@@ -60,9 +60,10 @@ def filter_ungrouped_cubes(cubes):
 # Select cubes which share all of the cubes in sub_list[k]
 # (Generation of sub-lists, step 4)
 def shared_cubes(cube_list, sub_list):
-    new_cube_list = cube_list
-    new_sub_list = sub_list
-    # Change the above to new_cube_list = [] ... etc.
+    new_cube_list = []
+    new_sub_list = []
+    
+    
     
     return new_cube_list, new_sub_list
 
