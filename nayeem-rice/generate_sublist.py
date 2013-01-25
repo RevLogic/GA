@@ -12,7 +12,7 @@ from cube import *
 # its output specification. (Generation of sub-lists, step 3)
 def largest_shared_cubes(cubes):
     largest = 0
-    largest_cube = Cube([],[])
+    largest_cube = Cube([],[], "Largest Cube")
     
     for cube in cubes:
         if(cube.count_outputs() > largest):
@@ -70,17 +70,17 @@ def shared_cubes(cube_list, sub_list):
 
 def main():
     
-    test_cube_list = [ Cube(['x1','x2','x3'], ['f1','f2','f3'], 'A'), 
-                       Cube(['x1','x3','x4'], ['f1','f4','f5'], 'B'),
-                       Cube(['x1','x7','x8'], ['f1','f2','f3'], 'C'),
-                       Cube(['x2','x3','x4','x5'], ['f3','f4','f5','f2'], 'D'),
-                       Cube(['x6'], ['f6'], 'E'), Cube(['x7', 'x8'], ['f8','f7'], 'F') ]
+    test_cube_list = [ Cube(['x1','x2','x3'], ['f1','f2','f3'], 'A', 3), 
+                       Cube(['x1','x3','x4'], ['f1','f4','f5'], 'B', 3),
+                       Cube(['x1','x7','x8'], ['f1','f2','f3'], 'C', 3),
+                       Cube(['x2','x3','x4','x5'], ['f3','f4','f5','f2'], 'D', 4),
+                       Cube(['x6'], ['f6'], 'E', 1), Cube(['x7', 'x8'], ['f8','f7'], 'F', 2) ]
     
     cube_list = test_cube_list
     ungrouped_list = []
     sub_list = []
     
-    current_cube = Cube([],[])
+    current_cube = Cube([],[], "Current Cube")
     k = 0
 
     cube_list, ungrouped_list = filter_ungrouped_cubes(cube_list)
