@@ -10,9 +10,9 @@ import operator
 #    DOES NOT CHANGE THE VALUE OF THE CONTROL FUNCTIONS
 # NOTE: The list of controls MUST NOT contain the target.
 def tof(controls, target):
-    def new_target():
+    def new_target(val):
         # FP WARNING: Applies AND to all controls and XORs with previous target   
-        return operator.xor(target(), all(controls))
+        return operator.xor(target(val), all(controls))
     return new_target
     
         
