@@ -1,7 +1,13 @@
 # RevSim - A Reversible Logic Simulator
 # Christopher Rabl, Rio Lowry, Rubin Rana
 
+import sys
 import operator
+
+# Helper function to get variables from sys.argv
+def arg(n):
+    return int(sys.argv[n])
+
 
 # Defines a Toffoli gate given a list of inputs
 #
