@@ -1,10 +1,9 @@
-import sys
 from revsim import *
 
 # Implements Jackie's one-bit adder detailed in class
 
-a = int(sys.argv[1])
-b = int(sys.argv[2])
+a = arg(1)
+b = arg(2)
 lines = [a, b, 0, 0]
 
 c = Cascade(lines)

@@ -1,10 +1,9 @@
-import sys
 from revsim import *
 
-a = int(sys.argv[1])
-b = int(sys.argv[2])
-c = int(sys.argv[3])
-d = int(sys.argv[4])
+a = arg(1)
+b = arg(2)
+c = arg(3)
+d = arg(4)
 lines = [a, b, c, d, 0]
 
 c = Cascade(lines)
