@@ -39,6 +39,13 @@ def inv(controls, target):
         print "Warning: A control bit is being ignored!"
     return operator.not_(controls[0]) # We do this because in an inverter, there is ONLY one control
 
+
+def fred(controls, targets):
+    if(all(controls)):
+        targets[0], targets[1] = targets[1], targets[0]
+    return targets
+
+
 # Apply an arbitrary function to a list of lines according to a list of controls and a target
 #
 # Input:
@@ -52,7 +59,10 @@ def inv(controls, target):
 #
 def apply(lines, f, controls, target):
     out = lines
-    out[target] = f([lines[i] for i in controls], lines[target])
+    if f == fred:
+        out[target[0]], out[target[1]] = f([lines[i] for i in controls], [lines[target[0]], lines[target[1]]])
+    else:
+        out[target] = f([lines[i] for i in controls], lines[target])
     return out
 
 # Defines a cascade of gates which perform operations on a list of lines
