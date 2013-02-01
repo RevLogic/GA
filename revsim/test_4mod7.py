@@ -10,13 +10,16 @@ c = int(sys.argv[2])
 d = int(sys.argv[3])
 e = int(sys.argv[4])
 lines = [0, b, c, d, e]
-lines = apply(lines, tof, [1,4], 0)
-lines = apply(lines, tof, [1], 4)
-lines = apply(lines, tof, [2,3,4], 0)
-lines = apply(lines, tof, [0,2,3], 4)
-lines = apply(lines, tof, [0,3], 2)
-lines = apply(lines, tof, [0], 3)
+c = Cascade(lines)
+c.append(tof, [1,4], 0)
+c.append(tof, [1], 4)
+c.append(tof, [2,3,4], 0)
+c.append(tof, [0,2,3], 4)
+c.append(tof, [0, 3], 2)
+c.append(tof, [0], 3)
 
-print "c: ", int(lines[2])
-print "d: ", int(lines[3])
-print "e: ", int(lines[4])
+out = c.run()
+
+print "c: ", out[2]
+print "d: ", out[3]
+print "e: ", out[4]
