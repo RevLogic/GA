@@ -1,18 +1,14 @@
-from tof import tof
+from tof import *
 
-def a(t):
-    return t
+lines = [0, 0, 0, 0]
+lines = apply(lines, tof, [0,1], 3)
+print lines     
+lines = apply(lines, tof, [0], 1)
+print lines
+lines = apply(lines, tof, [1,2], 3)
+print lines
+lines = apply(lines, tof, [1], 2)
+print lines
 
-def b(t):
-    return t
-
-def c(t):
-    return t
-
-def target(t):
-    return t
-
-new_target = tof([a,b,c], target)
-
-    
-    
+print "sum: ", lines[2]
+print "car: ", lines[3]
