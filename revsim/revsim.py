@@ -12,9 +12,12 @@ import operator
 def tof(controls, target):
     return operator.xor(target, all(controls))
 
+def inv(control, target):
+    return operator.not_(control[0]) # We do this because in an inverter, there is ONLY one control
+
 def apply(lines, f, controls, target):
     out = lines
-    out[target] = f(filter(lambda x: lines.index(x) in controls, lines), lines[target])
+    out[target] = f([lines[i] for i in controls], lines[target])
     return out
 
 class Cascade:
