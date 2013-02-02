@@ -4,12 +4,12 @@
 import sys
 import operator
 
-# Helper function to get variables from sys.argv
+# Helper function to get variables from sys.argv[].
 def arg(n):
     return int(sys.argv[n])
 
 
-# Defines a Toffoli gate given a list of inputs
+# Defines a Toffoli gate given a list of inputs.
 #
 # Input:
 #     controls := list of control line indices
@@ -25,7 +25,7 @@ def tof(controls, target):
     return operator.xor(target, all(controls))
 
 
-# Defines an inverter based on a single control
+# Defines an inverter based on a single control (CNOT).
 #
 # Input:
 #    controls := list of control line indices (must contain exactly one control)
@@ -40,13 +40,23 @@ def inv(controls, target):
     return operator.not_(controls[0]) # We do this because in an inverter, there is ONLY one control
 
 
+# Defines a multiple-control Fredkin (CSWAP) gate.
+#
+# Input:
+#    controls := list of control line indices
+#    targets := list of target line indices (must contain exactly two targets)
+#
+# Output:
+#    If input lines are all 1, then swap the target lines, otherwise do nothing
+#    targets := updated list of targets
+#
 def fred(controls, targets):
     if(all(controls)):
         targets[0], targets[1] = targets[1], targets[0]
     return targets
 
 
-# Apply an arbitrary function to a list of lines according to a list of controls and a target
+# Apply an arbitrary function to a list of lines according to a list of controls and a target.
 #
 # Input:
 #    lines := list of lines
@@ -59,13 +69,14 @@ def fred(controls, targets):
 #
 def apply(lines, f, controls, target):
     out = lines
-    if f == fred:
+    try:
         out[target[0]], out[target[1]] = f([lines[i] for i in controls], [lines[target[0]], lines[target[1]]])
-    else:
+    except(TypeError):
         out[target] = f([lines[i] for i in controls], lines[target])
     return out
 
-# Defines a cascade of gates which perform operations on a list of lines
+
+# Defines a cascade of gates which perform operations on a list of lines.
 #
 # Usage:
 #    lines = [...] # list of lines and their initial states
@@ -79,8 +90,9 @@ class Cascade:
         self.controls = []
         self.targets = []
 
+
     # Append the current function, control list, and target to the
-    # gate-list, control-list, and target-list
+    # gate-list, control-list, and target-list.
     # NOTE: This does NOT evaluate the function on the list
     #
     def append(self, op, control, target):
@@ -88,9 +100,10 @@ class Cascade:
         self.controls.append(control)
         self.targets.append(target)
 
+
     # Output the result of running the input line values through
     # the current cascade. May be called with c.run(True) to output
-    # intermediate line states
+    # intermediate line states.
     #
     def run(self, debug=False):
         for i in range(len(self.gates)):
@@ -103,3 +116,9 @@ class Cascade:
         self.lines = [int(line) for line in self.lines]
 
         return self.lines
+    
+    # Allows the user to replace the lines in the current circuit and re-run
+    # the cascade on the new line values.
+    #
+    def replace_lines(self, lines):
+        self.lines = lines

@@ -12,5 +12,5 @@ c.append(tof, [0], 3)
 c.append(tof, [1], 3)
 output = c.run(True)
 
-print "CAR: ", output[2]
-print "SUM: ", output[3]
+print "Carry: ", output[2]
+print "Sum: ", output[3]
