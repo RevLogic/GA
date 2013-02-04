@@ -1,11 +1,14 @@
 from revsim import *
 
-maxVal = 16
-for i in range(maxVal):
-    n = len(bin(maxVal))
-    binList = []
-    for j in range(2, len(bin(i))):
+num_vars = 4
+max_val = 2 ** num_vars
+bits = len(bin(max_val))
+
+for i in range(max_val):
+    bit_list = []
+    current_bits = bin(i)
+    for j in range(2, len(current_bits)):
         # This is terrible
-        binList.append(int(bin(i)[j]))
+        bit_list.append(int(current_bits[j]))
     # Return bitlist prepended with zeros
-    print [0]*(n-len(bin(i))) + binList
+    print [0]*(bits-len(current_bits)) + bit_list
