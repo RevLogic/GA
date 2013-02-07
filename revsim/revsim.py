@@ -68,7 +68,7 @@ def fred(controls, targets):
 #    out := list of line states after the function has been performed
 #
 def apply(lines, f, controls, target):
-    out = lines
+    out = lines[:] # We must make a COPY of the list of lines... see issue #1
     try:
         out[target[0]], out[target[1]] = f([lines[i] for i in controls], [lines[target[0]], lines[target[1]]])
     except(TypeError):
@@ -85,7 +85,7 @@ def apply(lines, f, controls, target):
 #
 class Cascade:
     def __init__(self, lines):
-        self.lines = lines
+        self.lines = lines[:]
         self.gates = []
         self.controls = []
         self.targets = []
@@ -106,23 +106,22 @@ class Cascade:
     # intermediate line states.
     #
     def run(self, debug=False):
-        new_lines = []
         for i in range(len(self.gates)):
             # Apply the current function to all lines in the cascade
-            new_lines = apply(self.lines, self.gates[i], self.controls[i], self.targets[i])
+            output_lines = apply(self.lines, self.gates[i], self.controls[i], self.targets[i])
             if debug:
-                print new_lines # Debugging only, call c.run(True) to see intermediate steps
+                print output_lines # Debugging only, call c.run(True) to see intermediate steps
 
         # Python quirk: we want to display all outputs as integers
-        newer_lines = [int(line) for line in new_lines]
+        output_lines = [int(line) for line in output_lines]
 
-        return newer_lines
+        return output_lines
     
     # Allows the user to replace the lines in the current circuit and re-run
     # the cascade on the new line values.
     #
     def replace_lines(self, lines):
-        self.lines = lines
+        self.lines = lines[:] # Need to copy the values, see issue #1
 
 
     def gate_count(self):
