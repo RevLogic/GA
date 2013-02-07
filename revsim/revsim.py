@@ -128,6 +128,8 @@ class Cascade:
         return len(self.gates)
 
     def calculate_quantum_cost(self, op, num_controls, num_targets):
+        if op == tof:
+            return num_controls + 2
         return 0
 
     def quantum_cost(self):
