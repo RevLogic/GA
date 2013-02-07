@@ -99,23 +99,24 @@ class Cascade:
         self.gates.append(op)
         self.controls.append(control)
         self.targets.append(target)
-        self.cost += calculate_quantum_cost(op, len(control), target) # TODO: need to define another method to calculate the cost of a gate
+        self.cost += self.calculate_quantum_cost(op, len(control), target) # TODO: need to define another method to calculate the cost of a gate
 
     # Output the result of running the input line values through
     # the current cascade. May be called with c.run(True) to output
     # intermediate line states.
     #
     def run(self, debug=False):
+        new_lines = []
         for i in range(len(self.gates)):
             # Apply the current function to all lines in the cascade
-            self.lines = apply(self.lines, self.gates[i], self.controls[i], self.targets[i])
+            new_lines = apply(self.lines, self.gates[i], self.controls[i], self.targets[i])
             if debug:
-                print self.lines # Debugging only, call c.run(True) to see intermediate steps
+                print new_lines # Debugging only, call c.run(True) to see intermediate steps
 
         # Python quirk: we want to display all outputs as integers
-        self.lines = [int(line) for line in self.lines]
+        newer_lines = [int(line) for line in new_lines]
 
-        return self.lines
+        return newer_lines
     
     # Allows the user to replace the lines in the current circuit and re-run
     # the cascade on the new line values.
