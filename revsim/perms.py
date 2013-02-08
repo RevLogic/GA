@@ -1,5 +1,8 @@
 from revsim import *
 
+"""
+Binary iterator
+"""
 def binary_iterator(num_vars):
     max_val = 2 ** num_vars - 1
     bits = len(bin(max_val))
@@ -13,3 +16,4 @@ def binary_iterator(num_vars):
         # Return bitlist prepended with zeros
         yield [0]*(bits-len(current_bits)) + bit_list
 
+def
