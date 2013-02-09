@@ -12,6 +12,9 @@ Helper function to get variables from sys.argv[].
 def arg(n):
     return int(sys.argv[n])
 
+def swap():
+    pass
+
 """
 Defines a Toffoli gate given a list of inputs.
 
