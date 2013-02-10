@@ -104,9 +104,10 @@ class Cascade:
     intermediate line states.
     """
     def run(self, debug=False):
+        output_lines = self.lines[:]
         for i in range(len(self.gates)):
             # Apply the current function to all lines in the cascade
-            output_lines = apply(self.lines, self.gates[i], self.controls[i], self.targets[i])
+            output_lines = apply(output_lines, self.gates[i], self.controls[i], self.targets[i])
             if debug:
                 print output_lines # Debugging only, call c.run(True) to see intermediate steps
 
