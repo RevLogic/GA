@@ -24,32 +24,32 @@ Returns: A list with the targets swapped
 """
 def swap(target1, target2):
     return (target2, target1)
-
+    
 """
 Defines a Toffoli gate given a list of inputs.
 
 controls: list of control line indices
 target: the target index within the list of inputs
-
+    
 new_target: the new value of the target function
 
 DOES NOT CHANGE THE VALUE OF THE CONTROL FUNCTIONS
 NOTE: The list of controls MUST NOT contain the target.
 """
-def tof(controls, target):
+def toffoli(controls, target):
     return operator.xor(target, all(controls))
-
+    
 """
 Defines an inverter based on a single control (CNOT).
 
 controls: list of control line indices (must contain exactly one control)
 target: ignored, assumed to be the control
 """
-def inv(controls, target):
+def inverter(controls, target):
     if(len(controls) != 1):
         print "Warning: A control bit is being ignored!"
     return operator.not_(controls[0]) # We do this because in an inverter, there is ONLY one control
-
+        
 """
 Defines a multiple-control Fredkin (CSWAP) gate.
 
@@ -59,7 +59,7 @@ targets: list of target line indices (must contain exactly two targets)
 If input lines are all 1, then swap the target lines, otherwise do nothing
 targets: updated list of targets
 """
-def fred(controls, targets):
+def fredkin(controls, targets):
     if(all(controls)):
         targets[0], targets[1] = targets[1], targets[0]
     return targets
@@ -87,7 +87,7 @@ def apply(lines, f, controls, target):
 
 """
 Defines a cascade of gates which perform operations on a list of lines.
-
+    
 >>> lines = [...] # list of lines and their initial states
 >>> c = Cascade(lines)
 >>> print c.run() # output the final state of the cascade
@@ -99,7 +99,7 @@ class Cascade:
         self.controls = []
         self.targets = []
         self.cost = 0
-    
+        
     """
     Append the current function, control list, and target to the
     gate-list, control-list, and target-list.
@@ -110,7 +110,7 @@ class Cascade:
         self.controls.append(control)
         self.targets.append(target)
         self.cost += self.calculate_quantum_cost(op, len(control), target) # TODO: need to define another method to calculate the cost of a gate
-
+        
     """
     Output the result of running the input line values through
     the current cascade. May be called with c.run(True) to output
@@ -123,10 +123,8 @@ class Cascade:
             output_lines = apply(output_lines, self.gates[i], self.controls[i], self.targets[i])
             if debug:
                 print output_lines # Debugging only, call c.run(True) to see intermediate steps
-
         # Python quirk: we want to display all outputs as integers
         output_lines = [int(line) for line in output_lines]
-
         return output_lines
     
     """
