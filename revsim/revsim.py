@@ -12,8 +12,18 @@ Helper function to get variables from sys.argv[].
 def arg(n):
     return int(sys.argv[n])
 
-def swap():
-    pass
+
+"""
+Defines an uncontrolled SWAP gate, which is analogous to
+crossing wires in a classical logic design.
+
+target1: First target to swap, will become the second target
+target2: Second target to swap, will become the first target
+
+Returns: A list with the targets swapped
+"""
+def swap(target1, target2):
+    return (target2, target1)
 
 """
 Defines a Toffoli gate given a list of inputs.
@@ -66,6 +76,9 @@ out: list of line states after the function has been performed
 """
 def apply(lines, f, controls, target):
     out = lines[:] # We must make a COPY of the list of lines... see issue #1
+    if f == swap:
+        out[controls], out[target] = f(lines[controls], lines[target])
+        return out
     try:
         out[target[0]], out[target[1]] = f([lines[i] for i in controls], [lines[target[0]], lines[target[1]]])
     except(TypeError):
