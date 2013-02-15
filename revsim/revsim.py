@@ -6,6 +6,7 @@ Christopher Rabl, Rio Lowry, Rubin Rana
 import sys
 import operator
 import pickle
+import json
 
 """
 Helper function to get variables from sys.argv[].
@@ -94,12 +95,18 @@ Defines a cascade of gates which perform operations on a list of lines.
 >>> print c.run() # output the final state of the cascade
 """
 class Cascade:
-    def __init__(self, lines):
+    def __init__(self, lines, file_name=""):
         self.lines = lines[:]
         self.gates = []
         self.controls = []
         self.targets = []
         self.cost = 0
+        if file_name:
+            if file_name[-4:] == "json":
+                self.load_json(file_name)
+            else:
+                self.load_pickle(file_name)
+
         
     """
     Append the current function, control list, and target to the
@@ -112,6 +119,7 @@ class Cascade:
         self.targets.append(target)
         self.cost += self.calculate_quantum_cost(op, len(control), target) # TODO: need to define another method to calculate the cost of a gate
 
+
     """
     Prepend the current function, control list, and target to the
     gate-list, control-list, and target-list.
@@ -122,6 +130,7 @@ class Cascade:
         self.controls.insert(0, control)
         self.targets.insert(0, target)
         self.cost += self.calculate_quantum_cost(op, len(control), target)
+
         
     """
     Output the result of running the input line values through
@@ -138,6 +147,7 @@ class Cascade:
         # Python quirk: we want to display all outputs as integers
         output_lines = [int(line) for line in output_lines]
         return output_lines
+
     
     """
     Allows the user to replace the lines in the current circuit and re-run
@@ -146,11 +156,13 @@ class Cascade:
     def replace_lines(self, lines):
         self.lines = lines[:] # Need to copy the values, see issue #1
 
+
     """
     Calculates the number of gates in the current cascade
     """
     def gate_count(self):
         return len(self.gates)
+
 
     """
     
@@ -160,15 +172,45 @@ class Cascade:
             return 0
         return 1
 
+
+    """
+    
+    """
     def quantum_cost(self):
         return self.cost
 
+
+    """
+    Serializes the current Cascade's state into a file which may be loaded in at a later time.
+    """
     def write_pickle(self, file_name):
         f = open(file_name, "w")
         pickle.dump([self.lines, self.gates, self.controls, self.targets, self.cost], f)
         f.close()
 
+
+    """
+    Replaces the Cascade's current state with the state read from a file.
+    Right now it uses the pickle module to do this, but a better choice might be JSON.
+    """
     def read_pickle(self, file_name):
         f = open(file_name)
         self.lines, self.gates, self.controls, self.targets, self.cost = pickle.load(f)
         f.close()
+
+
+    """
+    Doesn't work just yet...
+    """
+    def write_json(self, file_name):
+        json_encoded = open(file_name, "w")
+        json_encoded = json.dumps([self.lines, self.gates, self.controls, self.targets, self.cost])
+        json_encoded.close()
+        
+    """
+    Ditto.
+    """
+    def read_json(self, file_name):
+        json_encoded = open(file_name)
+        self.lines, self.gates, self.controls, self.targets, self.cost = json.load(json_encoded)
+        json_encoded.close()
