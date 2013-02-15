@@ -15,5 +15,3 @@ def binary_iterator(num_vars):
             bit_list.append(int(current_bits[j]))
         # Return bitlist prepended with zeros
         yield [0]*(bits-len(current_bits)) + bit_list
-
-def
