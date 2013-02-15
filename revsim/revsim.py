@@ -110,6 +110,17 @@ class Cascade:
         self.controls.append(control)
         self.targets.append(target)
         self.cost += self.calculate_quantum_cost(op, len(control), target) # TODO: need to define another method to calculate the cost of a gate
+
+    """
+    Prepend the current function, control list, and target to the
+    gate-list, control-list, and target-list.
+    NOTE: As with append, this does NOT evaluate the Cascade on the list
+    """
+    def prepend(self, op, control, target):
+        self.gates.insert(0, op)
+        self.controls.insert(0, control)
+        self.targets.insert(0, target)
+        self.cost += self.calculate_quantum_cost(op, len(control), target)
         
     """
     Output the result of running the input line values through
