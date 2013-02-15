@@ -5,6 +5,7 @@ Christopher Rabl, Rio Lowry, Rubin Rana
 
 import sys
 import operator
+import pickle
 
 """
 Helper function to get variables from sys.argv[].
@@ -161,3 +162,13 @@ class Cascade:
 
     def quantum_cost(self):
         return self.cost
+
+    def write_pickle(self, file_name):
+        f = open(file_name, "w")
+        pickle.dump([self.lines, self.gates, self.controls, self.targets, self.cost], f)
+        f.close()
+
+    def read_pickle(self, file_name):
+        f = open(file_name)
+        self.lines, self.gates, self.controls, self.targets, self.cost = pickle.load(f)
+        f.close()
