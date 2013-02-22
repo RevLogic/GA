@@ -2,7 +2,7 @@
 RevSim - A Reversible Logic Simulator
 Christopher Rabl, Rio Lowry, Rubin Rana
 """
-
+import copy
 import sys
 import operator
 import pickle
@@ -135,6 +135,9 @@ class Cascade:
     def __len__(self):
         return len(self.gates) # Without loss of generality...
 
+    # Factory method for creating a copy of the current object"
+    def copy(self):
+        return copy.deepcopy(self)
     
     # TODO: Define other built-ins such as __lt__ (less than) which allows us to compare
     # Cascades based on quantum cost, etc. Can be VERY useful in our GA!

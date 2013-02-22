@@ -21,3 +21,7 @@ for perm in binary_iterator(2):
     print ""
 
 print "Quantum cost:", c.quantum_cost()
+
+d = c.copy()
+for item in d:
+    print item
