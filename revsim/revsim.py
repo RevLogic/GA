@@ -128,8 +128,8 @@ class Cascade:
         if len(value) != 3:
             raise TypeError
         self.gates[key] = value[0]
-        self.controls = value[1]
-        self.targets = value[2]
+        self.controls[key] = value[1]
+        self.targets[key] = value[2]
 
 
     def __len__(self):
