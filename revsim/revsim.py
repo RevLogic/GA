@@ -119,8 +119,25 @@ class Cascade:
         for item in zip(self.gates, self.controls, self.targets):
             yield item
 
+
     def __getitem__(self, key):
         return (self.gates[key], self.controls[key], self.targets[key])
+
+
+    def __setitem__(self, key, value):
+        if len(value) != 3:
+            raise TypeError
+        self.gates[key] = value[0]
+        self.controls = value[1]
+        self.targets = value[2]
+
+
+    def __len__(self):
+        return len(self.gates)
+
+    
+    # TODO: Define other built-ins such as __lt__ (less than) which allows us to compare
+    # Cascades based on quantum cost, etc. Can be VERY useful in our GA!
         
     """
     Append the current function, control list, and target to the
