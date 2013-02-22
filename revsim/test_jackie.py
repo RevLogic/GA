@@ -9,7 +9,7 @@ c = Cascade(lines)
 c.append(toffoli, [0, 1], 2)
 c.append(toffoli, [0], 3)
 c.append(toffoli, [1], 3)
-c.write_pickle("jackie_adder.cas")
+c.write_pickle("jackie_adder.pckl")
 
 for perm in binary_iterator(2):
     lines = perm + [0, 0]

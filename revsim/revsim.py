@@ -105,7 +105,7 @@ class Cascade:
             if file_name[-4:] == "json":
                 self.load_json(file_name)
             else:
-                self.load_pickle(file_name)
+                self.read_pickle(file_name)
 
     def __iter__(self):
         """
