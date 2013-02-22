@@ -133,7 +133,7 @@ class Cascade:
 
 
     def __len__(self):
-        return len(self.gates)
+        return len(self.gates) # Without loss of generality...
 
     
     # TODO: Define other built-ins such as __lt__ (less than) which allows us to compare
@@ -148,8 +148,10 @@ class Cascade:
         self.gates.append(op)
         self.controls.append(control)
         self.targets.append(target)
-        self.cost += self.calculate_quantum_cost(op, len(control), target) # TODO: need to define another method to calculate the cost of a gate
-
+        if type(target) == list:
+            self.cost += self.calculate_quantum_cost(op, len(control)+len(target), 0)
+        else:
+            self.cost += self.calculate_quantum_cost(op, len(control)+1, 0)
 
     """
     Prepend the current function, control list, and target to the
@@ -160,8 +162,10 @@ class Cascade:
         self.gates.insert(0, op)
         self.controls.insert(0, control)
         self.targets.insert(0, target)
-        self.cost += self.calculate_quantum_cost(op, len(control), target)
-
+        if type(target) == list:
+            self.cost += self.calculate_quantum_cost(op, len(control)+len(target), 0)
+        else: 
+            self.cost += self.calculate_quantum_cost(op, len(control)+1, 0)
         
     """
     Output the result of running the input line values through
@@ -198,11 +202,32 @@ class Cascade:
     """
     
     """
-    def calculate_quantum_cost(self, op, num_controls, num_targets):
-        if op == swap:
-            return 0
-        return 1
+    def calculate_quantum_cost(self, op, size, garbage):
+        itemCost = 0
+        
+        # Quantum cost calculation
+        # Using the table according to the quantum wizard Maslov:
+        # http://webhome.cs.uvic.ca/~dmaslov/definitions.html
+        toffoliCost = {(size, 0): 2**size - 3,
+                       (size, 1): 24*size - 88,
+                       (size, size-3): 12*size - 34}
+        
+        if size == 0:
+            return itemCost
+        elif size == 1:
+            itemCost = 1
+        elif size > 1 and 0 <= garbage <= 1:
+            itemCost = toffoliCost[(size, garbage)]
+        elif size > 1 and garbage == size - 3:
+            itemCost = toffoliCost[(size, size-3)]
+        else:
+            itemCost = 1
 
+        if op == fredkin:
+            itemCost += 2
+
+        return itemCost
+        
 
     """
     

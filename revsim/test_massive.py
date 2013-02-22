@@ -15,15 +15,18 @@ for i in range(0, 2000):
 
 print "Running..."
 print c.run()
-print "Length of cascade: ", len(c)
+print "Length of cascade:", len(c)
 c.write_pickle("massive.pckl")
+print "Quantum Cost:", c.quantum_cost()
+
 # This part took about 4 minutes to run on linux1... not bad
 print ""
 print "Simulating 2^10 input perms..."
 i = 1
 for perm in binary_iterator(10):
-    print i
     lines = perm
     c.replace_lines(lines)
     c.run()
     i += 1
+
+print "Done!"
