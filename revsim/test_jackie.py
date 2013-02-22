@@ -19,3 +19,6 @@ for perm in binary_iterator(2):
     print "Carry: ", output[2]
     print "Sum: ", output[3]
     print ""
+
+for item in c.items():
+    print item

@@ -214,3 +214,16 @@ class Cascade:
         json_encoded = open(file_name)
         self.lines, self.gates, self.controls, self.targets, self.cost = json.load(json_encoded)
         json_encoded.close()
+
+    
+    def items(self):
+        """
+        Given 3 lists of gates, controls, and targets, the zip function groups them into tuples
+        which each contain a gate, the control list, and the target associated with that gate.
+        gates := [tof, tof, fred]
+        controls := [[0,1], [1,2], [0,2]]
+        targets := [2, 0, [0,2]]
+        zip(gates, controls, targets) = [(tof, [0,1], 2), (tof, [1,2], 0), (fred, [0,2], [0,2])]
+        """
+        for item in zip(self.gates, self.controls, self.targets):
+            yield item
