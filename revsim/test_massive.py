@@ -19,11 +19,13 @@ print "Length of cascade:", len(c)
 c.write_pickle("massive.pckl")
 print "Quantum Cost:", c.quantum_cost()
 
-print ""
-print "Loading 1000 Cascades into RAM..."
-cascadeList = []
-for i in range(0, 1000):
-    cascadeList.append(Cascade(lines, "test_massive.pckl"))
+# DO NOT RUN THIS UNLESS YOU HAVE OVER A GIG OF RAM TO SPARE !!!!!
+#print ""
+#print "Loading 1000 Cascades into RAM..."
+#cascadeList = []
+#for i in range(0, 1000):
+#    cascadeList.append(Cascade(lines, "massive.pckl"))
+#    print i
 
 # This part took about 4 minutes to run on linux1... not bad
 print ""
