@@ -20,3 +20,6 @@ for perm in binary_iterator(3):
 # Using the shiny new __iter__ method, our Cascades are now iterable!
 for item in c:
     print item
+
+print ""
+print c[1]

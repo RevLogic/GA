@@ -107,6 +107,20 @@ class Cascade:
             else:
                 self.load_pickle(file_name)
 
+    def __iter__(self):
+        """
+        Given 3 lists of gates, controls, and targets, the zip function groups them into tuples
+        which each contain a gate, the control list, and the target associated with that gate.
+        gates := [tof, tof, fred]
+        controls := [[0,1], [1,2], [0,2]]
+        targets := [2, 0, [0,2]]
+        zip(gates, controls, targets) = [(tof, [0,1], 2), (tof, [1,2], 0), (fred, [0,2], [0,2])]
+        """
+        for item in zip(self.gates, self.controls, self.targets):
+            yield item
+
+    def __getitem__(self, key):
+        return (self.gates[key], self.controls[key], self.targets[key])
         
     """
     Append the current function, control list, and target to the
@@ -215,17 +229,5 @@ class Cascade:
         self.lines, self.gates, self.controls, self.targets, self.cost = json.load(json_encoded)
         json_encoded.close()
 
-    
-    def __iter__(self):
-        """
-        Given 3 lists of gates, controls, and targets, the zip function groups them into tuples
-        which each contain a gate, the control list, and the target associated with that gate.
-        gates := [tof, tof, fred]
-        controls := [[0,1], [1,2], [0,2]]
-        targets := [2, 0, [0,2]]
-        zip(gates, controls, targets) = [(tof, [0,1], 2), (tof, [1,2], 0), (fred, [0,2], [0,2])]
-        """
-        for item in zip(self.gates, self.controls, self.targets):
-            yield item
 
         
