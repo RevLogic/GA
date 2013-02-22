@@ -141,6 +141,22 @@ class Cascade:
     
     # TODO: Define other built-ins such as __lt__ (less than) which allows us to compare
     # Cascades based on quantum cost, etc. Can be VERY useful in our GA!
+
+    """
+    Insert a function, control-list, and target into the current Cascade's
+    gate-list, control-list, and target-list
+    """
+    def insert(self, op, control, target, pos):
+        if pos > len(self):
+            raise ValueError
+        
+        self.gates.insert(pos, op)
+        self.controls.insert(pos, control)
+        self.targets.insert(pos, target)
+        if type(target) == list:
+            self.cost += self.calculate_quantum_cost(op, len(control)+len(target), 0)
+        else:
+            self.cost += self.calculate_quantum_cost(op, len(control)+1, 0)
         
     """
     Append the current function, control list, and target to the
@@ -148,13 +164,7 @@ class Cascade:
     NOTE: This does NOT evaluate the function on the list
     """
     def append(self, op, control, target):
-        self.gates.append(op)
-        self.controls.append(control)
-        self.targets.append(target)
-        if type(target) == list:
-            self.cost += self.calculate_quantum_cost(op, len(control)+len(target), 0)
-        else:
-            self.cost += self.calculate_quantum_cost(op, len(control)+1, 0)
+        self.insert(op, control, target, len(self))
 
     """
     Prepend the current function, control list, and target to the
@@ -162,14 +172,8 @@ class Cascade:
     NOTE: As with append, this does NOT evaluate the Cascade on the list
     """
     def prepend(self, op, control, target):
-        self.gates.insert(0, op)
-        self.controls.insert(0, control)
-        self.targets.insert(0, target)
-        if type(target) == list:
-            self.cost += self.calculate_quantum_cost(op, len(control)+len(target), 0)
-        else: 
-            self.cost += self.calculate_quantum_cost(op, len(control)+1, 0)
-        
+        self.insert(op, control, target, 0)
+
     """
     Output the result of running the input line values through
     the current cascade. May be called with c.run(True) to output
