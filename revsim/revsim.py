@@ -216,7 +216,7 @@ class Cascade:
         json_encoded.close()
 
     
-    def items(self):
+    def __iter__(self):
         """
         Given 3 lists of gates, controls, and targets, the zip function groups them into tuples
         which each contain a gate, the control list, and the target associated with that gate.
@@ -227,3 +227,5 @@ class Cascade:
         """
         for item in zip(self.gates, self.controls, self.targets):
             yield item
+
+        
