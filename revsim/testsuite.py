@@ -80,6 +80,14 @@ class TestAdder(unittest.TestCase):
         for i in range(0, 3):
             self.assertEqual(expected[i], self.adder[i])
 
+
+class TestCascadeOperations(unittest.TestCase):
+    lines = [0, 0, 0, 0]
+    adder = Cascade(lines)
+    adder.append(toffoli, [0, 1], 2)
+    adder.append(toffoli, [0], 3)
+    adder.append(toffoli, [1], 3)
+
     def test_cascade_copy(self):
         copied = self.adder.copy()
         for i in range(0, 3):
@@ -95,6 +103,25 @@ class TestAdder(unittest.TestCase):
         for i in range(0, 4):
             self.assertEqual(ref[i], self.adder[i])
         self.assertEqual(len(ref), len(self.adder))
+        ref.remove(3)
+
+    def test_cascade_insert_valid(self):
+        self.adder.insert(toffoli, [0], 2, 2)
+        self.assertEqual(len(self.adder), 4)
+        self.assertEqual(self.adder[2], (toffoli, [0], 2))
+        
+    def test_cascade_insert_invalid(self):
+        self.assertRaises(ValueError, self.adder.insert, toffoli, [0], 2, -1)
+        self.assertRaises(ValueError, self.adder.insert, toffoli, [0], 2, 100)
+
+    def test_cascade_remove_valid(self):
+        self.adder.remove(2)
+        self.assertEqual(len(self.adder), 3)
+
+    def test_cascade_remove_invalid(self):
+        self.assertRaises(IndexError, self.adder.remove, -1)
+        self.assertRaises(IndexError, self.adder.remove, 100)
+
 
 if __name__ == "__main__":
     unittest.main()

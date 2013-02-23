@@ -150,7 +150,7 @@ class Cascade:
         Insert a function, control-list, and target into the current Cascade's
         gate-list, control-list, and target-list
         """
-        if pos > len(self):
+        if pos > len(self) or pos < 0:
             raise ValueError
         
         self.gates.insert(pos, op)
