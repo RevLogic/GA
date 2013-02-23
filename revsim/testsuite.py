@@ -52,6 +52,7 @@ class TruthTables(unittest.TestCase):
             actual = apply([line], inverter, [0], 0)
             self.assertEqual(expected, actual)
 
+
 class TestAdder(unittest.TestCase):
     
     lines = [0, 0, 0, 0]
@@ -84,6 +85,7 @@ class TestAdder(unittest.TestCase):
         copied = self.adder.copy()
         for i in range(0, 3):
             self.assertEqual(copied[i], self.adder[i])
+        self.assertEqual(len(copied), len(self.adder))
 
 
 if __name__ == "__main__":
