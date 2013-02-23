@@ -2,4 +2,10 @@ clean-all:
 	rm -f *~ *.pyc \#*#
 
 test:
-	python test_suite.py
+	python testsuite.py
+
+docs:
+	pydoc -w revsim
+
+help:
+	pydoc revsim

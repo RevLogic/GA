@@ -54,7 +54,6 @@ class TruthTables(unittest.TestCase):
 
 
 class TestAdder(unittest.TestCase):
-    
     lines = [0, 0, 0, 0]
     adder = Cascade(lines)
     adder.append(toffoli, [0, 1], 2)
@@ -87,6 +86,15 @@ class TestAdder(unittest.TestCase):
             self.assertEqual(copied[i], self.adder[i])
         self.assertEqual(len(copied), len(self.adder))
 
+    def test_cascade_reference(self):
+        ref = self.adder
+        for i in range(0, 3):
+            self.assertEqual(ref[i], self.adder[i])
+        self.assertEqual(len(ref), len(self.adder))
+        ref.append(toffoli, [0], 2)
+        for i in range(0, 4):
+            self.assertEqual(ref[i], self.adder[i])
+        self.assertEqual(len(ref), len(self.adder))
 
 if __name__ == "__main__":
     unittest.main()
