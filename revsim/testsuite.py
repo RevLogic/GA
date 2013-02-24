@@ -122,6 +122,33 @@ class TestCascadeOperations(unittest.TestCase):
         self.assertRaises(IndexError, self.adder.remove, -1)
         self.assertRaises(IndexError, self.adder.remove, 100)
 
+class TestGateSanity(unittest.TestCase):
+    def test_toffoli_sanity(self):
+        """ Target must not be contained in controls """
+        self.assertRaises(ValueError, apply, [0,0,0], toffoli, [0,1], 1)
+        """ Controls and targets must be in the line range """
+        self.assertRaises(ValueError, apply, [0], toffoli, [1], 0)
+        self.assertRaises(ValueError, apply, [0], toffoli, [0], 1)
+        """ Must not be able to apply on empty line list """
+        self.assertRaises(ValueError, apply, [], toffoli, [0], 1)
+        """ Toffoli gates must only have a single target """
+        self.assertRaises(ValueError, apply, [0,0,0], toffoli, [0], [1,2])
+        """ Controls must be specified in a list """
+        self.assertRaises(ValueError, apply, [0,0,0], toffoli, 1, 2)
+        """ Target must be specified by an integer """
+        self.assertRaises(ValueError, apply, [0,0,0], toffoli, [0,1], [2])
+
+    def test_fredkin_sanity(self):
+        """ Targets must not be contained in controls """
+        self.assertRaises(ValueError, apply, [0,0,0], fredkin, [0,1], [1,2])
+        
+        pass
+
+    def test_inverter_sanity(self):
+        pass
+
+    def test_swap_sanity(self):
+        pass
 
 if __name__ == "__main__":
     unittest.main()
