@@ -79,6 +79,7 @@ def apply(lines, f, controls, target):
     out: list of line states after the function has been performed
     """
     out = lines[:] # We must make a COPY of the list of lines... see issue #1
+
     if f == swap:
         out[controls], out[target] = f(lines[controls], lines[target])
         return out

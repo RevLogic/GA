@@ -150,5 +150,19 @@ class TestGateSanity(unittest.TestCase):
     def test_swap_sanity(self):
         pass
 
+class TestCascadeSanity(unittest.TestCase):
+    c = Cascade([0,0,0])
+    def test_remove_sanity(self):
+        """ Cascades must not allow removal of gate indices that don't exist """
+        self.assertRaises(IndexError, self.c.remove, 1)
+        """ Disallow removal of negative indices """
+        self.assertRaises(IndexError, self.c.remove, -1)
+
+    def test_replace_lines_sanity(self):
+        """ Must not allow replacement of lines with a set of lines that is smaller """
+        self.assertRaises(ValueError, self.c.replace_lines, [0,0])
+        """ Must not allow replacement of lines with a larger set of lines """
+        self.assertRaises(ValueError, self.c.replace_lines, [0,0,0,0])
+
 if __name__ == "__main__":
     unittest.main()
