@@ -157,10 +157,7 @@ class Cascade:
         self.gates.insert(pos, op)
         self.controls.insert(pos, control)
         self.targets.insert(pos, target)
-        if type(target) == list:
-            self.cost += self.calculate_quantum_cost(op, len(control)+len(target), 0)
-        else:
-            self.cost += self.calculate_quantum_cost(op, len(control)+1, 0)
+        self.cost += self.calculate_quantum_cost(op, len(control), 0)
 
     def append(self, op, control, target):
         """
@@ -237,11 +234,16 @@ class Cascade:
 
         if op == fredkin:
             itemCost += 2
+        elif op == inverter:
+            itemCost = 1
 
         return itemCost
-        
+
     def quantum_cost(self):
         return self.cost
+
+    def fitness_vector(self):
+        return len(self), self.cost
 
     def write_pickle(self, file_name):
         """
