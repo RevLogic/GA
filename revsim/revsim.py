@@ -157,7 +157,8 @@ class Cascade:
         self.gates.insert(pos, op)
         self.controls.insert(pos, control)
         self.targets.insert(pos, target)
-        self.cost += self.calculate_quantum_cost(op, len(control), 0)
+        # Jackie's method: count ALL inputs, not just controls; opposed to Maslov
+        self.cost += self.calculate_quantum_cost(op, len(control) + 1, 0)
 
     def append(self, op, control, target):
         """
