@@ -3,6 +3,8 @@ RevSim - A Reversible Logic Simulator
 Christopher Rabl, Rio Lowry, Rubin Rana
 """
 
+from perms import *
+
 import copy
 import sys
 import operator
@@ -246,6 +248,9 @@ class Cascade:
     def fitness_vector(self):
         return len(self), self.cost
 
+    def width(self):
+        return len(self.lines)
+
     def write_pickle(self, file_name):
         """
         Serializes the current Cascade's state into a file which may be loaded in at a later time.
@@ -279,5 +284,29 @@ class Cascade:
         self.lines, self.gates, self.controls, self.targets, self.cost = json.load(json_encoded)
         json_encoded.close()
 
-
+    def permutation_matrix(self):
+        if self.width() > 10:
+            raise ValueError
         
+        # Create an empty (sparse) matrix
+        matrix = [[0 for i in range(2**self.width())] for j in range(2**self.width())]
+
+        # Fill the matrix by encoding the lines of the truth table
+        for perm in binary_iterator(self.width()):
+            lines = perm
+            self.replace_lines(lines)
+            out_lines = self.run()
+            # INSERT MAGIC AND HAND-WAVING
+            row_index = int("".join([str(i) for i in lines]), 2)
+            column_index = int("".join([str(j) for j in out_lines]), 2)
+            matrix[row_index][column_index] = 1
+
+        for row in matrix:
+            print " ".join([str(entry) for entry in row]) # Pretty print the matrix
+
+    def truth_table(self):
+        for perm in binary_iterator(self.width()):
+            lines = perm
+            self.replace_lines(perm)
+            out_lines = self.run()
+            print lines, out_lines
