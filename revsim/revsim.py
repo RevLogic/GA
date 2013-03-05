@@ -120,12 +120,12 @@ class Cascade:
         targets := [2, 0, [0,2]]
         zip(gates, controls, targets) = [(tof, [0,1], 2), (tof, [1,2], 0), (fred, [0,2], [0,2])]
         """
-        for item in zip(self.gates, self.controls, self.targets):
-            yield item
+        for gate, control, target in zip(self.gates, self.controls, self.targets):
+            yield (gate.func_name, control, target)
 
 
     def __getitem__(self, key):
-        return (self.gates[key], self.controls[key], self.targets[key])
+        return (self.gates[key].func_name, self.controls[key], self.targets[key])
 
 
     def __setitem__(self, key, value):
