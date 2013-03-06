@@ -1,0 +1,35 @@
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[DiVincenzo and Smolin(1994)]{Smolin1994}
+David~P. DiVincenzo and J.~Smolin.
+\newblock Results on two-bit gate design for quantum computers.
+\newblock In \emph{Physics and Computation, 1994. PhysComp '94, Proceedings.,
+  Workshop on}, pages 14--23, Nov 1994.
+\newblock \doi{10.1109/PHYCMP.1994.363704}.
+
+\bibitem[Lukac et~al.(2003)Lukac, Perkowski, Goi, Pivtoraiko, Yu, Chung, Jeech,
+  Kim, and Kim]{Lukac2003}
+Martin Lukac, Marek Perkowski, Hilton Goi, Mikhail Pivtoraiko, Chung~Hyo Yu,
+  Kyusik Chung, Hyunkoo Jeech, Byung-Guk Kim, and Yong-Duk Kim.
+\newblock Evolutionary approach to quantum andreversible circuits synthesis.
+\newblock \emph{Artif. Intell. Rev.}, 20\penalty0 (3-4):\penalty0 361--417,
+  December 2003.
+\newblock ISSN 0269-2821.
+\newblock \doi{10.1023/B:AIRE.0000006605.86111.79}.
+\newblock URL \url{http://dx.doi.org/10.1023/B:AIRE.0000006605.86111.79}.
+
+\bibitem[Williams(1999)]{Williams1999}
+C.P. Williams.
+\newblock \emph{Quantum Computing and Quantum Communications: First NASA
+  International Conference, QCQC '98, Palm Springs, California, USA, February
+  17-20, 1998, Selected Papers}.
+\newblock Lecture Notes in Computer Science. Springer, 1999.
+\newblock ISBN 9783540655145.
+\newblock URL \url{http://books.google.ca/books?id=4QuAhlwj2icC}.
+
+\end{thebibliography}
