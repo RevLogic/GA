@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -22,6 +22,28 @@ Martin Lukac, Marek Perkowski, Hilton Goi, Mikhail Pivtoraiko, Chung~Hyo Yu,
 \newblock ISSN 0269-2821.
 \newblock \doi{10.1023/B:AIRE.0000006605.86111.79}.
 \newblock URL \url{http://dx.doi.org/10.1023/B:AIRE.0000006605.86111.79}.
+
+\bibitem[Nayeem and Rice(2011)]{Nayeem2011}
+N.~M. Nayeem and J.~E. Rice.
+\newblock A shared-cube approach to esop-based synthesis of reversible logic.
+\newblock \emph{Facta Universitatis Series: Electronics and Energetics},
+  24:\penalty0 385--403, 2011.
+\newblock ISSN 0353-3670.
+
+\bibitem[Rice and Nayeem(2011)]{Rice2011}
+J.E. Rice and N.~M. Nayeem.
+\newblock Ordering techniques for esop-based toffoli cascade generation.
+\newblock In \emph{Communications, Computers and Signal Processing (PacRim),
+  2011 IEEE Pacific Rim Conference on}, pages 274--279, Aug 2011.
+\newblock \doi{10.1109/PACRIM.2011.6032905}.
+
+\bibitem[Wille et~al.(2008)Wille, Gro{\ss}e, Teuber, Dueck, and
+  Drechsler]{RevLib}
+R.~Wille, D.~Gro{\ss}e, L.~Teuber, G.~W. Dueck, and R.~Drechsler.
+\newblock {RevLib}: An online resource for reversible functions and reversible
+  circuits.
+\newblock In \emph{{Int'l Symp. on Multi-Valued Logic}}, pages 220--225, 2008.
+\newblock {RevLib} is available at http://www.revlib.org.
 
 \bibitem[Williams(1999)]{Williams1999}
 C.P. Williams.

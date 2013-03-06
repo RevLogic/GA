@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2012.8.31)  6 MAR 2013 12:19
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2012.8.31)  6 MAR 2013 12:26
 entering extended mode
  %&-line parsing enabled.
 **main
@@ -537,13 +537,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
 ] (./main.aux (./introduction.aux)) ) 
 Here is how much of TeX's memory you used:
- 5168 strings out of 256216
- 65633 string characters out of 1917072
- 217698 words of memory out of 1500000
- 8351 multiletter control sequences out of 10000+200000
- 15151 words of font info for 72 fonts, out of 1200000 for 2000
+ 5175 strings out of 256216
+ 65697 string characters out of 1917072
+ 217841 words of memory out of 1500000
+ 8354 multiletter control sequences out of 10000+200000
+ 15309 words of font info for 74 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 46i,30n,40p,702b,1117s stack positions out of 5000i,500n,6000p,200000b,15000s
+ 46i,30n,40p,709b,1117s stack positions out of 5000i,500n,6000p,200000b,15000s
 </usr/share/texmf/fonts/type1/bluesky/cm/c
 mbx12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmex10.pfb></usr/share/texmf
 /fonts/type1/bluesky/cm/cmmi12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmm
@@ -553,7 +553,7 @@ ts/type1/bluesky/cm/cmr17.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr8.pfb
 pe1/bluesky/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmti12.pfb></
 usr/share/texmf/fonts/type1/bluesky/cm/cmtt12.pfb></usr/share/texmf/fonts/type1
 /bluesky/ams/msbm10.pfb>
-Output written on main.pdf (4 pages, 82243 bytes).
+Output written on main.pdf (4 pages, 85885 bytes).
 PDF statistics:
  63 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
