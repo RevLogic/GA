@@ -69,7 +69,7 @@ def fredkin(controls, targets):
         targets[0], targets[1] = targets[1], targets[0]
     return targets
 
-def apply(lines, f, controls, target):
+def apply(labels, lines, f, controls, target):
     """
     Apply an arbitrary function to a list of lines according to a list of controls and a target.
     
@@ -81,14 +81,14 @@ def apply(lines, f, controls, target):
     out: list of line states after the function has been performed
     """
     out = lines[:] # We must make a COPY of the list of lines... see issue #1
-
+    
     if f == swap:
         out[controls], out[target] = f(lines[controls], lines[target])
         return out
     try:
         out[target[0]], out[target[1]] = f([lines[i] for i in controls], [lines[target[0]], lines[target[1]]])
     except(TypeError):
-        out[target] = f([lines[i] for i in controls], lines[target])
+        out[labels.index(target)] = f([dict(zip(labels, lines))[i] for i in controls], dict(zip(labels, lines))[target])
     return out
 
 class Cascade:
@@ -100,11 +100,17 @@ class Cascade:
     >>> print c.run() # output the final state of the cascade
     """
     def __init__(self, lines, file_name=""):
-        self.lines = lines[:]
+        self.lines = []
+        self.labels = []
         self.gates = []
         self.controls = []
         self.targets = []
         self.cost = 0
+        
+        for key in lines:
+            self.lines.append(lines[key])
+            self.labels.append(key)
+        
         if file_name:
             if file_name[-4:] == "json":
                 self.load_json(file_name)
@@ -198,19 +204,24 @@ class Cascade:
         output_lines = self.lines[:]
         for i in range(len(self.gates)):
             # Apply the current function to all lines in the cascade
-            output_lines = apply(output_lines, self.gates[i], self.controls[i], self.targets[i])
+            output_lines = apply(self.labels, output_lines, self.gates[i], self.controls[i], self.targets[i])
             if debug:
                 print output_lines # Debugging only, call c.run(True) to see intermediate steps
         # Python quirk: we want to display all outputs as integers
         output_lines = [int(line) for line in output_lines]
-        return output_lines
+        return dict(zip(self.labels, output_lines))
 
     def replace_lines(self, lines):
         """
         Allows the user to replace the lines in the current circuit and re-run
         the cascade on the new line values.
         """
-        self.lines = lines[:] # Need to copy the values, see issue #1
+        new_lines = []
+        for key in lines:
+            new_lines.append(lines[key])
+        if len(new_lines) != len(self.lines):
+            raise ValueError
+        self.lines = new_lines[:]
 
     def calculate_quantum_cost(self, op, size, garbage):
         """
@@ -310,3 +321,5 @@ class Cascade:
             self.replace_lines(perm)
             out_lines = self.run()
             print lines, out_lines
+
+    
