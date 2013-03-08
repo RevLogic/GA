@@ -81,14 +81,15 @@ def apply(labels, lines, f, controls, target):
     out: list of line states after the function has been performed
     """
     out = lines[:] # We must make a COPY of the list of lines... see issue #1
-    
+    zipped = dict(zip(labels, lines))
+
     if f == swap:
         out[controls], out[target] = f(lines[controls], lines[target])
         return out
     try:
-        out[target[0]], out[target[1]] = f([lines[i] for i in controls], [lines[target[0]], lines[target[1]]])
+        out[labels.index(target[0])], out[labels.index(target[1])] = f([zipped[i] for i in controls], [zipped[target[0]], zipped[target[1]]])
     except(TypeError):
-        out[labels.index(target)] = f([dict(zip(labels, lines))[i] for i in controls], dict(zip(labels, lines))[target])
+        out[labels.index(target)] = f(zipped[i] for i in controls], zipped[target])
     return out
 
 class Cascade:
