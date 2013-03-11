@@ -1,9 +1,18 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{7}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Barenco et~al.(1995)Barenco, Bennett, Cleve, DiVincenzo, Margolus,
+  Shor, Sleator, Smolin, and Weinfurter]{Barenco1995}
+Adriano Barenco, Charles~H. Bennett, Richard Cleve, David~P. DiVincenzo, Norman
+  Margolus, Peter Shor, Tycho Sleator, John~A. Smolin, and Harald Weinfurter.
+\newblock Elementary gates for quantum computation.
+\newblock \emph{Phys. Rev. A}, 52:\penalty0 3457--3467, Nov 1995.
+\newblock \doi{10.1103/PhysRevA.52.3457}.
+\newblock URL \url{http://link.aps.org/doi/10.1103/PhysRevA.52.3457}.
 
 \bibitem[DiVincenzo and Smolin(1994)]{Smolin1994}
 David~P. DiVincenzo and J.~Smolin.
@@ -16,7 +25,7 @@ David~P. DiVincenzo and J.~Smolin.
   Kim, and Kim]{Lukac2003}
 Martin Lukac, Marek Perkowski, Hilton Goi, Mikhail Pivtoraiko, Chung~Hyo Yu,
   Kyusik Chung, Hyunkoo Jeech, Byung-Guk Kim, and Yong-Duk Kim.
-\newblock Evolutionary approach to quantum andreversible circuits synthesis.
+\newblock Evolutionary approach to quantum and reversible circuits synthesis.
 \newblock \emph{Artif. Intell. Rev.}, 20\penalty0 (3-4):\penalty0 361--417,
   December 2003.
 \newblock ISSN 0269-2821.

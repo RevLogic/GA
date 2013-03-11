@@ -18,6 +18,7 @@ def arg(n):
     """
     return int(sys.argv[n])
 
+
 def swap(target1, target2):
     """
     Defines an uncontrolled SWAP gate, which is analogous to
@@ -29,6 +30,7 @@ def swap(target1, target2):
     Returns: A list with the targets swapped
     """
     return (target2, target1)
+
 
 def toffoli(controls, target):    
     """
@@ -44,6 +46,7 @@ def toffoli(controls, target):
     """
     return operator.xor(target, all(controls))
 
+
 def inverter(controls, target):    
     """
     Defines an inverter based on a single control (CNOT).
@@ -54,6 +57,7 @@ def inverter(controls, target):
     if(len(controls) != 1):
         print "Warning: A control bit is being ignored!"
     return operator.not_(controls[0]) # We do this because in an inverter, there is ONLY one control
+
 
 def fredkin(controls, targets):        
     """
@@ -68,6 +72,7 @@ def fredkin(controls, targets):
     if(all(controls)):
         targets[0], targets[1] = targets[1], targets[0]
     return targets
+
 
 def apply(labels, lines, f, controls, target):
     """
@@ -87,10 +92,12 @@ def apply(labels, lines, f, controls, target):
         out[controls], out[target] = f(lines[controls], lines[target])
         return out
     try:
+        # TODO: REFACTOR THIS.
         out[labels.index(target[0])], out[labels.index(target[1])] = f([zipped[i] for i in controls], [zipped[target[0]], zipped[target[1]]])
-    except(TypeError):
-        out[labels.index(target)] = f(zipped[i] for i in controls], zipped[target])
+    except:
+        out[labels.index(target)] = f([zipped[i] for i in controls], zipped[target])
     return out
+
 
 class Cascade:
     """
@@ -117,6 +124,7 @@ class Cascade:
                 self.load_json(file_name)
             else:
                 self.read_pickle(file_name)
+
 
     def __iter__(self):
         """
@@ -146,12 +154,14 @@ class Cascade:
     def __len__(self):
         return len(self.gates) # Without loss of generality...
 
+
     def copy(self):
         """
         Factory method for creating a copy of the current object
         """
         return copy.deepcopy(self)
     
+
     # TODO: Define other built-ins such as __lt__ (less than) which allows us to compare
     # Cascades based on quantum cost, etc. Can be VERY useful in our GA!
     
@@ -169,6 +179,7 @@ class Cascade:
         # Jackie's method: count ALL inputs, not just controls; opposed to Maslov
         self.cost += self.calculate_quantum_cost(op, len(control) + 1, 0)
 
+
     def append(self, op, control, target):
         """
         Append the current function, control list, and target to the
@@ -177,6 +188,7 @@ class Cascade:
         """
         self.insert(op, control, target, len(self))
 
+
     def prepend(self, op, control, target):
         """
         Prepend the current function, control list, and target to the
@@ -184,6 +196,7 @@ class Cascade:
         NOTE: As with append, this does NOT evaluate the Cascade on the list
         """
         self.insert(op, control, target, 0)
+
 
     def remove(self, pos):
         """
@@ -195,6 +208,7 @@ class Cascade:
         del self.gates[pos]
         del self.controls[pos]
         del self.targets[pos]
+
 
     def run(self, debug=False):
         """
@@ -212,6 +226,7 @@ class Cascade:
         output_lines = [int(line) for line in output_lines]
         return dict(zip(self.labels, output_lines))
 
+
     def replace_lines(self, lines):
         """
         Allows the user to replace the lines in the current circuit and re-run
@@ -224,6 +239,7 @@ class Cascade:
             raise ValueError
         self.lines = new_lines[:]
 
+
     def calculate_quantum_cost(self, op, size, garbage):
         """
         Quantum cost calculation using the table provided by the quantum wizard Maslov:
@@ -231,7 +247,6 @@ class Cascade:
         """
         itemCost = 0
         
-
         toffoliCost = {(size, 0): 2**size - 3,
                        (size, 1): 24*size - 88,
                        (size, size-3): 12*size - 34}
@@ -254,14 +269,18 @@ class Cascade:
 
         return itemCost
 
+
     def quantum_cost(self):
         return self.cost
+
 
     def fitness_vector(self):
         return len(self), self.cost
 
+
     def width(self):
         return len(self.lines)
+
 
     def write_pickle(self, file_name):
         """
@@ -270,6 +289,7 @@ class Cascade:
         f = open(file_name, "w")
         pickle.dump([self.lines, self.gates, self.controls, self.targets, self.cost], f)
         f.close()
+
 
     def read_pickle(self, file_name):
         """
@@ -280,6 +300,7 @@ class Cascade:
         self.lines, self.gates, self.controls, self.targets, self.cost = pickle.load(f)
         f.close()
 
+
     def write_json(self, file_name):
         """
         Doesn't work just yet...
@@ -288,6 +309,7 @@ class Cascade:
         json_encoded = json.dumps([self.lines, self.gates, self.controls, self.targets, self.cost])
         json_encoded.close()
 
+
     def read_json(self, file_name):
         """
         Ditto.
@@ -295,6 +317,7 @@ class Cascade:
         json_encoded = open(file_name)
         self.lines, self.gates, self.controls, self.targets, self.cost = json.load(json_encoded)
         json_encoded.close()
+
 
     def permutation_matrix(self):
         if self.width() > 10:
@@ -315,6 +338,7 @@ class Cascade:
 
         for row in matrix:
             print " ".join([str(entry) for entry in row]) # Pretty print the matrix
+
 
     def truth_table(self):
         for perm in binary_iterator(self.width()):

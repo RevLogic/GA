@@ -3,44 +3,44 @@ The top-level auxiliary file: main.aux
 A level-1 auxiliary file: introduction.aux
 The style file: plainnat.bst
 Database file #1: bibliography.bib
-You've used 6 entries,
+You've used 7 entries,
             2774 wiz_defined-function locations,
-            654 strings with 6499 characters,
-and the built_in function-call counts, 3498 in all, are:
-= -- 331
-> -- 205
+            665 strings with 6870 characters,
+and the built_in function-call counts, 4339 in all, are:
+= -- 403
+> -- 289
 < -- 7
-+ -- 69
-- -- 63
-* -- 269
-:= -- 532
-add.period$ -- 28
-call.type$ -- 6
-change.case$ -- 32
-chr.to.int$ -- 6
-cite$ -- 12
-duplicate$ -- 150
-empty$ -- 264
-format.name$ -- 75
-if$ -- 754
++ -- 97
+- -- 90
+* -- 356
+:= -- 671
+add.period$ -- 33
+call.type$ -- 7
+change.case$ -- 43
+chr.to.int$ -- 7
+cite$ -- 14
+duplicate$ -- 170
+empty$ -- 305
+format.name$ -- 103
+if$ -- 920
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 7
-newline$ -- 47
-num.names$ -- 24
-pop$ -- 76
+missing$ -- 8
+newline$ -- 54
+num.names$ -- 28
+pop$ -- 96
 preamble$ -- 1
-purify$ -- 27
+purify$ -- 37
 quote$ -- 0
-skip$ -- 126
+skip$ -- 145
 stack$ -- 0
-substring$ -- 150
-swap$ -- 37
+substring$ -- 183
+swap$ -- 39
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 61
+type$ -- 72
 warning$ -- 0
-while$ -- 31
+while$ -- 36
 width$ -- 0
-write$ -- 103
+write$ -- 120

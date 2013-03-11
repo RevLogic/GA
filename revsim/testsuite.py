@@ -30,8 +30,8 @@ class TruthTables(unittest.TestCase):
 
     def test_toffoli_values(self):
         for line in self.TT_toffoli:
-            expected = list(self.TT_toffoli[line])
-            actual = apply(list(line), toffoli, [0,1], 2)
+            expected = self.TT_toffoli[line]
+            actual = apply(line, toffoli, [0,1], 2)
             self.assertEqual(expected, actual)
 
     def test_fredkin_values(self):

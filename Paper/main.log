@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2012.8.31)  6 MAR 2013 12:26
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2012.8.31)  11 MAR 2013 11:57
 entering extended mode
  %&-line parsing enabled.
 **main
@@ -502,60 +502,80 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 \openout2 = `introduction.aux'.
 
  (./introduction.tex
-Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+Package natbib Warning: Citation `Barenco1995' on page 2 undefined on input lin
+e 8.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--18
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 19--45
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 19--45
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
+Underfull \hbox (badness 10000) in paragraph at lines 71--72
 
  []
 
 [2
 
-] <xymatrix 8x3 1063> <xymatrix 8x3 1063>
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
+]
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
 
  []
 
-) [3] (./main.bbl) [4
 
-] (./main.aux (./introduction.aux)) ) 
+Underfull \hbox (badness 10000) in paragraph at lines 84--110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
+
+ []
+
+[3] <xymatrix 8x3 1063> <xymatrix 8x3 1063>
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
+
+ []
+
+) [4] (./main.bbl)
+
+Package natbib Warning: There were undefined citations.
+
+[5
+
+] (./main.aux (./introduction.aux)
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+) ) 
 Here is how much of TeX's memory you used:
- 5175 strings out of 256216
- 65697 string characters out of 1917072
- 217841 words of memory out of 1500000
- 8354 multiletter control sequences out of 10000+200000
- 15309 words of font info for 74 fonts, out of 1200000 for 2000
+ 5178 strings out of 256216
+ 65726 string characters out of 1917072
+ 217269 words of memory out of 1500000
+ 8355 multiletter control sequences out of 10000+200000
+ 15418 words of font info for 75 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 46i,30n,40p,709b,1117s stack positions out of 5000i,500n,6000p,200000b,15000s
-</usr/share/texmf/fonts/type1/bluesky/cm/c
-mbx12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmex10.pfb></usr/share/texmf
-/fonts/type1/bluesky/cm/cmmi12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmm
-i8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb></usr/share/texmf/fon
-ts/type1/bluesky/cm/cmr17.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr8.pfb
-></usr/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf/fonts/ty
-pe1/bluesky/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmti12.pfb></
-usr/share/texmf/fonts/type1/bluesky/cm/cmtt12.pfb></usr/share/texmf/fonts/type1
-/bluesky/ams/msbm10.pfb>
-Output written on main.pdf (4 pages, 85885 bytes).
+ 46i,30n,40p,816b,1117s stack positions out of 5000i,500n,6000p,200000b,15000s
+</usr/share/texmf/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/
+type1/bluesky/cm/cmex10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi12.pfb
+></usr/share/texmf/fonts/type1/bluesky/cm/cmmi6.pfb></usr/share/texmf/fonts/typ
+e1/bluesky/cm/cmmi8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb></us
+r/share/texmf/fonts/type1/bluesky/cm/cmr17.pfb></usr/share/texmf/fonts/type1/bl
+uesky/cm/cmr6.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr8.pfb></usr/share
+/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/bluesky/
+cm/cmsy6.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy8.pfb></usr/share/tex
+mf/fonts/type1/bluesky/cm/cmti12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/c
+mtt12.pfb></usr/share/texmf/fonts/type1/bluesky/ams/msbm10.pfb>
+Output written on main.pdf (5 pages, 102721 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
+ 78 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  13313 words of extra memory for PDF output out of 14400 (max. 10000000)
 
