@@ -1,0 +1,39 @@
+\newcommand{\tab}{\hspace*{2em}}
+
+\section*{Genetic Algorithm}
+Genetic Algorithm refers to a model introduced and investigated by John Holland (1975) and
+by students of Holland (DeJong, 1975). It is a search heuristic that mimics the process of natural 
+evolution \emph{[To add citation Book: An Introduction to Genetic Algorithms,Mitchell, Melanie (1996) ]}.
+It works by simulating nature's behavior of 'survival of 
+the fittest' to evolve towards a solution. The process of finding solution using GA is based on 
+natural selection, crossover and mutation. So basically, GA selects a population of strings, which 
+encodes the possible solution, combines them with crossover and mutation based on a fitness function 
+to produce individuals that are more fit and closer to the solution. 
+
+\subsection*{String Representation and Fitness Function}
+String representation and fitness functions are the two critical components of the GA. For better understanding let’s take an example of biological chromosomes. We can represent chromosomes as binary bit strings, where each gene is made up of a certain number of 0’s or 1’s. For example, we represent a chromosome of 6 genes, where each gene has 4 binary bits. 0001 1100 1001 1010 0110 0000 So far, that just looks like a bunch of zeros and ones, doesn’t it? Which doesn’t make a lot of sense, for this is where encoding comes in. We use encoding to represent information in the form of an arrangement of binary bits. For example, 0001 may represent the number 1, 0010 may represent the number 2 and 1010 may represent the ’+’ addition operator and so on. If we come up with a sensible encoding pattern, then our chromosomes will end up meaning something useful. So it is vital that we choose appropriate representation method and encoding pattern for our problem solution to ensure accuracy and quality of the result. 
+\\*\\*The fitness function allows us to rate how close an individual from the population is to the ideal solution. We use this function just before the crossover stage, so we can chose the two most suitable individuals to split and swap genes with. 
+
+\subsection*{Selection, Crossover and Mutation}
+As we mentioned earlier that the fitness function helps us chose the two fittest individuals in the population, however it’s not recommended to simply search through the population and pick the two fittest members. Instead, we use probability. We assign a higher probability of an individual being selected, proportional to that individual’s fitness. So essentially, if an individual is fitter according to our fitness function, then it has a higher chance of being chosen. By doing this, less fit individuals still have a chance of crossing over their genetic material, albeit less likely. 
+\\*\\*Crossover stage is similar to reproduction in nature. We combine genes from two individuals in the population to make 1 or more new individuals (children). We pick two individuals with highest fitness value from the population, split them at random generated point (depend on problem at hand), swap the fragments with each other and create the new generations. Consider following two binary strings, A: 1010 1100 0001 1000 1111 0000 and B: 1011 0011 1010 1111 0000 1110. Now using randomly chosen crossover point, we would get following crossover. 
+\\*
+\begin{center}
+A: 1010 1100 0001 X 1000 1111 0000
+\\*B: 1011 0011 1010 X 1111 0000 1110
+\vspace{2 mm}
+\\*Swapping fragments with A and B would produce two offspring AB and BA.
+\vspace{2 mm}
+\\*AB: 1010 1100 0001 1111 0000 1110
+\\*BA: 1011 0011 1010 1000 1111 0000
+\end{center}
+After crossover stage, we can apply the mutation. This operation can be optional. Certain times we can get the desire solution by just using crossover but often times mutation is used to provide some variation in population. Typically mutation rate is applied with less than 1% probability. There are several  ways to implement mutation in algorithm. One-way is to use probability (via a random number generator) to determine whether a single bit should mutate or not. If the bit is to be mutated, the algorithm can simply flip that bit. Another method would be to flip all the bits past that point in the chromosome rather than just flipping the single bit.
+\\*\\*Once the process of selection, crossover and mutation is complete, we can evaluate the fitness of new population. We repeat this process until our desire solution is found or simply we have reached the termination limit – that could be certain amount of generation has passed or computing power has reached. 
+\\*\\*{\bf Pseudo code for Genetic Algorithm}
+\\*\\*Choose initial population  
+\\*Evaluate each individual's fitness
+\\*Repeat until solution is found or enough generation has passed
+\\\tab Select best-ranking individuals according to it’s fitness to reproduce  
+	\\*\tab Apply crossover          
+	\\*\tab Apply mutation       
+	\\*\tab Evaluate each individual's fitness  

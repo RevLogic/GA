@@ -18,16 +18,6 @@ the ESOP product for that row, a $0$ is written if the negation $\bar{x}_{k}$ is
 product term for that cube. For each element, $f_{p}$, $p \in {1,2,...j}$, a 1 is written if that output variable contains 
 the product represented by the input portion of the list and a 0 otherwise. See figure \emph{draw figure 1} for 
 an example. \\
-
-Given an ESOP represented as a cube list in this way \emph{[To add citation: Fazel et al.]} proposed a 
-method of reversible logic synthesis that implements the function as a reversible circuit using only 
-Toffoli gates. In this method an empty cascade with $2i + j$ lines is created. Two input lines are given for every input 
-variable where one line corresponds to the variable $x_{k}$, the $2^{nd}$ line corresponds to its negation, $\bar{x}_{k}$, 
-and the remaining $j$ lines correspond to the output variables. For every output line $f_{p}$, a Toffoli gate 
-is placed with its target on line $f_{p}$ and a control for that target is placed on the input line $x_{k}$ if there was a 1
-in the cube for the corresponding variable, or on the negation line of $x_{k}$ if there was a 0 in the
-cube for $x_{k}$, see figure (draw figure 2). This method allows a cube-list to be quickly and efficiently transformed into a reversible cascade and allows for the synthesis of rather large functions. \\
-
 %\include figures (a) and (b) showing cube-list and circuit.
 \begin{figure}[h]
 \centering
@@ -57,3 +47,15 @@ cube for $x_{k}$, see figure (draw figure 2). This method allows a cube-list to 
  \end{tabular}
  \caption{A (a) the cube-list and (b) resulting circuit.}
 \end{figure}
+
+Given an ESOP represented as a cube list in this way \emph{[To add citation: Fazel et al.]} proposed a 
+method of reversible logic synthesis that implements the function as a reversible circuit using only 
+Toffoli gates. In this method an empty cascade with $2i + j$ lines is created. Two input lines are given for every input 
+variable where one line corresponds to the variable $x_{k}$, the $2^{nd}$ line corresponds to its negation, $\bar{x}_{k}$, 
+and the remaining $j$ lines correspond to the output variables. For every output line $f_{p}$, a Toffoli gate 
+is placed with its target on line $f_{p}$ and a control for that target is placed on the input line $x_{k}$ if there was a 1
+in the cube for the corresponding variable, or on the negation line of $x_{k}$ if there was a 0 in the
+cube for $x_{k}$, see figure (draw figure 2). This method allows a cube-list to be quickly and efficiently transformed 
+into a reversible cascade and allows for the synthesis of rather large functions. \\*
+
+
