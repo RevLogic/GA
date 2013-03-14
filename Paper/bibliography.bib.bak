@@ -832,6 +832,21 @@
 }
 
 @ARTICLE{Lukac2003,
+  author = {M. Lukac and M. Perkowski and H. Goi and M. Pivtoraiko and C. H.
+	Yu and K. Chung and H. Jee and B-G. Kim and Y-D. Kim},
+  title = {Evolutionary approach to Quantum and Reversible Circuits synthesis},
+  journal = {Artificial Intelligence Review, Special Issue on Artificial Intelligence
+	in Logic Design},
+  year = {2003},
+  volume = {20},
+  pages = {361--417},
+  number = {3--4},
+  month = dec,
+  owner = {lowryr4},
+  timestamp = {2013.03.13}
+}
+
+@ARTICLE{Lukac2003,
   author = {Lukac, Martin and Perkowski, Marek and Goi, Hilton and Pivtoraiko,
 	Mikhail and Yu, Chung Hyo and Chung, Kyusik and Jeech, Hyunkoo and
 	Kim, Byung-Guk and Kim, Yong-Duk},
