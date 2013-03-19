@@ -9,6 +9,9 @@ class Cascade:
     def __init__(self, lines):
         self.lines = lines.copy()
 
+    def __getitem__(self, key):
+        return self.gate_list(key)
+
     def __len__(self):
         return len(self.gate_list)
 
@@ -43,3 +46,4 @@ class Cascade:
         NOTE: As with append, this does NOT evaluate the Cascade on the list
         """
         self.insert(gate, 0)
+
