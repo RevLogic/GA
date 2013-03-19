@@ -1,6 +1,7 @@
 from revsim import *
 import unittest
 
+
 class TruthTables(unittest.TestCase):
     TT_toffoli = { (0,0,0): (0,0,0),
                    (0,0,1): (0,0,1),
@@ -122,6 +123,7 @@ class TestCascadeOperations(unittest.TestCase):
         self.assertRaises(IndexError, self.adder.remove, -1)
         self.assertRaises(IndexError, self.adder.remove, 100)
 
+
 class TestGateSanity(unittest.TestCase):
     def test_toffoli_sanity(self):
         """ Target must not be contained in controls """
@@ -149,6 +151,7 @@ class TestGateSanity(unittest.TestCase):
 
     def test_swap_sanity(self):
         pass
+
 
 class TestCascadeSanity(unittest.TestCase):
     c = Cascade([0,0,0])

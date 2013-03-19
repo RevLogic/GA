@@ -177,7 +177,7 @@ class Cascade:
         self.controls.insert(pos, control)
         self.targets.insert(pos, target)
         # Jackie's method: count ALL inputs, not just controls; opposed to Maslov
-        self.cost += self.calculate_quantum_cost(op, len(control) + 1, 0)
+        self.cost += self.calculate_quantum_cost(op, len(control) + 1, 0) # need to update for fredkin
 
 
     def append(self, op, control, target):
@@ -328,12 +328,12 @@ class Cascade:
 
         # Fill the matrix by encoding the lines of the truth table
         for perm in binary_iterator(self.width()):
-            lines = perm
+            lines = dict(zip(self.labels, perm))
             self.replace_lines(lines)
             out_lines = self.run()
             # INSERT MAGIC AND HAND-WAVING
-            row_index = int("".join([str(i) for i in lines]), 2)
-            column_index = int("".join([str(j) for j in out_lines]), 2)
+            row_index = int("".join([str(lines[i]) for i in lines]), 2)
+            column_index = int("".join([str(out_lines[j]) for j in out_lines]), 2)
             matrix[row_index][column_index] = 1
 
         for row in matrix:
