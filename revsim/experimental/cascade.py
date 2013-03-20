@@ -4,7 +4,7 @@ from lines import *
 class Cascade:
     gate_list = []
     lines = None
-
+    
     def __init__(self, lines):
         self.gate_list = []
         self.lines = lines.copy()
@@ -63,3 +63,8 @@ class Cascade:
             c.append(gate)
         return c
     
+    def truth_table(self):
+        pass
+
+    def fitness(self, garbage_lines, truth_table):
+        pass
