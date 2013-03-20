@@ -4,13 +4,12 @@ from lines import *
 class Cascade:
     gate_list = []
     lines = None
-    cost = 0
 
     def __init__(self, lines):
         self.lines = lines.copy()
 
     def __getitem__(self, key):
-        return self.gate_list(key)
+        return self.gate_list[key]
 
     def __len__(self):
         return len(self.gate_list)
@@ -47,3 +46,19 @@ class Cascade:
         """
         self.insert(gate, 0)
 
+    def cost(self):
+        quantum_cost = 0
+        for gate in self.gate_list:
+            quantum_cost += gate.cost()
+        return quantum_cost
+
+    def crossover(self, soulmate):
+        c = Cascade(self.lines)
+        print "len(self)/2 =", len(self)/2
+        print "len(soulmate)/2 =", len(soulmate)/2
+        for gate in self[0:len(self)/2]:
+            c.append(gate)
+        for gate in soulmate[len(soulmate)/2:len(soulmate)]:
+            c.append(gate)
+        return c
+    
