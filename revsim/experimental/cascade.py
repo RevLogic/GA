@@ -6,6 +6,7 @@ class Cascade:
     lines = None
 
     def __init__(self, lines):
+        self.gate_list = []
         self.lines = lines.copy()
 
     def __getitem__(self, key):
