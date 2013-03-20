@@ -29,7 +29,6 @@ class Cascade:
             raise ValueError
 
         self.gate_list.insert(pos, gate)
-        # self.cost += gate.quantum_cost() # TODO: make sure this works
 
     def append(self, gate):
         """
@@ -66,5 +65,5 @@ class Cascade:
     def truth_table(self):
         pass
 
-    def fitness(self, garbage_lines, truth_table):
+    def check_function(self, garbage_lines, target_truth_table):
         pass
