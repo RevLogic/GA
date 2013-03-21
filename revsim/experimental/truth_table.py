@@ -33,13 +33,15 @@ class TruthTable:
                     self.input_columns[key] = [ updated_lines[key] ]
                     self.output_columns[key] = [ int(run_result[key]) ]
                     
-    def get_columns(self):
+    def get_output_columns(self):
         return self.output_columns
 
     def get_input_columns(self):
         return self.input_columns
 
     def __str__(self):
+        # TODO: clean this up because it's pretty atrocious at the moment -CR
+        # also, make it look nicer, because right now printing makes it look like a pile of crap
         output_string = ""
         
         sorted_keys = [key for key in self.input_columns]

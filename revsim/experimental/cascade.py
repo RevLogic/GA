@@ -1,5 +1,6 @@
 from gates import *
 from lines import *
+from truth_table import *
 
 class Cascade:
     gate_list = []
@@ -73,6 +74,8 @@ class Cascade:
             quantum_cost += gate.cost()
         return quantum_cost
 
+    # TODO: This method should probably live in the GeneticAlgorithm class since it's
+    #       not really a Cascade method, but a computation that we do ON Cascades.
     def crossover(self, soulmate):
         c = Cascade(self.lines)
         print "len(self)/2 =", len(self)/2
@@ -83,11 +86,13 @@ class Cascade:
             c.append(gate)
         return c
     
+    # TODO: REMOVE THIS FUNCTIONALITY FROM THE CASCADE CLASS, these should be global functions...
     def truth_table(self):
-        pass
+        return TruthTable(self)
 
     def check_function(self, garbage_lines, target_truth_table):
         pass
+    # END TODO
 
     def width(self):
         return len(self.lines)
