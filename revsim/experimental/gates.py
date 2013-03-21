@@ -29,7 +29,9 @@ class SingleTargetGate(Gate):
     def __init__(self, controls, target):
         self.target = target
         self.controls = controls[:]
-        
+
+    def __len__(self):
+        return len(self.controls) + 1
     
 class MultipleTargetGate(Gate):
     controls = []
@@ -49,6 +51,8 @@ class SameTargetGate(Gate):
     def __init__(self, target):
         self.target = target
 
+    def __len__(self):
+        return 1
 
 class Toffoli(SingleTargetGate):
     def invert_target(self):
@@ -59,6 +63,24 @@ class Toffoli(SingleTargetGate):
             self.invert_target()
         return self.line_values
 
+    def cost(self):
+        size = len(self)
+
+        garbage = 0 # TODO: is this right?
+        toffoliCost = {(size, 0): 2**size - 3,
+                       (size, 1): 24*size - 88,
+                       (size, size-3): 12*size - 34}
+        
+        if size < 2:
+            return size
+        elif size == 3:
+            return 5
+        elif size > 1 and 0 <= garbage <= 1:
+            return toffoliCost[(size, garbage)]
+        elif size > 1 and garbage == size - 3:
+            return toffoliCost[(size, size-3)]
+
+        return 0
 
 class Swap(MultipleTargetGate):
     def operation(self):

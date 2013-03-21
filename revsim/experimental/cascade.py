@@ -12,13 +12,23 @@ class Cascade:
     def __getitem__(self, key):
         return self.gate_list[key]
 
+    def __setitem__(self, key, value):
+        self.gate_list[key] = value
+
     def __len__(self):
         return len(self.gate_list)
-
+    
+    def __eq__(self, cascade):
+        # TODO: Implement
+        return False
+    
     def run(self):
         for gate in self.gate_list:
             gate.eval(self.lines)
         return self.lines
+
+    def replace_lines(self, lines):
+        self.lines = lines.copy()
     
     def insert(self, gate, pos):
         """
@@ -67,3 +77,5 @@ class Cascade:
 
     def check_function(self, garbage_lines, target_truth_table):
         pass
+
+    

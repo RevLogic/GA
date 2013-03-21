@@ -34,3 +34,7 @@ print len(e)
 print c.run()
 print d.run()
 print e.run()
+
+print "C quantum cost:", c.cost()
+print "D quantum cost:", d.cost()
+print "E quantum cost:", e.cost()
