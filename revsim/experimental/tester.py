@@ -8,4 +8,4 @@ c.append(Toffoli(['a', 'b'], 'c'))
 print "C Truth Table:"
 
 t = TruthTable(c)
-t.print_table()
+print t

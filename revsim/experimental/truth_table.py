@@ -39,7 +39,9 @@ class TruthTable:
     def get_input_columns(self):
         return self.input_columns
 
-    def print_table(self):
+    def __str__(self):
+        output_string = ""
+        
         sorted_keys = [key for key in self.input_columns]
         sorted_keys.sort()
         
@@ -52,8 +54,8 @@ class TruthTable:
         for key in sorted_keys:
             output_keys += key
             
-        print input_keys+" | "+output_keys
-        print separator
+        output_string += input_keys+" | "+output_keys + "\n"
+        output_string += separator + "\n"
         
         for i in range(0, self.num_rows):
             output_row = ""
@@ -62,5 +64,7 @@ class TruthTable:
             output_row += " | "
             for key in sorted_keys:
                 output_row += str(self.output_columns[key][i])
-            print output_row
+            output_string += output_row + "\n"
+
+        return output_string
             
