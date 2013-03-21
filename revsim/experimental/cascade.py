@@ -30,8 +30,16 @@ class Cascade:
             gate.eval(self.lines)
         return self.lines
 
-    def replace_lines(self, lines):
-        self.lines = lines.copy()
+    def update_lines(self, lines):
+        # This function is now called update_lines because it doesn't
+        # really "replace" them in the conventional set. The values are
+        # still there, but we can change any ones we want
+        
+        # Merge current line set with existing line set
+        self.lines.update(lines)
+
+        # Make sure the constant lines stay constant
+        self.lines.update(self.constant_lines)
     
     def insert(self, gate, pos):
         """
@@ -87,3 +95,9 @@ class Cascade:
     def logical_width(self):
         return len(self.lines) - len(self.constant_lines)
     
+    def variable_line_labels(self):
+        variable_lines = []
+        for key in self.lines:
+            if not(key in self.constant_lines):
+                variable_lines.append(key)
+        return variable_lines

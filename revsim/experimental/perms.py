@@ -1,5 +1,3 @@
-from revsim import *
-
 """
 Binary iterator
 """
