@@ -1,3 +1,8 @@
+class GeneticAlgorithm:
+    pass
+
+
+
 def select_fitness(individuals):
     return individuals
 

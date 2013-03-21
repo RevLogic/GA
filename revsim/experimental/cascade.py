@@ -4,10 +4,13 @@ from lines import *
 class Cascade:
     gate_list = []
     lines = None
-    
-    def __init__(self, lines):
+    constant_lines = {}
+
+    def __init__(self, lines, constants=[]):
         self.gate_list = []
         self.lines = lines.copy()
+        for key in constants:
+            self.constant_lines[key] = self.lines[key]
 
     def __getitem__(self, key):
         return self.gate_list[key]
@@ -78,4 +81,9 @@ class Cascade:
     def check_function(self, garbage_lines, target_truth_table):
         pass
 
+    def width(self):
+        return len(self.lines)
+
+    def logical_width(self):
+        return len(self.lines) - len(self.constant_lines)
     
