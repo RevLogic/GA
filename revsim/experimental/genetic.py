@@ -10,14 +10,31 @@ class GeneticAlgorithm:
         self.max_population = 100
 
         self.individuals = []
+        self.lines = {}
 
         pass
     
-    def crossover(self, parent1, parent2):
-        pass
+    def crossover(self, parent_a, parent_b):
+        child_a = Cascade(self.lines)
+        child_b = Cascade(self.lines)
+        
+        # Construct first child. Half of A, half of B
+        for gate in parent_a[0:len(parent_a)/2]:
+            child_a.append(gate)
+        for gate in parent_b[len(parent_b)/2:len(parent_b)]:
+            child_a.append(gate)
+        
+        # Construct second child. Half of B, half of A
+        for gate in parent_b[0:len(parent_b)/2]:
+            child_b.append(gate)
+        for gate in parent_a[len(parent_a)/2:len(parent_a)]:
+            child_b.append(gate)
+        
+        return child_a, child_b
 
     def select_fitness(self):
         pass
+
 
 def main():
     init_lines = []
