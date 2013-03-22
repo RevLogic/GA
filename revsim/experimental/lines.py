@@ -1,5 +1,4 @@
 class Lines:
-    lines = {}
     def __init__(self, labels, values):
         if len(labels) != len(values):
             raise ValueError

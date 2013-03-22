@@ -1,17 +1,16 @@
 class GeneticAlgorithm:
-    current_threshold = 1
-    min_threshold = 0.01
-
-    current_generations = 0
-    max_generations = 1000
-
-    current_population = 10
-    max_population = 100
-
-    individuals = []
-
-
     def __init__(self, cascade):
+        self.current_threshold = 1
+        self.min_threshold = 0.01
+
+        self.current_generations = 0
+        self.max_generations = 1000
+
+        self.current_population = 10
+        self.max_population = 100
+
+        self.individuals = []
+
         pass
     
     def crossover(self, parent1, parent2):

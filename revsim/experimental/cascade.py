@@ -3,13 +3,10 @@ from lines import *
 from truth_table import *
 
 class Cascade:
-    gate_list = []
-    lines = None
-    constant_lines = {}
-
     def __init__(self, lines, constants=[]):
         self.gate_list = []
         self.lines = lines.copy()
+        self.constant_lines = {}
         for key in constants:
             self.constant_lines[key] = self.lines[key]
 
@@ -107,3 +104,6 @@ class Cascade:
                 variable_lines.append(key)
         variable_lines.sort()
         return variable_lines
+
+    def constant_line_values(self):
+        return self.constant_lines

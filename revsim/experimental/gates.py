@@ -3,7 +3,8 @@
 # Author: Chris Rabl
 
 class Gate:
-    line_values = {}
+    def __init__(self):
+        self.line_values = {}
     
     def __len__(self):
         return len(self.controls) + len(self.targets)
@@ -24,9 +25,6 @@ class Gate:
         pass
     
 class SingleTargetGate(Gate):
-    controls = []
-    target = ""
-
     def __init__(self, controls, target):
         self.target = target
         self.controls = controls[:]
@@ -35,9 +33,6 @@ class SingleTargetGate(Gate):
         return len(self.controls) + 1
     
 class MultipleTargetGate(Gate):
-    controls = []
-    targets = []
-
     def __init__(self, controls, targets):
         self.targets = targets[:]
         self.controls = controls[:]
@@ -47,8 +42,6 @@ class MultipleTargetGate(Gate):
         
 
 class SameTargetGate(Gate):
-    target = ""
-
     def __init__(self, target):
         self.target = target
 

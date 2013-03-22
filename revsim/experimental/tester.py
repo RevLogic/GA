@@ -11,10 +11,10 @@ t = TruthTable(c)
 print t
 
 
-d = Cascade(lines)
+d = Cascade(lines, ['a'])
 d.append(Fredkin(['a'], ['b', 'c']))
 
-print "Fredkin Truth Table:"
+print "Fredkin Truth Table (a = constant):"
 s = TruthTable(d)
 print s
 

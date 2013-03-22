@@ -2,16 +2,11 @@ from cascade import *
 from perms import *
 
 class TruthTable:
-    output_columns = {}
-    input_columns = {}
-    c = None
-    num_rows = 0
-
     def __init__(self, cascade):
         self.output_columns = {}
         self.input_columns = {}
-
         self.c = cascade
+        self.num_rows = 2**self.c.logical_width()
         self.calculate()
 
     def __eq__(self, other):
@@ -20,8 +15,8 @@ class TruthTable:
     def calculate(self):
         width = self.c.logical_width() # can be replaced with len(labels)
         labels = self.c.variable_line_labels()
-        self.num_rows = 2**width
-        
+        constant_lines = self.c.constant_line_values()
+
         perms = binary_iterator(width)
         for perm in perms:
             updated_lines = dict(zip(labels, perm))
@@ -29,11 +24,15 @@ class TruthTable:
 
             run_result = self.c.run()
             for key in run_result:
+                line_dict = updated_lines
+                if key in constant_lines:
+                    line_dict = constant_lines
                 try:
-                    self.input_columns[key].append(updated_lines[key])
+                    self.input_columns[key].append(int(line_dict[key]))
                     self.output_columns[key].append(int(run_result[key]))
                 except KeyError:
-                    self.input_columns[key] = [ updated_lines[key] ]
+                    # Create a new column for a key we haven't seen yet
+                    self.input_columns[key] = [ int(line_dict[key]) ]
                     self.output_columns[key] = [ int(run_result[key]) ]
                     
     def get_output_columns(self):
