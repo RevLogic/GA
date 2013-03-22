@@ -12,6 +12,11 @@ class TruthTable:
     def __eq__(self, other):
         return self.columns == other.get_columns()
 
+    def recalculate(self):
+        self.input_columns = {}
+        self.output_columns = {}
+        self.calculate()
+
     def calculate(self):
         width = self.c.logical_width() # can be replaced with len(labels)
         labels = self.c.variable_line_labels()
@@ -42,6 +47,7 @@ class TruthTable:
         return self.input_columns
 
     def __str__(self):
+        self.recalculate()
         # TODO: clean this up because it's pretty atrocious at the moment -CR
         # also, make it look nicer, because right now printing makes it look like a pile of crap
         output_string = ""

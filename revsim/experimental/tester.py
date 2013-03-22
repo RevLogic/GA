@@ -9,6 +9,9 @@ print "Toffoli Truth Table:"
 t = TruthTable(c)
 print t
 
+c.append(Toffoli(['a'], 'b'))
+print t
+
 
 d = Cascade(lines, ['a'])
 d.append(Fredkin(['a'], ['b', 'c']))
@@ -22,3 +25,4 @@ e = Cascade({'a': 0, 'b':0})
 e.append(Swap([], ['a', 'b']))
 v = TruthTable(e)
 print v
+

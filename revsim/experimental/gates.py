@@ -99,3 +99,5 @@ class Inverter(SameTargetGate):
     def operation(self):
         self.line_values[self.target] = not(self.line_values[self.target])
         return self.line_values
+
+        

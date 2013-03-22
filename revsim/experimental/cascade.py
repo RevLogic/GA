@@ -84,14 +84,6 @@ class Cascade:
         for gate in soulmate[len(soulmate)/2:len(soulmate)]:
             c.append(gate)
         return c
-    
-    # TODO: REMOVE THIS FUNCTIONALITY FROM THE CASCADE CLASS, these should be global functions...
-    def truth_table(self):
-        return TruthTable(self)
-
-    def check_function(self, garbage_lines, target_truth_table):
-        pass
-    # END TODO
 
     def width(self):
         return len(self.lines)
