@@ -105,4 +105,5 @@ class Cascade:
         for key in self.lines:
             if not(key in self.constant_lines):
                 variable_lines.append(key)
+        variable_lines.sort()
         return variable_lines
