@@ -2,9 +2,7 @@
 # RevSim beta
 # Author: Christopher Rabl
 
-from gates import *
-from lines import *
-from truth_table import *
+from revsim import *
 
 class Cascade:
     def __init__(self, lines, constants=[]):

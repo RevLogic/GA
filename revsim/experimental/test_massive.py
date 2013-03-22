@@ -1,5 +1,4 @@
-from cascade import *
-from truth_table import *
+from revsim import *
 
 lines = {'a':0, 'b':1, 'c':1, 'd':0, 'e':0, 'f':1, 'g':0, 'h':0, 'i':0, 'j':1}
 c = Cascade(lines)
