@@ -73,18 +73,6 @@ class Cascade:
             quantum_cost += gate.cost()
         return quantum_cost
 
-    # TODO: This method should probably live in the GeneticAlgorithm class since it's
-    #       not really a Cascade method, but a computation that we do ON Cascades.
-    def crossover(self, soulmate):
-        c = Cascade(self.lines)
-        print "len(self)/2 =", len(self)/2
-        print "len(soulmate)/2 =", len(soulmate)/2
-        for gate in self[0:len(self)/2]:
-            c.append(gate)
-        for gate in soulmate[len(soulmate)/2:len(soulmate)]:
-            c.append(gate)
-        return c
-
     def width(self):
         return len(self.lines)
 
