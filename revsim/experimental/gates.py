@@ -94,7 +94,7 @@ class Fredkin(MultipleTargetGate):
     def operation(self):
         if len(self.targets) != 2:
             raise ValueError
-        if all_controls():
+        if self.all_controls():
             self.swap(self.line_values[self.targets[0]], self.line_values[self.targets[1]])
         return self.line_values
 

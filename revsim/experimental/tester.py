@@ -9,3 +9,12 @@ print "C Truth Table:"
 
 t = TruthTable(c)
 print t
+
+
+d = Cascade(lines)
+d.append(Fredkin(['a'], ['b', 'c']))
+
+print "D Truth Table:"
+s = TruthTable(d)
+print s
+
