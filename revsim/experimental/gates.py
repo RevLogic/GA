@@ -38,7 +38,9 @@ class MultipleTargetGate(Gate):
         self.controls = controls[:]
 
     def swap(self, a, b):
-        self.line_values[self.targets[b]], self.line_values[self.targets[a]] = self.line_values[self.targets[a]], self.line_values[self.targets[b]]
+        val_a = self.targets[a]
+        val_b = self.targets[b]
+        self.line_values[val_b], self.line_values[val_a] = self.line_values[val_a], self.line_values[val_b]
         
 
 class SameTargetGate(Gate):

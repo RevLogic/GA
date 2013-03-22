@@ -1,3 +1,7 @@
+# Experimental Cascade class
+# RevSim beta
+# Author: Christopher Rabl
+
 from gates import *
 from lines import *
 from truth_table import *
