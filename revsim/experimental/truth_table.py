@@ -8,6 +8,9 @@ class TruthTable:
     num_rows = 0
 
     def __init__(self, cascade):
+        self.output_columns = {}
+        self.input_columns = {}
+
         self.c = cascade
         self.calculate()
 

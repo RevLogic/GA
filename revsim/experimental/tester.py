@@ -18,3 +18,7 @@ print "D Truth Table:"
 s = TruthTable(d)
 print s
 
+e = Cascade({'a': 0, 'b':0})
+e.append(Swap([], ['a', 'b']))
+v = TruthTable(e)
+print v

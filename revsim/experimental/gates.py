@@ -3,7 +3,6 @@
 # Author: Chris Rabl
 
 class Gate:
-    operation = None
     line_values = {}
     
     def __len__(self):
@@ -20,7 +19,9 @@ class Gate:
     
     def all_controls(self):
         return all([self.line_values[control] for control in self.controls])
-        
+
+    def operation(self):
+        pass
     
 class SingleTargetGate(Gate):
     controls = []
@@ -42,8 +43,8 @@ class MultipleTargetGate(Gate):
         self.controls = controls[:]
 
     def swap(self, a, b):
-        a, b = b, a
-
+        self.line_values[self.targets[b]], self.line_values[self.targets[a]] = self.line_values[self.targets[a]], self.line_values[self.targets[b]]
+        
 
 class SameTargetGate(Gate):
     target = ""
@@ -86,7 +87,7 @@ class Swap(MultipleTargetGate):
     def operation(self):
         if len(self.targets) != 2:
             raise ValueError        
-        self.swap(self.line_values[self.targets[0]], self.line_values[self.targets[1]])
+        self.swap(0, 1)
         return self.line_values
 
 
@@ -95,7 +96,7 @@ class Fredkin(MultipleTargetGate):
         if len(self.targets) != 2:
             raise ValueError
         if self.all_controls():
-            self.swap(self.line_values[self.targets[0]], self.line_values[self.targets[1]])
+            self.swap(0, 1)
         return self.line_values
 
 
