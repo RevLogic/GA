@@ -9,6 +9,7 @@ class Cascade:
         self.gate_list = []
         self.lines = lines.copy()
         self.constant_lines = {}
+        self.updated = False
         for key in constants:
             self.constant_lines[key] = self.lines[key]
 
@@ -26,6 +27,7 @@ class Cascade:
         return False
     
     def run(self):
+        self.updated = False
         for gate in self.gate_list:
             gate.eval(self.lines)
         return self.lines
@@ -50,6 +52,7 @@ class Cascade:
             raise ValueError
 
         self.gate_list.insert(pos, gate)
+        self.updated = True
 
     def append(self, gate):
         """
@@ -89,3 +92,6 @@ class Cascade:
 
     def constant_line_values(self):
         return self.constant_lines
+
+    def is_updated(self):
+        return self.updated

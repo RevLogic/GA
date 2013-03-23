@@ -47,8 +47,9 @@ class TruthTable:
         return self.input_columns
 
     def __str__(self):
-        self.recalculate() # Fixes issue #10
-
+        if(self.c.is_updated()):
+            self.recalculate() # Fixes issue #10
+        
         # TODO: clean this up because it's pretty atrocious at the moment -CR
         # also, make it look nicer, because right now printing makes it look like a pile of crap
         output_string = ""
