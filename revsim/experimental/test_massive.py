@@ -18,6 +18,11 @@ print "Length of cascade:", len(c)
 print "Quantum Cost:", c.cost()
 
 print "Creating truth table..."
-t = TruthTable(c)
+t = TruthTable(c, calc_stats=True)
 print t
 print "Done!"
+print ""
+print "  SUMMARY"
+print "--------------------------------------------"
+print "  Calculated", 2**len(lines), "cascade perms on"
+print " ", len(lines), "lines and", len(c), "gates in:"

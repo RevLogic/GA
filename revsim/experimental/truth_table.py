@@ -90,7 +90,7 @@ class TruthTable:
 
         if(self.calc_stats):
             summary = "\nCASCADE STATISTICS\n\n"
-            summary += "Passthrough cases: " + str(passthrough*100.0/self.num_rows) + "%\n"
+            summary += "Passthrough cases: " + str(passthrough*100.0/self.num_rows) + "\n"
             output_string += summary
         return output_string
             
