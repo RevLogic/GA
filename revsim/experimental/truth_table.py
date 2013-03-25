@@ -57,6 +57,8 @@ class TruthTable:
         sorted_keys = [key for key in self.input_columns]
         sorted_keys.sort()
         
+        passthrough = 0
+
         input_keys = ""
         output_keys = ""
         separator = "-" * (2*len(sorted_keys)+3)
@@ -71,12 +73,20 @@ class TruthTable:
         
         for i in range(0, self.num_rows):
             output_row = ""
+            in_str = ""
             for key in sorted_keys:
-                output_row += str(self.input_columns[key][i])
+                in_str += str(self.input_columns[key][i])
+            output_row += in_str
             output_row += " | "
+            out_str = ""
             for key in sorted_keys:
-                output_row += str(self.output_columns[key][i])
+                out_str += str(self.output_columns[key][i])
+            output_row += out_str
             output_string += output_row + "\n"
+            if(in_str == out_str):
+                passthrough += 1
 
+        summary = "\nPassthrough cases: " + str(passthrough*100.0/self.num_rows) + "%\n"
+        output_string += summary
         return output_string
             
