@@ -2,13 +2,14 @@ from cascade import *
 from perms import *
 
 class TruthTable:
-    def __init__(self, cascade):
+    def __init__(self, cascade, calc_stats=False):
         self.output_columns = {}
         self.input_columns = {}
         self.c = cascade
         self.num_rows = 2**self.c.logical_width()
         self.calculate()
-
+        self.calc_stats = calc_stats
+    
     def __eq__(self, other):
         return self.columns == other.get_columns()
 
@@ -83,10 +84,12 @@ class TruthTable:
                 out_str += str(self.output_columns[key][i])
             output_row += out_str
             output_string += output_row + "\n"
-            if(in_str == out_str):
-                passthrough += 1
+            if(self.calc_stats):
+                if(in_str == out_str):
+                    passthrough += 1
 
-        summary = "\nPassthrough cases: " + str(passthrough*100.0/self.num_rows) + "%\n"
-        output_string += summary
+        if(self.calc_stats):
+            summary = "\nPassthrough cases: " + str(passthrough*100.0/self.num_rows) + "%\n"
+            output_string += summary
         return output_string
             
