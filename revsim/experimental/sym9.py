@@ -87,7 +87,7 @@ print "Quantum Cost:", c.cost()
 
 print "Creating truth table..."
 t = TruthTable(c, calc_stats=True)
-print t
+#print t
 print "Done!"
 print ""
 print "  SUMMARY"
