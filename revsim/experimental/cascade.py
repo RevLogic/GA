@@ -26,6 +26,16 @@ class Cascade:
         # TODO: Implement
         return False
     
+    def remove(self, pos):
+        """                                                                     
+        Delete the gate, controls, and targets at the specified index from the  
+        gate-list, control-list, and target-list.                               
+        """
+        if pos < 0 or pos >= len(self) or len(self) == 0:
+            raise IndexError
+        del self.gate_list[pos]
+        self.updated = True
+
     def run(self):
         self.updated = False
         for gate in self.gate_list:
@@ -95,3 +105,6 @@ class Cascade:
 
     def is_updated(self):
         return self.updated
+
+    def reset_updated(self):
+        self.updated = False

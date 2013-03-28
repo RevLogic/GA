@@ -50,6 +50,7 @@ class TruthTable:
     def __str__(self):
         if(self.c.is_updated()):
             self.recalculate() # Fixes issue #10
+            self.c.reset_updated()
         
         # TODO: clean this up because it's pretty atrocious at the moment -CR
         # also, make it look nicer, because right now printing makes it look like a pile of crap
