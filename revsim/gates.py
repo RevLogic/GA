@@ -31,6 +31,13 @@ class SingleTargetGate(Gate):
 
     def __len__(self):
         return len(self.controls) + 1
+
+    def get_controls(self):
+        return sorted(self.controls)
+
+    def get_target(self):
+        return self.target
+
     
 class MultipleTargetGate(Gate):
     def __init__(self, controls, targets):

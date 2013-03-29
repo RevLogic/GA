@@ -100,6 +100,13 @@ class Cascade:
         variable_lines.sort()
         return variable_lines
 
+    def constant_line_labels(self):
+        constant_lines = []
+        for key in self.constant_lines:
+            constant_lines.append(key)
+        constant_lines.sort()
+        return constant_lines
+
     def constant_line_values(self):
         return self.constant_lines
 
