@@ -1,7 +1,6 @@
 from revsim import *
 import unittest
 
-
 class TruthTables(unittest.TestCase):
     TT_toffoli = { (0,0,0): (0,0,0),
                    (0,0,1): (0,0,1),
