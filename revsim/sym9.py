@@ -7,7 +7,7 @@ lines = {'x0':0,  'x1':0,  'x2':0,  'x3':0, 'x4':0,   'x5':0,
          'x18':0, 'x19':0, 'x20':0, 'x21':1, 'x22':0, 'x23':0, 
          'x24':1, 'x25':0, 'x26':0}
 
-c = Cascade(lines, sorted(lines.keys())[9:int(sys.argv[1])])
+c = Cascade(lines, sorted(lines.keys())[9:])
 """
 
     c.append(Toffoli(['d','e'], 'f'))
@@ -85,12 +85,4 @@ print c.run()
 print "Length of cascade:", len(c)
 print "Quantum Cost:", c.cost()
 
-print "Creating truth table..."
-t = TruthTable(c, calc_stats=True)
-#print t
-print "Done!"
-print ""
-print "  SUMMARY"
-print "--------------------------------------------"
-print "  Calculated", 2**c.logical_width(), "cascade perms on"
-print " ", len(lines), "lines and", len(c), "gates in:"
+c.cube_list(['x17'])

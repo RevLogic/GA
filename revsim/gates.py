@@ -57,6 +57,12 @@ class SameTargetGate(Gate):
     def __len__(self):
         return 1
 
+    def get_target(self):
+        return self.target
+
+    def get_controls(self):
+        return [self.target]
+
 class Toffoli(SingleTargetGate):
     def invert_target(self):
         self.line_values[self.target] = not(self.line_values[self.target])
