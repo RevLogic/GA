@@ -115,33 +115,3 @@ class Cascade:
 
     def reset_updated(self):
         self.updated = False
-
-    def cube_list(self, not_garbage):
-        # this code is horrible
-        cube_list = {}
-
-        for gate in self.gate_list:
-            for label in not_garbage:
-                if gate.get_target() == label:
-                    try:
-                        cube_list[tuple(gate.get_controls())].append(label)
-                    except KeyError:
-                        cube_list[tuple(gate.get_controls())] = [label]
-                        
-        # select all cubes shared by a given key
-        shared_key_values = {}
-        for key in cube_list:
-            if key[0] in not_garbage:
-                shared_key_values[key] = cube_list[key]
-        
-        for item in shared_key_values:
-            shared_key = item[0]
-            shared_value = shared_key_values[item]
-            for key in cube_list:
-                if shared_key in cube_list[key]:
-                    cube_list[key] += shared_value
-            del cube_list[item]
-
-        for key in cube_list:
-            print key, sorted(cube_list[key])
-    
