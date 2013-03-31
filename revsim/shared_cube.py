@@ -15,12 +15,13 @@ class SharedCube:
         cube_list = {}
 
         for gate in self.c:
-            for label in self.not_garbage:
-                if gate.get_target() == label:
-                    try:
-                        cube_list[tuple(gate.get_controls())].append(label)
-                    except KeyError:
-                        cube_list[tuple(gate.get_controls())] = [label]
+            target = gate.get_target()
+            if target in self.not_garbage:
+                controls = tuple(gate.get_controls())
+                try:
+                    cube_list[controls].append(target)
+                except KeyError:
+                    cube_list[controls] = [target]
                         
         # select all cubes shared by a given key
         shared_key_values = {}
