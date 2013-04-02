@@ -11,7 +11,8 @@ class TruthTable:
         self.calc_stats = calc_stats
     
     def __eq__(self, other):
-        return self.columns == other.get_columns()
+        self.__update_if_required()
+        return self.output_columns == other.get_output_columns()
 
     def recalculate(self):
         self.input_columns = {}
@@ -42,15 +43,20 @@ class TruthTable:
                     self.output_columns[key] = [ int(run_result[key]) ]
                     
     def get_output_columns(self):
+        self.__update_if_required()
         return self.output_columns
 
     def get_input_columns(self):
+        self.__update_if_required()
         return self.input_columns
 
-    def __str__(self):
-        if(self.c.is_updated()):
-            self.recalculate() # Fixes issue #10
+    def __update_if_required(self):
+        if self.c.is_updated():
+            self.recalculate()
             self.c.reset_updated()
+
+    def __str__(self):
+        self.__update_if_required()
         
         # TODO: clean this up because it's pretty atrocious at the moment -CR
         # also, make it look nicer, because right now printing makes it look like a pile of crap
@@ -89,7 +95,7 @@ class TruthTable:
                 if(in_str == out_str):
                     passthrough += 1
 
-        if(self.calc_stats):
+        if self.calc_stats:
             summary = "\nCASCADE STATISTICS\n\n"
             summary += "Passthrough cases: " + str(passthrough*100.0/self.num_rows) + "\n"
             output_string += summary

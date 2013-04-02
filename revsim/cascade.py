@@ -3,6 +3,7 @@
 # Author: Christopher Rabl
 
 from revsim import *
+import copy
 
 class Cascade:
     def __init__(self, lines, constants=[]):
@@ -115,3 +116,6 @@ class Cascade:
 
     def reset_updated(self):
         self.updated = False
+
+    def copy(self):
+        return copy.deepcopy(self)
