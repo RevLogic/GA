@@ -40,10 +40,24 @@ c.append( Toffoli(['a'], 's') )
 c.append( Toffoli(['b'], 's') )
 
 
+# Another thing we can do is remove gates from any point in the circuit, we do
+# this by calling Cascade.remove(pos) where pos is the index of the gate in the
+# Cascade. Note that Cascades are zero-indexed:
+c.remove(1) # Will remove Toffoli(['a'], 's')
+
+
+# We can also insert gates at any point in our Cascade. Since we still want to
+# create an adder, let's replace the gate that we just removed (insert at index 1):
+c.insert( Toffoli(['a'], 's'), 1 ) 
+
+
 # Once we have our circuit defined, we can do a lot of cool things with it.
 # The first thing that we get for free with our Cascade class is quantum cost
 # calculation. We can get the cost by doing:
 print "Quantum Cost:", c.cost()
+# Additionally, if we remove or insert gates from/into our Cascade, this cost
+# is updated automatically, so all we need to do is call c.cost() to retrieve
+# the new value.
 
 
 # We can also count the number of gates in our circuit by using Python's
@@ -64,3 +78,5 @@ print "Number of Variable Lines:", c.logical_width()
 # This will output the gate specification in the Revlib format:
 for gate in c:
     print gate
+
+
