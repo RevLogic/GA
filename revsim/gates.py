@@ -91,6 +91,14 @@ class Toffoli(SingleTargetGate):
 
         return 0
 
+    def __str__(self):
+        out = "t"
+        out += str(len(self)) + " "
+        for control in self.controls:
+            out += control + " "
+        out += self.target
+        return out
+
 class Swap(MultipleTargetGate):
     def operation(self):
         if len(self.targets) != 2:
