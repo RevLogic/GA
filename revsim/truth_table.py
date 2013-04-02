@@ -14,6 +14,13 @@ class TruthTable:
         self.__update_if_required()
         return self.output_columns == other.get_output_columns()
 
+    def compare_columns(self, other, col_list):
+        self.__update_if_required()
+        for col in col_list:
+            if self.output_columns[col] != other.get_output_columns()[col]:
+                return False
+        return True
+
     def recalculate(self):
         self.input_columns = {}
         self.output_columns = {}

@@ -128,3 +128,24 @@ else:
     print "Not the same"
            
 
+print ""
+# We can also compare individual columns of the truth tables to see if they are the same.
+# This is useful when comparing reversible circuits that have garbage outputs. Let's go ahead
+# and remove the last gate in the 'd' cascade again. If we look at it's truth table now,
+# we can see that only the 's' column changes. So let's only compare on the 'c' column:
+d.remove(2)
+
+c_same = t.compare_columns(s, ['c'])
+if c_same:
+    print "Column c is the same"
+else:
+    print "Column c is not the same"
+
+
+# If we compare on the 's' column now, we should get the opposite response:
+s_same = t.compare_columns(s, ['s'])
+if s_same:
+    print "Column s is the same"
+else:
+    print "Column s is not the same"
+
