@@ -118,9 +118,9 @@ else:
     print "Not the same"
 
 
-# We can add that gate back it, but this time we will append it to the cascade rather than
+# We can add that gate back in, but this time we will append it to the cascade rather than
 # inserting it at its original position. Note that the Cascades will not have the same gate
-# ordering, but their truth tables will be the same:
+# ordering, but their truth tables will be the same (though this is not always the case):
 d.append( Toffoli(['a'], 's') )
 if s == t:
     print "Same"
