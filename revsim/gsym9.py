@@ -8,6 +8,9 @@ from revsim import *
 import random
 
 
+max_cascade_length = 30
+
+
 in_lines = {'x0':0,  'x1':0,  'x2':0,  'x3':0, 'x4':0,   'x5':0, 
          'x6':0,  'x7':0,  'x8':0,  'x9':0, 'x10': 0, 'x11':0,
          'x12':0, 'x13':0, 'x14':0, 'x15':0, 'x16':0, 'x17':0,
@@ -122,7 +125,7 @@ def fitness(c, goal, columns):
 
 new_lines = {'x0':0, 'x1':0, 'x2':0, 'x3':0, 'x4':0, 'x5':0, 'x6':0, 'x7':0, 'x8':0, 'x16':0}
 c = Cascade(new_lines, ['x16'])
-for i in range(0, 20):
+for i in range(0, max_cascade_length):
     c.append(random_toffoli(new_lines))
 
 
@@ -146,7 +149,7 @@ while (current_fitness < threshold) and (gen_count < max_generations):
     if new_fitness > current_fitness:
         c = d.copy()
 
-    print "Generation:",gen_count
+    print "Generation:",gen_count, "\t\tFitness:", current_fitness
     gen_count += 1
 
 tt = TruthTable(c)
