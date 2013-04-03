@@ -9,16 +9,21 @@ class NaiveGA:
     def __init__(self, spec, non_garbage_lines):
         self.threshold = 0.9
 
-        self.init_population_size = 1000
+        self.init_population_size = 500
         self.max_generations = 10000
-        self.max_gatecount_deviation = 15
+        self.max_gatecount_deviation = 2
 
         self.population = []
         self.max_population_size = 50
+
         self.spec_length = len(spec)
-        self.lines = spec.lines
-        self.constant_lines = spec.constant_line_labels()
-        
+        #self.lines = spec.lines
+        self.lines = dict(zip(spec.variable_line_labels(), [0] * spec.logical_width()))
+        for line in non_garbage_lines:
+            self.lines[line] = 0
+        #self.constant_lines = spec.constant_line_labels()
+        self.constant_lines = non_garbage_lines
+
         self.goal = TruthTable(spec)
         self.non_garbage = non_garbage_lines
     
@@ -75,7 +80,7 @@ class NaiveGA:
         width = len(index_pool)
         random.shuffle(index_pool)
         
-        max_index = random.randint(1, width-1)
+        max_index = random.randint(1, min(4, width-1))
         control_list = index_pool[0:max_index]
         target = index_pool[max_index]
         
@@ -132,21 +137,3 @@ class NaiveGA:
                 print "Gate Count:", len(best)
             gen_count += 1
 
-        
-
-"""
-def main():
-    lines = {'a':0, 'b':0, 'c':0, 's':0}
-    ideal = Cascade(lines, ['c', 's'])
-    ideal.append(Toffoli(['a', 'b'], 'c'))
-    ideal.append(Toffoli(['a'], 's'))
-    ideal.append(Toffoli(['b'], 's'))
-
-    # Generate the initial population
-    ga = NaiveGA(ideal, ['c', 's'])
-    ga.run()
-
-
-if __name__ == "__main__":
-    main()
-"""

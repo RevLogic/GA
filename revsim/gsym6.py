@@ -32,8 +32,8 @@ ideal.append(Toffoli(['s2'], 's5'))
 ideal.append(Toffoli(['s4'], 's5'))
 
 ga = NaiveGA(ideal, ['s5'])
-ga.init_population_size = 500
+ga.init_population_size = 5000
 ga.max_generations = 10000
-ga.max_gatecount_deviation = 10
-ga.max_population_size = 50
+ga.max_gatecount_deviation = 20
+ga.max_population_size = 20
 ga.run()
