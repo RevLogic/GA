@@ -21,6 +21,18 @@ class TruthTable:
                 return False
         return True
 
+    def fuzzy_compare_columns(self, other, col_list):
+        self.__update_if_required()
+        same = 0
+        length = 0
+        for col in col_list:
+            col1 = self.output_columns[col]
+            col2 = other.get_output_columns()[col]
+            length = len(col1)
+            for i in range(0, length):
+                same += int(col1[i] == col2[i])
+        return (float(same) / float(length*len(col_list)))
+
     def recalculate(self):
         self.input_columns = {}
         self.output_columns = {}
