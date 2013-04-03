@@ -98,8 +98,7 @@ while (current_fitness < threshold) and (gen_count < max_generations):
     tt = TruthTable(c)
     current_fitness = fitness(tt, spec, non_garbage_lines)
     d = mutate(c, new_lines)
-    #d = mutate(d, new_lines)
-    #d = mutate(d, new_lines)
+
     new_tt = TruthTable(d)
     new_fitness = fitness(new_tt, spec, non_garbage_lines)
 

@@ -6,17 +6,13 @@ import random
 
 class NaiveGA:
     def __init__(self, spec):
-        self.current_threshold = 1
-        self.min_threshold = 0.01
+        self.threshold = 0.9
 
-        self.current_generations = 0
         self.max_generations = 1000
 
-        self.current_population = 10
-        self.max_population = 100
-
-        self.individuals = []
-        self.lines = {}
+        self.population = []
+        self.spec_length = len(spec)
+        self.lines = spec.lines
 
         self.goal = TruthTable(spec)
         pass
@@ -86,17 +82,43 @@ class NaiveGA:
     def fitness(c, goal, columns):
         return c.fuzzy_compare_columns(goal, columns)
 
-    def select_fitness(self):
-        pass
+
+    def run(self):
+        current_fitness = 0.0
+        gen_count = 0
+
+        non_garbage_lines = ['c', 's']
+
+        # Generate initial population
+        
+        while (current_fitness < self.threshold) and (gen_count < self.max_generations):
+            tt = TruthTable(c)
+            current_fitness = fitness(tt, spec, non_garbage_lines)
+            d = mutate(c, new_lines)
+            
+            new_tt = TruthTable(d)
+            new_fitness = fitness(new_tt, spec, non_garbage_lines)
+
+            if new_fitness > current_fitness:
+                print "Generation:",gen_count, "\t\tFitness:", current_fitness, "\t\tCost Decrease?", (d.cost < c.cost)
+                c = d.copy()
+            gen_count += 1
 
 
 def main():
-    init_lines = []
+    lines = {'a':0, 'b':0, 'c':0, 's':0}
+    ideal = Cascade(in_lines, ['c', 's'])
+    ideal.append(Toffoli(['a', 'b'], 'c'))
+    ideal.append(Toffoli(['a'], 's'))
+    ideal.append(Toffoli(['b'], 's'))
 
     # Generate the initial population
     for i in range(0, current_population):
         c = Cascade.random(lines)
         individuals.append(c)
 
-    while (current_threshold > min_threshold) and (current_generations > max_generations):
-        individuals = select_fitness(individuals)
+    ga.run()
+
+
+if __name__ == "__main__":
+    main()
