@@ -9,11 +9,12 @@ class NaiveGA:
     def __init__(self, spec, non_garbage_lines):
         self.threshold = 0.9
 
-        self.init_population_size = 100
+        self.init_population_size = 1000
         self.max_generations = 10000
-        self.max_gatecount_deviation = 10
+        self.max_gatecount_deviation = 15
 
         self.population = []
+        self.max_population_size = 50
         self.spec_length = len(spec)
         self.lines = spec.lines
         self.constant_lines = spec.constant_line_labels()
@@ -85,17 +86,28 @@ class NaiveGA:
         return c.fuzzy_compare_columns(self.goal, self.non_garbage)
 
 
+    def generate_population(self, pop_size):
+        self.population = []
+        for i in xrange(0, pop_size):
+            c_length = random.randint(2, self.spec_length+self.max_gatecount_deviation)
+            self.population.append(Cascade(self.lines, self.constant_lines))
+            for j in xrange(1, c_length):
+                self.population[i].append(self.random_toffoli())
+    
+
     def run(self):
+        print "GA Parameters"
+        print "Initial Population Count:", self.init_population_size
+        print "Maximum Number of Generations:", self.max_generations
+        print "Maximum Gate Count Deviation:", self.max_gatecount_deviation
+        print ""
+        
         current_fitness = 0.0
         gen_count = 0
 
         non_garbage_lines = self.non_garbage
         # Generate initial population
-        for i in xrange(0, self.init_population_size):
-            c_length = random.randint(2, self.spec_length+self.max_gatecount_deviation)
-            self.population.append(Cascade(self.lines, self.constant_lines))
-            for j in xrange(1, c_length):
-                self.population[i].append(self.random_toffoli())
+        self.generate_population(self.init_population_size)
         
         while (current_fitness < self.threshold) and (gen_count < self.max_generations):
             mutate_index = random.randint(0, len(self.population)-1)
@@ -108,7 +120,8 @@ class NaiveGA:
 
             if new_fitness > current_fitness:
                 print "Generation:",gen_count, "\t\tFitness:", new_fitness
-                self.population = self.crossover(top_two[0][1], top_two[1][1]) + self.population[0:1]
+                self.generate_population(self.max_population_size) # Regenerate random population
+                self.population += self.crossover(top_two[0][1], top_two[1][1])
                 current_fitness = new_fitness
         
             if (gen_count == self.max_generations - 1) or (current_fitness == 1.0):
@@ -121,7 +134,7 @@ class NaiveGA:
 
         
 
-
+"""
 def main():
     lines = {'a':0, 'b':0, 'c':0, 's':0}
     ideal = Cascade(lines, ['c', 's'])
@@ -136,3 +149,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+"""
