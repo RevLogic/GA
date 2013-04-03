@@ -17,7 +17,8 @@ lines = {'a':0, 'b':0, 'c':0, 's':0}
 # The second parameter that we pass into our cascade defines the list of
 # constant inputs (in this case, the 'c' and 's' lines should always
 # start out as being 0 (or whatever their initial value in the "lines"
-# dictionary were)
+# dictionary were). If all of the lines in the circuit are variable
+# (i.e. there are no constant lines), then this list is omitted.
 c = Cascade( lines, ['c', 's'] )
 
 
