@@ -29,7 +29,7 @@ class TruthTable:
             col1 = self.output_columns[col]
             col2 = other.get_output_columns()[col]
             length = len(col1)
-            for i in range(0, length):
+            for i in xrange(0, length):
                 same += int(col1[i] == col2[i])
         return (float(same) / float(length*len(col_list)))
 

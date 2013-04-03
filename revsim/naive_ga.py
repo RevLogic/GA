@@ -2,29 +2,33 @@
 # Naive Genetic Algorithm with Limited Crossover
 # Chris Rabl
 
+from revsim import *
 import random
 
 class NaiveGA:
-    def __init__(self, spec):
+    def __init__(self, spec, non_garbage_lines):
         self.threshold = 0.9
 
-        self.max_generations = 1000
+        self.init_population_size = 10000
+        self.max_generations = 20000
+        self.max_gatecount_deviation = 10
 
         self.population = []
         self.spec_length = len(spec)
         self.lines = spec.lines
-
+        self.constant_lines = spec.constant_line_labels()
+        
         self.goal = TruthTable(spec)
-        pass
+        self.non_garbage = non_garbage_lines
     
 
     def crossover(self, parent_a, parent_b):
         children = []
         # Need to append because otherwise we refer to the same Cascade instance!!!
-        children.append(Cascade(self.lines))
-        children.append(Cascade(self.lines))
-        children.append(Cascade(self.lines))
-        children.append(Cascade(self.lines))
+        children.append(Cascade(self.lines, self.constant_lines))
+        children.append(Cascade(self.lines, self.constant_lines))
+        children.append(Cascade(self.lines, self.constant_lines))
+        children.append(Cascade(self.lines, self.constant_lines))
 
         # TODO: Are there better ways to do crossover?
 
@@ -56,15 +60,13 @@ class NaiveGA:
 
 
     def mutate(self, c):
-        d = c.copy()
-        i = len(d)-1
+        i = len(c)-1
         index = random.randint(0, i)
-        d.remove(index)
+        c.remove(index)
         if index == i:
-            d.append(random_toffoli(self.lines))
+            c.append(self.random_toffoli())
         else:
-            d.insert(random_toffoli(self.lines), index)
-        return d
+            c.insert(self.random_toffoli(), index)
 
 
     def random_toffoli(self):
@@ -79,44 +81,56 @@ class NaiveGA:
         return Toffoli(control_list, target)
 
 
-    def fitness(c, goal, columns):
-        return c.fuzzy_compare_columns(goal, columns)
+    def fitness(self, c):
+        return c.fuzzy_compare_columns(self.goal, self.non_garbage)
 
 
     def run(self):
         current_fitness = 0.0
         gen_count = 0
 
-        non_garbage_lines = ['c', 's']
-
+        non_garbage_lines = self.non_garbage
         # Generate initial population
+        for i in xrange(0, self.init_population_size):
+            c_length = random.randint(2, self.spec_length+self.max_gatecount_deviation)
+            self.population.append(Cascade(self.lines, self.constant_lines))
+            for j in xrange(1, c_length):
+                self.population[i].append(self.random_toffoli())
         
         while (current_fitness < self.threshold) and (gen_count < self.max_generations):
-            tt = TruthTable(c)
-            current_fitness = fitness(tt, spec, non_garbage_lines)
-            d = mutate(c, new_lines)
-            
-            new_tt = TruthTable(d)
-            new_fitness = fitness(new_tt, spec, non_garbage_lines)
+            mutate_index = random.randint(0, len(self.population)-1)
+            self.mutate(self.population[mutate_index])
+    
+            fits = [(self.fitness(TruthTable(c)), c) for c in self.population]
+            fits.sort()
+            top_two = fits[-2:]
+            new_fitness = top_two[1][0]
 
             if new_fitness > current_fitness:
-                print "Generation:",gen_count, "\t\tFitness:", current_fitness, "\t\tCost Decrease?", (d.cost < c.cost)
-                c = d.copy()
+                print "Generation:",gen_count, "\t\tFitness:", new_fitness
+                self.population = self.crossover(top_two[0][1], top_two[1][1])
+                current_fitness = new_fitness
+        
+            if (gen_count == self.max_generations - 1) or (current_fitness == 1.0):
+                best = top_two[1][1]
+                for gate in best:
+                    print gate
+                print "Quantum Cost:", best.cost()
+                print "Gate Count:", len(best)
             gen_count += 1
+
+        
 
 
 def main():
     lines = {'a':0, 'b':0, 'c':0, 's':0}
-    ideal = Cascade(in_lines, ['c', 's'])
+    ideal = Cascade(lines, ['c', 's'])
     ideal.append(Toffoli(['a', 'b'], 'c'))
     ideal.append(Toffoli(['a'], 's'))
     ideal.append(Toffoli(['b'], 's'))
 
     # Generate the initial population
-    for i in range(0, current_population):
-        c = Cascade.random(lines)
-        individuals.append(c)
-
+    ga = NaiveGA(ideal, ['c', 's'])
     ga.run()
 
 
