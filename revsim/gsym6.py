@@ -6,9 +6,10 @@
 
 from revsim import *
 import random
+import sys
 
-max_generations = 10000
-max_cascade_length = 40
+max_generations = int(sys.argv[1])
+max_cascade_length = int(sys.argv[2])
 
 
 in_lines = {'x1':0,  'x2':0, 'x3':0, 'x4':0, 'x5':0, 
@@ -46,21 +47,31 @@ def random_toffoli(lines):
     # Experiment to see if "smaller" toffoli gates are better
     max_index = random.randint(1, min(4, width-1)) 
     control_list = index_pool[0:max_index]
-    #target = index_pool[max_index]
-    target = 's5' # test to see if we use only one target
+    target = index_pool[max_index]
+    #target = 's5' # test to see if we use only one target
 
     return Toffoli(control_list, target)
 
 
 def mutate(c, lines):
     d = c.copy()
-    i = len(d)-1
-    index = random.randint(0, i)
-    d.remove(index)
-    if index == i:
+    
+    choice = random.randint(1,5)
+
+    if choice == 1:
+        d.remove(random.randint(0,len(d)-1))
+    elif choice == 2:
         d.append(random_toffoli(lines))
+        pass
     else:
-        d.insert(random_toffoli(lines), index)
+        i = len(d)-1
+        index = random.randint(0, i)
+        d.remove(index)
+        if index == i:
+            d.append(random_toffoli(lines))
+        else:
+            d.insert(random_toffoli(lines), index)
+
     return d
 
 
@@ -78,7 +89,7 @@ for i in range(0, max_cascade_length):
 
 
 current_fitness = 0.0
-threshold = 0.9
+threshold = 1.0
 
 gen_count = 0
 non_garbage_lines = ['s5']
@@ -87,8 +98,8 @@ while (current_fitness < threshold) and (gen_count < max_generations):
     tt = TruthTable(c)
     current_fitness = fitness(tt, spec, non_garbage_lines)
     d = mutate(c, new_lines)
-    d = mutate(d, new_lines)
-    d = mutate(d, new_lines)
+    #d = mutate(d, new_lines)
+    #d = mutate(d, new_lines)
     new_tt = TruthTable(d)
     new_fitness = fitness(new_tt, spec, non_garbage_lines)
 
@@ -105,4 +116,5 @@ print "Whose circuit spec is:"
 for gate in c:
     print gate
 
+print "Gate count:", len(c)
 print "Quantum cost:", c.cost()

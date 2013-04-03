@@ -49,7 +49,7 @@ def fitness(c, goal, columns):
 
     
 c = Cascade(in_lines, ['c', 's'])
-for i in range(0, 4):
+for i in range(0, 3):
     c.append(random_toffoli(in_lines))
 
 
