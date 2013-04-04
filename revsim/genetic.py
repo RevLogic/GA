@@ -1,48 +1,90 @@
+# Revsim
+# Genetic Algorithm Class
+# For developing GAs that follow a given template with crossover
+# and mutation
+
+from revsim import *
+
 class GeneticAlgorithm:
-    def __init__(self, cascade):
-        self.current_threshold = 1
-        self.min_threshold = 0.01
+    def __init__(self, spec, non_garbage_lines):
+        """
+        Perform initialization on all GA parameters. These may be set by accessing the
+        member variables directly before calling GeneticAlgorithm.run(). The default values
+        will almost certainly not work in the average case.
+        """
+        self.threshold = 0.9
+        self.init_population_size = 500
+        self.max_generations = 10000
+        self.max_gatecount_deviation = 2
 
-        self.current_generations = 0
-        self.max_generations = 1000
+        self.population = []
+        self.max_population_size = 50
 
-        self.current_population = 10
-        self.max_population = 100
+        self.spec_length = len(spec)
+        #self.lines = spec.lines
+        self.lines = dict(zip(spec.variable_line_labels(), [0] * spec.logical_width()))
+        for line in non_garbage_lines:
+            self.lines[line] = 0
+        #self.constant_lines = spec.constant_line_labels()
+        self.constant_lines = non_garbage_lines
 
-        self.individuals = []
-        self.lines = {}
+        self.goal = TruthTable(spec)
+        self.non_garbage = non_garbage_lines
+    
 
+    def crossover(self, parent_a, parent_b):
+        """
+        Override this method in your own GA class. This method is designed to
+        take two members of the Cascade population and cross them over in some way.
+        """
+        pass
+
+
+    def mutate(self, c):
+        """
+        Override this method in your own GA class. This method is designed to
+        perform mutation on a given Cascade in a population. For GAs that rely only
+        on crossover, this method may be omitted.
+        """
+        pass
+
+
+    def random_toffoli(self):
+        """
+        Generates a random Toffoli gate, given a set of available input lines.
+        All line indices go into an "index pool", from which control and target
+        values can be chosen. These gates are limited to 3 controls and 1 target.
+        """
+        index_pool = self.lines.keys()
+        width = len(index_pool)
+        random.shuffle(index_pool)
+        
+        max_index = random.randint(1, min(4, width-1))
+        control_list = index_pool[0:max_index]
+        target = index_pool[max_index]
+        
+        return Toffoli(control_list, target)
+
+
+    def fitness(self, c):
+        """
+        Prototype method for measuring the fitness of a given Cascade according to
+        some metric (quantum cost, gate count, etc.)
+        """
+        pass
+
+
+    def generate_population(self, pop_size):
+        """
+        Prototype method for generating initial and subsequent populations according
+        to the "pop_size" parameter, which denotes how large the population should be.
+        """
         pass
     
-    def crossover(self, parent_a, parent_b):
-        child_a = Cascade(self.lines)
-        child_b = Cascade(self.lines)
-        
-        # Construct first child. Half of A, half of B
-        for gate in parent_a[0:len(parent_a)/2]:
-            child_a.append(gate)
-        for gate in parent_b[len(parent_b)/2:len(parent_b)]:
-            child_a.append(gate)
-        
-        # Construct second child. Half of B, half of A
-        for gate in parent_b[0:len(parent_b)/2]:
-            child_b.append(gate)
-        for gate in parent_a[len(parent_a)/2:len(parent_a)]:
-            child_b.append(gate)
-        
-        return child_a, child_b
 
-    def select_fitness(self):
+    def run(self):
+        """
+        Prototype method to run the Genetic Algorithm. This MUST be overridden by modules
+        that subclass from GeneticAlgorithm.
+        """
         pass
-
-
-def main():
-    init_lines = []
-
-    # Generate the initial population
-    for i in range(0, current_population):
-        c = Cascade.random(lines)
-        individuals.append(c)
-
-    while (current_threshold > min_threshold) and (current_generations > max_generations):
-        individuals = select_fitness(individuals)

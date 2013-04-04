@@ -2,32 +2,9 @@
 # Naive Genetic Algorithm with Limited Crossover
 # Chris Rabl
 
-from revsim import *
-import random
+from genetic import *
 
-class NaiveGA:
-    def __init__(self, spec, non_garbage_lines):
-        self.threshold = 0.9
-
-        self.init_population_size = 500
-        self.max_generations = 10000
-        self.max_gatecount_deviation = 2
-
-        self.population = []
-        self.max_population_size = 50
-
-        self.spec_length = len(spec)
-        #self.lines = spec.lines
-        self.lines = dict(zip(spec.variable_line_labels(), [0] * spec.logical_width()))
-        for line in non_garbage_lines:
-            self.lines[line] = 0
-        #self.constant_lines = spec.constant_line_labels()
-        self.constant_lines = non_garbage_lines
-
-        self.goal = TruthTable(spec)
-        self.non_garbage = non_garbage_lines
-    
-
+class NaiveGA(GeneticAlgorithm):
     def crossover(self, parent_a, parent_b):
         children = []
         # Need to append because otherwise we refer to the same Cascade instance!!!
@@ -65,6 +42,15 @@ class NaiveGA:
         return children
 
 
+    def generate_population(self, pop_size):
+        self.population = []
+        for i in xrange(0, pop_size):
+            c_length = random.randint(2, self.spec_length+self.max_gatecount_deviation)
+            self.population.append(Cascade(self.lines, self.constant_lines))
+            for j in xrange(1, c_length):
+                self.population[i].append(self.random_toffoli())
+
+
     def mutate(self, c):
         i = len(c)-1
         index = random.randint(0, i)
@@ -75,34 +61,14 @@ class NaiveGA:
             c.insert(self.random_toffoli(), index)
 
 
-    def random_toffoli(self):
-        index_pool = self.lines.keys()
-        width = len(index_pool)
-        random.shuffle(index_pool)
-        
-        max_index = random.randint(1, min(4, width-1))
-        control_list = index_pool[0:max_index]
-        target = index_pool[max_index]
-        
-        return Toffoli(control_list, target)
-
-
     def fitness(self, c):
         return c.fuzzy_compare_columns(self.goal, self.non_garbage)
 
-
-    def generate_population(self, pop_size):
-        self.population = []
-        for i in xrange(0, pop_size):
-            c_length = random.randint(2, self.spec_length+self.max_gatecount_deviation)
-            self.population.append(Cascade(self.lines, self.constant_lines))
-            for j in xrange(1, c_length):
-                self.population[i].append(self.random_toffoli())
     
-
     def run(self):
         print "GA Parameters"
         print "Initial Population Count:", self.init_population_size
+        print "Subsequent Population Count:", self.max_population_size
         print "Maximum Number of Generations:", self.max_generations
         print "Maximum Gate Count Deviation:", self.max_gatecount_deviation
         print ""
@@ -138,4 +104,3 @@ class NaiveGA:
                 print "Gate Count:", len(best)
 
             gen_count += 1
-

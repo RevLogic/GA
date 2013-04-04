@@ -1,4 +1,4 @@
-filename = open('/Users/rubinrana/Desktop/testFile.txt', 'r')
+filename = open('testFile.txt', 'r')
 list = []
 #add all the lines from file to a list
 for line in filename:
