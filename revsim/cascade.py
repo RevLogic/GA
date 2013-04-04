@@ -7,6 +7,9 @@ import copy
 
 class Cascade:
     def __init__(self, lines, constants=[]):
+        """
+        Cascade constructor which initializes an empty Cascade with lines
+        """
         self.gate_list = []
         self.lines = lines.copy()
         self.constant_lines = {}
@@ -21,6 +24,12 @@ class Cascade:
         self.gate_list[key] = value
 
     def __len__(self):
+        """
+        Returns the number of gates in a given Cascade.
+        c = Cascade(...)
+        ...
+        len(c) # Returns the number of gates in c
+        """
         return len(self.gate_list)
     
     def __eq__(self, cascade):
@@ -38,6 +47,9 @@ class Cascade:
         self.updated = True
 
     def run(self):
+        """
+        Evaluate the result of all gates in the Cascade according to specific line values.
+        """
         self.updated = False
         for gate in self.gate_list:
             gate.eval(self.lines)
@@ -82,15 +94,25 @@ class Cascade:
         self.insert(gate, 0)
 
     def cost(self):
+        """
+        Calculates the quantum cost of the Cascade by running through the entire
+        gate list and keeping a tally of each gate's cost.
+        """
         quantum_cost = 0
         for gate in self.gate_list:
             quantum_cost += gate.cost()
         return quantum_cost
 
     def width(self):
+        """
+        Returns the number of lines in the Cascade
+        """
         return len(self.lines)
 
     def logical_width(self):
+        """
+        Returns the number of variable lines (non-constant lines) in the Cascade
+        """
         return len(self.lines) - len(self.constant_lines)
     
     def variable_line_labels(self):
@@ -118,4 +140,7 @@ class Cascade:
         self.updated = False
 
     def copy(self):
+        """
+        Returns a deep copy of the current Cascade
+        """
         return copy.deepcopy(self)

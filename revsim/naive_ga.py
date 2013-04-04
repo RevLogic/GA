@@ -66,7 +66,7 @@ class NaiveGA(GeneticAlgorithm):
 
     
     def run(self):
-        print "GA Parameters"
+        print "Naive GA Parameters"
         print "Initial Population Count:", self.init_population_size
         print "Subsequent Population Count:", self.max_population_size
         print "Maximum Number of Generations:", self.max_generations
