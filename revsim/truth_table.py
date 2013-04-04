@@ -11,10 +11,17 @@ class TruthTable:
         self.calc_stats = calc_stats
     
     def __eq__(self, other):
+        """
+        Compares two TruthTables to determine if they are identical.
+        """
         self.__update_if_required()
         return self.output_columns == other.get_output_columns()
 
     def compare_columns(self, other, col_list):
+        """
+        Compares the columns specified in col_list of two TruthTables. Returns True if their
+        entries are the same, False otherwise.
+        """
         self.__update_if_required()
         for col in col_list:
             if self.output_columns[col] != other.get_output_columns()[col]:
@@ -22,6 +29,12 @@ class TruthTable:
         return True
 
     def fuzzy_compare_columns(self, other, col_list):
+        """
+        Returns a float value between 0 and 1 based on the number of identical entries in
+        the columns of the current TruthTable specified by col_list. This value is computed as:
+        number_of_identical_entries / number_of_entries
+        If two columns are exactly the same, this function will return 1.0
+        """
         self.__update_if_required()
         same = 0
         length = 0
@@ -34,11 +47,20 @@ class TruthTable:
         return (float(same) / float(length*len(col_list)))
 
     def recalculate(self):
+        """
+        Recalculates the TruthTable if the Cascade is changed, or under other circumstances.
+        Typically, this does not need to be called by end-user applications or libraries.
+        """
         self.input_columns = {}
         self.output_columns = {}
         self.calculate()
 
     def calculate(self):
+        """
+        Computes the entries of the TruthTable by running every input permutation through
+        the current TruthTable's cascade and recording the result. For Cascades with a large
+        logical width, this computation is VERY expensive. This takes O(2^n) time in all cases.
+        """
         width = self.c.logical_width() # can be replaced with len(labels)
         labels = self.c.variable_line_labels()
         constant_lines = self.c.constant_line_values()
@@ -75,6 +97,10 @@ class TruthTable:
             self.c.reset_updated()
 
     def __str__(self):
+        """
+        Allows the TruthTable to be printed or output to a file by constructing a string
+        representation of it.
+        """
         self.__update_if_required()
         
         # TODO: clean this up because it's pretty atrocious at the moment -CR
