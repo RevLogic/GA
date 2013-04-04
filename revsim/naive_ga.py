@@ -121,6 +121,7 @@ class NaiveGA:
             fits = [(self.fitness(TruthTable(c)), c) for c in self.population]
             fits.sort()
             top_two = fits[-2:]
+
             new_fitness = top_two[1][0]
 
             if new_fitness > current_fitness:
@@ -135,5 +136,6 @@ class NaiveGA:
                     print gate
                 print "Quantum Cost:", best.cost()
                 print "Gate Count:", len(best)
+
             gen_count += 1
 

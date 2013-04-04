@@ -8,10 +8,9 @@ ideal.append(Toffoli(['b'], 's'))
 
 # Generate the initial population                                                                                                          
 ga = NaiveGA(ideal, ['c', 's'])
-
-ga.init_population_size = 500
-ga.max_generations = 10000
-ga.max_gatecount_deviation = 2
-ga.max_population_size = 50
-
+ga.threshold = 1.0
+ga.init_population_size = 100
+ga.max_generations = 20000
+ga.max_gatecount_deviation = 4
+ga.max_population_size = 3
 ga.run()
