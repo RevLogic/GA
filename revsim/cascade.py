@@ -2,7 +2,7 @@
 # RevSim beta
 # Author: Christopher Rabl
 
-from revsim import *
+from gates import *
 import copy
 
 class Cascade:

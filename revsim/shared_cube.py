@@ -9,7 +9,7 @@ of a Cascade, it is required that Cascades have designated
 targets and controls to gates. Any line that is NOT an output
 line MUST NOT BE USED AS A TARGET.
 """
-from revsim import *
+from cascade import *
 
 class SharedCube:
     def __init__(self, cascade):

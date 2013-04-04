@@ -3,7 +3,10 @@
 # For developing GAs that follow a given template with crossover
 # and mutation
 
-from revsim import *
+import random
+
+from cascade import *
+from truth_table import *
 
 class GeneticAlgorithm:
     def __init__(self, spec, non_garbage_lines):
