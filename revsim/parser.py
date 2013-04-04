@@ -59,20 +59,14 @@ try:
 	#print 'Inputs : ',inputs
 	#print 'Outputs : ',outputs
 	
-	
-	
-	
-
 	#find string .begin and .end - get it's index value
 	startIndex = myList.index('.begin\n')
 	endIndex = myList.index('.end\n')
-
 
 	if len(constants) !=0:
 		c = Cascade( lineDict, constants)
 	else:
 		c = Cascade (lineDict)
-
 
 	#loop throught the startIndex to endIndex and parse string
 	for i in range(startIndex+1, int(endIndex)):
@@ -82,12 +76,14 @@ try:
 		numOfInput = firstString[1] #second char to num of inputs
 		numOfInput = int(numOfInput) #convert string to int
 	
-	
 		#Single Control Toffoli gates (MCT)
+		#a single "target" line label - picked the last from variable list to be a
+		# target 
 		if gateType == 't':
 			c.append( Toffoli (myCascade[1:numOfInput+1],variables[-1] ) )
 	
 		#Multiple Control Fredkin gate (MCF)
+		#Two "target" line label - picked last two from variable list to be target
 		elif gateType == 'f':
 			c.append( Fredkin ( myCascade[1:numOfInput+1],variables[-2:]) )
 
@@ -102,7 +98,6 @@ try:
 	t = TruthTable(c)
 	print t
 	
-
 except LookupError as e:
     print e
 except IOError as e:
