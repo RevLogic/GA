@@ -1,27 +1,22 @@
-# Function: 4gt10-v0
-# Checks, if input is greater than 10.
-# Note: Embedding with constant 0.
-# Used Library: MCT (gates: 13, quantum costs: 53)
-# This file have been taken from RevLib (www.revlib.org). 
-.version 1.0
-.numvars 5
-.variables a b c d e
-.inputs 0 b c d e
-.outputs g g g g f
-.constants 0----
-.garbage 1111-
+# This file has been generated using RevKit 1.1 (www.revkit.org)
+# Command Line:
+# ./tools/bdd_synthesis.py --filename alu_9.pla --realname alu_9.real
+# Based on the approach proposed in R. Wille and R. Drechsler. BDD-based synthesis of reversible logic for large functions. In Design Automation Conf., pages 270-275, 2009.
+.version 2.0
+.numvars 7
+.variables x0 x1 x2 x3 x4 x5 x6
+.inputs c0 c1 c2 a b 0 0
+.outputs  g g g g g g f
+.constants -----00
+.garbage 111111-
 .begin
-t2 c b
-t2 b c
-t2 d c
-t2 c d
-t5 b c d e a
-t2 e d
-t2 d e
-f4 b d e a
-t2 e d
-t2 e c
-t2 e b
-f2 a e
-t2 e a
+t2 x0 x5
+t3 x1 x3 x5
+t3 x0 x3 x5
+t2 x2 x6
+t3 x0 x3 x6
+t3 x2 x3 x6
+t2 x6 x5
+t3 x4 x5 x6
+t1 x6
 .end
