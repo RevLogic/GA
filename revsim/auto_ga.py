@@ -10,6 +10,8 @@ ga.init_population_size = 50
 ga.max_generations = 1000
 ga.max_population_size = 50
 ga.threshold = 1.0
+ga.initial_population_mutations = 20
+ga.subsequent_population_mutations = 5
 ga.run()
 
 
