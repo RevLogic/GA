@@ -61,7 +61,7 @@ class SmartGA(GeneticAlgorithm):
 
     
     def run(self):
-        print "Naive GA Parameters"
+        print "Smart GA Parameters"
         print "Initial Population Count:", self.init_population_size
         print "Subsequent Population Count:", self.max_population_size
         print "Maximum Number of Generations:", self.max_generations
@@ -71,7 +71,7 @@ class SmartGA(GeneticAlgorithm):
         gen_count = 0
 
         non_garbage_lines = self.non_garbage
-        # Generate initial population                                                                                                          
+        # Generate initial population 
         self.generate_population(self.init_population_size, 15)
 
         while (current_fitness < self.threshold) and (gen_count < self.max_generations):
@@ -99,6 +99,7 @@ class SmartGA(GeneticAlgorithm):
                 best = top_two[1][1]
                 for gate in best:
                     print gate
+                    
                 print "Quantum Cost:", best.cost()
                 print "Gate Count:", len(best)
 
