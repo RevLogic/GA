@@ -63,7 +63,7 @@ def parse(circuit_file):
 	
 		#find string .begin and .end - get it's index value
 		startIndex = myList.index('.begin\n')
-		endIndex = myList.index('.end')
+		endIndex = myList.index('.end\n')
 
 		if len(constants) !=0:
 			c = Cascade( lineDict, constants)
