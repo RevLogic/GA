@@ -23,13 +23,15 @@ class GeneticAlgorithm:
         self.population = []
         self.max_population_size = 50
 
+        self.parent = spec
         self.spec_length = len(spec)
-        #self.lines = spec.lines
-        self.lines = dict(zip(spec.variable_line_labels(), [0] * spec.logical_width()))
-        for line in non_garbage_lines:
-            self.lines[line] = 0
-        #self.constant_lines = spec.constant_line_labels()
-        self.constant_lines = non_garbage_lines
+        self.lines = spec.lines
+        #self.lines = dict(zip(spec.variable_line_labels(), [0] * spec.logical_width()))
+        #for line in non_garbage_lines:
+        #    self.lines[line] = 0
+        #
+        self.constant_lines = spec.constant_line_labels()
+        #self.constant_lines = non_garbage_lines
 
         self.goal = TruthTable(spec)
         self.non_garbage = non_garbage_lines
@@ -62,6 +64,7 @@ class GeneticAlgorithm:
         width = len(index_pool)
         random.shuffle(index_pool)
         
+        #max_index = 2
         max_index = random.randint(1, min(4, width-1))
         control_list = index_pool[0:max_index]
         target = index_pool[max_index]
