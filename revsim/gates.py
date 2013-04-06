@@ -26,6 +26,8 @@ class Gate:
     
 class SingleTargetGate(Gate):
     def __init__(self, controls, target):
+        if target in controls:
+            raise ValueError
         self.target = target
         self.controls = controls[:]
 

@@ -65,7 +65,6 @@ class SmartGA(GeneticAlgorithm):
         print "Initial Population Count:", self.init_population_size
         print "Subsequent Population Count:", self.max_population_size
         print "Maximum Number of Generations:", self.max_generations
-        print "Maximum Gate Count Deviation:", self.max_gatecount_deviation
         print ""
 
         current_fitness = 0.0
@@ -82,7 +81,8 @@ class SmartGA(GeneticAlgorithm):
             fits = [(self.fitness(TruthTable(c)), c) for c in self.population]
             fits.sort()
             top_two = fits[-2:]
-
+            
+            new_cost = top_two[1][1].cost()
             new_fitness = top_two[1][0]
 
             if new_fitness > current_fitness:

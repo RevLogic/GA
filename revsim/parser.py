@@ -82,7 +82,7 @@ def parse(circuit_file):
 			#a single "target" line label - picked the last from variable list to be a
 			# target 
 			if gateType == 't':
-				c.append( Toffoli (myCascade[1:numOfInput],variables[-1] ) )
+				c.append( Toffoli (myCascade[1:numOfInput-1],variables[-1] ) )
 	
 			#Multiple Control Fredkin gate (MCF)
 			#Two "target" line label - picked last two from variable list to be target
