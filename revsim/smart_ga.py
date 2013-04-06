@@ -73,7 +73,7 @@ class SmartGA(GeneticAlgorithm):
 
         non_garbage_lines = self.non_garbage
         # Generate initial population                                                                                                          
-        self.generate_population(self.init_population_size, 10)
+        self.generate_population(self.init_population_size, 15)
 
         while (current_fitness < self.threshold) and (gen_count < self.max_generations):
             mutate_index = random.randint(0, len(self.population)-1)
@@ -92,7 +92,7 @@ class SmartGA(GeneticAlgorithm):
                 self.population += self.crossover(top_two[0][1], top_two[1][1])
                 current_fitness = new_fitness
             else:
-                self.generate_population(self.max_population_size, 3)
+                self.generate_population(self.max_population_size, 5)
                 self.population += [top_two[0][1], top_two[1][1]]
 
             if (gen_count == self.max_generations - 1) or (current_fitness == 1.0):

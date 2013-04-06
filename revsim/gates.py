@@ -121,4 +121,7 @@ class Inverter(SameTargetGate):
         self.line_values[self.target] = not(self.line_values[self.target])
         return self.line_values
 
-        
+    def __str__(self):
+        out = "t1 "
+        out += self.target
+        return out

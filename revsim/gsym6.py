@@ -32,6 +32,9 @@ ideal.append(Toffoli(['x5'], 'x6'))
 ideal.append(Toffoli(['s2'], 's5'))
 ideal.append(Toffoli(['s4'], 's5'))
 
+print "Initial Quantum Cost:", ideal.cost()
+print "Initial Gate Count:", len(ideal)
+
 ga = SmartGA(ideal, ['s5'])
 ga.init_population_size = 500
 ga.max_generations = 50000

@@ -65,7 +65,7 @@ class GeneticAlgorithm:
         random.shuffle(index_pool)
         
         #max_index = 2
-        max_index = random.randint(1, min(4, width-1))
+        max_index = random.randint(1, min(3, width-1))
         control_list = index_pool[0:max_index]
         target = index_pool[max_index]
         

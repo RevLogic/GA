@@ -73,11 +73,14 @@ ideal.append(Toffoli(['x16'], 'x26'))
 ideal.append(Toffoli(['x3', 'x26'], 'x16'))
 ideal.append(Inverter('x16'))
 
-ga = NaiveGA(ideal, ['x16'])
-ga.init_population_size = 1000
-ga.max_generations = 10000
-ga.max_gatecount_deviation = 30
-ga.max_population_size = 20
+
+print "Original quantum cost:", ideal.cost()
+print "Original gate count:", len(ideal)
+
+ga = SmartGA(ideal, ['x16'])
+ga.init_population_size = 50
+ga.max_generations = 1000
+ga.max_population_size = 50
 ga.run()
 
 
