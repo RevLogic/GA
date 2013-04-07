@@ -78,9 +78,13 @@ print "Original quantum cost:", ideal.cost()
 print "Original gate count:", len(ideal)
 
 ga = SmartGA(ideal, ['x16'])
-ga.init_population_size = 50
-ga.max_generations = 1000
+ga.init_population_size = 500
+ga.max_generations = 50000
 ga.max_population_size = 50
+ga.threshold = 1.0
 ga.run()
+
+print "Quantum Improvement:", (ideal.cost() - ga.bestgate.cost())
+print "gate count Improvement:", ( len(ideal) - len(ga.bestgate))
 
 

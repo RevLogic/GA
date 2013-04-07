@@ -42,3 +42,5 @@ ga.max_gatecount_deviation = 20
 ga.max_population_size = 35
 ga.threshold = 1.0
 ga.run()
+print "Quantum Improvement:", (ideal.cost() - ga.bestgate.cost())  
+print "gate count Improvement:", ( len(ideal) - len(ga.bestgate))

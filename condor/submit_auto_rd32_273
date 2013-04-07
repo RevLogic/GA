@@ -1,0 +1,7 @@
+Universe   = vanilla
+Executable = auto_ga_rd32_273.sh
+Log        = /home/lowr4210/GA/condor/logs/rd32_273/e/rd32_273log.log
+Output     = /home/lowr4210/GA/condor/logs/rd32_273/o/rd32_273.o.$(Cluster).$(Process)
+Error      = /home/lowr4210/GA/condor/logs/rd32_273/e/rd32_273.e.$(Cluster).$(Process)
+Notification = Never
+Queue 10

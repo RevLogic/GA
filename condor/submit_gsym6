@@ -1,0 +1,7 @@
+Universe   = vanilla
+Executable = gsym6.sh
+Log        = /home/lowr4210/GA/condor/logs/test1/e/test1log.log
+Output     = /home/lowr4210/GA/condor/logs/test1/o/gsym6.o.$(Cluster).$(Process)
+Error      = /home/lowr4210/GA/condor/logs/test1/e/gsym6.e.$(Cluster).$(Process)
+Notification = Never
+Queue 10

@@ -11,5 +11,6 @@ ga.max_generations = 1000
 ga.max_population_size = 50
 ga.threshold = 1.0
 ga.run()
-
+print "Quantum Cost Improvement:", (ideal.cost() - ga.bestgate.cost())
+print "Gate Count Improvement:", ( len(ideal) - len(ga.bestgate))
 

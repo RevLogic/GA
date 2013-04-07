@@ -1,0 +1,7 @@
+Universe   = vanilla
+Executable = auto_ga_hwb9_121.sh
+Log        = /home/lowr4210/GA/condor/logs/hwb9_121/e/gsym9test1log.log
+Output     = /home/lowr4210/GA/condor/logs/hwb9_121/o/hwb9_121.o.$(Cluster).$(Process)
+Error      = /home/lowr4210/GA/condor/logs/hwb9_121/e/hwb9_121.e.$(Cluster).$(Process)
+Notification = Never
+Queue 10

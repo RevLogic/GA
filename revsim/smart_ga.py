@@ -97,6 +97,7 @@ class SmartGA(GeneticAlgorithm):
 
             if (gen_count == self.max_generations - 1) or (current_fitness == 1.0):
                 best = top_two[1][1]
+		self.bestgate = best
                 for gate in best:
                     print gate
                     
