@@ -1,0 +1,7 @@
+Universe   = vanilla
+Executable = auto_ga_urf4_187.sh
+Log        = /home/lowr4210/GA/condor/logs/urf4_187/e/urf4_187log.log
+Output     = /home/lowr4210/GA/condor/logs/urf4_187/o/urf4_187.o.$(Cluster).$(Process)
+Error      = /home/lowr4210/GA/condor/logs/urf4_187/e/urf4_187.e.$(Cluster).$(Process)
+Notification = Never
+Queue 10

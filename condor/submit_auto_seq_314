@@ -1,0 +1,7 @@
+Universe   = vanilla
+Executable = auto_ga_seq_314.sh
+Log        = /home/lowr4210/GA/condor/logs/seq_314/e/seq_314log.log
+Output     = /home/lowr4210/GA/condor/logs/seq_314/o/seq_314.o.$(Cluster).$(Process)
+Error      = /home/lowr4210/GA/condor/logs/seq_314/e/seq_314.e.$(Cluster).$(Process)
+Notification = Never
+Queue 10

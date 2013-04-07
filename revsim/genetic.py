@@ -25,6 +25,9 @@ class GeneticAlgorithm:
         self.population = []
         self.max_population_size = 50
 
+        self.initial_population_mutations = 15
+        self.subsequent_population_mutations = 3
+
         self.parent = spec
         self.spec_length = len(spec)
         self.lines = spec.lines
