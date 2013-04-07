@@ -56,15 +56,23 @@ class SmartGA(GeneticAlgorithm):
                 c.insert(self.random_toffoli(), index)
     
                 
-    def fitness(self, c):
-        return c.fuzzy_compare_columns(self.goal, self.non_garbage)
+    def fitness(self, c, quantum_cost_goal):
+        function_eval = c.fuzzy_compare_columns(self.goal, self.non_garbage)
+        qcost_fitness = min(quantum_cost_goal / c.c.cost(), 1.0)
+        if function_eval == 1.0:
+            return qcost_fitness
+        else:
+            return function_eval
 
     
     def run(self):
+        quantum_cost_goal = self.parent.cost() - 10
+
         print "Smart GA Parameters"
         print "Initial Population Count:", self.init_population_size
         print "Subsequent Population Count:", self.max_population_size
         print "Maximum Number of Generations:", self.max_generations
+        print "Quantum Cost Goal:", quantum_cost_goal
         print ""
 
         current_fitness = 0.0
@@ -78,7 +86,7 @@ class SmartGA(GeneticAlgorithm):
             mutate_index = random.randint(0, len(self.population)-1)
             self.mutate(self.population[mutate_index])
 
-            fits = [(self.fitness(TruthTable(c)), c) for c in self.population]
+            fits = [(self.fitness(TruthTable(c), quantum_cost_goal), c) for c in self.population]
             fits.sort()
             top_two = fits[-2:]
             
