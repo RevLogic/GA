@@ -41,9 +41,9 @@ class SmartGA(GeneticAlgorithm):
         """
         Either remove a gate at random or replace it with a random gate
         """
-        choice = bool(random.randint(0,1))
+        choice = random.randint(0,2)
 
-        if choice:
+        if (choice == 0 or choice == 1) and len(c) > 1:
             c.remove(random.randint(0, len(c)-1)) # Randomly remove a gate
         else:
             # or replace a gate with a random gate
@@ -63,7 +63,9 @@ class SmartGA(GeneticAlgorithm):
     def run(self):
         print "Smart GA Parameters"
         print "Initial Population Count:", self.init_population_size
+        print "Initial Population Mutations:", self.initial_population_mutations
         print "Subsequent Population Count:", self.max_population_size
+        print "Subsequent Population Mutations:", self.subsequent_population_mutations
         print "Maximum Number of Generations:", self.max_generations
         print ""
 
@@ -72,7 +74,7 @@ class SmartGA(GeneticAlgorithm):
 
         non_garbage_lines = self.non_garbage
         # Generate initial population 
-        self.generate_population(self.init_population_size, 15)
+        self.generate_population(self.init_population_size, self.initial_population_mutations)
 
         while (current_fitness < self.threshold) and (gen_count < self.max_generations):
             mutate_index = random.randint(0, len(self.population)-1)
@@ -92,7 +94,7 @@ class SmartGA(GeneticAlgorithm):
                 self.population += self.crossover(top_two[0][1], top_two[1][1])
                 current_fitness = new_fitness
             else:
-                self.generate_population(self.max_population_size, 3)
+                self.generate_population(self.max_population_size, self.subsequent_population_mutations)
                 self.population += [top_two[0][1], top_two[1][1]]
 
             if (gen_count == self.max_generations - 1) or (current_fitness == 1.0):

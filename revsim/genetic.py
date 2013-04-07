@@ -3,6 +3,8 @@
 # For developing GAs that follow a given template with crossover
 # and mutation
 
+#this is a quick change
+
 import random
 
 from cascade import *
@@ -22,6 +24,9 @@ class GeneticAlgorithm:
 
         self.population = []
         self.max_population_size = 50
+
+        self.initial_population_mutations = 15
+        self.subsequent_population_mutations = 3
 
         self.parent = spec
         self.spec_length = len(spec)

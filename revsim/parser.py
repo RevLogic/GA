@@ -82,7 +82,7 @@ def parse(circuit_file):
 			#a single "target" line label - picked the last from variable list to be a
 			# target 
 			if gateType == 't':
-				c.append( Toffoli (myCascade[1:numOfInput-1],variables[-1] ) )
+				c.append( Toffoli (myCascade[1:numOfInput],myCascade[-1] ) )
 	
 			#Multiple Control Fredkin gate (MCF)
 			#Two "target" line label - picked last two from variable list to be target
@@ -97,11 +97,12 @@ def parse(circuit_file):
 		#print "Number of Variable Lines:", c.logical_width()
 
 		non_garbage_outputs = []
-		outputs_dict = dict(zip(variables, outputs))
-		for key in outputs_dict:
-			if outputs_dict[key] != "g":
-				non_garbage_outputs.append(outputs_dict[key])
+		garbage_dict = dict(zip(variables, garbage))
+		for key in garbage_dict:
+			if garbage_dict[key] != "1":
+				non_garbage_outputs.append(key)
 		
+
 		return c, non_garbage_outputs
 		#t = TruthTable(c)
 		#print t
@@ -113,3 +114,5 @@ def parse(circuit_file):
 		
 	 
 		
+if __name__ == "__main__":
+	parse(sys.argv[1])
