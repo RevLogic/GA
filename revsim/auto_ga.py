@@ -12,6 +12,7 @@ ga.max_population_size = 50
 ga.threshold = 1.0
 ga.initial_population_mutations = 20
 ga.subsequent_population_mutations = 5
+ga.cost_improvement_goal = int(0.1 * ideal.cost()) # We want to reduce q cost by at least 10%
 ga.run()
 print "Quantum Cost Improvement:", (ideal.cost() - ga.bestgate.cost())
 print "Gate Count Improvement:", ( len(ideal) - len(ga.bestgate))

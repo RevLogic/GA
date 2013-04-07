@@ -21,6 +21,7 @@ class GeneticAlgorithm:
         self.init_population_size = 500
         self.max_generations = 10000
         self.max_gatecount_deviation = 2
+        self.cost_improvement_goal = 10
 
         self.population = []
         self.max_population_size = 50

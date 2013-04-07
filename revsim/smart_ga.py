@@ -56,9 +56,9 @@ class SmartGA(GeneticAlgorithm):
                 c.insert(self.random_toffoli(), index)
     
                 
-    def fitness(self, c, quantum_cost_goal):
-        function_eval = c.fuzzy_compare_columns(self.goal, self.non_garbage)
-        qcost_fitness = min(quantum_cost_goal / c.c.cost(), 1.0)
+    def fitness(self, truth_table, quantum_cost_goal):
+        function_eval = truth_table.fuzzy_compare_columns(self.goal, self.non_garbage)
+        qcost_fitness = min(quantum_cost_goal / truth_table.c.cost(), 1.0)
         if function_eval == 1.0:
             return qcost_fitness
         else:
@@ -66,7 +66,7 @@ class SmartGA(GeneticAlgorithm):
 
     
     def run(self):
-        quantum_cost_goal = self.parent.cost() - 10
+        quantum_cost_goal = self.parent.cost() - self.cost_improvement_goal
 
         print "Smart GA Parameters"
         print "Initial Population Count:", self.init_population_size
@@ -106,6 +106,9 @@ class SmartGA(GeneticAlgorithm):
                 self.population += [top_two[0][1], top_two[1][1]]
 
             if (gen_count == self.max_generations - 1) or (current_fitness == 1.0):
+                if gen_count == self.max_generations - 1:
+                    print "GENERATION LIMIT EXCEEDED!"
+                    print "Fitness:", current_fitness
                 best = top_two[1][1]
 		self.bestgate = best
                 for gate in best:
