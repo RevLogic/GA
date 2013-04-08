@@ -44,7 +44,8 @@ class SmartGA(GeneticAlgorithm):
         choice = random.randint(0,2)
 
         if (choice == 0 or choice == 1) and len(c) > 1:
-            c.remove(random.randint(0, len(c)-1)) # Randomly remove a gate
+            for i in range(0, self.max_removals_per_mutation):
+                c.remove(random.randint(0, len(c)-1)) # Randomly remove a gate
         else:
             # or replace a gate with a random gate
             i = len(c)-1
