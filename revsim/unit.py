@@ -64,6 +64,7 @@ class GateTests(unittest.TestCase):
             expected = dict([(line_label, self.TT_inverter[line])])
             self.assertEqual(actual, expected)
 
+
 class CascadeOperations(unittest.TestCase):
     lines = {'a':0, 'b':0, 'c':0, 's':0}
     adder = Cascade(lines)
@@ -105,6 +106,7 @@ class CascadeOperations(unittest.TestCase):
         self.assertRaises(IndexError, self.adder.remove, -1)
         self.assertRaises(IndexError, self.adder.remove, 100)
 
+
 class CascadeSanity(unittest.TestCase):
     c = Cascade({'a':0, 'b':0, 'c':0})
     def test_remove_sanity(self):
@@ -118,6 +120,7 @@ class CascadeSanity(unittest.TestCase):
         self.assertRaises(ValueError, self.c.update_lines, {'a':0, 'b':0})
         """ Must not allow replacement of lines with a larger set of lines """
         self.assertRaises(ValueError, self.c.update_lines, {'a':0, 'b':0, 'c':0, 'd':0})
+
 
 class TestGateSanity(unittest.TestCase):
     def test_toffoli_sanity(self):

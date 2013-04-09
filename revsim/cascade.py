@@ -141,6 +141,6 @@ class Cascade:
 
     def copy(self):
         """
-        Returns a deep copy of the current Cascade
+        Returns a deep copy of the current Cascade. "Must go deeper." -JZ
         """
         return copy.deepcopy(self)
