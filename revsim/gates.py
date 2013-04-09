@@ -1,8 +1,10 @@
-# Experimental Gate class
-# RevSim beta
+# Revsim gate class
 # Author: Chris Rabl
 
 class Gate:
+    """
+    Abstract base class to define basic gate behavior
+    """
     def __init__(self):
         self.line_values = {}
     
@@ -25,6 +27,10 @@ class Gate:
         pass
     
 class SingleTargetGate(Gate):
+    """
+    Base class to define behavior of gates with multiple controls and only one target
+    All SingleTargetGates use lists to define their controls and a string literal to define the target
+    """
     def __init__(self, controls, target):
         if target in controls:
             raise ValueError
@@ -42,6 +48,10 @@ class SingleTargetGate(Gate):
 
     
 class MultipleTargetGate(Gate):
+    """
+    Base class to define the behavior of gates with multiple controls and multiple targets
+    All MultipleTargetGates use lists to define their controls and targets
+    """
     def __init__(self, controls, targets):
         self.targets = targets[:]
         self.controls = controls[:]
@@ -53,6 +63,10 @@ class MultipleTargetGate(Gate):
         
 
 class SameTargetGate(Gate):
+    """
+    Base class to define the behavior of gates with only one target and no controls (that are the same line)
+    All SameTargetGates use only a single string to define the target, controls are not supported
+    """
     def __init__(self, target):
         self.target = target
 
@@ -66,6 +80,9 @@ class SameTargetGate(Gate):
         return [self.target]
 
 class Toffoli(SingleTargetGate):
+    """
+    Defines the behavior of a Toffoli gate when applied to the lines in a Cascade
+    """
     def invert_target(self):
         self.line_values[self.target] = not(self.line_values[self.target])
 
@@ -102,6 +119,9 @@ class Toffoli(SingleTargetGate):
         return out
 
 class Swap(MultipleTargetGate):
+    """
+    Defines the behavior of an uncontrolled Swap gate
+    """
     def operation(self):
         if len(self.targets) != 2:
             raise ValueError        
@@ -110,6 +130,9 @@ class Swap(MultipleTargetGate):
 
 
 class Fredkin(MultipleTargetGate):
+    """
+    Defines the behavior of a controlled swap gate (Fredkin gate)
+    """
     def operation(self):
         if len(self.targets) != 2:
             raise ValueError
@@ -128,6 +151,11 @@ class Fredkin(MultipleTargetGate):
         return out
 
 class Inverter(SameTargetGate):
+    """
+    Defines the behavior of a simple inverter acting on a line.
+    In the .real file format, this is referred to as a Toffoli gate which only
+    has one input (the target).
+    """
     def operation(self):
         self.line_values[self.target] = not(self.line_values[self.target])
         return self.line_values
