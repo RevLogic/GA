@@ -65,7 +65,7 @@ class GateTests(unittest.TestCase):
             self.assertEqual(actual, expected)
 
 
-class CascadeOperations(unittest.TestCase):
+class CascadeOperationTests(unittest.TestCase):
     lines = {'a':0, 'b':0, 'c':0, 's':0}
     adder = Cascade(lines)
     adder.append(Toffoli(['a', 'b'], 'c'))
@@ -157,7 +157,7 @@ class RealIOTests(unittest.TestCase):
         pass
 
 
-class SharedCubes(unittest.TestCase):
+class SharedCubeTests(unittest.TestCase):
     c = Cascade({'x1':1, 'x2':1, 'x3':1, 'x4':1, 'f1':0, 'f2':0, 'f3':0, 'f4':0, 'f5':0},
             ['f1', 'f2', 'f3', 'f4', 'f5'])
 
@@ -179,6 +179,9 @@ class SharedCubes(unittest.TestCase):
                    ('x1', 'x2', 'x4'): ['f1', 'f4', 'f2', 'f3', 'f5'] }
         
         self.assertEqual(self.cube_list, actual)
+
+
+
 
 if __name__ == "__main__":
     unittest.main()

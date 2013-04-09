@@ -40,6 +40,13 @@ class SingleTargetGate(Gate):
     def __len__(self):
         return len(self.controls) + 1
 
+    def __eq__(self, other):
+        # Check if the instances are of the same subclass
+        if isinstance(self, other.__class__):
+            if (self.target == other.target) and (self.controls == other.controls):
+                return True
+        return False
+    
     def get_controls(self):
         return sorted(self.controls)
 
@@ -55,6 +62,13 @@ class MultipleTargetGate(Gate):
     def __init__(self, controls, targets):
         self.targets = targets[:]
         self.controls = controls[:]
+
+    def __eq__(self, other):
+        # Check if the instances are of the same subclass
+        if isinstance(self, other.__class__):
+            if (self.targets == other.targets) and (self.controls == other.controls):
+                return True
+        return False
 
     def swap(self, a, b):
         val_a = self.targets[a]
@@ -72,6 +86,12 @@ class SameTargetGate(Gate):
 
     def __len__(self):
         return 1
+
+    def __eq__(self, other):
+        if isinstance(self, other.__class__):
+            if self.target == other.target:
+                return True
+        return False
 
     def get_target(self):
         return self.target
