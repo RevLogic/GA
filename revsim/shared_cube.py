@@ -43,5 +43,4 @@ class SharedCube:
                     cube_list[key] += shared_value
             del cube_list[item]
 
-        for key in cube_list:
-            print key, sorted(cube_list[key])
+        return cube_list
