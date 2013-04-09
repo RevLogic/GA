@@ -149,6 +149,12 @@ class TestGateSanity(unittest.TestCase):
         pass
 
 
+class RealIOTests(unittest.TestCase):    
+    def test_reading(self):
+        pass
+
+    def test_writing(self):
+        pass
 
 
 if __name__ == "__main__":

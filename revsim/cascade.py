@@ -1,5 +1,4 @@
-# Experimental Cascade class
-# RevSim beta
+# Cascade class
 # Author: Christopher Rabl
 
 from gates import *
