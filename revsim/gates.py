@@ -116,7 +116,16 @@ class Fredkin(MultipleTargetGate):
         if self.all_controls():
             self.swap(0, 1)
         return self.line_values
-
+    
+    def __str__(self):
+        out = "f"
+        out += str(len(self))
+        out += " "
+        for control in self.controls:
+            out += control + " "
+        for target in self.targets:
+            out += target + " "
+        return out
 
 class Inverter(SameTargetGate):
     def operation(self):
