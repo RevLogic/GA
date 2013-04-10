@@ -153,6 +153,10 @@ class Cascade:
     def write_pickle(self, file_name):
         """
         Serializes the current Cascade's state into a file which may be loaded in at a later time.
+        c = Cascade(...)
+        c.append(...)
+        ...
+        c.write_pickle("file_name.pckl")
         """
         f = open(file_name, "w")
         pickle.dump([self.lines, self.gate_list, self.constant_lines, self.updated], f)
@@ -162,6 +166,9 @@ class Cascade:
         """
         Replaces the Cascade's current state with the state read from a file.
         Right now it uses the pickle module to do this, but a better choice might be JSON.
+
+        c = Cascade({}) # Create an empty Cascade with no lines
+        c.read_pickle("file_name.pckl")
         """
         f = open(file_name)
         self.lines, self.gate_list, self.constant_lines, self.updated = pickle.load(f)
