@@ -18,19 +18,21 @@ class GeneticAlgorithm:
         will almost certainly not work in the average case.
         """
         self.threshold = 0.9
-        self.init_population_size = 500
-        self.max_generations = 10000
-        self.max_gatecount_deviation = 2
-        self.cost_improvement_goal = 10
+        
+        # Initial population parameters
+        self.init_population_size = 500 # Number of initial population members 
+        self.max_generations = 10000 # maximum number of generations that the GA should run
+        self.max_gatecount_deviation = 2 # used in the naive GA when generating intial populations of random circuits: how many gates can the generated population members add to the length of the ideal cascade?
+        self.cost_improvement_goal = 10 # number of gates by which the cascade should be reduced AT LEAST
 
         self.population = []
-        self.max_population_size = 50
+        self.max_population_size = 50 # maximum subsequent population size for every generation in our evolution
 
-        self.initial_population_mutations = 15
-        self.subsequent_population_mutations = 3
-        self.max_removals_per_mutation = 2
+        self.initial_population_mutations = 15 # maximum number of mutations that we should perform on EACH CASCADE in our initial population
+        self.subsequent_population_mutations = 3 # maximum number of mutations that we should perform on EACH CASCADE in subsequent populations
+        self.max_removals_per_mutation = 2 # the maximum number of gates that we should remove if our mutation does gate removals. the larger this number, the more aggressive the optimization will be, however it may yield undesired results on large circuits (divergence comes to mind)
         
-        self.parent = spec
+        self.parent = spec # Cascade that specifies the function that we wish to compute
         self.spec_length = len(spec)
         self.lines = spec.lines
         #self.lines = dict(zip(spec.variable_line_labels(), [0] * spec.logical_width()))
