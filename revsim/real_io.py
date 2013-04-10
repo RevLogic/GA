@@ -9,6 +9,12 @@ class RealWriter:
         self.variables_lines = c.variable_line_labels()
 
     def write(self, file_name):
+        """
+        c = Cascade(...)
+        ...
+        w = RealWriter(c)
+        w.write("file_name.real")
+        """
         REVLIB_VERSION_STRING = "1.0"
 
         f = open(file_name, 'w')
@@ -49,6 +55,11 @@ class RealReader:
         pass
 
     def read_cascade(self):
+        """
+        c = Cascade({})
+        r = RealReader("file_name.real")
+        c, non_garbage_outputs = r.read_cascade()
+        """
         try:
             filename = open(self.circuit_file, 'r') #change this to cmd argv 
             myList = [] #to store all the lines from file
