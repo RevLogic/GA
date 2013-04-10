@@ -150,6 +150,9 @@ class TestGateSanity(unittest.TestCase):
 
 
 class RealIOTests(unittest.TestCase):    
+    current_cascade = None
+    ideal = Cascade({'a':0, 'b':0, 'c':0})
+
     def test_reading(self):
         pass
 
@@ -179,8 +182,6 @@ class SharedCubeTests(unittest.TestCase):
                    ('x1', 'x2', 'x4'): ['f1', 'f4', 'f2', 'f3', 'f5'] }
         
         self.assertEqual(self.cube_list, actual)
-
-
 
 
 if __name__ == "__main__":

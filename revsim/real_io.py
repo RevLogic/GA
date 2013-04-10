@@ -4,10 +4,20 @@ from gates import *
 class RealWriter:
     def __init__(self, c):
         self.c = c
-        self.variables = c.lines
         self.lines = c.lines
         self.constant_lines = c.constant_line_labels()
         self.variables_lines = c.variable_line_labels()
+
+    def write(self, file_name):
+        f = open(file_name, 'w')
+        variable_list = sorted(self.lines.keys())
+        num_vars = str(len(variable_list))
+        constant_list = []
+        for variable in variable_list:
+            if variable in self.constant_lines:
+                constant_list.append(str(self.lines[variable]))
+            else:
+                constant_list.append("-")
 
 class RealReader:
     def __init__(self, file_name):

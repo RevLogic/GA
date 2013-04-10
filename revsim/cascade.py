@@ -3,6 +3,7 @@
 
 from gates import *
 import copy
+import pickle
 
 class Cascade:
     def __init__(self, lines, constants=[]):
@@ -148,3 +149,21 @@ class Cascade:
         Returns a deep copy of the current Cascade. "Must go deeper." -JZ
         """
         return copy.deepcopy(self)
+
+    def write_pickle(self, file_name):
+        """
+        Serializes the current Cascade's state into a file which may be loaded in at a later time.
+        """
+        f = open(file_name, "w")
+        pickle.dump([self.lines, self.gate_list, self.constant_lines, self.updated], f)
+        f.close()
+
+    def read_pickle(self, file_name):
+        """
+        Replaces the Cascade's current state with the state read from a file.
+        Right now it uses the pickle module to do this, but a better choice might be JSON.
+        """
+        f = open(file_name)
+        self.lines, self.gate_list, self.constant_lines, self.updated = pickle.load(f)
+        f.close()
+        
