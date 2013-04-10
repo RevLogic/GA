@@ -45,7 +45,12 @@ class SmartGA(GeneticAlgorithm):
 
         if (choice == 0 or choice == 1) and len(c) > 1:
             for i in range(0, self.max_removals_per_mutation):
-                c.remove(random.randint(0, len(c)-1)) # Randomly remove a gate
+                try:
+                    c.remove(random.randint(0, len(c)-1)) # Randomly remove a gate
+                except ValueError:
+                    print "ERROR: trying to remove more gates than there are in the Cascade"
+                    print "You should try decreasing the GA's self.max_removals_per_mutation parameter"
+                    exit()
         else:
             # or replace a gate with a random gate
             i = len(c)-1

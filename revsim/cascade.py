@@ -58,13 +58,18 @@ class Cascade:
         # This function is now called update_lines because it doesn't
         # really "replace" them in the conventional set. The values are
         # still there, but we can change any ones we want
+
+        for line in lines:
+            if line not in self.lines:
+                raise ValueError
         
         # Merge current line set with existing line set
         self.lines.update(lines)
 
         # Make sure the constant lines stay constant
         self.lines.update(self.constant_lines)
-    
+        self.updated = True
+        
     def insert(self, gate, pos):
         """
         Insert a function, control-list, and target into the current Cascade's

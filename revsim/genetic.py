@@ -28,7 +28,7 @@ class GeneticAlgorithm:
 
         self.initial_population_mutations = 15
         self.subsequent_population_mutations = 3
-        self.max_removals_per_mutation = 5
+        self.max_removals_per_mutation = 2
         
         self.parent = spec
         self.spec_length = len(spec)

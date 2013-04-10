@@ -10,4 +10,4 @@ from shared_cube import *
 from genetic import *
 from naive_ga import *
 from smart_ga import *
-import parser
+from real_io import *
