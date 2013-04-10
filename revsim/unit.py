@@ -149,14 +149,20 @@ class TestGateSanity(unittest.TestCase):
         pass
 
 
-class RealIOTests(unittest.TestCase):    
+class IOTests(unittest.TestCase):    
     current_cascade = None
     ideal = Cascade({'a':0, 'b':0, 'c':0})
 
-    def test_reading(self):
+    def test_reading_real(self):
         pass
 
-    def test_writing(self):
+    def test_writing_real(self):
+        pass
+
+    def test_reading_pickle(self):
+        pass
+    
+    def test_writing_pickle(self):
         pass
 
 
