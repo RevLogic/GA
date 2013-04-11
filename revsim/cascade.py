@@ -32,9 +32,26 @@ class Cascade:
         """
         return len(self.gate_list)
     
-    def __eq__(self, cascade):
+    def __eq__(self, other):
         # TODO: Implement
-        return False
+        if len(self) != len(other):
+            return False
+
+        # We can't just compare gate-lists because
+        # two of the same gates will be different instances
+        # of the class
+        for i in range(0, len(self)):
+            if self[i] != other[i]:
+                return False
+
+
+        if self.lines != other.lines:
+            return False
+        
+        if self.constant_lines != other.constant_lines:
+            return False
+
+        return True
     
     def remove(self, pos):
         """                                                                     

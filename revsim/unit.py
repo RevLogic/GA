@@ -1,4 +1,5 @@
 from revsim import *
+from sym9 import *
 import unittest
 
 class GateTests(unittest.TestCase):
@@ -151,18 +152,20 @@ class TestGateSanity(unittest.TestCase):
 
 class IOTests(unittest.TestCase):    
     current_cascade = None
-    ideal = Cascade({'a':0, 'b':0, 'c':0})
-
-    def test_reading_real(self):
-        pass
 
     def test_writing_real(self):
-        pass
+        w = RealWriter(sym9)
+        w.write("sym9_unittest.real")
 
-    def test_reading_pickle(self):
+    def test_reading_real(self):
+        r = RealReader("sym9_unittest.real")
+        self.current_cascade, non_garbage = r.read_cascade()
+        self.assertEqual(self.current_cascade, sym9)
+
+    def test_writing_pickle(self):
         pass
     
-    def test_writing_pickle(self):
+    def test_reading_pickle(self):
         pass
 
 

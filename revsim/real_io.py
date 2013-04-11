@@ -48,6 +48,8 @@ class RealWriter:
         for gate in self.c:
             f.write(str(gate) + "\n")
         f.write(".end\n")
+
+        f.close()
         
 class RealReader:
     def __init__(self, file_name):
@@ -160,6 +162,8 @@ class RealReader:
                 if garbage_dict[key] != "1":
                     non_garbage_outputs.append(key)
 		
+            filename.close()
+
             return c, non_garbage_outputs
             #t = TruthTable(c)
             #print t
