@@ -75,11 +75,11 @@ class RealReader:
                     variables = line
                 if '.inputs' in line: #find .input line
                     inputs = line
-	       		if '.outputs' in line: #find .output line
+                if '.outputs' in line: #find .output line
                     outputs = line
-	       		if '.constants' in line: #find .constant line
+                if '.constants' in line: #find .constant line
                     constants = line
-	       		if '.garbage' in line: #find .garbage line
+                if '.garbage' in line: #find .garbage line
                     garbage = line
 		
             lineDict = {} #create an empty dictionary to store set of usable lines for our circuit
