@@ -1,8 +1,5 @@
 #!/bin/sh
 FILES=`ls ./files/`
-rm -f ./exec/*.cir.sh
-rm -f ./exec/*.job
-
 for i in $FILES
     do
 

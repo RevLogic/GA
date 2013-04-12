@@ -1,8 +1,8 @@
 #!/bin/sh
 FILE=$1
 
-for (( d=1; d<=10; d++ ))
-#for (( d=1; d<=1; d++ ))
+#for (( d=1; d<=10; d++ ))
+for (( d=1; d<=1; d++ ))
 do
   echo " |*******^*^*^******************---******---******************^*^*^*******| "
   echo " |**************** File=<$FILE> Set #$((d)) *******************| "
@@ -23,7 +23,7 @@ do
   echo
 
   #for (( c=1; c<=102; c++ ))
-  for (( c=1; c<=50; c++ ))
+  for (( c=1; c<=1; c++ ))
   do
      echo " |------- <$FILE> Set #$((d))  Run #$((c)) --------| "
      #python /home/lowr4210/GA/revsim/auto_ga.py /home/lowr4210/GA/revsim/tests/rd32_273.real $IPOP $IMUT $SMUT $CIMG $MRPM
