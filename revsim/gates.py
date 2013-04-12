@@ -1,8 +1,10 @@
-# Experimental Gate class
-# RevSim beta
+# Revsim gate class
 # Author: Chris Rabl
 
 class Gate:
+    """
+    Abstract base class to define basic gate behavior
+    """
     def __init__(self):
         self.line_values = {}
     
@@ -25,6 +27,10 @@ class Gate:
         pass
     
 class SingleTargetGate(Gate):
+    """
+    Base class to define behavior of gates with multiple controls and only one target
+    All SingleTargetGates use lists to define their controls and a string literal to define the target
+    """
     def __init__(self, controls, target):
         if target in controls:
             raise ValueError
@@ -34,6 +40,13 @@ class SingleTargetGate(Gate):
     def __len__(self):
         return len(self.controls) + 1
 
+    def __eq__(self, other):
+        # Check if the instances are of the same subclass
+        if isinstance(self, other.__class__):
+            if (self.target == other.target) and (self.controls == other.controls):
+                return True
+        return False
+    
     def get_controls(self):
         return sorted(self.controls)
 
@@ -42,9 +55,20 @@ class SingleTargetGate(Gate):
 
     
 class MultipleTargetGate(Gate):
+    """
+    Base class to define the behavior of gates with multiple controls and multiple targets
+    All MultipleTargetGates use lists to define their controls and targets
+    """
     def __init__(self, controls, targets):
         self.targets = targets[:]
         self.controls = controls[:]
+
+    def __eq__(self, other):
+        # Check if the instances are of the same subclass
+        if isinstance(self, other.__class__):
+            if (self.targets == other.targets) and (self.controls == other.controls):
+                return True
+        return False
 
     def swap(self, a, b):
         val_a = self.targets[a]
@@ -53,11 +77,21 @@ class MultipleTargetGate(Gate):
         
 
 class SameTargetGate(Gate):
+    """
+    Base class to define the behavior of gates with only one target and no controls (that are the same line)
+    All SameTargetGates use only a single string to define the target, controls are not supported
+    """
     def __init__(self, target):
         self.target = target
 
     def __len__(self):
         return 1
+
+    def __eq__(self, other):
+        if isinstance(self, other.__class__):
+            if self.target == other.target:
+                return True
+        return False
 
     def get_target(self):
         return self.target
@@ -66,6 +100,9 @@ class SameTargetGate(Gate):
         return [self.target]
 
 class Toffoli(SingleTargetGate):
+    """
+    Defines the behavior of a Toffoli gate when applied to the lines in a Cascade
+    """
     def invert_target(self):
         self.line_values[self.target] = not(self.line_values[self.target])
 
@@ -102,6 +139,9 @@ class Toffoli(SingleTargetGate):
         return out
 
 class Swap(MultipleTargetGate):
+    """
+    Defines the behavior of an uncontrolled Swap gate
+    """
     def operation(self):
         if len(self.targets) != 2:
             raise ValueError        
@@ -110,15 +150,32 @@ class Swap(MultipleTargetGate):
 
 
 class Fredkin(MultipleTargetGate):
+    """
+    Defines the behavior of a controlled swap gate (Fredkin gate)
+    """
     def operation(self):
         if len(self.targets) != 2:
             raise ValueError
         if self.all_controls():
             self.swap(0, 1)
         return self.line_values
-
+    
+    def __str__(self):
+        out = "f"
+        out += str(len(self))
+        out += " "
+        for control in self.controls:
+            out += control + " "
+        for target in self.targets:
+            out += target + " "
+        return out
 
 class Inverter(SameTargetGate):
+    """
+    Defines the behavior of a simple inverter acting on a line.
+    In the .real file format, this is referred to as a Toffoli gate which only
+    has one input (the target).
+    """
     def operation(self):
         self.line_values[self.target] = not(self.line_values[self.target])
         return self.line_values

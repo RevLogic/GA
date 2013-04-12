@@ -71,9 +71,4 @@ sym9.append(Toffoli(['x16'], 'x26'))
 sym9.append(Toffoli(['x3', 'x26'], 'x16'))
 sym9.append(Inverter('x16'))
 
-print "Running..."
-print sym9.run()
-print "Length of cascade:", len(sym9)
-print "Quantum Cost:", sym9.cost()
-
-sym9.cube_list(['x17'])
+print "Imported sym9"

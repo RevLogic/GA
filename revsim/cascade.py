@@ -1,9 +1,9 @@
-# Experimental Cascade class
-# RevSim beta
+# Cascade class
 # Author: Christopher Rabl
 
 from gates import *
 import copy
+import pickle
 
 class Cascade:
     def __init__(self, lines, constants=[]):
@@ -32,9 +32,26 @@ class Cascade:
         """
         return len(self.gate_list)
     
-    def __eq__(self, cascade):
+    def __eq__(self, other):
         # TODO: Implement
-        return False
+        if len(self) != len(other):
+            return False
+
+        # We can't just compare gate-lists because
+        # two of the same gates will be different instances
+        # of the class
+        for i in range(0, len(self)):
+            if self[i] != other[i]:
+                return False
+
+
+        if self.lines != other.lines:
+            return False
+        
+        if self.constant_lines != other.constant_lines:
+            return False
+
+        return True
     
     def remove(self, pos):
         """                                                                     
@@ -59,13 +76,18 @@ class Cascade:
         # This function is now called update_lines because it doesn't
         # really "replace" them in the conventional set. The values are
         # still there, but we can change any ones we want
+
+        for line in lines:
+            if line not in self.lines:
+                raise ValueError
         
         # Merge current line set with existing line set
         self.lines.update(lines)
 
         # Make sure the constant lines stay constant
         self.lines.update(self.constant_lines)
-    
+        self.updated = True
+        
     def insert(self, gate, pos):
         """
         Insert a function, control-list, and target into the current Cascade's
@@ -141,6 +163,31 @@ class Cascade:
 
     def copy(self):
         """
-        Returns a deep copy of the current Cascade
+        Returns a deep copy of the current Cascade. "Must go deeper." -JZ
         """
         return copy.deepcopy(self)
+
+    def write_pickle(self, file_name):
+        """
+        Serializes the current Cascade's state into a file which may be loaded in at a later time.
+        c = Cascade(...)
+        c.append(...)
+        ...
+        c.write_pickle("file_name.pckl")
+        """
+        f = open(file_name, "w")
+        pickle.dump([self.lines, self.gate_list, self.constant_lines, self.updated], f)
+        f.close()
+
+    def read_pickle(self, file_name):
+        """
+        Replaces the Cascade's current state with the state read from a file.
+        Right now it uses the pickle module to do this, but a better choice might be JSON.
+
+        c = Cascade({}) # Create an empty Cascade with no lines
+        c.read_pickle("file_name.pckl")
+        """
+        f = open(file_name)
+        self.lines, self.gate_list, self.constant_lines, self.updated = pickle.load(f)
+        f.close()
+        
