@@ -1,0 +1,34 @@
+Original quantum cost: 52
+Original gate count: 20
+Smart GA Parameters
+Initial Population Count: 50
+Subsequent Population Count: 50
+Maximum Number of Generations: 1000
+
+Generation: 0           Fitness: 0.6875
+Generation: 2           Fitness: 0.875
+Generation: 4           Fitness: 1.0
+t1 a
+t1 b
+t3 a b e
+t1 b
+t2 b e
+t1 c
+t3 a b d
+t1 a
+t1 b
+t1 c
+t3 a b e
+t1 c
+t3 a b d
+t1 b
+t1 c
+t3 a b d
+t1 c
+t3 a b d
+t2 b a
+Quantum Cost: 43
+Gate Count: 19
+Quantum Cost Improvement: 9
+Gate Count Improvement: 1
+

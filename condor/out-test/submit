@@ -1,0 +1,6 @@
+Universe   = vanilla
+Executable = gsym6.sh
+Log        = simple.log
+Output     = simple.out
+Error      = simple.error
+Queue

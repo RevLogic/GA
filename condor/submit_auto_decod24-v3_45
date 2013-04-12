@@ -1,0 +1,7 @@
+Universe   = vanilla
+Executable = auto_ga_decod24-v3_45.sh
+Log        = /home/lowr4210/GA/condor/logs/decod24-v3_45/e/decod24-v3_45log.log
+Output     = /home/lowr4210/GA/condor/logs/decod24-v3_45/o/decod24-v3_45.o.$(Cluster).$(Process)
+Error      = /home/lowr4210/GA/condor/logs/decod24-v3_45/e/decod24-v3_45.e.$(Cluster).$(Process)
+Notification = Never
+Queue 10

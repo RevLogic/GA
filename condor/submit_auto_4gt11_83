@@ -1,0 +1,7 @@
+Universe   = vanilla
+Executable = auto_ga_4gt11_83.sh
+Log        = /home/lowr4210/GA/condor/logs/4gt11_83/e/4gt11_83log.log
+Output     = /home/lowr4210/GA/condor/logs/4gt11_83/o/4gt11_83.o.$(Cluster).$(Process)
+Error      = /home/lowr4210/GA/condor/logs/4gt11_83/e/4gt11_83.e.$(Cluster).$(Process)
+Notification = Never
+Queue 10

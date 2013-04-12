@@ -1,0 +1,70 @@
+------- Run number: 1 --------
+Initial Quantum Cost: 72
+Initial Gate Count: 20
+Smart GA Parameters
+Initial Population Count: 500
+Subsequent Population Count: 35
+Maximum Number of Generations: 50000
+
+Generation: 0 		Fitness: 0.71875
+Generation: 2 		Fitness: 0.75
+Generation: 4 		Fitness: 0.8125
+Generation: 7 		Fitness: 0.96875
+Generation: 86 		Fitness: 1.0
+t3 x1 x2 s2
+t2 x1 x2
+t3 x3 s2 s3
+t3 x2 x3 s2
+t2 x2 x3
+t3 x4 s3 s4
+t3 x4 s2 s3
+t3 x3 x4 s2
+t2 x3 x4
+t3 x5 s4 s5
+t3 x5 s3 s4
+t3 x5 s2 s3
+t3 x4 x5 s2
+t2 x4 x5
+t3 x6 s4 s5
+t3 x6 s3 s4
+t3 x5 x6 s2
+t2 s2 s5
+t2 s4 s5
+Quantum Cost: 71
+Gate Count: 19
+------- End run number: 1 -------
+------- Run number: 2 --------
+Initial Quantum Cost: 72
+Initial Gate Count: 20
+Smart GA Parameters
+Initial Population Count: 500
+Subsequent Population Count: 35
+Maximum Number of Generations: 50000
+
+Generation: 0 		Fitness: 0.71875
+Generation: 2 		Fitness: 0.90625
+Generation: 10 		Fitness: 0.96875
+Generation: 142 		Fitness: 1.0
+t3 x1 x2 s2
+t2 x1 x2
+t3 x3 s2 s3
+t3 x2 x3 s2
+t2 x2 x3
+t3 x4 s3 s4
+t3 x4 s2 s3
+t3 x3 x4 s2
+t2 x3 x4
+t3 x5 s4 s5
+t3 x5 s3 s4
+t3 x5 s2 s3
+t3 x4 x5 s2
+t2 x4 x5
+t3 s4 x6 s2
+t3 x6 s3 s4
+t3 x5 x6 s2
+t3 x5 x6 x4
+t2 s2 s5
+t2 s4 s5
+Quantum Cost: 76
+Gate Count: 20
+------- End run number: 2 -------

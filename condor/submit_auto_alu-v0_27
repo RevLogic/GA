@@ -1,0 +1,7 @@
+Universe   = vanilla
+Executable = auto_ga_alu-v0_27.sh
+Log        = /home/lowr4210/GA/condor/logs/alu-v0_27/e/alu-v0_27log.log
+Output     = /home/lowr4210/GA/condor/logs/alu-v0_27/o/alu-v0_27.o.$(Cluster).$(Process)
+Error      = /home/lowr4210/GA/condor/logs/alu-v0_27/e/alu-v0_27.e.$(Cluster).$(Process)
+Notification = Never
+Queue 10
