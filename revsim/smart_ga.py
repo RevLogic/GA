@@ -64,11 +64,9 @@ class SmartGA(GeneticAlgorithm):
                 
     def fitness(self, truth_table, quantum_cost_goal):
         function_eval = truth_table.fuzzy_compare_columns(self.goal, self.non_garbage)
-        qcost_fitness = min(quantum_cost_goal / truth_table.c.cost(), 1.0)
-        if function_eval == 1.0:
-            return qcost_fitness
-        else:
-            return function_eval
+        #qcost_fitness = min(quantum_cost_goal / truth_table.c.cost(), 1.0)
+        
+        return function_eval
 
     
     def run(self):
@@ -122,5 +120,6 @@ class SmartGA(GeneticAlgorithm):
                     
                 print "Quantum Cost:", best.cost()
                 print "Gate Count:", len(best)
+                return best
 
             gen_count += 1
