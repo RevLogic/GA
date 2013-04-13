@@ -69,16 +69,17 @@ class RealReader:
             
             #add all the lines from file to a list
             for line in filename:
+            	line = line.strip() #to strip new line char in the end
                 myList.append( line )
                 if '.variables' in line: #find the variables line
                     variables = line
                 if '.inputs' in line: #find .input line
                     inputs = line
-	       	if '.outputs' in line: #find .output line
+                if '.outputs' in line: #find .output line
                     outputs = line
-	       	if '.constants' in line: #find .constant line
+                if '.constants' in line: #find .constant line
                     constants = line
-	       	if '.garbage' in line: #find .garbage line
+                if '.garbage' in line: #find .garbage line
                     garbage = line
 		
             lineDict = {} #create an empty dictionary to store set of usable lines for our circuit
@@ -122,8 +123,8 @@ class RealReader:
             #print 'Outputs : ',outputs
 	
             #find string .begin and .end - get it's index value
-            startIndex = myList.index('.begin\n')
-            endIndex = myList.index('.end\n')
+            startIndex = myList.index('.begin')
+            endIndex = myList.index('.end')
 
             if len(constants) !=0:
                 c = Cascade( lineDict, constants)
