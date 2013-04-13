@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "../../revsim/auto_ga.py", line 23, in <module>
+    ga.run()
+  File "/home/lowr4210/GA/revsim/smart_ga.py", line 97, in run
+    fits = [(self.fitness(TruthTable(c), quantum_cost_goal), c) for c in self.population]
+  File "/home/lowr4210/GA/revsim/smart_ga.py", line 67, in fitness
+    qcost_fitness = min(quantum_cost_goal / truth_table.c.cost(), 1.0)
+ZeroDivisionError: integer division or modulo by zero

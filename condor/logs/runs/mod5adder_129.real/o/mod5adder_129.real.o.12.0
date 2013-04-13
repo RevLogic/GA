@@ -2,1858 +2,729 @@
  |**************** File=<../files/mod5adder_129.real> Set #1 *******************| 
  |*******^*^*^******************---******---******************^*^*^*******| 
  |->>>>>> --- Set #1 variables: --- <<<<<<| 
- | init_population_size =            76  
- | initial_population_mutations =    6  
- | subsequent_population_mutations = 2  
- | cost_improvement_goal =           21  
- | max_removals_per_mutation =       4  
+ | init_population_size =            738  
+ | initial_population_mutations =    5  
+ | subsequent_population_mutations = 4  
+ | cost_improvement_goal =           12  
+ | max_removals_per_mutation =       7  
 
  |------- <../files/mod5adder_129.real> Set #1  Run #1 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.84375
-Generation: 2 		Fitness: 0.869791666667
-Generation: 4 		Fitness: 0.880208333333
-Generation: 5 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 1 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #2 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.885416666667
-Generation: 3 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 2 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #3 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 3 		Fitness: 0.875
-Generation: 4 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 3 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #4 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 3 		Fitness: 0.854166666667
-Generation: 4 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 4 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #5 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.84375
-Generation: 2 		Fitness: 0.864583333333
-Generation: 3 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 5 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #6 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.911458333333
-Generation: 3 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 6 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #7 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.885416666667
-Generation: 3 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 7 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #8 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.864583333333
-Generation: 3 		Fitness: 0.916666666667
-Generation: 4 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 8 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #9 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 3 		Fitness: 0.90625
-Generation: 4 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 9 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #10 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.84375
-Generation: 2 		Fitness: 0.885416666667
-Generation: 3 		Fitness: 0.947916666667
-Generation: 46 		Fitness: 0.958333333333
-Generation: 47 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 10 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #11 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.895833333333
-Generation: 3 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 11 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #12 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 4 		Fitness: 0.875
-Generation: 5 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 12 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #13 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.875
-Generation: 3 		Fitness: 0.947916666667
-Generation: 4 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 13 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #14 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.9375
-Generation: 35 		Fitness: 0.958333333333
-Generation: 36 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 14 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #15 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.916666666667
-Generation: 3 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 15 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #16 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.880208333333
-Generation: 3 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 16 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #17 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.890625
-Generation: 3 		Fitness: 0.9375
-Generation: 4 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 17 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #18 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.84375
-Generation: 2 		Fitness: 0.880208333333
-Generation: 3 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 18 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #19 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.864583333333
-Generation: 3 		Fitness: 0.942708333333
-Generation: 4 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 19 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #20 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 3 		Fitness: 0.880208333333
-Generation: 4 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 20 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #21 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.901041666667
-Generation: 9 		Fitness: 0.947916666667
-Generation: 10 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 21 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #22 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.84375
-Generation: 2 		Fitness: 0.90625
-Generation: 3 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 22 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #23 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.84375
-Generation: 2 		Fitness: 0.875
-Generation: 3 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 23 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #24 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.885416666667
-Generation: 3 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 24 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #25 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.864583333333
-Generation: 3 		Fitness: 0.90625
-Generation: 4 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 25 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #26 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 3 		Fitness: 0.932291666667
-Generation: 4 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 26 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #27 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.875
-Generation: 4 		Fitness: 0.901041666667
-Generation: 5 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 27 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #28 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 3 		Fitness: 0.890625
-Generation: 4 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 28 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #29 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.916666666667
-Generation: 3 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 29 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #30 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.875
-Generation: 3 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 30 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #31 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.854166666667
-Generation: 4 		Fitness: 0.880208333333
-Generation: 5 		Fitness: 0.916666666667
-Generation: 8 		Fitness: 0.9375
-Generation: 9 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 31 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #32 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.84375
-Generation: 2 		Fitness: 0.901041666667
-Generation: 3 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 32 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #33 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.84375
-Generation: 3 		Fitness: 0.942708333333
-Generation: 4 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 33 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #34 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 4 		Fitness: 0.885416666667
-Generation: 5 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 34 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #35 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.859375
-Generation: 3 		Fitness: 0.890625
-Generation: 4 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 35 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #36 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.901041666667
-Generation: 3 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 36 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #37 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.854166666667
-Generation: 3 		Fitness: 0.859375
-Generation: 5 		Fitness: 0.885416666667
-Generation: 6 		Fitness: 0.9375
-Generation: 7 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 37 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #38 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.84375
-Generation: 2 		Fitness: 0.890625
-Generation: 3 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 38 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #39 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.869791666667
-Generation: 4 		Fitness: 0.880208333333
-Generation: 5 		Fitness: 0.901041666667
-Generation: 6 		Fitness: 0.90625
-Generation: 12 		Fitness: 0.942708333333
-Generation: 13 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 39 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #40 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.890625
-Generation: 3 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 40 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #41 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.84375
-Generation: 2 		Fitness: 0.90625
-Generation: 3 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 41 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #42 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 3 		Fitness: 0.864583333333
-Generation: 4 		Fitness: 0.96875
-Generation: 5 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 42 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #43 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.927083333333
-Generation: 3 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 43 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #44 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.854166666667
-Generation: 2 		Fitness: 0.864583333333
-Generation: 3 		Fitness: 0.947916666667
-Generation: 62 		Fitness: 0.963541666667
-Generation: 63 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 44 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #45 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.869791666667
-Generation: 3 		Fitness: 0.921875
-Generation: 4 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 45 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #46 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 4 		Fitness: 0.869791666667
-Generation: 5 		Fitness: 0.885416666667
-Generation: 6 		Fitness: 0.927083333333
-Generation: 8 		Fitness: 0.9375
-Generation: 9 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 46 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #47 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.864583333333
-Generation: 6 		Fitness: 0.895833333333
-Generation: 7 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 47 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #48 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.875
-Generation: 3 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 48 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #49 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.875
-Generation: 3 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 49 -------|
  |------- <../files/mod5adder_129.real> Set #1  Run #50 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 76
-Initial Population Mutations: 6
-Subsequent Population Count: 76
-Subsequent Population Mutations: 2
+Initial Population Count: 738
+Initial Population Mutations: 5
+Subsequent Population Count: 738
+Subsequent Population Mutations: 4
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.927083333333
-Generation: 3 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 50 -------|
  |*******^*^*^******************---******---******************^*^*^*******| 
  |**************** File=<../files/mod5adder_129.real> Set #2 *******************| 
  |*******^*^*^******************---******---******************^*^*^*******| 
  |->>>>>> --- Set #2 variables: --- <<<<<<| 
- | init_population_size =            619  
- | initial_population_mutations =    8  
+ | init_population_size =            756  
+ | initial_population_mutations =    9  
  | subsequent_population_mutations = 3  
  | cost_improvement_goal =           21  
- | max_removals_per_mutation =       7  
+ | max_removals_per_mutation =       10  
 
  |------- <../files/mod5adder_129.real> Set #2  Run #1 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -1865,9 +736,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -1879,9 +750,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -1893,9 +764,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -1907,9 +778,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -1921,9 +792,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -1935,9 +806,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -1949,9 +820,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -1963,9 +834,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -1977,9 +848,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -1991,9 +862,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2005,9 +876,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2019,9 +890,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2033,9 +904,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2047,9 +918,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2061,9 +932,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2075,9 +946,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2089,9 +960,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2103,9 +974,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2117,9 +988,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2131,9 +1002,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2145,9 +1016,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2159,9 +1030,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2173,9 +1044,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2187,9 +1058,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2201,9 +1072,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2215,9 +1086,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2229,9 +1100,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2243,9 +1114,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2257,9 +1128,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2271,9 +1142,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2285,9 +1156,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2299,9 +1170,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2313,9 +1184,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2327,9 +1198,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2341,9 +1212,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2355,9 +1226,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2369,9 +1240,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2383,9 +1254,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2397,9 +1268,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2411,9 +1282,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2425,9 +1296,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2439,9 +1310,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2453,9 +1324,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2467,9 +1338,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2481,9 +1352,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2495,9 +1366,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2509,9 +1380,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2523,9 +1394,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2537,9 +1408,9 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 619
-Initial Population Mutations: 8
-Subsequent Population Count: 619
+Initial Population Count: 756
+Initial Population Mutations: 9
+Subsequent Population Count: 756
 Subsequent Population Mutations: 3
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
@@ -2551,20 +1422,20 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
  |**************** File=<../files/mod5adder_129.real> Set #3 *******************| 
  |*******^*^*^******************---******---******************^*^*^*******| 
  |->>>>>> --- Set #3 variables: --- <<<<<<| 
- | init_population_size =            361  
- | initial_population_mutations =    6  
- | subsequent_population_mutations = 3  
- | cost_improvement_goal =           18  
- | max_removals_per_mutation =       9  
+ | init_population_size =            884  
+ | initial_population_mutations =    8  
+ | subsequent_population_mutations = 5  
+ | cost_improvement_goal =           10  
+ | max_removals_per_mutation =       10  
 
  |------- <../files/mod5adder_129.real> Set #3  Run #1 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2575,10 +1446,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2589,10 +1460,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2603,10 +1474,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2617,10 +1488,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2631,10 +1502,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2645,10 +1516,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2659,10 +1530,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2673,10 +1544,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2687,10 +1558,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2701,10 +1572,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2715,10 +1586,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2729,10 +1600,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2743,10 +1614,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2757,10 +1628,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2771,10 +1642,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2785,10 +1656,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2799,10 +1670,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2813,10 +1684,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2827,10 +1698,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2841,10 +1712,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2855,10 +1726,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2869,10 +1740,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2883,10 +1754,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2897,10 +1768,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2911,10 +1782,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2925,10 +1796,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2939,10 +1810,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2953,10 +1824,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2967,10 +1838,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2981,10 +1852,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -2995,10 +1866,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -3009,10 +1880,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -3023,10 +1894,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -3037,10 +1908,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -3051,10 +1922,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -3065,10 +1936,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -3079,10 +1950,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -3093,10 +1964,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -3107,10 +1978,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -3121,10 +1992,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -3135,10 +2006,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -3149,10 +2020,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -3163,10 +2034,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -3177,10 +2048,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -3191,10 +2062,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -3205,10 +2076,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -3219,10 +2090,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -3233,10 +2104,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -3247,10 +2118,10 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 361
-Initial Population Mutations: 6
-Subsequent Population Count: 361
-Subsequent Population Mutations: 3
+Initial Population Count: 884
+Initial Population Mutations: 8
+Subsequent Population Count: 884
+Subsequent Population Mutations: 5
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
@@ -3261,536 +2132,759 @@ You should try decreasing the GA's self.max_removals_per_mutation parameter
  |**************** File=<../files/mod5adder_129.real> Set #4 *******************| 
  |*******^*^*^******************---******---******************^*^*^*******| 
  |->>>>>> --- Set #4 variables: --- <<<<<<| 
- | init_population_size =            466  
- | initial_population_mutations =    9  
- | subsequent_population_mutations = 4  
- | cost_improvement_goal =           13  
- | max_removals_per_mutation =       8  
+ | init_population_size =            673  
+ | initial_population_mutations =    8  
+ | subsequent_population_mutations = 2  
+ | cost_improvement_goal =           16  
+ | max_removals_per_mutation =       6  
 
  |------- <../files/mod5adder_129.real> Set #4  Run #1 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 466
-Initial Population Mutations: 9
-Subsequent Population Count: 466
-Subsequent Population Mutations: 4
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 2 		Fitness: 0.880208333333
-Generation: 138 		Fitness: 0.895833333333
-Generation: 139 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 1 -------|
  |------- <../files/mod5adder_129.real> Set #4  Run #2 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 466
-Initial Population Mutations: 9
-Subsequent Population Count: 466
-Subsequent Population Mutations: 4
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 23 		Fitness: 0.864583333333
-Generation: 24 		Fitness: 0.958333333333
-Generation: 25 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 2 -------|
  |------- <../files/mod5adder_129.real> Set #4  Run #3 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 466
-Initial Population Mutations: 9
-Subsequent Population Count: 466
-Subsequent Population Mutations: 4
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 10 		Fitness: 0.864583333333
-Generation: 11 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 3 -------|
  |------- <../files/mod5adder_129.real> Set #4  Run #4 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 466
-Initial Population Mutations: 9
-Subsequent Population Count: 466
-Subsequent Population Mutations: 4
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 8 		Fitness: 0.854166666667
-Generation: 23 		Fitness: 0.890625
-Generation: 37 		Fitness: 0.916666666667
-Generation: 38 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 4 -------|
  |------- <../files/mod5adder_129.real> Set #4  Run #5 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 466
-Initial Population Mutations: 9
-Subsequent Population Count: 466
-Subsequent Population Mutations: 4
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 22 		Fitness: 0.854166666667
-Generation: 65 		Fitness: 0.869791666667
-Generation: 66 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 5 -------|
  |------- <../files/mod5adder_129.real> Set #4  Run #6 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 466
-Initial Population Mutations: 9
-Subsequent Population Count: 466
-Subsequent Population Mutations: 4
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 29 		Fitness: 0.875
-Generation: 80 		Fitness: 0.895833333333
-Generation: 81 		Fitness: 0.9375
-Generation: 82 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 6 -------|
  |------- <../files/mod5adder_129.real> Set #4  Run #7 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 466
-Initial Population Mutations: 9
-Subsequent Population Count: 466
-Subsequent Population Mutations: 4
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 5 		Fitness: 0.859375
-Generation: 40 		Fitness: 0.875
-Generation: 50 		Fitness: 0.885416666667
-Generation: 51 		Fitness: 0.96875
-Generation: 52 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 7 -------|
  |------- <../files/mod5adder_129.real> Set #4  Run #8 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 466
-Initial Population Mutations: 9
-Subsequent Population Count: 466
-Subsequent Population Mutations: 4
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 8 		Fitness: 0.854166666667
-Generation: 47 		Fitness: 0.859375
-Generation: 106 		Fitness: 0.875
-Generation: 208 		Fitness: 0.927083333333
-Generation: 209 		Fitness: 0.979166666667
-Generation: 210 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 8 -------|
  |------- <../files/mod5adder_129.real> Set #4  Run #9 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 466
-Initial Population Mutations: 9
-Subsequent Population Count: 466
-Subsequent Population Mutations: 4
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 28 		Fitness: 0.859375
-Generation: 32 		Fitness: 0.864583333333
-Generation: 33 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 9 -------|
  |------- <../files/mod5adder_129.real> Set #4  Run #10 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 466
-Initial Population Mutations: 9
-Subsequent Population Count: 466
-Subsequent Population Mutations: 4
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 25 		Fitness: 0.885416666667
-Generation: 101 		Fitness: 0.895833333333
-Generation: 102 		Fitness: 0.96875
-Generation: 103 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 10 -------|
  |------- <../files/mod5adder_129.real> Set #4  Run #11 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 466
-Initial Population Mutations: 9
-Subsequent Population Count: 466
-Subsequent Population Mutations: 4
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 14 		Fitness: 0.880208333333
-Generation: 102 		Fitness: 0.90625
-Generation: 103 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 11 -------|
  |------- <../files/mod5adder_129.real> Set #4  Run #12 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 466
-Initial Population Mutations: 9
-Subsequent Population Count: 466
-Subsequent Population Mutations: 4
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 17 		Fitness: 0.869791666667
-Generation: 87 		Fitness: 0.875
-Generation: 88 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 12 -------|
  |------- <../files/mod5adder_129.real> Set #4  Run #13 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 466
-Initial Population Mutations: 9
-Subsequent Population Count: 466
-Subsequent Population Mutations: 4
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 25 		Fitness: 0.854166666667
-Generation: 57 		Fitness: 0.859375
-Generation: 58 		Fitness: 0.9375
-Generation: 59 		Fitness: 1
-t1 b
-t3 a d b
-t1 a
-t4 a b f c
-t1 c
-t3 c d a
-t4 a b d c
-t3 c e b
-t3 a f c
-t3 b e f
-t3 a f c
-t3 c f a
-t3 b e f
-t1 a
-t1 b
-t1 c
-t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
  |------- End run number: 13 -------|
  |------- <../files/mod5adder_129.real> Set #4  Run #14 --------| 
 Original quantum cost: 77
 Original gate count: 17
 Smart GA Parameters
-Initial Population Count: 466
-Initial Population Mutations: 9
-Subsequent Population Count: 466
-Subsequent Population Mutations: 4
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
 Maximum Number of Generations: 5000
 Quantum Cost Goal: 77
 
-Generation: 0 		Fitness: 0.848958333333
-Generation: 7 		Fitness: 0.880208333333
-Generation: 8 		Fitness: 0.90625
-Generation: 9 		Fitness: 1
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 14 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #15 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 15 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #16 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 16 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #17 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 17 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #18 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 18 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #19 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 19 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #20 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 20 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #21 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 21 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #22 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 22 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #23 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 23 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #24 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 24 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #25 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 25 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #26 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 26 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #27 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 27 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #28 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 28 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #29 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 29 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #30 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 30 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #31 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 31 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #32 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 32 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #33 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 33 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #34 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 34 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #35 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 35 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #36 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 36 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #37 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 37 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #38 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 38 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #39 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 39 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #40 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 40 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #41 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 41 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #42 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 42 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #43 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 43 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #44 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 44 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #45 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 45 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #46 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 46 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #47 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 47 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #48 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 48 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #49 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 49 -------|
+ |------- <../files/mod5adder_129.real> Set #4  Run #50 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 673
+Initial Population Mutations: 8
+Subsequent Population Count: 673
+Subsequent Population Mutations: 2
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+ERROR: trying to remove more gates than there are in the Cascade
+You should try decreasing the GA's self.max_removals_per_mutation parameter
+ |------- End run number: 50 -------|
+ |*******^*^*^******************---******---******************^*^*^*******| 
+ |**************** File=<../files/mod5adder_129.real> Set #5 *******************| 
+ |*******^*^*^******************---******---******************^*^*^*******| 
+ |->>>>>> --- Set #5 variables: --- <<<<<<| 
+ | init_population_size =            731  
+ | initial_population_mutations =    7  
+ | subsequent_population_mutations = 5  
+ | cost_improvement_goal =           19  
+ | max_removals_per_mutation =       1  
+
+ |------- <../files/mod5adder_129.real> Set #5  Run #1 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 731
+Initial Population Mutations: 7
+Subsequent Population Count: 731
+Subsequent Population Mutations: 5
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+Generation: 0 		Fitness: 0.859375
+Generation: 2 		Fitness: 0.885416666667
+Generation: 5 		Fitness: 0.901041666667
+Generation: 6 		Fitness: 0.921875
+Generation: 73 		Fitness: 0.947916666667
+Generation: 132 		Fitness: 0.958333333333
+Generation: 1452 		Fitness: 0.96875
+GENERATION LIMIT EXCEEDED!
+Fitness: 0.96875
 t1 b
-t3 a d b
 t1 a
 t4 a b f c
 t1 c
 t3 c d a
 t4 a b d c
 t3 c e b
-t3 a f c
 t3 b e f
-t3 a f c
 t3 c f a
 t3 b e f
 t1 a
 t1 b
 t1 c
 t3 a f b
-Quantum Cost: 77
-Gate Count: 17
-Quantum Cost Improvement: 0
-Gate Count Improvement: 0
- |------- End run number: 14 -------|
- |------- <../files/mod5adder_129.real> Set #4  Run #15 --------| 
+Quantum Cost: 62
+Gate Count: 14
+Quantum Cost Improvement: 15
+Gate Count Improvement: 3
+ |------- End run number: 1 -------|
+ |------- <../files/mod5adder_129.real> Set #5  Run #2 --------| 
