@@ -43,7 +43,7 @@ encoding=UTF-8
 highlight=BibTeX
 line=411
 mode=BibTeX
-open=true
+open=false
 order=1
 
 [item:conclusion.tex]
@@ -71,9 +71,9 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=49
+line=0
 mode=LaTeX
-open=true
+open=false
 order=0
 
 [item:genetic.tex]
@@ -81,19 +81,19 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=5
+line=0
 mode=LaTeX
-open=true
+open=false
 order=4
 
 [item:introduction.tex]
 archive=true
-column=14
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=120
+line=0
 mode=LaTeX
-open=true
+open=false
 order=2
 
 [item:main.tex]
@@ -101,19 +101,19 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=19
+line=43
 mode=LaTeX
-open=true
+open=false
 order=5
 
 [item:orderingrules.tex]
 archive=true
-column=28
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=3
+line=0
 mode=LaTeX
-open=true
+open=false
 order=3
 
 [item:results.tex]
@@ -156,7 +156,7 @@ CursorLine=120
 
 [view-settings,view=0,item:main.tex]
 CursorColumn=0
-CursorLine=19
+CursorLine=43
 
 [view-settings,view=0,item:orderingrules.tex]
 CursorColumn=28

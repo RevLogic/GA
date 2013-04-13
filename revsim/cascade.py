@@ -87,6 +87,10 @@ class Cascade:
         # Make sure the constant lines stay constant
         self.lines.update(self.constant_lines)
         self.updated = True
+
+    def replace_gates(self, gates):
+        # TODO: Test for replacement validity
+        self.gate_list = gates
         
     def insert(self, gate, pos):
         """
