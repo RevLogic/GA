@@ -34,18 +34,18 @@ if __name__ == '__main__':
         for i in xrange(0, len(l), n):
             yield l[i:i+n]
             
-    max_cascade_length = 30;
+    max_cascade_length = 20;
 
     # The most terrible list comprehension ever...
     cascade_list = [create_cascade(ideal.lines, gates) for gates in list(partition(ideal, max_cascade_length))]
 
     new_cascade_list = pool.map(smartGA_pool_runner, cascade_list)
 
+    final_cascade = Cascade(ideal.lines)
     for cascade in new_cascade_list:
         for gate in cascade:
-            print gate
-
+            final_cascade.append(gate)
     
-    print "Quantum Cost Improvement:", ideal.cost()
-    print "Gate Count Improvement:", len(ideal)
+    print "Quantum Cost Improvement:", ideal.cost() - final_cascade.cost()
+    print "Gate Count Improvement:", len(ideal) - len(final_cascade)
     
