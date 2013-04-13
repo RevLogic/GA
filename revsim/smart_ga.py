@@ -113,6 +113,7 @@ class SmartGA(GeneticAlgorithm):
                 if gen_count == self.max_generations - 1:
                     print "GENERATION LIMIT EXCEEDED!"
                     print "Fitness:", current_fitness
+                    return self.parent
                 best = top_two[1][1]
 		self.bestgate = best
                 for gate in best:
