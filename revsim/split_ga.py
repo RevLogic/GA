@@ -50,6 +50,8 @@ if __name__ == '__main__':
     # The most terrible list comprehension ever...
     cascade_list = [create_cascade(ideal.lines, gates) for gates in list(partition(ideal, max_cascade_length))]
 
+    ideal_copy = ideal.copy()
+
     new_cascade_list = pool.map(smartGA_pool_runner, cascade_list)
 
     final_cascade = Cascade(ideal.lines)
@@ -63,6 +65,6 @@ if __name__ == '__main__':
             final_cascade.append(gate)
             
     
-    print "Quantum Cost Improvement:", ideal.cost() - final_cascade.cost()
-    print "Gate Count Improvement:", len(ideal) - len(final_cascade)
+    print "Quantum Cost Improvement:", ideal_copy.cost() - final_cascade.cost()
+    print "Gate Count Improvement:", len(ideal_copy) - len(final_cascade)
     
