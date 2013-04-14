@@ -1,3 +1,14 @@
+# Revsim experimental
+
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# FOR INTERNAL TESTING ONLY: DO NOT DEPLOY ON CONDOR
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+# Description: Multiprocessing implementation of
+# "splitting" Genetic Algorithm
+# Author: Chris Rabl
+
+
 from multiprocessing import Pool
 import sys
 
@@ -42,9 +53,15 @@ if __name__ == '__main__':
     new_cascade_list = pool.map(smartGA_pool_runner, cascade_list)
 
     final_cascade = Cascade(ideal.lines)
+
+    print "-----------------------------------"
+    print "Final Cascade: "
+
     for cascade in new_cascade_list:
         for gate in cascade:
+            print gate
             final_cascade.append(gate)
+            
     
     print "Quantum Cost Improvement:", ideal.cost() - final_cascade.cost()
     print "Gate Count Improvement:", len(ideal) - len(final_cascade)
