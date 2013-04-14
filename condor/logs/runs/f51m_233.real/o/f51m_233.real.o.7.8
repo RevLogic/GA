@@ -2,24 +2,24 @@
  |**************** File=<../files/f51m_233.real> Set #1 *******************| 
  |*******^*^*^******************---******---******************^*^*^*******| 
  |->>>>>> --- Set #1 variables: --- <<<<<<| 
- | init_population_size =            715  
- | initial_population_mutations =    5  
+ | init_population_size =            516  
+ | initial_population_mutations =    7  
  | subsequent_population_mutations = 2  
- | cost_improvement_goal =           17  
- | max_removals_per_mutation =       8  
+ | cost_improvement_goal =           10  
+ | max_removals_per_mutation =       1  
 
  |------- <../files/f51m_233.real> Set #1  Run #1 --------| 
 Original quantum cost: 28303
 Original gate count: 663
 Smart GA Parameters
-Initial Population Count: 715
-Initial Population Mutations: 5
-Subsequent Population Count: 715
+Initial Population Count: 516
+Initial Population Mutations: 7
+Subsequent Population Count: 516
 Subsequent Population Mutations: 2
 Maximum Number of Generations: 5000
-Quantum Cost Goal: 28255
+Quantum Cost Goal: 28275
 
-Generation: 0 		Fitness: 1
+Generation: 0 		Fitness: 1.0
 t3 x12 x13 f0
 t3 x12 x13 f1
 t3 x12 x13 f2
@@ -41,6 +41,7 @@ t8 x1 x2 x5 x8 x9 x10 x13 f3
 t1 f6
 t8 x1 x5 x8 x9 x10 x11 x13 f1
 t6 x2 x8 x10 x11 x13 f2
+t6 x2 x8 x10 x11 x13 f6
 t8 x3 x7 x8 x9 x10 x11 x13 f3
 t8 x3 x7 x8 x9 x10 x11 x13 f6
 t1 x4
@@ -50,6 +51,7 @@ t6 x0 x4 x10 x12 x13 f1
 t6 x0 x4 x10 x12 x13 f2
 t8 x0 x4 x8 x9 x10 x11 x13 f0
 t8 x0 x4 x8 x9 x10 x11 x13 f1
+t8 x0 x4 x8 x9 x10 x11 x13 f2
 t1 f3
 t1 x7
 t4 x3 x7 x10 f3
@@ -67,6 +69,7 @@ t1 f6
 t1 x4
 t5 x1 x2 x3 x4 f7
 t1 f3
+t1 x8
 t5 x1 x2 x4 x7 f7
 t1 x7
 t1 x4
@@ -77,11 +80,13 @@ t7 x3 x8 x9 x10 x11 x13 f6
 t8 x1 x2 x6 x8 x9 x11 x13 f3
 t1 x8
 t8 x0 x8 x9 x10 x11 x12 x13 f1
+t7 x1 x8 x9 x10 x11 x13 f1
 t7 x1 x8 x9 x10 x11 x13 f3
 t5 x2 x9 x11 x13 f3
 t1 f6
 t1 x8
 t1 x11
+t4 x9 x11 x13 f3
 t9 x4 x5 x6 x8 x10 x11 x12 x13 f3
 t4 x3 x7 x11 f3
 t5 x9 x10 x11 x13 f0
@@ -89,6 +94,7 @@ t5 x9 x10 x11 x13 f6
 t6 x0 x9 x10 x11 x13 f0
 t1 f6
 t1 x9
+t1 f6
 t1 f6
 t1 f6
 t1 x9
@@ -102,6 +108,7 @@ t1 f6
 t1 x7
 t1 f6
 t1 f6
+t1 f6
 t1 x9
 t1 x7
 t1 x11
@@ -111,12 +118,14 @@ t1 f6
 t1 f2
 t4 x0 x4 x8 f0
 t1 x8
+t1 x11
 t1 x4
 t1 f6
 t1 f3
 t1 x4
 t1 x9
 t8 x0 x4 x8 x9 x10 x11 x13 f1
+t8 x0 x4 x8 x9 x10 x11 x13 f2
 t1 f3
 t1 f6
 t1 x4
@@ -125,6 +134,7 @@ t1 x7
 t1 f6
 t1 x9
 t1 x2
+t1 f6
 t1 f6
 t1 x8
 t1 x9
@@ -137,11 +147,13 @@ t1 x4
 t1 x7
 t1 x8
 t1 x2
-t9 x2 x3 x7 x8 x9 x10 x11 x13 f6
+t1 x3
+t3 x11 x8 x13
 t1 x11
 t1 f6
 t1 f6
 t1 x2
+t1 f6
 t1 f6
 t1 f6
 t1 x2
@@ -185,6 +197,7 @@ t1 f3
 t1 f6
 t1 x9
 t1 f6
+t1 f6
 t1 x3
 t1 x8
 t1 f6
@@ -201,6 +214,7 @@ t1 x0
 t9 x0 x1 x2 x8 x9 x11 x12 x13 f3
 t1 x11
 t1 f6
+t1 x3
 t8 x0 x1 x2 x3 x9 x10 x13 f6
 t1 x9
 t1 f6
@@ -278,6 +292,7 @@ t1 f2
 t1 f6
 t1 x0
 t1 x9
+t1 x11
 t1 f3
 t1 f6
 t1 x11
@@ -291,10 +306,13 @@ t6 x6 x8 x9 x12 x13 f3
 t8 x2 x6 x8 x9 x10 x11 x13 f2
 t8 x2 x6 x8 x9 x10 x11 x13 f6
 t1 x2
+t1 f6
 t1 x11
+t1 f6
 t1 f6
 t1 x8
 t1 f3
+t1 x0
 t1 f3
 t1 x11
 t1 x8
@@ -303,16 +321,19 @@ t1 f6
 t1 x3
 t1 f6
 t1 x1
+t1 f6
 t1 x7
 t8 x6 x7 x8 x9 x10 x11 x13 f6
 t1 f6
 t1 f6
 t1 x5
+t9 x1 x5 x6 x8 x9 x10 x12 x13 f3
 t1 f6
 t1 f6
 t1 x1
 t1 x11
 t1 f6
+t1 x8
 t1 x3
 t1 x2
 t1 f3
@@ -341,7 +362,6 @@ t1 x9
 t1 x12
 t1 x8
 t8 x2 x5 x8 x9 x10 x12 x13 f3
-t9 x0 x4 x8 x9 x10 x11 x12 x13 f1
 t9 x0 x4 x8 x9 x10 x11 x12 x13 f2
 t1 x0
 t8 x0 x4 x5 x8 x9 x12 x13 f2
@@ -361,11 +381,13 @@ t1 f6
 t1 f6
 t1 x6
 t1 f6
+t1 f6
 t1 x6
 t1 x2
 t1 f6
 t1 f6
 t1 x8
+t1 x4
 t1 x1
 t1 x9
 t7 x0 x1 x9 x11 x12 x13 f2
@@ -373,6 +395,7 @@ t1 f2
 t1 x1
 t1 f3
 t1 f6
+t1 x4
 t6 x0 x4 x9 x12 x13 f1
 t6 x0 x4 x9 x12 x13 f2
 t1 f3
@@ -395,6 +418,7 @@ t1 x9
 t1 f2
 t1 x0
 t7 x0 x1 x5 x9 x12 x13 f2
+t1 x5
 t1 x11
 t8 x0 x1 x9 x10 x11 x12 x13 f2
 t1 x1
@@ -423,10 +447,12 @@ t1 f6
 t1 x5
 t1 f3
 t1 f6
+t1 x6
 t9 x2 x3 x6 x7 x8 x10 x11 x13 f6
 t1 x2
 t1 f3
 t1 f3
+t1 f6
 t1 f6
 t1 f6
 t1 x2
@@ -435,7 +461,7 @@ t7 x2 x6 x7 x10 x11 x13 f6
 t1 f6
 t1 f6
 t1 x5
-t9 x1 x5 x6 x7 x9 x10 x11 x13 f6
+t3 x0 x4 f0
 t8 x1 x5 x7 x9 x10 x11 x13 f6
 t1 x9
 t9 x2 x3 x6 x7 x9 x10 x11 x13 f6
@@ -503,21 +529,23 @@ t1 x6
 t1 f3
 t1 f6
 t1 f6
-t1 x3
+t1 f6
 t1 f6
 t1 x7
 t1 x1
 t1 x5
 t1 f6
 t1 f6
-t1 x3
 t1 x5
+t1 x0
+t1 f3
 t1 f6
 t1 f3
 t1 f6
 t1 x5
 t9 x0 x1 x5 x9 x10 x11 x12 x13 f2
 t1 f3
+t1 f6
 t1 f6
 t1 f6
 t1 f6
@@ -540,6 +568,7 @@ t1 f3
 t1 f3
 t1 x12
 t1 x9
+t1 x5
 t1 x1
 t1 f3
 t1 f3
@@ -551,6 +580,7 @@ t7 x8 x9 x10 x11 x12 x13 f0
 t7 x8 x9 x10 x11 x12 x13 f1
 t7 x8 x9 x10 x11 x12 x13 f2
 t1 x9
+t1 x12
 t9 x0 x1 x2 x9 x10 x11 x12 x13 f3
 t9 x0 x1 x2 x9 x10 x11 x12 x13 f6
 t1 x7
@@ -573,6 +603,7 @@ t1 f6
 t1 f6
 t1 x4
 t1 x1
+t1 x6
 t1 f3
 t1 f6
 t1 f6
@@ -588,8 +619,8 @@ t1 x1
 t1 f2
 t9 x0 x1 x4 x5 x8 x10 x12 x13 f2
 t9 x2 x6 x8 x9 x10 x11 x12 x13 f3
-t1 x12
 t9 x2 x6 x8 x9 x10 x11 x12 x13 f6
+t1 f3
 t1 f6
 t1 f6
 t1 f6
@@ -615,7 +646,6 @@ t1 x3
 t1 f6
 t1 x5
 t1 x2
-t1 f3
 t1 f6
 t1 f6
 t1 x2
@@ -627,10 +657,12 @@ t1 f6
 t1 x0
 t1 x9
 t1 f6
+t1 x11
 t1 x3
 t1 x8
 t1 x13
 t5 x8 x10 x11 x13 f0
+t5 x8 x10 x11 x13 f1
 t5 x8 x10 x11 x13 f2
 t5 x8 x10 x11 x13 f3
 t1 x8
@@ -639,1325 +671,16 @@ t8 x2 x6 x8 x9 x10 x11 x13 f2
 t8 x1 x5 x8 x9 x10 x11 x13 f1
 t1 x4
 t8 x0 x4 x8 x9 x10 x11 x13 f0
+t1 x10
+t1 x9
 t1 x11
 t6 x8 x9 x10 x11 x13 f0
+t6 x8 x9 x10 x11 x13 f1
 t6 x8 x9 x10 x11 x13 f2
 t6 x8 x9 x10 x11 x13 f3
-Quantum Cost: 26967
-Gate Count: 623
-Quantum Cost Improvement: 1336
-Gate Count Improvement: 40
+Quantum Cost: 26782
+Gate Count: 658
+Quantum Cost Improvement: 1521
+Gate Count Improvement: 5
  |------- End run number: 1 -------|
  |------- <../files/f51m_233.real> Set #1  Run #2 --------| 
-Original quantum cost: 28303
-Original gate count: 663
-Smart GA Parameters
-Initial Population Count: 715
-Initial Population Mutations: 5
-Subsequent Population Count: 715
-Subsequent Population Mutations: 2
-Maximum Number of Generations: 5000
-Quantum Cost Goal: 28255
-
-Generation: 0 		Fitness: 1
-t3 x12 x13 f0
-t3 x12 x13 f1
-t3 x12 x13 f2
-t3 x3 x7 f3
-t3 x3 x7 f4
-t3 x3 x7 f5
-t5 x0 x1 x3 x6 f7
-t6 x0 x4 x11 x12 x13 f1
-t6 x0 x4 x11 x12 x13 f2
-t4 x2 x6 x11 f2
-t4 x1 x5 x11 f1
-t1 x8
-t1 f6
-t6 x0 x8 x10 x11 x13 f0
-t6 x0 x8 x10 x11 x13 f1
-t6 x0 x8 x10 x11 x13 f2
-t8 x1 x2 x5 x8 x9 x10 x13 f3
-t1 f6
-t8 x1 x5 x8 x9 x10 x11 x13 f1
-t6 x2 x8 x10 x11 x13 f2
-t6 x2 x8 x10 x11 x13 f6
-t8 x3 x7 x8 x9 x10 x11 x13 f3
-t8 x3 x7 x8 x9 x10 x11 x13 f6
-t1 x4
-t5 x1 x3 x4 x6 f7
-t4 x0 x4 x10 f0
-t6 x0 x4 x10 x12 x13 f1
-t6 x0 x4 x10 x12 x13 f2
-t8 x0 x4 x8 x9 x10 x11 x13 f0
-t8 x0 x4 x8 x9 x10 x11 x13 f1
-t1 f3
-t1 x7
-t4 x3 x7 x10 f3
-t5 x0 x1 x6 x7 f7
-t5 x1 x4 x6 x7 f7
-t1 x4
-t1 f6
-t1 x2
-t5 x0 x1 x2 x3 f7
-t6 x2 x6 x8 x9 x13 f3
-t9 x2 x3 x6 x8 x9 x10 x11 x13 f6
-t4 x2 x6 x8 f2
-t5 x0 x1 x2 x7 f7
-t1 x4
-t5 x1 x2 x3 x4 f7
-t1 f3
-t1 x8
-t5 x1 x2 x4 x7 f7
-t1 x7
-t1 x4
-t1 x9
-t5 x3 x9 x10 x13 f3
-t7 x3 x8 x9 x10 x11 x13 f3
-t7 x3 x8 x9 x10 x11 x13 f6
-t1 x8
-t8 x0 x8 x9 x10 x11 x12 x13 f1
-t7 x1 x8 x9 x10 x11 x13 f1
-t7 x1 x8 x9 x10 x11 x13 f3
-t5 x2 x9 x11 x13 f3
-t1 f6
-t1 x8
-t1 x11
-t4 x9 x11 x13 f3
-t9 x4 x5 x6 x8 x10 x11 x12 x13 f3
-t4 x3 x7 x11 f3
-t5 x9 x10 x11 x13 f0
-t5 x9 x10 x11 x13 f6
-t6 x0 x9 x10 x11 x13 f0
-t1 x9
-t1 f6
-t1 f6
-t1 f6
-t1 x9
-t6 x2 x9 x10 x11 x13 f2
-t1 f3
-t1 f6
-t1 x2
-t1 x8
-t1 f3
-t1 f6
-t1 x7
-t1 f6
-t1 f6
-t1 f6
-t1 x9
-t1 x7
-t1 x11
-t1 x0
-t1 f6
-t1 f2
-t4 x0 x4 x8 f0
-t1 x8
-t1 x11
-t1 x4
-t1 f6
-t1 f3
-t1 x4
-t1 x9
-t8 x0 x4 x8 x9 x10 x11 x13 f2
-t1 f6
-t1 x4
-t4 x0 x4 x9 f0
-t1 x7
-t1 f6
-t1 x9
-t1 x2
-t1 f6
-t1 f6
-t1 x8
-t1 x9
-t1 f3
-t1 f6
-t1 f6
-t1 x11
-t9 x0 x1 x2 x8 x9 x10 x11 x13 f3
-t1 x4
-t1 x7
-t1 x8
-t1 x2
-t1 x3
-t9 x2 x3 x7 x8 x9 x10 x11 x13 f6
-t1 x11
-t1 f6
-t1 f6
-t1 x2
-t1 f6
-t1 f6
-t1 f6
-t1 x2
-t1 x7
-t3 x3 x7 f4
-t4 x3 x7 x9 f3
-t1 x9
-t1 f6
-t1 f6
-t1 f6
-t1 x7
-t1 x8
-t4 x3 x7 x8 f3
-t1 f6
-t1 f6
-t1 x0
-t1 x3
-t1 x1
-t1 f6
-t1 f6
-t8 x1 x2 x8 x9 x10 x12 x13 f3
-t4 x1 x5 x8 f1
-t1 f6
-t1 f6
-t1 x3
-t1 f6
-t1 f6
-t1 x8
-t1 f6
-t1 x9
-t6 x1 x9 x10 x11 x13 f1
-t9 x0 x1 x5 x8 x9 x10 x11 x13 f2
-t1 f3
-t1 f6
-t1 f6
-t1 x11
-t9 x1 x2 x3 x8 x9 x10 x11 x13 f6
-t8 x1 x2 x3 x9 x10 x11 x13 f6
-t1 x2
-t1 f3
-t1 f6
-t1 x9
-t1 f6
-t1 f6
-t1 x3
-t1 x8
-t1 f6
-t1 x4
-t1 f3
-t1 f2
-t1 f3
-t1 x8
-t1 x9
-t1 f2
-t9 x1 x4 x5 x8 x9 x10 x12 x13 f2
-t1 x9
-t1 x0
-t9 x0 x1 x2 x8 x9 x11 x12 x13 f3
-t4 x3 x0 x9 f2
-t1 f6
-t1 x3
-t8 x0 x1 x2 x3 x9 x10 x13 f6
-t1 x9
-t1 f6
-t9 x0 x1 x2 x9 x10 x11 x12 x13 f3
-t9 x0 x1 x2 x9 x10 x11 x12 x13 f6
-t1 f6
-t1 f3
-t1 f6
-t1 x8
-t9 x0 x1 x3 x6 x8 x9 x10 x13 f6
-t8 x0 x1 x3 x6 x8 x10 x13 f6
-t1 x3
-t1 x7
-t1 f6
-t1 f6
-t1 f6
-t1 x9
-t1 x8
-t1 x0
-t1 x1
-t1 x5
-t5 x0 x3 x5 x6 f7
-t4 x1 x5 x10 f1
-t5 x0 x5 x6 x7 f7
-t5 x3 x4 x5 x6 f7
-t5 x4 x5 x6 x7 f7
-t5 x0 x2 x3 x5 f7
-t5 x0 x2 x5 x7 f7
-t5 x2 x3 x4 x5 f7
-t1 x7
-t1 x4
-t4 x7 x3 x6 f5
-t9 x0 x1 x4 x5 x10 x11 x12 x13 f2
-t1 x1
-t1 f3
-t1 x4
-t1 f6
-t1 f6
-t1 x4
-t1 x2
-t1 f3
-t1 x9
-t4 x1 x5 x9 f1
-t1 f2
-t9 x0 x1 x5 x8 x9 x10 x12 x13 f2
-t1 f6
-t1 x2
-t1 x1
-t1 x0
-t7 x0 x1 x5 x10 x12 x13 f2
-t1 f2
-t1 x1
-t1 x4
-t1 x7
-t1 f6
-t1 x9
-t1 f3
-t1 x3
-t1 f6
-t1 f6
-t1 x4
-t1 x0
-t1 x2
-t1 f6
-t1 f6
-t1 x11
-t1 x2
-t1 x3
-t1 x8
-t1 f6
-t1 x7
-t1 f2
-t1 f2
-t1 f6
-t1 x0
-t1 x9
-t1 x11
-t1 f3
-t1 f6
-t1 x11
-t1 x9
-t1 x0
-t1 x5
-t1 x6
-t4 x2 x6 x10 f2
-t1 f6
-t6 x6 x8 x9 x12 x13 f3
-t8 x2 x6 x8 x9 x10 x11 x13 f2
-t8 x2 x6 x8 x9 x10 x11 x13 f6
-t1 f6
-t1 x11
-t1 f6
-t1 f6
-t1 x8
-t1 f3
-t1 x0
-t1 f3
-t1 x11
-t1 x8
-t1 f6
-t1 f6
-t1 x3
-t1 f6
-t1 x1
-t1 f6
-t1 x7
-t8 x6 x7 x8 x9 x10 x11 x13 f6
-t1 f6
-t1 f6
-t1 x5
-t9 x1 x5 x6 x8 x9 x10 x12 x13 f3
-t1 f6
-t1 f6
-t1 x1
-t1 f6
-t1 x8
-t1 x3
-t1 x2
-t1 f3
-t1 f3
-t1 x5
-t1 x0
-t1 x9
-t1 x2
-t4 x2 x6 x9 f2
-t1 x8
-t1 f3
-t1 f6
-t1 f6
-t1 x8
-t1 x0
-t1 f6
-t1 f6
-t1 x1
-t1 x7
-t1 f6
-t1 x3
-t1 x11
-t1 x2
-t1 x0
-t1 x9
-t1 x12
-t1 x8
-t8 x2 x5 x8 x9 x10 x12 x13 f3
-t9 x0 x4 x8 x9 x10 x11 x12 x13 f1
-t9 x0 x4 x8 x9 x10 x11 x12 x13 f2
-t1 x0
-t8 x0 x4 x5 x8 x9 x12 x13 f2
-t6 x0 x4 x8 x12 x13 f1
-t6 x0 x4 x8 x12 x13 f2
-t9 x0 x1 x4 x8 x9 x10 x12 x13 f2
-t1 f3
-t1 f3
-t1 x1
-t6 x1 x5 x8 x12 x13 f2
-t8 x1 x5 x6 x8 x9 x12 x13 f3
-t1 x6
-t1 x4
-t1 f6
-t1 f6
-t1 f6
-t1 f6
-t1 x6
-t1 f6
-t1 f6
-t1 x6
-t1 x2
-t1 f6
-t1 f6
-t1 x8
-t1 x4
-t1 x1
-t1 x9
-t7 x0 x1 x9 x11 x12 x13 f2
-t1 f2
-t1 x1
-t1 f3
-t1 f6
-t1 x4
-t6 x0 x4 x9 x12 x13 f1
-t6 x0 x4 x9 x12 x13 f2
-t1 f3
-t1 x2
-t1 x0
-t1 x4
-t1 x8
-t1 f3
-t1 f6
-t1 x3
-t1 x0
-t8 x0 x1 x5 x8 x9 x12 x13 f2
-t1 x9
-t1 x5
-t1 f3
-t1 x6
-t9 x0 x4 x5 x6 x8 x9 x12 x13 f3
-t1 x8
-t1 x9
-t1 f2
-t1 x0
-t7 x0 x1 x5 x9 x12 x13 f2
-t1 x5
-t1 x11
-t8 x0 x1 x9 x10 x11 x12 x13 f2
-t1 x1
-t1 x0
-t7 x0 x9 x10 x11 x12 x13 f1
-t7 x0 x9 x10 x11 x12 x13 f2
-t2 x4 x13
-t1 x0
-t1 x11
-t1 x12
-t1 x10
-t5 x8 x9 x10 x13 f0
-t5 x8 x9 x10 x13 f1
-t5 x8 x9 x10 x13 f6
-t5 x8 x9 x10 x11 f0
-t5 x8 x9 x10 x11 f1
-t5 x8 x9 x10 x11 f2
-t5 x8 x9 x10 x11 f3
-t6 x3 x7 x10 x11 x13 f6
-t8 x6 x8 x9 x10 x11 x12 x13 f3
-t9 x1 x5 x6 x9 x10 x11 x12 x13 f3
-t1 x3
-t1 f6
-t1 x5
-t1 f3
-t1 f6
-t1 x6
-t9 x2 x3 x6 x7 x8 x10 x11 x13 f6
-t1 x2
-t1 f3
-t1 f3
-t1 f6
-t1 f6
-t1 f6
-t1 x2
-t1 x7
-t7 x2 x6 x7 x10 x11 x13 f6
-t1 f6
-t1 f6
-t1 x5
-t9 x1 x5 x6 x7 x9 x10 x11 x13 f6
-t8 x1 x5 x7 x9 x10 x11 x13 f6
-t1 x9
-t9 x2 x3 x6 x7 x9 x10 x11 x13 f6
-t1 x2
-t1 f6
-t1 f6
-t1 x5
-t1 f6
-t1 f6
-t1 f6
-t1 f6
-t1 x2
-t1 x3
-t1 x5
-t1 x6
-t1 f6
-t1 x1
-t1 f3
-t8 x1 x2 x6 x9 x10 x11 x13 f3
-t1 f6
-t1 f6
-t1 f6
-t1 x9
-t1 f6
-t1 x6
-t1 x3
-t1 f6
-t1 f6
-t1 x2
-t1 x9
-t1 f3
-t1 f6
-t1 f6
-t1 x7
-t1 f2
-t9 x0 x1 x4 x9 x10 x11 x12 x13 f2
-t1 x1
-t1 x4
-t9 x0 x1 x4 x5 x10 x11 x12 x13 f2
-t1 f6
-t1 x3
-t1 x5
-t1 x7
-t1 f6
-t1 x2
-t1 x6
-t1 f3
-t1 f6
-t1 x9
-t1 x5
-t1 x6
-t1 x2
-t1 f3
-t1 f3
-t1 x4
-t1 x12
-t1 x9
-t1 f6
-t1 f6
-t1 x1
-t1 f6
-t1 x2
-t1 x6
-t1 f3
-t1 f6
-t1 f6
-t1 f6
-t1 x3
-t1 f6
-t1 x7
-t1 x1
-t1 x5
-t1 f6
-t1 x3
-t1 x5
-t1 x0
-t1 f3
-t1 f6
-t1 f3
-t1 f6
-t1 x5
-t9 x0 x1 x5 x9 x10 x11 x12 x13 f2
-t1 f3
-t1 f6
-t1 f6
-t1 f6
-t1 f6
-t1 f6
-t1 x5
-t1 x1
-t1 x4
-t1 f6
-t1 x3
-t1 f6
-t1 x6
-t1 x4
-t1 x5
-t1 f2
-t1 x1
-t1 x2
-t1 f6
-t1 f3
-t1 f3
-t1 x12
-t1 x9
-t1 x5
-t1 x1
-t1 f3
-t1 f3
-t1 x1
-t1 x2
-t1 x0
-t1 x11
-t7 x8 x9 x10 x11 x12 x13 f0
-t7 x8 x9 x10 x11 x12 x13 f1
-t7 x8 x9 x10 x11 x12 x13 f2
-t1 x9
-t1 x12
-t9 x0 x1 x2 x9 x10 x11 x12 x13 f3
-t9 x0 x1 x2 x9 x10 x11 x12 x13 f6
-t1 x7
-t1 f6
-t1 x2
-t1 f3
-t1 f6
-t1 x2
-t1 x0
-t1 f3
-t1 f6
-t1 x4
-t1 f6
-t1 x1
-t1 f3
-t1 f6
-t1 f6
-t1 f3
-t1 f6
-t1 f6
-t1 x4
-t1 x1
-t1 x6
-t1 f3
-t1 f6
-t1 f6
-t1 x0
-t1 f6
-t1 f6
-t1 x12
-t1 x9
-t1 x7
-t1 x6
-t1 x8
-t1 x1
-t1 f2
-t9 x0 x1 x4 x5 x8 x10 x12 x13 f2
-t9 x2 x6 x8 x9 x10 x11 x12 x13 f3
-t1 x12
-t9 x2 x6 x8 x9 x10 x11 x12 x13 f6
-t1 f3
-t1 f6
-t1 f6
-t1 f6
-t1 x1
-t1 x0
-t1 f2
-t1 f3
-t1 f6
-t1 f6
-t1 x6
-t1 f6
-t1 f6
-t1 x3
-t1 x6
-t1 x5
-t1 f3
-t1 f6
-t1 x6
-t1 f6
-t1 f6
-t1 x6
-t1 x3
-t1 f6
-t1 x5
-t1 x2
-t1 f3
-t1 f6
-t1 f6
-t1 x2
-t1 x7
-t1 x5
-t1 x6
-t9 x5 x6 x7 x8 x9 x10 x12 x13 f6
-t1 f6
-t1 x0
-t1 x9
-t1 f6
-t1 x11
-t1 x3
-t1 x8
-t1 x13
-t5 x8 x10 x11 x13 f0
-t5 x8 x10 x11 x13 f1
-t5 x8 x10 x11 x13 f2
-t5 x8 x10 x11 x13 f3
-t1 x8
-t8 x3 x7 x8 x9 x10 x11 x13 f3
-t8 x2 x6 x8 x9 x10 x11 x13 f2
-t8 x1 x5 x8 x9 x10 x11 x13 f1
-t1 x4
-t8 x0 x4 x8 x9 x10 x11 x13 f0
-t1 x10
-t1 x9
-t1 x11
-t6 x8 x9 x10 x11 x13 f0
-t6 x8 x9 x10 x11 x13 f1
-t6 x8 x9 x10 x11 x13 f2
-t6 x8 x9 x10 x11 x13 f3
-Quantum Cost: 27335
-Gate Count: 647
-Quantum Cost Improvement: 968
-Gate Count Improvement: 16
- |------- End run number: 2 -------|
- |------- <../files/f51m_233.real> Set #1  Run #3 --------| 
-Original quantum cost: 28303
-Original gate count: 663
-Smart GA Parameters
-Initial Population Count: 715
-Initial Population Mutations: 5
-Subsequent Population Count: 715
-Subsequent Population Mutations: 2
-Maximum Number of Generations: 5000
-Quantum Cost Goal: 28255
-
-Generation: 0 		Fitness: 1
-t3 x12 x13 f0
-t3 x12 x13 f1
-t3 x12 x13 f2
-t3 x3 x7 f3
-t3 x3 x7 f4
-t3 x3 x7 f5
-t5 x0 x1 x3 x6 f7
-t6 x0 x4 x11 x12 x13 f1
-t6 x0 x4 x11 x12 x13 f2
-t4 x2 x6 x11 f2
-t4 x1 x5 x11 f1
-t4 x0 x4 x11 f0
-t1 x8
-t1 f6
-t6 x0 x8 x10 x11 x13 f0
-t6 x0 x8 x10 x11 x13 f1
-t6 x0 x8 x10 x11 x13 f2
-t8 x1 x2 x5 x8 x9 x10 x13 f3
-t1 f6
-t8 x1 x5 x8 x9 x10 x11 x13 f1
-t6 x2 x8 x10 x11 x13 f2
-t6 x2 x8 x10 x11 x13 f6
-t8 x3 x7 x8 x9 x10 x11 x13 f3
-t8 x3 x7 x8 x9 x10 x11 x13 f6
-t1 x4
-t5 x1 x3 x4 x6 f7
-t4 x0 x4 x10 f0
-t6 x0 x4 x10 x12 x13 f1
-t6 x0 x4 x10 x12 x13 f2
-t8 x0 x4 x8 x9 x10 x11 x13 f0
-t8 x0 x4 x8 x9 x10 x11 x13 f1
-t8 x0 x4 x8 x9 x10 x11 x13 f2
-t1 f3
-t1 x7
-t4 x3 x7 x10 f3
-t5 x0 x1 x6 x7 f7
-t5 x1 x4 x6 x7 f7
-t1 x4
-t1 f6
-t1 x2
-t5 x0 x1 x2 x3 f7
-t6 x2 x6 x8 x9 x13 f3
-t9 x2 x3 x6 x8 x9 x10 x11 x13 f6
-t4 x2 x6 x8 f2
-t5 x0 x1 x2 x7 f7
-t1 f6
-t1 x4
-t5 x1 x2 x3 x4 f7
-t1 f3
-t1 x8
-t5 x1 x2 x4 x7 f7
-t1 x4
-t1 x9
-t5 x3 x9 x10 x13 f3
-t7 x3 x8 x9 x10 x11 x13 f3
-t7 x3 x8 x9 x10 x11 x13 f6
-t8 x1 x2 x6 x8 x9 x11 x13 f3
-t1 x8
-t8 x0 x8 x9 x10 x11 x12 x13 f1
-t7 x1 x8 x9 x10 x11 x13 f1
-t7 x1 x8 x9 x10 x11 x13 f3
-t1 f6
-t1 x8
-t1 x11
-t4 x9 x11 x13 f3
-t9 x4 x5 x6 x8 x10 x11 x12 x13 f3
-t4 x3 x7 x11 f3
-t5 x9 x10 x11 x13 f0
-t5 x9 x10 x11 x13 f6
-t6 x0 x9 x10 x11 x13 f0
-t1 f6
-t1 x9
-t1 f6
-t1 f6
-t1 f6
-t6 x2 x9 x10 x11 x13 f2
-t1 f3
-t1 f6
-t1 x2
-t1 x8
-t1 f3
-t1 f6
-t1 x7
-t1 f6
-t1 f6
-t1 f6
-t1 x9
-t1 x7
-t1 x11
-t1 x0
-t7 x0 x1 x5 x11 x12 x13 f2
-t1 f6
-t1 f2
-t1 x8
-t1 x11
-t1 x4
-t1 f6
-t1 f3
-t1 x4
-t1 x9
-t8 x0 x4 x8 x9 x10 x11 x13 f1
-t8 x0 x4 x8 x9 x10 x11 x13 f2
-t1 f3
-t1 f6
-t1 x4
-t4 x0 x4 x9 f0
-t1 x7
-t1 f6
-t1 x9
-t1 f6
-t1 f6
-t1 x8
-t1 x9
-t1 f3
-t1 f6
-t1 x11
-t9 x0 x1 x2 x8 x9 x10 x11 x13 f3
-t1 x4
-t1 x7
-t1 x8
-t1 x2
-t1 x3
-t9 x2 x3 x7 x8 x9 x10 x11 x13 f6
-t1 x11
-t1 f6
-t1 f6
-t1 x2
-t1 f6
-t1 f6
-t1 f6
-t1 x7
-t3 x3 x7 f4
-t4 x3 x7 x9 f3
-t1 f6
-t1 f6
-t1 x7
-t1 x8
-t4 x3 x7 x8 f3
-t1 f6
-t1 x0
-t1 x3
-t1 x1
-t1 f6
-t1 f6
-t8 x1 x2 x8 x9 x10 x12 x13 f3
-t1 f6
-t1 f6
-t1 x3
-t1 f6
-t1 f6
-t1 x8
-t1 x9
-t6 x1 x9 x10 x11 x13 f1
-t9 x0 x1 x5 x8 x9 x10 x11 x13 f2
-t1 f3
-t1 f6
-t1 f6
-t1 x11
-t9 x1 x2 x3 x8 x9 x10 x11 x13 f6
-t8 x1 x2 x3 x9 x10 x11 x13 f6
-t1 x2
-t1 f3
-t1 f6
-t1 x9
-t1 f6
-t1 f6
-t1 x3
-t1 f6
-t1 x4
-t1 f3
-t1 f2
-t1 f3
-t1 x9
-t1 f2
-t1 x0
-t9 x0 x1 x2 x8 x9 x11 x12 x13 f3
-t1 x11
-t1 f6
-t1 x3
-t8 x0 x1 x2 x3 x9 x10 x13 f6
-t1 x9
-t1 f6
-t9 x0 x1 x2 x9 x10 x11 x12 x13 f3
-t9 x0 x1 x2 x9 x10 x11 x12 x13 f6
-t1 f6
-t1 f3
-t1 f6
-t1 x8
-t9 x0 x1 x3 x6 x8 x9 x10 x13 f6
-t8 x0 x1 x3 x6 x8 x10 x13 f6
-t1 x3
-t1 x7
-t1 f6
-t1 f6
-t1 x9
-t1 x8
-t1 x0
-t1 x1
-t1 x5
-t5 x0 x3 x5 x6 f7
-t4 x1 x5 x10 f1
-t5 x0 x5 x6 x7 f7
-t5 x3 x4 x5 x6 f7
-t5 x4 x5 x6 x7 f7
-t5 x0 x2 x3 x5 f7
-t5 x0 x2 x5 x7 f7
-t5 x2 x3 x4 x5 f7
-t1 x7
-t1 x4
-t1 x2
-t9 x0 x1 x4 x5 x10 x11 x12 x13 f2
-t1 x1
-t1 f3
-t1 x4
-t1 f6
-t1 f6
-t1 x4
-t1 x2
-t1 f3
-t1 x9
-t4 x1 x5 x9 f1
-t1 f2
-t9 x0 x1 x5 x8 x9 x10 x12 x13 f2
-t1 f6
-t1 x2
-t1 x1
-t1 x0
-t7 x0 x1 x5 x10 x12 x13 f2
-t1 f2
-t1 x1
-t1 x4
-t1 x7
-t1 f6
-t1 x9
-t1 f3
-t1 x3
-t1 f6
-t1 x4
-t1 x0
-t1 x2
-t1 f6
-t1 f6
-t1 x11
-t1 x2
-t1 x3
-t1 x8
-t1 f6
-t1 x7
-t1 f2
-t1 f2
-t1 f6
-t1 x0
-t1 x9
-t1 x11
-t1 f3
-t1 f6
-t1 x11
-t1 x9
-t1 x0
-t1 x5
-t1 x6
-t4 x2 x6 x10 f2
-t1 f6
-t6 x6 x8 x9 x12 x13 f3
-t8 x2 x6 x8 x9 x10 x11 x13 f2
-t8 x2 x6 x8 x9 x10 x11 x13 f6
-t1 x2
-t1 f6
-t1 x11
-t1 f6
-t1 f6
-t1 x8
-t1 f3
-t1 x0
-t1 f3
-t1 x11
-t1 x8
-t1 f6
-t1 f6
-t1 x3
-t1 f6
-t1 x1
-t1 f6
-t1 x7
-t8 x6 x7 x8 x9 x10 x11 x13 f6
-t1 f6
-t1 f6
-t1 x5
-t9 x1 x5 x6 x8 x9 x10 x12 x13 f3
-t1 f6
-t1 f6
-t1 x1
-t1 x11
-t1 f6
-t1 x8
-t1 x3
-t1 x2
-t1 f3
-t1 f3
-t1 x5
-t1 x0
-t1 x9
-t1 x2
-t4 x2 x6 x9 f2
-t1 x8
-t1 f3
-t1 f6
-t1 f6
-t1 x8
-t1 x0
-t1 f6
-t1 f6
-t1 x1
-t1 x7
-t1 f6
-t1 x3
-t1 x11
-t1 x2
-t1 x9
-t1 x12
-t1 x8
-t8 x2 x5 x8 x9 x10 x12 x13 f3
-t9 x0 x4 x8 x9 x10 x11 x12 x13 f1
-t9 x0 x4 x8 x9 x10 x11 x12 x13 f2
-t1 x0
-t8 x0 x4 x5 x8 x9 x12 x13 f2
-t6 x0 x4 x8 x12 x13 f1
-t6 x0 x4 x8 x12 x13 f2
-t9 x0 x1 x4 x8 x9 x10 x12 x13 f2
-t1 f3
-t1 f3
-t1 x1
-t6 x1 x5 x8 x12 x13 f2
-t8 x1 x5 x6 x8 x9 x12 x13 f3
-t1 x6
-t1 x4
-t1 f6
-t1 f6
-t1 f6
-t1 f6
-t1 x6
-t1 f6
-t1 f6
-t1 x6
-t1 x2
-t1 f6
-t1 f6
-t1 x8
-t1 x4
-t1 x1
-t1 x9
-t7 x0 x1 x9 x11 x12 x13 f2
-t1 f2
-t1 x1
-t1 f3
-t1 f6
-t1 x4
-t6 x0 x4 x9 x12 x13 f1
-t1 f3
-t1 x2
-t1 x0
-t1 x4
-t1 x8
-t1 f3
-t1 f6
-t1 x3
-t1 x0
-t8 x0 x1 x5 x8 x9 x12 x13 f2
-t1 x9
-t1 x5
-t1 x6
-t9 x0 x4 x5 x6 x8 x9 x12 x13 f3
-t1 x8
-t1 x9
-t1 f2
-t1 x0
-t7 x0 x1 x5 x9 x12 x13 f2
-t1 x5
-t1 x11
-t8 x0 x1 x9 x10 x11 x12 x13 f2
-t1 x1
-t7 x0 x9 x10 x11 x12 x13 f1
-t7 x0 x9 x10 x11 x12 x13 f2
-t1 x9
-t1 x0
-t1 x11
-t1 x12
-t5 x8 x9 x10 x13 f0
-t5 x8 x9 x10 x13 f1
-t5 x8 x9 x10 x13 f2
-t5 x8 x9 x10 x13 f3
-t5 x8 x9 x10 x13 f6
-t5 x8 x9 x10 x11 f0
-t5 x8 x9 x10 x11 f1
-t5 x8 x9 x10 x11 f2
-t5 x8 x9 x10 x11 f3
-t6 x3 x7 x10 x11 x13 f6
-t8 x6 x8 x9 x10 x11 x12 x13 f3
-t9 x1 x5 x6 x9 x10 x11 x12 x13 f3
-t1 x3
-t1 f6
-t1 x5
-t1 f3
-t1 f6
-t1 x6
-t9 x2 x3 x6 x7 x8 x10 x11 x13 f6
-t1 x2
-t1 f3
-t1 f3
-t1 f6
-t1 f6
-t1 x2
-t1 x7
-t7 x2 x6 x7 x10 x11 x13 f6
-t1 f6
-t1 f6
-t1 x5
-t9 x1 x5 x6 x7 x9 x10 x11 x13 f6
-t8 x1 x5 x7 x9 x10 x11 x13 f6
-t1 x9
-t9 x2 x3 x6 x7 x9 x10 x11 x13 f6
-t1 x2
-t1 f6
-t1 f6
-t1 x5
-t1 f6
-t1 f6
-t1 f6
-t3 x1 x10 f0
-t1 x2
-t1 x3
-t1 x5
-t1 x6
-t1 f6
-t1 x1
-t1 f3
-t8 x1 x2 x6 x9 x10 x11 x13 f3
-t1 f6
-t1 f6
-t1 x9
-t1 f6
-t1 x6
-t1 x3
-t1 f6
-t1 f6
-t1 x2
-t1 x9
-t1 f3
-t1 f6
-t1 f6
-t1 x7
-t1 f2
-t9 x0 x1 x4 x9 x10 x11 x12 x13 f2
-t1 x1
-t1 x4
-t9 x0 x1 x4 x5 x10 x11 x12 x13 f2
-t1 f6
-t1 f6
-t1 x3
-t1 x5
-t1 x7
-t1 f6
-t1 x2
-t1 x6
-t1 f3
-t1 f6
-t1 x9
-t1 x5
-t1 x6
-t1 x2
-t1 f3
-t1 f3
-t1 x4
-t1 x12
-t1 x9
-t1 f6
-t1 f6
-t1 x1
-t1 f6
-t1 x2
-t1 x6
-t1 f3
-t1 f6
-t1 f6
-t1 f6
-t1 x3
-t1 f6
-t1 x7
-t1 x1
-t1 x5
-t1 f6
-t1 f6
-t1 x3
-t1 x5
-t1 x0
-t1 f3
-t1 f6
-t1 f3
-t1 f6
-t1 x5
-t9 x0 x1 x5 x9 x10 x11 x12 x13 f2
-t1 f3
-t1 f6
-t1 f6
-t1 f6
-t1 f6
-t1 f6
-t1 x5
-t1 x1
-t1 x4
-t1 f6
-t1 f6
-t1 f6
-t1 x6
-t1 x4
-t1 x5
-t1 f2
-t1 x1
-t1 x2
-t1 f6
-t1 f3
-t1 f3
-t1 x12
-t1 x9
-t1 x5
-t1 x1
-t1 f3
-t1 x1
-t1 x2
-t1 x0
-t1 x11
-t7 x8 x9 x10 x11 x12 x13 f0
-t7 x8 x9 x10 x11 x12 x13 f1
-t7 x8 x9 x10 x11 x12 x13 f2
-t1 x9
-t1 x12
-t9 x0 x1 x2 x9 x10 x11 x12 x13 f3
-t9 x0 x1 x2 x9 x10 x11 x12 x13 f6
-t1 x7
-t1 f6
-t1 x2
-t1 f3
-t1 f6
-t1 x2
-t1 x0
-t1 f3
-t1 f6
-t1 x4
-t1 f6
-t1 x1
-t1 f3
-t1 f6
-t1 f6
-t1 f3
-t1 f6
-t1 f6
-t1 x4
-t1 x1
-t1 x6
-t1 f3
-t1 f6
-t1 f6
-t1 x0
-t1 f6
-t1 f6
-t1 x12
-t1 x9
-t1 x7
-t1 x6
-t1 x8
-t1 x1
-t1 f2
-t9 x0 x1 x4 x5 x8 x10 x12 x13 f2
-t9 x2 x6 x8 x9 x10 x11 x12 x13 f3
-t1 x12
-t9 x2 x6 x8 x9 x10 x11 x12 x13 f6
-t1 f3
-t1 f6
-t1 f6
-t1 f6
-t1 x1
-t1 x0
-t1 f2
-t1 f3
-t1 f6
-t1 f6
-t1 x6
-t1 f6
-t1 f6
-t1 x6
-t1 x5
-t1 f3
-t1 f6
-t1 x6
-t1 f6
-t1 f6
-t1 x6
-t1 x3
-t1 f6
-t1 x5
-t1 x2
-t1 f3
-t1 f6
-t1 f6
-t1 x2
-t1 x5
-t1 x6
-t9 x5 x6 x7 x8 x9 x10 x12 x13 f6
-t1 x0
-t1 x9
-t1 f6
-t1 x11
-t1 x3
-t1 x8
-t1 x13
-t5 x8 x10 x11 x13 f0
-t5 x8 x10 x11 x13 f1
-t5 x8 x10 x11 x13 f3
-t1 x8
-t8 x3 x7 x8 x9 x10 x11 x13 f3
-t8 x2 x6 x8 x9 x10 x11 x13 f2
-t8 x1 x5 x8 x9 x10 x11 x13 f1
-t1 x4
-t8 x0 x4 x8 x9 x10 x11 x13 f0
-t1 x10
-t1 x9
-t1 x11
-t6 x8 x9 x10 x11 x13 f0
-t6 x8 x9 x10 x11 x13 f1
-t6 x8 x9 x10 x11 x13 f2
-t6 x8 x9 x10 x11 x13 f3
-Quantum Cost: 27599
-Gate Count: 631
-Quantum Cost Improvement: 704
-Gate Count Improvement: 32
- |------- End run number: 3 -------|
- |------- <../files/f51m_233.real> Set #1  Run #4 --------| 

@@ -345,3 +345,24 @@
 ...
 011 (012.001.000) 04/13 00:43:03 Job was unsuspended.
 ...
+022 (012.001.000) 04/14 03:14:31 Job disconnected, attempting to reconnect
+    Socket between submit and execute hosts closed unexpectedly
+    Trying to reconnect to slot1@35cottle.cs.uleth.ca <142.66.140.88:58585>
+...
+024 (012.001.000) 04/14 03:14:31 Job reconnection failed
+    Job disconnected too long: JobLeaseDuration (1200 seconds) expired
+    Can not reconnect to slot1@35cottle.cs.uleth.ca, rescheduling job
+...
+001 (012.001.000) 04/14 03:14:49 Job executing on host: <142.66.140.10:35887>
+...
+005 (012.001.000) 04/14 03:15:51 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+...
