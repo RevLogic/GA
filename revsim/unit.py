@@ -139,7 +139,7 @@ class TestGateSanity(unittest.TestCase):
         self.assertRaises(ValueError, tof3.eval, {'a':0, 'b':0, 'c':0, 'd':0})
 
     def test_fredkin_sanity(self):
-        """ Targets must not be contained in controls ""
+        """ Targets must not be contained in controls """
         self.assertRaises(ValueError, apply, [0,0,0], fredkin, [0,1], [1,2])
         pass
 
