@@ -3337,3 +3337,310 @@ Quantum Cost Improvement: 20
 Gate Count Improvement: 4
  |------- End run number: 13 -------|
  |------- <../files/mod5adder_129.real> Set #5  Run #14 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 731
+Initial Population Mutations: 7
+Subsequent Population Count: 731
+Subsequent Population Mutations: 5
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+Generation: 0 		Fitness: 0.880208333333
+Generation: 1 		Fitness: 0.895833333333
+Generation: 2 		Fitness: 0.911458333333
+Generation: 3 		Fitness: 0.927083333333
+Generation: 31 		Fitness: 0.947916666667
+Generation: 32 		Fitness: 0.963541666667
+Generation: 88 		Fitness: 0.96875
+GENERATION LIMIT EXCEEDED!
+Fitness: 0.96875
+t1 b
+t3 a d b
+t1 a
+t4 a b f c
+t1 c
+t3 c d a
+t4 a b d c
+t3 c e b
+t4 b e a c
+t3 c f a
+t1 a
+t1 b
+t1 c
+t3 a f b
+Quantum Cost: 70
+Gate Count: 14
+Quantum Cost Improvement: 7
+Gate Count Improvement: 3
+ |------- End run number: 14 -------|
+ |------- <../files/mod5adder_129.real> Set #5  Run #15 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 731
+Initial Population Mutations: 7
+Subsequent Population Count: 731
+Subsequent Population Mutations: 5
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+Generation: 0 		Fitness: 0.901041666667
+Generation: 3 		Fitness: 0.911458333333
+Generation: 4 		Fitness: 0.96875
+GENERATION LIMIT EXCEEDED!
+Fitness: 0.96875
+t1 b
+t3 a d b
+t1 a
+t4 a b f c
+t1 c
+t3 c d a
+t4 a b d c
+t3 e c b
+t3 b e f
+t3 c f a
+t3 b e f
+t1 a
+t1 b
+t1 c
+t3 a f b
+Quantum Cost: 67
+Gate Count: 15
+Quantum Cost Improvement: 10
+Gate Count Improvement: 2
+ |------- End run number: 15 -------|
+ |------- <../files/mod5adder_129.real> Set #5  Run #16 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 731
+Initial Population Mutations: 7
+Subsequent Population Count: 731
+Subsequent Population Mutations: 5
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+Generation: 0 		Fitness: 0.880208333333
+Generation: 1 		Fitness: 0.927083333333
+Generation: 13 		Fitness: 0.947916666667
+Generation: 263 		Fitness: 0.96875
+GENERATION LIMIT EXCEEDED!
+Fitness: 0.96875
+t1 b
+t3 a d b
+t1 a
+t4 a b f c
+t1 c
+t3 c d a
+t4 a b d c
+t3 c e b
+t3 c f a
+t1 a
+t1 b
+t1 c
+t3 a f b
+Quantum Cost: 57
+Gate Count: 13
+Quantum Cost Improvement: 20
+Gate Count Improvement: 4
+ |------- End run number: 16 -------|
+ |------- <../files/mod5adder_129.real> Set #5  Run #17 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 731
+Initial Population Mutations: 7
+Subsequent Population Count: 731
+Subsequent Population Mutations: 5
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+Generation: 0 		Fitness: 0.880208333333
+Generation: 2 		Fitness: 0.911458333333
+Generation: 3 		Fitness: 0.927083333333
+Generation: 9 		Fitness: 0.947916666667
+Generation: 347 		Fitness: 0.96875
+GENERATION LIMIT EXCEEDED!
+Fitness: 0.96875
+t1 b
+t3 a d b
+t1 a
+t4 a b f c
+t1 c
+t4 c d f a
+t3 c e b
+t3 a f c
+t3 b e f
+t3 a f c
+t3 c f a
+t3 b e f
+t1 a
+t1 b
+t1 c
+t3 a f b
+Quantum Cost: 72
+Gate Count: 16
+Quantum Cost Improvement: 5
+Gate Count Improvement: 1
+ |------- End run number: 17 -------|
+ |------- <../files/mod5adder_129.real> Set #5  Run #18 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 731
+Initial Population Mutations: 7
+Subsequent Population Count: 731
+Subsequent Population Mutations: 5
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+Generation: 0 		Fitness: 0.890625
+Generation: 1 		Fitness: 0.90625
+Generation: 2 		Fitness: 0.921875
+Generation: 8 		Fitness: 0.927083333333
+Generation: 76 		Fitness: 0.947916666667
+Generation: 1804 		Fitness: 0.958333333333
+Generation: 3200 		Fitness: 0.96875
+GENERATION LIMIT EXCEEDED!
+Fitness: 0.96875
+t1 b
+t3 a d b
+t1 a
+t4 a b f c
+t1 c
+t3 c d a
+t3 c e b
+t3 b e f
+t4 b a e c
+t3 c f a
+t3 b e f
+t1 a
+t1 b
+t1 c
+t3 a f b
+Quantum Cost: 67
+Gate Count: 15
+Quantum Cost Improvement: 10
+Gate Count Improvement: 2
+ |------- End run number: 18 -------|
+ |------- <../files/mod5adder_129.real> Set #5  Run #19 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 731
+Initial Population Mutations: 7
+Subsequent Population Count: 731
+Subsequent Population Mutations: 5
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+Generation: 0 		Fitness: 0.869791666667
+Generation: 1 		Fitness: 0.875
+Generation: 3 		Fitness: 0.901041666667
+Generation: 4 		Fitness: 0.927083333333
+Generation: 6 		Fitness: 0.9375
+Generation: 15 		Fitness: 0.947916666667
+Generation: 228 		Fitness: 0.958333333333
+Generation: 229 		Fitness: 0.96875
+GENERATION LIMIT EXCEEDED!
+Fitness: 0.96875
+t1 b
+t3 a d b
+t1 a
+t4 a b f c
+t1 c
+t3 c d a
+t3 c e b
+t3 b e f
+t4 e b a c
+t3 c f a
+t3 b e f
+t1 a
+t1 b
+t1 c
+t3 a f b
+Quantum Cost: 67
+Gate Count: 15
+Quantum Cost Improvement: 10
+Gate Count Improvement: 2
+ |------- End run number: 19 -------|
+ |------- <../files/mod5adder_129.real> Set #5  Run #20 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 731
+Initial Population Mutations: 7
+Subsequent Population Count: 731
+Subsequent Population Mutations: 5
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+Generation: 0 		Fitness: 0.869791666667
+Generation: 1 		Fitness: 0.90625
+Generation: 2 		Fitness: 0.927083333333
+Generation: 172 		Fitness: 0.947916666667
+Generation: 173 		Fitness: 0.963541666667
+Generation: 655 		Fitness: 0.96875
+GENERATION LIMIT EXCEEDED!
+Fitness: 0.96875
+t1 b
+t3 a d b
+t1 a
+t4 a b f c
+t1 c
+t3 c d a
+t4 a b d c
+t3 c e b
+t3 c f a
+t4 a e b c
+t1 a
+t1 b
+t1 c
+t3 a f b
+Quantum Cost: 70
+Gate Count: 14
+Quantum Cost Improvement: 7
+Gate Count Improvement: 3
+ |------- End run number: 20 -------|
+ |------- <../files/mod5adder_129.real> Set #5  Run #21 --------| 
+Original quantum cost: 77
+Original gate count: 17
+Smart GA Parameters
+Initial Population Count: 731
+Initial Population Mutations: 7
+Subsequent Population Count: 731
+Subsequent Population Mutations: 5
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 77
+
+Generation: 0 		Fitness: 0.880208333333
+Generation: 1 		Fitness: 0.901041666667
+Generation: 4 		Fitness: 0.911458333333
+Generation: 5 		Fitness: 0.927083333333
+Generation: 6 		Fitness: 0.947916666667
+Generation: 453 		Fitness: 0.963541666667
+Generation: 454 		Fitness: 1.0
+t1 b
+t3 a d b
+t1 a
+t4 a b f c
+t1 c
+t3 c d a
+t4 a b d c
+t3 c e b
+t3 b e f
+t4 a e b c
+t3 c f a
+t3 b e f
+t1 a
+t1 b
+t1 c
+t3 a f b
+Quantum Cost: 80
+Gate Count: 16
+Quantum Cost Improvement: -3
+Gate Count Improvement: 1
+ |------- End run number: 21 -------|
+ |------- <../files/mod5adder_129.real> Set #5  Run #22 --------| 

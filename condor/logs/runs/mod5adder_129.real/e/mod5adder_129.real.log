@@ -366,3 +366,61 @@
 	0  -  Total Bytes Sent By Job
 	0  -  Total Bytes Received By Job
 ...
+006 (012.005.000) 04/14 18:16:03 Image size of job updated: 68572
+...
+006 (012.005.000) 04/14 18:26:04 Image size of job updated: 68836
+...
+006 (012.005.000) 04/14 18:31:05 Image size of job updated: 69184
+...
+006 (012.005.000) 04/14 18:36:06 Image size of job updated: 69500
+...
+005 (012.006.000) 04/14 21:30:08 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 2 19:25:41, Sys 0 00:00:31  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 2 19:25:41, Sys 0 00:00:31  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+...
+010 (012.008.000) 04/15 05:53:26 Job was suspended.
+	Number of processes actually suspended: 3
+...
+011 (012.008.000) 04/15 05:58:26 Job was unsuspended.
+...
+010 (012.008.000) 04/15 06:03:31 Job was suspended.
+	Number of processes actually suspended: 3
+...
+011 (012.008.000) 04/15 06:08:28 Job was unsuspended.
+...
+005 (012.008.000) 04/15 08:24:36 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 2 18:36:48, Sys 0 00:01:32  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 2 18:36:48, Sys 0 00:01:32  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+...
+006 (012.005.000) 04/15 10:07:43 Image size of job updated: 69620
+...
+010 (012.009.000) 04/15 11:14:27 Job was suspended.
+	Number of processes actually suspended: 3
+...
+011 (012.009.000) 04/15 11:19:32 Job was unsuspended.
+...
+005 (012.004.000) 04/15 12:04:15 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 3 10:04:00, Sys 0 00:00:25  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 3 10:04:00, Sys 0 00:00:25  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+...
