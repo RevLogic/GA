@@ -22,7 +22,7 @@ def smartGA_pool_runner(block):
     ga.threshold = 1.0
     ga.initial_population_mutations = 5 # (5 - 10)
     ga.subsequent_population_mutations = 2 # (2 - 5)
-    ga.cost_improvement_goal = int( (10.0/100.0) * block.cost()) 
+    ga.cost_improvement_goal = int( (7.0/100.0) * block.cost()) 
     ga.max_removals_per_mutation = 2 # (1-10)
     return ga.run()
 
