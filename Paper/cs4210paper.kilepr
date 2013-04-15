@@ -4,7 +4,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.1.0
-lastDocument=main.tex
+lastDocument=revsim.tex
 masterDocument=main.tex
 name=CS4210 Paper
 pkg_extIsRegExp=false
@@ -103,7 +103,7 @@ encoding=UTF-8
 highlight=LaTeX
 line=32
 mode=LaTeX
-open=false
+open=true
 order=0
 
 [item:matricescost.tex]
@@ -148,13 +148,13 @@ order=6
 
 [item:revsim.tex]
 archive=true
-column=0
+column=58
 encoding=UTF-8
 highlight=LaTeX
-line=0
+line=90
 mode=LaTeX
-open=false
-order=-1
+open=true
+order=1
 
 [view-settings,view=0,item:Qcircuit.tex]
 CursorColumn=0
@@ -205,5 +205,5 @@ CursorColumn=0
 CursorLine=2
 
 [view-settings,view=0,item:revsim.tex]
-CursorColumn=0
-CursorLine=0
+CursorColumn=58
+CursorLine=90
