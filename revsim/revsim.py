@@ -9,5 +9,5 @@ from truth_table import *
 from shared_cube import *
 from genetic import *
 from naive_ga import *
-from dumb_ga import *
+from smart_ga import *
 from real_io import *
