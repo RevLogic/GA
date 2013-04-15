@@ -41,9 +41,9 @@ class SmartGA(GeneticAlgorithm):
         """
         Either remove a gate at random or replace it with a random gate
         """
-        choice = random.randint(0,2)
+        choice = random.randint(0,1)
 
-        if (choice == 0 or choice == 1) and len(c) > 1:
+        if bool(choice) and len(c) > 1:
             for i in range(0, self.max_removals_per_mutation):
                 try:
                     c.remove(random.randint(0, len(c)-1)) # Randomly remove a gate
@@ -105,8 +105,8 @@ class SmartGA(GeneticAlgorithm):
 
             if new_fitness > current_fitness:
                 print "Generation:",gen_count, "\t\tFitness:", new_fitness
-                self.population += self.crossover(self.parent, top_two[0][1])
-                self.population += self.crossover(self.parent, top_two[1][1])
+                #self.population += self.crossover(self.parent, top_two[0][1])
+                #self.population += self.crossover(self.parent, top_two[1][1])
                 self.population += self.crossover(top_two[0][1], top_two[1][1])
 
                 # Add randomly chosen ones to the mix
@@ -115,8 +115,8 @@ class SmartGA(GeneticAlgorithm):
                 self.population += self.crossover(top_two[0][1], random_two[1])
                 self.population += self.crossover(top_two[1][1], random_two[0])
                 self.population += self.crossover(top_two[1][1], random_two[1])
-                self.population += self.crossover(self.parent, random_two[0])
-                self.population += self.crossover(self.parent, random_two[1])
+                #self.population += self.crossover(self.parent, random_two[0])
+                #self.population += self.crossover(self.parent, random_two[1])
 
                 current_fitness = new_fitness
             else:
