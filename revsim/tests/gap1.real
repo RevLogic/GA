@@ -1,0 +1,29 @@
+.version 1.0
+.numvars 9
+.variables a b c d e f g h i
+.inputs a b c d e f g h i
+.outputs a b c d e f g h i
+.constants ---------
+.garbage ---------
+.begin
+t2 h d
+t4 b c f h
+t2 i c
+t2 g b
+t2 i f
+t4 a f h e
+t4 c d f i
+t2 g c
+t4 c e f a
+t3 f h a
+t3 e f h
+t5 b c d f g
+t3 f h c
+t4 a e f b
+t4 b d h a
+t4 d e f b
+t2 h d
+t5 a c e f h
+t3 b i e
+t3 b i f
+.end
