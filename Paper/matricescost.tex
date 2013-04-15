@@ -1,0 +1,128 @@
+\subsection{Unitary Matrices}
+Every quantum gate can be represented by a unitary transformation (in the form of a unitary matrix) whose entries are complex variables corresponding to the complex coefficients of a given particle's wave function. Unitary transformations allow us to perform actual computations with qubits since they can be realized using technologies like NMR, for instance: a qubit in an NMR machine undergoes state changes due to a changing magnetic field. These magnetic field changes are, in turn, represented by unitary matrices (\cite{Lukac2003}). Constructing useful quantum circuits in this way is analogous to early computer programmers who ``programmed'' massive machines like ENIAC by physically connecting relays and vacuum tubes with wires. How far we have come since then...
+
+\begin{mydef}
+ A {\bf unitary matrix} is an $n \times n$ matrix of complex coefficients which, when multiplied by its Hermitian, gives the identity matrix. Thus, for a unitary matrix $U$, it is true that $(U^{T})^{*} = U^{-1}$ where $(\cdot)^{*}$ denotes complex conjugation.
+\end{mydef}
+
+In addition, every $2 \times 2$ unitary matrix can be expressed using the following product (\cite{Barenco1995}). This representation is particularly useful since it corresponds to the exact rotation matrix which can be applied to the Bloch sphere representation of a qubit: \\
+\[ \left[
+ \begin{matrix}
+  e^{i\delta} & 0 \\
+  0 & e^{i\delta}
+ \end{matrix}
+  \right] *
+  \left[
+  \begin{matrix}
+   e^{\frac{i\alpha}{2}} & 0 \\
+   0 & e^{\frac{-i\alpha}{2}}
+  \end{matrix}
+  \right] *
+  \left[
+  \begin{matrix}
+   \cos{\theta/2} & \sin{\theta/2} \\
+   -\sin{\theta/2}& \cos{\theta/2}
+  \end{matrix}
+  \right] \times
+  \left[
+  \begin{matrix}
+  e^{i\beta/2} & 0 \\
+  0 & e^{-i\beta/2}
+  \end{matrix}
+  \right]
+\]
+
+In order to create useful operations out of ``quantum primitives'', we can compose unitary transformations in order to come up with a permutation representation of a gate or cascade of gates. We can use the ``Square-Root-of-NOT'' gate to construct a NOT gate, for instance:
+\[ \sqrt{\text{NOT}} = \frac{1+i}{2}
+  \left[
+  \begin{matrix}
+   1 & -i \\
+   -i & 1
+  \end{matrix}
+  \right] \Rightarrow
+  \sqrt{\text{NOT}}*\sqrt{\text{NOT}} = \left(\frac{1+i}{2}\right)^{2} \left[
+  \begin{matrix}
+   1 & -i \\
+   -i & 1
+  \end{matrix}
+  \right] *
+  \left[
+  \begin{matrix}
+   1 & -i \\
+   -i & 1
+  \end{matrix}
+  \right] =
+  \left[
+  \begin{matrix}
+   0 & 1 \\
+   1 & 0
+  \end{matrix}
+  \right]
+\]
+
+There are many other unitary matrices: more examples may be found in \cite{Lukac2003}. Gates such as the Pauli-X, Pauli-Y, Pauli-Z, are interesting examples to play around with. 
+
+
+\subsection{Permutation Matrices}
+\begin{mydef}
+ A {\bf permutation matrix} $P$ is an $n \times n$ matrix created by permuting the rows of the identity matrix $I_{n}$. It is the case that $P*P^{T}=P^{T}*P=I$ and that $\text{det}(P)=1$. 
+\end{mydef}
+
+Rather than deal with extremely large and unwieldy unitary transformations all the time, we can use permutation matrices, as described by \cite{Williams1999}. These are a powerful tool, since an $n \times n$ permutation matrix can be used to represent a $2^{n} \times 2^{n}$ unitary operation. Additionally, since permutation matrices are sparse, they can be computed with and stored more efficiently than full matrices. As an aside, some unitary matrices are also permutation matrices (such as the NOT gate), but the gates which are ``true quantum primitives'', as described in \cite{Lukac2003} are only unitary. \\
+
+In brief, permutation matrices encode the rows of a circuit or gate's truth table. Given the truth table for a CNOT gate, for instance, it is quite simple to construct its permutation matrix: we begin by encoding the inputs and outputs of the gate as decimal numbers, and create a mapping between them. Then, we use this mapping to construct the permutation matrix, using the following rule:
+\begin{align*}
+P = [p_{ij}] \text{ where } p_{ij} = 
+  \begin{cases}
+   1 & \text{if } i=n \text{ and } j=M(n) \hspace{1em} \forall n \in \mathbb{Z}_{k} \\
+   0 & \text{otherwise}
+  \end{cases}
+\end{align*}
+
+In this case, $k=2^{w}$ where $w$ is the ``width'' of the gate, or the number of inputs. Since CNOT has a width of 2, that means $k=2^{2}=4$, in this case. \\
+
+\begin{tabular}{c c c c c}
+\begin{tabular}{c | c || c | c}
+ a & b & a' & b' \\ \hline
+ 0 & 0 & 0 & 0 \\
+ 0 & 1 & 0 & 1 \\
+ 1 & 0 & 1 & 1 \\
+ 1 & 1 & 1 & 0
+\end{tabular} & $\rightarrow$ &
+\begin{tabular}{c | c}
+ $n$ & $M(n)$ \\ \hline
+ 0 & 0 \\
+ 1 & 1 \\
+ 2 & 3 \\
+ 3 & 2
+\end{tabular} & $\rightarrow$ &
+$P = \left[
+    \begin{matrix}
+     1 & 0 & 0 & 0 \\
+     0 & 1 & 0 & 0 \\
+     0 & 0 & 0 & 1 \\
+     0 & 0 & 1 & 0
+    \end{matrix}
+\right]
+$
+
+\end{tabular} \\ \\
+
+A useful property of permutation matrices is that they allow us to ``compose'' permutations. In order to do this, we use the following identity: $P_{\sigma \circ \pi} = P_{\pi}*P_{\sigma}$. Note that the order of the matrix multiplication matters, as matrices do not typically commute under multiplication. Having this composition operator makes it easy to represent cascades in a unique way. We can check that two cascades realize the same function if their output permutation matrices are identical. This provides circuit designers with an efficient way to ``equate'' cascades and determine which is ``better''.
+
+\subsection{Quantum Cost}
+Since we can represent operations on qubits using unitary transformations (which conveniently correspond to exactly one quantum operation each), we can devise a metric called ``quantum cost'' in order to determine whether the transformations we perform constitute an efficient synthesis of a given operation. In an NMR system, each electromagnetic pulse to which we subject a qubit has a cost: whether it is the amount of energy required to create the pulse, or the risk of the qubit decohering into a useless state (through vibrations, or other environmental perturbations), these factors may be treated as unitless ``cost'' variables which must be taken into account. \\
+
+As quantum cost is a unitless quantity which corresponds directly to the number of unitary operations in a quantum circuit, it is a very useful metric for calculating the efficiency of an implementation of a circuit. In order to determine the quantum cost of a gate or cascade, we need to break it down into ``quantum primitives'' (unitary transformations). For instance, we can break down a 3-input Toffoli gate like so:
+
+{\begin{align*}
+ \Qcircuit @C=2em @R=1.5em {
+ \lstick{a} & \qw 	& \ctrl{2}  	& \ctrl{1} & \qw & \ctrl{1} & \qw & \lstick{a'} \\
+ \lstick{b} & \ctrl{1} 	& \qw		& \targ & \ctrl{1} & \targ & \qw & \lstick{b'} \\
+ \lstick{c} & \gate{V_{0}} & \gate{V_{1}}       & \qw & \gate{V^{+}} & \qw & \qw & \lstick{c'}
+ }
+\end{align*}}
+
+Of course, it is not immediately obvious why this construction gives us a Toffoli gate. Note that the $\sqrt{\text{NOT}}$ gates (and their Hermitian friend) do not get activated unless their control lines are 1. \\
+
+So, if we pass $a=0$ and $b=0$ through our gate, $c$ remains unchanged, as do $a$ and $b$. If $a=0$ and $b=1$, then the gate that gets applied to $c$ will be $V_{0}*V^{+}=I$, which is the identity, so $c$ will be unchanged. If $a=1$ and $b=0$, then the gate that gets applied to $c$ will be $V_{1}*V^{+}=I$, so $c$ will be unchanged, and finally, if $a=1$ and $b=1$, $c$ will be inverted because the gate that gets applied will be $V_{0}*V_{1}=\text{NOT}$. And thus, we have shown that a 3-input Toffoli gate may be simulated by at least five quantum primitives, and so it has a quantum cost of 5. This result is due to \cite{Smolin1994}.

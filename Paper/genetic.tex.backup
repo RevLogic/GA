@@ -1,6 +1,6 @@
 \newcommand{\tab}{\hspace*{2em}}
 
-\subsection{Genetic Algorithm}
+\section{Genetic Algorithm}
  The Genetic Algorithm is a search heuristic that was introduced and investigated by John Holland (1975) 
 and his students (DeJong, 1975). The algorithm attempts to mimic the evolutionary process of natural 
 selection (Mitchell, 1996) by modelling the concepts of individuals in a population, fitness and selection, 
@@ -23,34 +23,13 @@ on this theme, the basic algorithm is as follows:
 \end{enumerate}
 
 
-\subsubsection{Representation}
+\subsection{Representation}
 
 Representation of the individuals in a population is critical to the successful application of this algorithm and is 
 perhaps the most challenging aspect of implementing it. Since the model is based on biology, each individual is often 
 represented as some type of string which the mutation and crossover functions can be applied to. 
 
-\subsubsection{Fitness and Selection}
-The fitness function allows us to measure how close the solution represented but any specific individual is to the desired 
-output solution. Each individual is evaluated and ranked according to its fitness, and then according to the selection 
-criteria some are chosen for crossover and mutation 
-
-\subsubsection{Crossover}
-Crossover tries to model the process of sexual reproduction in nature. after parent individuals are selected from the 
-population of the previous generation, the 'genes' of these individuals are combined to make one or more child individuals 
-(go to listed example)
-
-\subsubsection{Mutation}
-The mutation operation models mutation of the genes in organisms. For selected individuals individual 'genes' are randomly 
-changed in some way (whether through addition, deletion, or swapping with another type of 'gene' (add example)
-
-\subsubsection{Parameter Variations}
-
-\subsubsection{Previous Applications of the Genetic Algorithm to Reversible Logic Synthesis}
-
-
-\subsection{Old GA material}
-
-\subsubsection{String Representation and Fitness Function}
+\subsection{String Representation and Fitness Function}
 String representation and fitness functions are the two critical components of the GA. For better understanding let’s 
 take an example of biological chromosomes. We can represent chromosomes as binary bit strings, where each gene is made 
 up of a certain number of 0’s or 1’s. For example, we represent a chromosome of 6 genes, where each gene has 4 binary 
@@ -63,17 +42,9 @@ our problem solution to ensure accuracy and quality of the result.
 \\*\\*The fitness function allows us to rate how close an individual from the population is to the ideal solution. We use 
 this function just before the crossover stage, so we can chose the two most suitable individuals to split and swap genes with. 
 
-\subsubsection{Selection, Crossover and Mutation}
-As we mentioned earlier that the fitness function helps us chose the two fittest individuals in the population, however it’s 
-not recommended to simply search through the population and pick the two fittest members. Instead, we use probability. We 
-assign a higher probability of an individual being selected, proportional to that individual’s fitness. So essentially, if 
-an individual is fitter according to our fitness function, then it has a higher chance of being chosen. By doing this, less 
-fit individuals still have a chance of crossing over their genetic material, albeit less likely. 
-\\*\\*Crossover stage is similar to reproduction in nature. We combine genes from two individuals in the population to make 1 
-or more new individuals (children). We pick two individuals with highest fitness value from the population, split them at random 
-generated point (depend on problem at hand), swap the fragments with each other and create the new generations. Consider following 
-two binary strings, A: 1010 1100 0001 1000 1111 0000 and B: 1011 0011 1010 1111 0000 1110. Now using randomly chosen crossover 
-point, we would get following crossover. 
+\subsection{Selection, Crossover and Mutation}
+As we mentioned earlier that the fitness function helps us chose the two fittest individuals in the population, however it’s not recommended to simply search through the population and pick the two fittest members. Instead, we use probability. We assign a higher probability of an individual being selected, proportional to that individual’s fitness. So essentially, if an individual is fitter according to our fitness function, then it has a higher chance of being chosen. By doing this, less fit individuals still have a chance of crossing over their genetic material, albeit less likely. 
+\\*\\*Crossover stage is similar to reproduction in nature. We combine genes from two individuals in the population to make 1 or more new individuals (children). We pick two individuals with highest fitness value from the population, split them at random generated point (depend on problem at hand), swap the fragments with each other and create the new generations. Consider following two binary strings, A: 1010 1100 0001 1000 1111 0000 and B: 1011 0011 1010 1111 0000 1110. Now using randomly chosen crossover point, we would get following crossover. 
 \\*
 \begin{center}
 A: 1010 1100 0001 X 1000 1111 0000
