@@ -1,0 +1,65 @@
+# Function: hwb9
+# Used Library: MCT (gates: 1541, quantum costs: 44665)
+# This file has been taken from RevLib (www.revlib.org).
+.version 1.0
+.numvars 9
+.variables a b c d e f g h i
+.inputs a b c d e f g h i
+.outputs a b c d e f g h i
+.constants ---------
+.garbage ---------
+.begin
+t2 h d
+t4 b c f h
+t2 i c
+t2 g b
+t2 i f
+t4 a f h e
+t4 c d f i
+t2 g c
+t4 c e f a
+t3 f h a
+t3 e f h
+t5 b c d f g
+t3 f h c
+t4 a e f b
+t4 b d h a
+t4 d e f b
+t2 h d
+t5 a c e f h
+t3 b i e
+t3 b i f
+t4 b c i h
+t5 b c e f i
+t5 d e h i f
+t4 d f i h
+t4 d e f i
+t3 c i a
+t2 i d
+t4 c d i f
+t3 d i c
+t5 a d e f i
+t4 d f h a
+t5 c d e i h
+t4 a c g b
+t3 d h g
+t5 c d e f i
+t3 f i g
+t6 a c d e f i
+t2 g e
+t3 d g c
+t3 g h d
+t2 g h
+t2 i a
+t3 a i g
+t4 b g h c
+t3 a g i
+t4 c d g a
+t3 g h a
+t2 i h
+t3 b g i
+t3 d g b
+t5 a c f g d
+t4 a c g f
+t3 e h a
+.end

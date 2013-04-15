@@ -16,7 +16,7 @@ from revsim import *
 
 def smartGA_pool_runner(block):
     ga = SmartGA(block, block.lines) # Need to use all lines
-    ga.init_population_size = 50 # (50 - 500)
+    ga.init_population_size = 60 # (50 - 500)
     ga.max_generations = 5000
     ga.max_population_size = 20 # (same as ipop)
     ga.threshold = 1.0
@@ -32,8 +32,8 @@ def create_cascade(lines, gates):
     return c
 
 if __name__ == '__main__':
-    # Start 4 worker processes: we use subprocesses to avoid GIL
-    pool = Pool(processes=4)
+    # Start 2 worker processes: we use subprocesses to avoid GIL
+    pool = Pool(processes=2)
     
     r = RealReader(sys.argv[1])
     ideal, non_garbage = r.read_cascade()

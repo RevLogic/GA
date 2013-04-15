@@ -1,6 +1,6 @@
 # Revsim 
 # "Smart genetic algorithm" that utilizes the original circuit spec as a seed
-
+import os
 from genetic import *
 
 class SmartGA(GeneticAlgorithm):
@@ -64,7 +64,7 @@ class SmartGA(GeneticAlgorithm):
                 
     def fitness(self, truth_table, quantum_cost_goal):
         function_eval = truth_table.fuzzy_compare_columns(self.goal, self.non_garbage)
-        #qcost_fitness = min(quantum_cost_goal / truth_table.c.cost(), 1.0)
+        qcost_fitness = min(quantum_cost_goal / truth_table.c.cost(), 1.0)
         
         return function_eval
 
@@ -72,14 +72,14 @@ class SmartGA(GeneticAlgorithm):
     def run(self):
         quantum_cost_goal = self.parent.cost() - self.cost_improvement_goal
 
-        print "Smart GA Parameters"
-        print "Initial Population Count:", self.init_population_size
+        """
         print "Initial Population Mutations:", self.initial_population_mutations
         print "Subsequent Population Count:", self.max_population_size
         print "Subsequent Population Mutations:", self.subsequent_population_mutations
         print "Maximum Number of Generations:", self.max_generations
         print "Quantum Cost Goal:", quantum_cost_goal
         print ""
+        """
 
         current_fitness = 0.0
         gen_count = 0
@@ -100,14 +100,14 @@ class SmartGA(GeneticAlgorithm):
             new_fitness = top_two[1][0]
 
             if new_fitness > current_fitness:
-                print "Generation:",gen_count, "\t\tFitness:", new_fitness
+                print "[", os.getpid(), "]" "Generation:",gen_count, "\t\tFitness:", new_fitness
                 self.population += self.crossover(self.parent, top_two[0][1])
                 self.population += self.crossover(self.parent, top_two[1][1])
                 self.population += self.crossover(top_two[0][1], top_two[1][1])
                 current_fitness = new_fitness
             else:
                 self.generate_population(self.max_population_size, self.subsequent_population_mutations)
-                self.population += [top_two[0][1], top_two[1][1]]
+                #self.population += [top_two[0][1], top_two[1][1]]
 
             if (gen_count == self.max_generations - 1) or (current_fitness == 1.0):
                 if gen_count == self.max_generations - 1:
@@ -121,7 +121,7 @@ class SmartGA(GeneticAlgorithm):
                 for gate in best:
                     print gate
                     
-                print "Quantum Cost:", best.cost()
+                print "[", os.getpid(), "]", "Quantum Cost Improvement:", self.parent.cost() - best.cost()
                 print "Gate Count:", len(best)
                 return best
 
