@@ -140,7 +140,7 @@ class TestGateSanity(unittest.TestCase):
 
     def test_fredkin_sanity(self):
         """ Targets must not be contained in controls """
-        #self.assertRaises(ValueError, apply, [0,0,0], fredkin, [0,1], [1,2])
+        self.assertRaises(ValueError, apply, [0,0,0], fredkin, [0,1], [1,2])
         pass
 
     def test_inverter_sanity(self):
@@ -185,13 +185,31 @@ class SharedCubeTests(unittest.TestCase):
     s = SharedCube(c)
     cube_list = s.generate()
 
-    def check_cube_list(self):
+    def test_check_cube_list(self):
         actual = { ('x2', 'x4'): ['f1', 'f3'],
                    ('x1', 'x3'): ['f1', 'f4', 'f3', 'f5'],
                    ('x1', 'x2', 'x4'): ['f1', 'f4', 'f2', 'f3', 'f5'] }
         
         self.assertEqual(self.cube_list, actual)
 
+class QuantumCostTest(unittest.TestCase):
+    costs = []
+    gates = []
+    def test_toffoli_quantum(self):
+        self.costs = [1, 1, 5, 13, 29, 61, 125, 253, 509, 1021]
+        self.gates.append(Inverter('a')) # 1
+        self.gates.append(Toffoli(['a'], 'b')) # 1
+        self.gates.append(Toffoli(['a', 'b'], 'c')) # 5
+        self.gates.append(Toffoli(['a', 'b', 'c'], 'd')) # 13
+        self.gates.append(Toffoli(['a', 'b', 'c', 'd'], 'e')) # 29
+        self.gates.append(Toffoli(['a', 'b', 'c', 'd', 'e'], 'f')) # 61
+        self.gates.append(Toffoli(['a', 'b', 'c', 'd', 'e', 'f'], 'g')) # 125
+        self.gates.append(Toffoli(['a', 'b', 'c', 'd', 'e', 'f', 'g'], 'h')) # 253
+        self.gates.append(Toffoli(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'], 'i')) # 509
+        self.gates.append(Toffoli(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'], 'j')) # 1021
 
+        for i in range(0, len(self.gates)):
+            self.assertEqual(self.gates[i].cost(), self.costs[i])
+            
 if __name__ == "__main__":
     unittest.main()
