@@ -41,9 +41,9 @@ class SmartGA(GeneticAlgorithm):
         """
         Either remove a gate at random or replace it with a random gate
         """
-        choice = random.randint(0,2)
+        choice = random.randint(0,3)
 
-        if choice == 0 and len(c) > 1:
+        if (choice == 0 or choice == 1) and len(c) > 1:
             for i in range(0, self.max_removals_per_mutation):
                 try:
                     c.remove(random.randint(0, len(c)-1)) # Randomly remove a gate
@@ -51,7 +51,7 @@ class SmartGA(GeneticAlgorithm):
                     print "ERROR: trying to remove more gates than there are in the Cascade"
                     print "You should try decreasing the GA's self.max_removals_per_mutation parameter"
                     exit()
-        elif choice == 1:
+        elif choice == 2:
             c.append(self.random_toffoli())
         else:
             # or replace a gate with a random gate
@@ -68,7 +68,7 @@ class SmartGA(GeneticAlgorithm):
         function_eval = truth_table.fuzzy_compare_columns(self.goal, self.non_garbage)
         qcost_fitness = min(quantum_cost_goal / truth_table.c.cost(), 1.0)
         
-        return function_eval #* qcost_fitness
+        return function_eval * qcost_fitness
 
     
     def run(self):
