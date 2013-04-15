@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2012.9.14)  15 APR 2013 13:52
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2012.9.14)  15 APR 2013 15:58
 entering extended mode
  %&-line parsing enabled.
 **main.tex
@@ -577,65 +577,80 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--11
 \openout2 = `genetic.aux'.
 
  (./genetic.tex [5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 67--78
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 86.
+ (/usr/share/texmf/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 86.
+ [7]
 
- []
+Package natbib Warning: Citation `Lukac2008' on page 8 undefined on input line 
+102.
 
-[7])
+
+Package natbib Warning: Citation `Khan2004' on page 8 undefined on input line 1
+02.
+
+
+Package natbib Warning: Citation `Aguirre2003' on page 8 undefined on input lin
+e 102.
+
+)
 \openout2 = `parallel.aux'.
 
  (./parallel.tex)
 \openout2 = `approach.aux'.
 
- (./approach.tex) [8
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.8}Parallelization}{8
-}}
-\@writefile{toc}{\contentsline {paragraph}{multiple threading and processes}{8}
-}
-\@writefile{toc}{\contentsline {paragraph}{Grid Computing}{8}}
-]
+ (./approach.tex)
 \openout2 = `revsim.aux'.
 
- (./revsim.tex [9] [10])
+ (./revsim.tex [8] [9] [10])
 \openout2 = `results.aux'.
 
  (./results.tex)
 \openout2 = `conclusion.aux'.
 
- (./conclusion.tex) [11
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.4}Parallelizati
-on}{11}}
+(./conclusion.tex) [11
 \@writefile{toc}{\contentsline {paragraph}{Grid Computing.}{11}}
 \@writefile{toc}{\contentsline {paragraph}{Parallelization of large circuits.}{
 11}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Experimental Results}{1
 1}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{11}}
-] (./main.bbl) [12] (./main.aux (./introduction.aux) (./matricescost.aux)
-(./cubelist.aux) (./orderingrules.aux) (./genetic.aux) (./parallel.aux)
-(./approach.aux) (./revsim.aux) (./results.aux) (./conclusion.aux)) ) 
+] (./main.bbl [12])
+
+Package natbib Warning: There were undefined citations.
+
+[13] (./main.aux (./introduction.aux) (./matricescost.aux) (./cubelist.aux)
+(./orderingrules.aux) (./genetic.aux) (./parallel.aux) (./approach.aux)
+(./revsim.aux) (./results.aux) (./conclusion.aux)
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+) ) 
 Here is how much of TeX's memory you used:
- 5346 strings out of 256216
- 67214 string characters out of 1917072
+ 5366 strings out of 256216
+ 67514 string characters out of 1917072
  369705 words of memory out of 1500000
- 8459 multiletter control sequences out of 10000+200000
+ 8476 multiletter control sequences out of 10000+200000
  15834 words of font info for 77 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
  46i,37n,40p,820b,1352s stack positions out of 5000i,500n,6000p,200000b,15000s
-</usr/shar
-e/texmf/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/bluesky
-/cm/cmex10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi12.pfb></usr/share/
-texmf/fonts/type1/bluesky/cm/cmmi6.pfb></usr/share/texmf/fonts/type1/bluesky/cm
-/cmmi8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb></usr/share/texmf
-/fonts/type1/bluesky/cm/cmr17.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr6
-.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr8.pfb></usr/share/texmf/fonts/
-type1/bluesky/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy6.pfb>
-</usr/share/texmf/fonts/type1/bluesky/cm/cmsy8.pfb></usr/share/texmf/fonts/type
-1/bluesky/cm/cmti12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmtt12.pfb></u
-sr/share/texmf/fonts/type1/bluesky/ams/msbm10.pfb>
-Output written on main.pdf (12 pages, 141012 bytes).
+</usr/share/texmf/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/
+type1/bluesky/cm/cmex10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi12.pfb
+></usr/share/texmf/fonts/type1/bluesky/cm/cmmi6.pfb></usr/share/texmf/fonts/typ
+e1/bluesky/cm/cmmi8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb></us
+r/share/texmf/fonts/type1/bluesky/cm/cmr17.pfb></usr/share/texmf/fonts/type1/bl
+uesky/cm/cmr6.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr8.pfb></usr/share
+/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/bluesky/
+cm/cmsy6.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy8.pfb></usr/share/tex
+mf/fonts/type1/bluesky/cm/cmti12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/c
+mtt12.pfb></usr/share/texmf/fonts/type1/bluesky/ams/msbm10.pfb>
+Output written on main.pdf (13 pages, 142282 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
+ 105 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  13825 words of extra memory for PDF output out of 14400 (max. 10000000)
 

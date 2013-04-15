@@ -1,9 +1,15 @@
-\begin{thebibliography}{9}
+\begin{thebibliography}{12}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Aguirre and Coello(2003)]{Aguirre2003}
+A.~H. Aguirre and C.~A.~Coello Coello.
+\newblock Evolutionary synthesis of logic circuits using information theory.
+\newblock \emph{Artificial Intelligence Review}, 20\penalty0 (3--4), December
+  2003.
 
 \bibitem[Barenco et~al.(1995)Barenco, Bennett, Cleve, DiVincenzo, Margolus,
   Shor, Sleator, Smolin, and Weinfurter]{Barenco1995}
@@ -28,6 +34,20 @@ K.~Fazel, M.~Thornton, and J.~E. Rice.
   Communications, Computers and Signal Processing (PACRIM)}, pages 206--209,
   2007.
 \newblock Aug. 22--24 2007, Victoria, BC, Canada, IEEE Press.
+
+\bibitem[Khan and Perkowski(2004)]{Khan2004}
+M.~H.~A. Khan and M.~Perkowski.
+\newblock Genetic algorithm based synthesis of multi-output ternary functions
+  using quantum cascade of generalized ternary gates.
+\newblock In \emph{Proceedings of the Congress on Evolutionary Computation
+  (CEC)}, volume~2, pages 2194--2201, 2004.
+
+\bibitem[Lukac and Perkowski(2008)]{Lukac2008}
+M.~Lukac and M.~Perkowski.
+\newblock Evolutionary approach to quantum symbolic logic synthesis.
+\newblock In \emph{Proceedings of the IEEE Congress on Evolutionary Computation
+  (CEC)}, pages 3374--3380, 2008.
+\newblock \doi{10.1109/CEC.2008.4631254}.
 
 \bibitem[Lukac et~al.(2003)Lukac, Perkowski, Goi, Pivtoraiko, Yu, Chung, Jeech,
   Kim, and Kim]{Lukac2003}

@@ -4,7 +4,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.1.0
-lastDocument=revsim.tex
+lastDocument=genetic.tex
 masterDocument=main.tex
 name=CS4210 Paper
 pkg_extIsRegExp=false
@@ -78,13 +78,13 @@ order=0
 
 [item:genetic.tex]
 archive=true
-column=0
+column=80
 encoding=UTF-8
 highlight=LaTeX
-line=5
+line=101
 mode=LaTeX
-open=false
-order=4
+open=true
+order=2
 
 [item:introduction.tex]
 archive=true
@@ -177,8 +177,8 @@ CursorColumn=0
 CursorLine=49
 
 [view-settings,view=0,item:genetic.tex]
-CursorColumn=0
-CursorLine=5
+CursorColumn=80
+CursorLine=101
 
 [view-settings,view=0,item:introduction.tex]
 CursorColumn=94
