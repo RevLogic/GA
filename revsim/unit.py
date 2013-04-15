@@ -111,15 +111,15 @@ class CascadeOperationTests(unittest.TestCase):
 class CascadeSanity(unittest.TestCase):
     c = Cascade({'a':0, 'b':0, 'c':0})
     def test_remove_sanity(self):
-        # Cascades must not allow removal of gate indices that don't exist
+        """ Cascades must not allow removal of gate indices that don't exist """
         self.assertRaises(IndexError, self.c.remove, 1)
-        # Disallow removal of negative indices
+        """ Disallow removal of negative indices """
         self.assertRaises(IndexError, self.c.remove, -1)
 
     def test_update_lines_sanity(self):
-        # Must not allow replacement of lines with a set of lines that is smaller
+        """ Must not allow replacement of lines with a set of lines that is smaller """
         self.assertRaises(ValueError, self.c.update_lines, {'a':0, 'b':0})
-        # Must not allow replacement of lines with a larger set of lines
+        """ Must not allow replacement of lines with a larger set of lines """
         self.assertRaises(ValueError, self.c.update_lines, {'a':0, 'b':0, 'c':0, 'd':0})
 
 
@@ -127,20 +127,20 @@ class TestGateSanity(unittest.TestCase):
     def test_toffoli_sanity(self):
         tof1 = Toffoli(['a', 'b'], 'd')
         tof2 = Toffoli(['a', 'd'], 'b')
-        # Target must not be contained in controls 
+        """ Target must not be contained in controls """
         self.assertRaises(ValueError, Toffoli, ['a', 'b'], 'a')
-        # Controls and targets must be in the line range
+        """ Controls and targets must be in the line range """
         self.assertRaises(ValueError, tof1.eval, {'a':0, 'b':0, 'c':0})
         self.assertRaises(ValueError, tof2.eval, {'a':0, 'b':0, 'c':0})
-        # Must not be able to apply on empty line list
+        """ Must not be able to apply on empty line list """
         self.assertRaises(ValueError, tof1.eval, {})
-        # Toffoli gates must only have a single target
+        """ Toffoli gates must only have a single target """
         tof3 = Toffoli(['a', 'b'], ['c', 'd'])
         self.assertRaises(ValueError, tof3.eval, {'a':0, 'b':0, 'c':0, 'd':0})
 
     def test_fredkin_sanity(self):
-        # Targets must not be contained in controls
-        #self.assertRaises(ValueError, apply, [0,0,0], fredkin, [0,1], [1,2])
+        """ Targets must not be contained in controls ""
+        self.assertRaises(ValueError, apply, [0,0,0], fredkin, [0,1], [1,2])
         pass
 
     def test_inverter_sanity(self):
