@@ -100,7 +100,7 @@ class SmartGA(GeneticAlgorithm):
             new_fitness = top_two[1][0]
 
             if new_fitness > current_fitness:
-                print "[", os.getpid(), "]" "Generation:",gen_count, "\t\tFitness:", new_fitness
+                print "[", os.getpid(), "]", "Generation:",gen_count, "\t\tFitness:", new_fitness
                 self.population += self.crossover(self.parent, top_two[0][1])
                 self.population += self.crossover(self.parent, top_two[1][1])
                 self.population += self.crossover(top_two[0][1], top_two[1][1])
