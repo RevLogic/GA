@@ -107,4 +107,5 @@ class NaiveGA(GeneticAlgorithm):
                 print "Quantum Cost:", best.cost()
                 print "Gate Count:", len(best)
 
+                return best
             gen_count += 1
