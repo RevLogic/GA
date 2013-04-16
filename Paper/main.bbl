@@ -1,4 +1,4 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{18}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -11,14 +11,23 @@ A.~H. Aguirre and C.~A.~Coello Coello.
 \newblock \emph{Artificial Intelligence Review}, 20\penalty0 (3--4), December
   2003.
 
-\bibitem[Barenco et~al.(1995)Barenco, Bennett, Cleve, DiVincenzo, Margolus,
-  Shor, Sleator, Smolin, and Weinfurter]{Barenco1995}
-Adriano Barenco, Charles~H. Bennett, Richard Cleve, David~P. DiVincenzo, Norman
-  Margolus, Peter Shor, Tycho Sleator, John~A. Smolin, and Harald Weinfurter.
-\newblock Elementary gates for quantum computation.
-\newblock \emph{Phys. Rev. A}, 52:\penalty0 3457--3467, Nov 1995.
-\newblock \doi{10.1103/PhysRevA.52.3457}.
-\newblock URL \url{http://link.aps.org/doi/10.1103/PhysRevA.52.3457}.
+\bibitem[Al-Rabadi(2004)]{AlRabadi2004}
+A.~N. Al-Rabadi.
+\newblock \emph{Reversible Logic Synthesis: From Fundamentals to Quantum
+  Computing}.
+\newblock Springer-Verlag, 2004.
+
+\bibitem[Athas and Svensson(1994)]{Athas94}
+W.~C. Athas and L.~J. Svensson.
+\newblock Reversible logic issues in adiabatic {CMOS}.
+\newblock In \emph{Proceedings of the Workshop on Physics and Computation
+  (PhysComp)}, pages 111--118, Dallas, TX, 1994.
+
+\bibitem[Bennett(1973)]{Bennett73}
+C.~H. Bennett.
+\newblock Logical reversibility of computation.
+\newblock \emph{IBM Journal of Research and Development}, 6:\penalty0 525--532,
+  1973.
 
 \bibitem[DiVincenzo and Smolin(1994)]{Smolin1994}
 David~P. DiVincenzo and J.~Smolin.
@@ -35,12 +44,26 @@ K.~Fazel, M.~Thornton, and J.~E. Rice.
   2007.
 \newblock Aug. 22--24 2007, Victoria, BC, Canada, IEEE Press.
 
+\bibitem[Frank(2005)]{Frank2005}
+M.~P. Frank.
+\newblock Introduction to reversible computing: Motivation, progress, and
+  challenges.
+\newblock In \emph{Proceedings of the 2nd Conference on Computing Frontiers},
+  pages 385--390, 2005.
+\newblock May 4--6, Ischia, Italy, ACM Press.
+
 \bibitem[Khan and Perkowski(2004)]{Khan2004}
 M.~H.~A. Khan and M.~Perkowski.
 \newblock Genetic algorithm based synthesis of multi-output ternary functions
   using quantum cascade of generalized ternary gates.
 \newblock In \emph{Proceedings of the Congress on Evolutionary Computation
   (CEC)}, volume~2, pages 2194--2201, 2004.
+
+\bibitem[Landauer(1961)]{Landauer61}
+R.~Landauer.
+\newblock Irreversibility and heat generation in the computing process.
+\newblock \emph{IBM Journal of Research and Development}, 5:\penalty0 183--191,
+  1961.
 
 \bibitem[Lukac and Perkowski(2008)]{Lukac2008}
 M.~Lukac and M.~Perkowski.
@@ -60,6 +83,12 @@ Martin Lukac, Marek Perkowski, Hilton Goi, Mikhail Pivtoraiko, Chung~Hyo Yu,
 \newblock \doi{10.1023/B:AIRE.0000006605.86111.79}.
 \newblock URL \url{http://dx.doi.org/10.1023/B:AIRE.0000006605.86111.79}.
 
+\bibitem[Merkle(1993)]{Merkle1993}
+R~C Merkle.
+\newblock Reversible electronic logic using switches.
+\newblock \emph{Nanotechnology}, 4\penalty0 (1):\penalty0 21, 1993.
+\newblock URL \url{http://stacks.iop.org/0957-4484/4/i=1/a=002}.
+
 \bibitem[Mitchell(1996)]{Mitchell1996}
 Melanie Mitchell.
 \newblock \emph{An Introduction to Genetic Algorithms.}
@@ -72,6 +101,12 @@ N.~M. Nayeem and J.~E. Rice.
 \newblock \emph{Facta Universitatis Series: Electronics and Energetics},
   24:\penalty0 385--403, 2011.
 \newblock ISSN 0353-3670.
+
+\bibitem[Picton(1991)]{Picton91}
+P.~Picton.
+\newblock Optoelectronic, multivalued, conservative logic.
+\newblock \emph{International Journal of Optical Computing}, 2:\penalty0
+  19--29, 1991.
 
 \bibitem[Rice and Nayeem(2011)]{Rice2011}
 J.E. Rice and N.~M. Nayeem.
