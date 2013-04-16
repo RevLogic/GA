@@ -1,4 +1,4 @@
-#!/usr/bin/env/python
+#!/usr/bin/env python
 # Revsim: a reversible logic framework
 # C. Rabl, R. Lowry, H. Rana
 
