@@ -1,33 +1,17 @@
-\section{ESOP Cube-list Representations}
+\subsection{ESOP cube-list Representations}
 
-Any boolean function can be represented by an exclusive-or sum-of-products (ESOP) expression.This is
-particularly useful for reversible logic synthesis since there are existing algorithms for converting 
-any ESOP expression into a cascade of reversible toffoli gates, thus generating a reversible circuit 
-to implement your original function. \\ 
+Any Boolean function can be represented by an exclusive-or sum-of-products (ESOP) expression. This is particularly useful for reversible logic synthesis since there are existing algorithms for converting any ESOP expression into a cascade of Toffoli gates, thus allowing us to generate a reversible circuit from arbitrary Boolean functions. \\ 
 
 
-In reversible circuit design ESOP expressions are often written as a cube-list. A cube list is an $ n \times m $
-matrix with $m$, the number of product terms in the ESOP expression, and $n = i + j$ where $i$ is the number 
-of input variables and $j$ is the number output variables. Each of the $m$ rows in the matrix are the individual
-cubes that make up the cube list and represent one of the products from the ESOP expression. \\
+In reversible circuit design, ESOP expressions are often written as a cube list. A cube list is an $ n \times m $ matrix, where $m$ is the number of product terms in the ESOP expression, and $n = i + j$, where $i$ is the number of input variables and $j$ is the number of output variables in the expression. Each of the $m$ rows in the matrix are the ``cubes'' that make up the cube list and represent one of the products from the ESOP expression. \\
 
-Each cube in the list takes the general form: $x_{1} x_{2} ... x_{i} f_{1} f_{2} ... f_{j}$, where each of the elements $x_{1} .. x_{i}$ 
-represent an input variables and each element $f_{1} .. f_{j}$ represents an output variable. For each cube in the 
-cube list a $1$ is written in cube position $x_{k}$ , $k \in \{1,2, ..., i\}$ if the variable $x_{k}$ is in 
-the ESOP product for that row, a $0$ is written if the negation $\bar{x}_{k}$ is present, and a '$-$' nis written if $x_{k}$ is not present in that
-product term for that cube. For each element, $f_{p}$, $p \in {1,2,...j}$, a 1 is written if that output variable contains 
-the product represented by the input portion of the list and a 0 otherwise. See figure \emph{draw figure 1} for 
+Each cube in the list takes the general form: $x_{1} x_{2} ... x_{i} f_{1} f_{2} ... f_{j}$, where each of the elements $x_{1} ... x_{i}$ 
+represent an input variable and each element $f_{1} ... f_{j}$ represents an output variable. For each cube in the 
+cube list, a $1$ is written in cube position $x_{k}$ , $k \in \{1,2, ..., i\}$ if the variable $x_{k}$ is in 
+the ESOP product for that row. A $0$ is written if the negation $\bar{x}_{k}$ is present, and a '$-$' is written if $x_{k}$ is not present in the
+product term for that cube. For each element $f_{p}$, $p \in \{1,2,...j\}$, a 1 is written if that output variable contains 
+the product represented by the input portion of the list and a 0 is written otherwise. See \ref{fig:cubelist} for 
 an example. \\
-
-Given an ESOP represented as a cube list in this way \emph{[To add citation: Fazel et al.]} proposed a 
-method of reversible logic synthesis that implements the function as a reversible circuit using only 
-Toffoli gates. In this method an empty cascade with $2i + j$ lines is created. Two input lines are given for every input 
-variable where one line corresponds to the variable $x_{k}$, the $2^{nd}$ line corresponds to its negation, $\bar{x}_{k}$, 
-and the remaining $j$ lines correspond to the output variables. For every output line $f_{p}$, a Toffoli gate 
-is placed with its target on line $f_{p}$ and a control for that target is placed on the input line $x_{k}$ if there was a 1
-in the cube for the corresponding variable, or on the negation line of $x_{k}$ if there was a 0 in the
-cube for $x_{k}$, see figure (draw figure 2). This method allows a cube-list to be quickly and efficiently transformed into a reversible cascade and allows for the synthesis of rather large functions. \\
-
 %\include figures (a) and (b) showing cube-list and circuit.
 \begin{figure}[h]
 \centering
@@ -42,12 +26,12 @@ cube for $x_{k}$, see figure (draw figure 2). This method allows a cube-list to 
   & \ \ \ &
   \begin{tabular}{l}
   \Qcircuit @C=1.5em @R=1.0em {
-    \lstick{x_{1}} 	 &  \ctrl{1}      &  \ctrl{1}      &  \ctrl{1}      &  \ctrl{1}      &  \ctrl{1}      &  \qw        &  \qw        &  \qw        &  \qw & \lstick{} \\
-    \lstick{\bar{x}_{1}} &  \qw           &  \qw           &  \qw           &  \qw           &  \qw           &  \ctrl{1}   &  \ctrl{1}   &  \ctrl{1}   &  \qw & \lstick{} \\
-    \lstick{x_{2}} 	 &  \ctrl{1} \qwx &  \ctrl{1} \qwx &  \ctrl{1} \qwx &  \qw \qwx      &  \qw \qwx      &  \ctrl{1}   &  \ctrl{1}   &  \ctrl{1}   &  \qw & \lstick{} \\
-    \lstick{\bar{x}_{2}} &  \qw           &  \qw           &  \qw           &  \ctrl{1} \qwx &  \ctrl{1} \qwx &  \qw        &  \qw        &  \qw        &  \qw & \lstick{} \\
-    \lstick{x_{3}} 	 &  \ctrl{1} \qwx &  \ctrl{1} \qwx &  \ctrl{1} \qwx &  \ctrl{1}      &  \ctrl{1}      &  \qw \qwx   &  \qw \qwx   &  \qw \qwx   &  \qw & \lstick{} \\
-    \lstick{\bar{x}_{3}} &  \qw           &  \qw           &  \qw           &  \qw           &  \qw           &  \qw \qwx   &  \qw \qwx   &  \qw \qwx   &  \qw & \lstick{} \\
+    \lstick{x_{1}} 	 &  \ctrl{1}      &  \ctrl{1}      &  \ctrl{1}      &  \ctrl{1}      &  \ctrl{1}      &  \qw        &  \qw        &  \qw        &  \qw & \lstick{g_{1}} \\
+    \lstick{\bar{x}_{1}} &  \qw           &  \qw           &  \qw           &  \qw           &  \qw           &  \ctrl{1}   &  \ctrl{1}   &  \ctrl{1}   &  \qw & \lstick{g_{2}} \\
+    \lstick{x_{2}} 	 &  \ctrl{1} \qwx &  \ctrl{1} \qwx &  \ctrl{1} \qwx &  \qw \qwx      &  \qw \qwx      &  \ctrl{1}   &  \ctrl{1}   &  \ctrl{1}   &  \qw & \lstick{g_{3}} \\
+    \lstick{\bar{x}_{2}} &  \qw           &  \qw           &  \qw           &  \ctrl{1} \qwx &  \ctrl{1} \qwx &  \qw        &  \qw        &  \qw        &  \qw & \lstick{g_{4}} \\
+    \lstick{x_{3}} 	 &  \ctrl{1} \qwx &  \ctrl{1} \qwx &  \ctrl{1} \qwx &  \ctrl{1}      &  \ctrl{1}      &  \qw \qwx   &  \qw \qwx   &  \qw \qwx   &  \qw & \lstick{g_{5}} \\
+    \lstick{\bar{x}_{3}} &  \qw           &  \qw           &  \qw           &  \qw           &  \qw           &  \qw \qwx   &  \qw \qwx   &  \qw \qwx   &  \qw & \lstick{g_{6}} \\
     \lstick{0}  	 &  \targ  \qwx   &  \qw \qwx      &  \qw \qwx      &  \targ  \qwx   &  \qw \qwx      &  \targ \qwx &  \qw \qwx   &  \qw \qwx   &  \qw & \lstick{f_{1}} \\
     \lstick{0}  	 &  \qw           &  \targ \qwx    &  \qw \qwx      &  \qw           &  \targ  \qwx   &  \qw        &  \targ \qwx &  \qw \qwx   &  \qw & \lstick{f_{2}} \\
     \lstick{0}   	 &  \qw           &  \qw           &  \targ \qwx    &  \qw           &  \qw           &  \qw        &  \qw        &  \targ \qwx &  \qw & \lstick{f_{3}} 
@@ -55,12 +39,18 @@ cube for $x_{k}$, see figure (draw figure 2). This method allows a cube-list to 
   \end{tabular} \\
   \ \ \ \ \ \ \ \ \ \ \ \ (a) & \ \ \ & \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (b)
  \end{tabular}
- \caption{A (a) the cube-list and (b) resulting circuit.}
+ \caption{A (a) the cube list and (b) resulting circuit.}
+  \label{fig:cubelist}
 \end{figure}
+ 
+Given an ESOP represented as a cube-list, \cite{Thornton2007} proposed a 
+method for reversible logic synthesis that implements the function as a reversible circuit using only 
+Toffoli gates. In this method an empty cascade with $2i + j$ lines is created. Two input lines are given for every input 
+variable where one line corresponds to the variable $x_{k}$, the $2^{nd}$ line corresponds to its negation, $\bar{x}_{k}$, 
+and the remaining $j$ lines correspond to the output variables. For every output line $f_{p}$, a Toffoli gate 
+is placed with its target on line $f_{p}$ and a control for that target is placed on the input line $x_{k}$ if there was a 1
+in the cube for the corresponding variable, or on the negation line of $x_{k}$ if there was a 0 in the
+cube for $x_{k}$, see figure \emph{figure 2}. This method allows a cube-list to be quickly and efficiently transformed 
+into a reversible cascade and allows for the synthesis of rather large functions. \\*
 
-
-
-
-\begin{mydef}
-\end{mydef}
 
