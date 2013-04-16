@@ -1,26 +1,41 @@
 \section{Experimental Results}
 
-\begin{table}
-    \begin{tabular}{l | l | l | l | l}
-    Circuit & Data       & Number of & \verb!%! Improved & Best      \\
-            & Generating & Improved  &                   & Reported   \\
-            & Runs       & Circuits  &                   & Improvement \\ \hline
-    \verb!Max46_240!     & 5000                 & 5000                        & 100.00    & 14038                     \\
-    \verb!life_238!      & 4999                 & 4999                        & 100.00    & 11084                     \\
-    \verb!f51m_233!    & 60                   & 60                          & 100.00    & 4472                      \\
-    \verb!alu-v0_27!     & 1020                 & 904                         & 88.63     & 7                         \\
-    \verb!decod24-v3_45! & 1020                 & 838                         & 82.16     & 31                        \\
-    \verb!gsym9!         & 1040                 & 665                         & 63.94     & 52                        \\
-    \verb!4gt11_83!      & 1020                 & 576                         & 56.47     & 9                         \\
-    \verb!gsym6!         & 1020                 & 536                         & 52.55     & 6                         \\
-    \verb!rd32_273!      & 1020                 & 526                         & 51.57     & 24                        \\
-    \verb!mod5adder_129! & 1277                 & 188                         & 14.72     & 72                        \\
-    \verb!hwb7_62!       & 60                   & 7                           & 11.67     & 217                       \\
-    \verb!urf4_187!      & 8                    & 0                           & 0.00      & N/A                       \\
-    \verb!hwb8_116!      & 14                   & 1                           & 7.14      & 100                       \\
-    \verb!seq_314!      & 0                    & 0                           & N/A       & N/A                       \\
-    \verb!hwb9_121!      & 0                    & 0                           & N/A       & N/A                       \\
+We ran our genetic algorithm against 16 circuits found in the revlib.org circuit library. Table \emph{X} shows the results of the trials 
+for all 16 circuits. Of the 16 trials we were able to generate results from 14 of the circuits. 13 of the the trials also generated 
+at least one circuit with a quantum cost improvement compared to the quantum cost calculated when we read in the comparison 
+circuit's .real file downloaded from revlib. The failure to generate any results for the circuits \verb!seq_314! and
+ \verb!hwb9_121! is due to the time complexity of our fitness function and the large size of those circuits. 
+
+ \begin{table}
+\begin{center}
+    \begin{tabular}{l | l | l | l | l | l}
+    Circuit              & Attempted & Data        & Number of & \verb!%! of Runs  & Best Reported \\
+                         &   Runs    & Generating  & Improved  & Generating an     & Quantum Cost  \\
+                         &           & Runs        & Circuits  & Improved circuit  & Improvement \\ \hline
+    \verb!Max46_240!     &  5000     & 5000        & 5000      & 100.00   & 14038       \\
+    \verb!life_238!      &  5000     & 5000        & 4999      & 100.00   & 11084       \\
+    \verb!f51m_233!      &  5000     & 60          & 60        & 100.00   & 4472        \\
+    \verb!alu-v0_27!     &  1020     & 1020        & 904       & 88.63    & 7           \\
+    \verb!decod24-v3_45! &  1020     & 1020        & 838       & 82.16    & 31          \\
+    \verb!gsym9!         &  1040     & 1040        & 665       & 63.94    & 52          \\
+    \verb!4gt11_83!      &  1020     & 1020        & 576       & 56.47    & 9           \\
+    \verb!gsym6!         &  1020     & 1020        & 536       & 52.55    & 6           \\
+    \verb!rd32_273!      &  1020     & 1020        & 526       & 51.57    & 24          \\
+    \verb!mod5adder_129! &  5000     & 1277        & 188       & 14.72    & 72          \\
+    \verb!hwb7_62!       &  5000     & 60          & 7         & 11.67    & 217         \\
+    \verb!urf4_187!      &  1020     & 8           & 0         & 0.00     & N/A         \\
+    \verb!hwb8_116!      &  5000     & 14          & 1         & 7.14     & 100         \\
+    \verb!seq_314!       &  3060     & 0           & 0         & N/A      & N/A         \\
+    \verb!hwb9_121!      &  1020     & 0           & 0         & N/A      & N/A         \\
     \end{tabular}
-\end{table}
+ \caption {Circuit Improvement Results}
+\end{center}
+ \end{table}
+
+There were a number of of circuits generated that showed a significant relative improvement in quantum cost over the original comparison 
+circuit downloaded from revlib. Upon doing a detailed comparison of our circuit to the 
+
+
+
 
 

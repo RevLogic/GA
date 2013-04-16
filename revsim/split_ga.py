@@ -16,7 +16,7 @@ from revsim import *
 
 def smartGA_pool_runner(block):
     ga = SmartGA(block, block.lines) # Need to use all lines
-    ga.init_population_size = 60 # (50 - 500)
+    ga.init_population_size = 100 # (50 - 500)
     ga.max_generations = 10000
     ga.max_population_size = 30 # (same as ipop)
     ga.threshold = 1.0
@@ -52,7 +52,7 @@ def split_ga(filename):
 
     ideal_copy = ideal.copy()
 
-    new_cascade_list = pool.map(smartGA_pool_runner, cascade_list)
+    new_cascade_list = pool.map_async(smartGA_pool_runner, cascade_list).get(9999999) # this is an UGLY python hack
 
     final_cascade = Cascade(ideal.lines)
 
