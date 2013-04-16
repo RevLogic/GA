@@ -1,36 +1,9 @@
 \subsection{Unitary Matrices}
-Every quantum gate can be represented by a unitary transformation (in the form of a unitary matrix) whose entries are complex variables corresponding to the complex coefficients of a given particle's wave function. Unitary transformations allow us to perform actual computations with qubits since they can be realized using technologies like NMR, for instance: a qubit in an NMR machine undergoes state changes due to a changing magnetic field. These magnetic field changes are, in turn, represented by unitary matrices (\cite{Lukac2003}). Constructing useful quantum circuits in this way is analogous to early computer programmers who ``programmed'' massive machines like ENIAC by physically connecting relays and vacuum tubes with wires. How far we have come since then...
+Every quantum gate can be represented by a unitary transformation (in the form of a unitary matrix) whose entries are complex variables corresponding to the complex coefficients of a given particle's wave function. Unitary transformations allow us to perform actual computations with qubits since they can be realized using technologies like NMR, for instance: a qubit in an NMR machine undergoes quantum state changes due to a changing magnetic field. These magnetic field changes are, in turn, represented by unitary matrices (\cite{Lukac2003}). 
 
 \begin{mydef}
  A {\bf unitary matrix} is an $n \times n$ matrix of complex coefficients which, when multiplied by its Hermitian, gives the identity matrix. Thus, for a unitary matrix $U$, it is true that $(U^{T})^{*} = U^{-1}$ where $(\cdot)^{*}$ denotes complex conjugation.
 \end{mydef}
-
-In addition, every $2 \times 2$ unitary matrix can be expressed using the following product (\cite{Barenco1995}). This representation is particularly useful since it corresponds to the exact rotation matrix which can be applied to the Bloch sphere representation of a qubit: \\
-\[ \left[
- \begin{matrix}
-  e^{i\delta} & 0 \\
-  0 & e^{i\delta}
- \end{matrix}
-  \right] *
-  \left[
-  \begin{matrix}
-   e^{\frac{i\alpha}{2}} & 0 \\
-   0 & e^{\frac{-i\alpha}{2}}
-  \end{matrix}
-  \right] *
-  \left[
-  \begin{matrix}
-   \cos{\theta/2} & \sin{\theta/2} \\
-   -\sin{\theta/2}& \cos{\theta/2}
-  \end{matrix}
-  \right] \times
-  \left[
-  \begin{matrix}
-  e^{i\beta/2} & 0 \\
-  0 & e^{-i\beta/2}
-  \end{matrix}
-  \right]
-\]
 
 In order to create useful operations out of ``quantum primitives'', we can compose unitary transformations in order to come up with a permutation representation of a gate or cascade of gates. We can use the ``Square-Root-of-NOT'' gate to construct a NOT gate, for instance:
 \[ \sqrt{\text{NOT}} = \frac{1+i}{2}
@@ -60,7 +33,7 @@ In order to create useful operations out of ``quantum primitives'', we can compo
   \right]
 \]
 
-There are many other unitary matrices: more examples may be found in \cite{Lukac2003}. Gates such as the Pauli-X, Pauli-Y, Pauli-Z, are interesting examples to play around with. 
+There are many other unitary matrices: more examples may be found in \cite{Lukac2003}. 
 
 
 \subsection{Permutation Matrices}
@@ -123,6 +96,6 @@ As quantum cost is a unitless quantity which corresponds directly to the number 
  }
 \end{align*}}
 
-Of course, it is not immediately obvious why this construction gives us a Toffoli gate. Note that the $\sqrt{\text{NOT}}$ gates (and their Hermitian friend) do not get activated unless their control lines are 1. \\
+Of course, it is not immediately obvious why this construction gives us a Toffoli gate. Note that the $\sqrt{\text{NOT}}$ gates (and their Hermitian analogs) do not get activated unless their control lines are 1. \\
 
-So, if we pass $a=0$ and $b=0$ through our gate, $c$ remains unchanged, as do $a$ and $b$. If $a=0$ and $b=1$, then the gate that gets applied to $c$ will be $V_{0}*V^{+}=I$, which is the identity, so $c$ will be unchanged. If $a=1$ and $b=0$, then the gate that gets applied to $c$ will be $V_{1}*V^{+}=I$, so $c$ will be unchanged, and finally, if $a=1$ and $b=1$, $c$ will be inverted because the gate that gets applied will be $V_{0}*V_{1}=\text{NOT}$. And thus, we have shown that a 3-input Toffoli gate may be simulated by at least five quantum primitives, and so it has a quantum cost of 5. This result is due to \cite{Smolin1994}.
+So, if we pass $a=0$ and $b=0$ through our gate, $c$ remains unchanged, as do $a$ and $b$. If $a=0$ and $b=1$, then the gate that gets applied to $c$ will be $V_{0}*V^{+}=I$, which is the identity, so $c$ will be unchanged. If $a=1$ and $b=0$, then the gate that gets applied to $c$ will be $V_{1}*V^{+}=I$, so $c$ will be unchanged, and finally, if $a=1$ and $b=1$, $c$ will be inverted because the gate that gets applied will be $V_{0}*V_{1}=\text{NOT}$. Thus, a 3-input Toffoli gate may be simulated by at least 5 quantum primitives, and so it has a quantum cost of 5. This result is due to \cite{Smolin1994}.

@@ -3,16 +3,16 @@
 \subsection{Genetic Algorithm}
  The Genetic Algorithm is a search heuristic that was introduced and investigated by John Holland (1975) 
 and his students (DeJong, 1975). The algorithm attempts to mimic the evolutionary process of natural 
-selection (Mitchell, 1996) by modelling the concepts of individuals in a population, fitness and selection, 
-crossover, and mutation that are found in the biological reproduction of organisms\cite{Mitchell1996}. 
+selection \cite{Mitchell1996} by modelling the concepts of individuals in a population, fitness and selection, 
+crossover, and mutation that are found in the biological reproduction of organisms \cite{Mitchell1996}. 
 
-The basic idea is that over a number of generations an individual that is the solution to a problem can 
+Over a number of generations, an individual that is the solution to a problem can 
 evolve out of the latest generation of the individuals in the population. While there are a many variations 
 on this theme, the basic algorithm is as follows:
 \begin{enumerate}
- \item Generate an initial population of 'individuals' that represent potential solutions to the problem.
- \item Evaluate each individual's Fitness
- \item Until a solution is found or a maximum number of generations have passed, repeat the following:
+ \item Generate an initial population of individuals that represent a potential solutions to the problem, typically randomaly generated.
+ \item Evaluate each individual's Fitness according to a metric.
+ \item Until a solution is found or a maximum number of generations have elapsed, repeat the following:
   \begin{enumerate}
    \item Select individuals to reproduce.
    \item Apply crossover
@@ -30,35 +30,35 @@ perhaps the most challenging aspect of implementing it. Since the model is based
 encoded as some type of string which the mutation and crossover functions can be applied to. 
 
 To show how a the genetic algorithm works we will use a simple example of adding two numbers to reach a specified sum. 
-Each individual in our algorithm will be represented as bit strings consisting of 6 'genes' with each gene composed of 4
-bits each. For example, an individual in our example may be represented as:  0001 1110 1001 1111 0110 0000. We choose an
-encoding scheme where each gene in the individual encodes for either a number or an operator. We'll let  the genes 0000 to 
-1101 represent the numbers 0 through 13 and the gene 1110 and 1111 can represent addition and subtraction respectively. Using 
+Each individual in our algorithm will be represented as bit strings consisting of 6 `genes' with each gene composed of 4
+bits. For example, an individual in our example may be represented as:  0001 1110 1001 1111 0110 0000. We choose an
+encoding scheme where each gene in the individual encodes for either a number or an operator. We will let the genes 0000 to 
+1101 represent the numbers 0 through 13 and the genes 1110 and 1111 represent addition and subtraction, respectively. Using 
 this encoding scheme, our individual would represent the arithmetic expression 1 + 9 - 70.
 
 \subsubsection{Fitness and Selection}
-The fitness function allows us to measure how close the solution represented but any specific individual is to the desired 
+The fitness function allows us to measure how close the solution represented by any specific individual is to the desired 
 output solution. Each individual is evaluated and ranked according to its fitness, and then according to the selection 
-criteria some are chosen for crossover and mutation. To measure the fitness we need to decode the representation of each 
-individual and compar it against our goal result. From the example individual above, if our goal was to find an expression 
+criteria, some are chosen for crossover and mutation. To measure the fitness, we need to decode the representation of each 
+individual and compare it against our goal result. From the example individual above, if our goal was to find an expression 
 whose result is equal to the absolute value of the number 30, our fitness function would decode the individual and find that 
-it has a value of -60 and then compare it to the goal and give it a fitness, say 0.5. Once every individual is ranked according 
+it has a value of -60 and then compare it to the goal and evaluate its fitness, between [0,1]. Once every individual is ranked according 
 to its fitness, a number of individuals are selected for crossover and mutation according to the selection criteria that we specify.
 
 
 \subsubsection{Crossover}
 Crossover tries to model the process of sexual reproduction in nature. After parent individuals are selected from the 
-population of the previous generation, the 'genes' of these individuals are combined to make one or more child individuals. To 
-combine the genes a crossover point is specified in each parent individual, it is important that the crossover point occur between genes
-and not inside of a gene or our encoding would be broken. Consider the following two binary strings, A: 1010 1100 0001 1000 1111 0000 
-and B: 1011 0011 1010 1111 0000 1110. The offspring individuals will be a combinateion of the first part of A with the second part of B, 
-or the first part of A with the second part of B. Here is an illustration of crossover using randomly chosen crossover points X:
+population of the previous generation, the `genes' of these individuals are combined to make one or more child individuals. To 
+combine the genes, a crossover point is specified in each parent individual. It is important that the crossover point occurs between genes
+and not inside of a gene or our encoding for this example would be broken since we are using 4 bits to represent a gene, thus a cross over point must not occur between these 4 bits. Consider the following two binary strings, A: 1010 1100 0001 1000 1111 0000 
+and B: 1011 0011 1010 1111 0000 1110. The offspring individuals will be a combination of the first part of A with the second part of B, 
+or the first part of A with the second part of B. Here is an illustration of crossover using a randomly chosen crossover point, X:
 
 \begin{center}
 A: 1010 1100 0001 X 1000 1111 0000
 \\*B: 1011 0011 1010 X 1111 0000 1110
 \vspace{2 mm}
-\\*We now have fragments 
+\\*We now have fragments : 
 \\*A1: 1010 1100 0001 
 \\*A2: 1000 1111 0000
 \\*B1: 1011 0011 1010 
@@ -66,37 +66,38 @@ A: 1010 1100 0001 X 1000 1111 0000
 \vspace{2 mm}
 \\*Combining the fragments of A and B we would produce two offspring A1B2 and B1A2:
 \vspace{2 mm}
-\\*A1B2: 1010 1100 0001 1111 0000 1110
-\\*B1A2: 1011 0011 1010 1000 1111 0000
+\\*A\(_{1}\)B\(_{2}\): 1010 1100 0001 1111 0000 1110
+\\*B\(_{1}\)A\(_{2}\): 1011 0011 1010 1000 1111 0000
 \end{center}
 
 \subsubsection{Mutation}
-The mutation operation models mutation of the genes in organisms. For selected individuals individual 'genes' are randomly 
-changed in some way (depending on your algorithm and encoding this mutation may be through addition, deletion, swapping of 
-bits, or switching one gene another type of gene).
-For example given the individual A:  1010 1100 0001 1000 1111 0000 mutation could occur through swapping a bit to resulting 
-individual: A\(_{sw}\):   1010 1000 0001 1000 1111 0000, or by replacing a gene with another gene with the resulting individual:
-A\(_{sw}\):   1010 1100 1110 1000 1111 0000.
-
+The mutation operation models mutation of the genes in organisms. For selected individuals, individual `genes' are randomly 
+changed in some way (depending on algorithm and encoding, this mutation can be achived through addition, deletion or switching/swapping of bits).
+For example given the individual A:  1010 1100 0001 1000 1111 0000, mutation could occur through swapping a bit to resulting 
+individual: 
+\begin{center} A\(_{sw}\):   1010 1\underline{0}00 0001 1000 1111 0000 \end{center}
+or by replacing a gene with another gene within the individual:
+\begin{center} A\(_{sw}\):   1010 \underline{1100} 1110 1000 1111 0000.\end{center}
+                                                           
 \subsubsection{Initial Parameter Variations}
 
 There are a number of other factors in the design of genetic algorithm that can impact the chances of finding a useful result. 
 These factors include:
 \begin{itemize}
  \item The initial population size.
-\\ If you have too few individuals in your initial popluation you may not be able to search enough of the search space to 
-find an acceptable solution, conversly, if you have too many you may be searchhing more of the search space than you need to.
+\\ Having too few individuals in initial popluation may not be able to search enough of the search space to 
+find an acceptable solution, conversly, having too many may result in searchhing more of the search space than necessary.
  \item The maximum number of generations.
-\\ Specifying a maximum number of generations ensures that your search will not continue indefinitely, however if this number is too 
-small it limits the possibility for your algorithm to find a good solution.
- \item The fitness threshold that you are willing to accept.
-\\ Depending on the application you may be able to accept a solution that is close-to but does not exacly provide the desired result, 
-whereas in other situations you can only accept a solutiong that is guaranteed to give you the desired result. A fitness threshold 
-allows you to specify how exact of a solution you need. 
+\\ Specifying a maximum number of generations ensure that search will not continue indefinitely, however if this number is too 
+small it limits the possibility for an algorithm to find a good solution.
+ \item Acceptable fitness threshold.
+\\Depending on the application, an acceptable solution could be the one that is very close to the ideal solution but does not exactly provide the
+desired result, whereas in other situations, an acceptable solution could only be the solution that guaranteed to provide the desired result. 
+A fitness threshold allows to specify how exact of a solution is needed.  
 \end{itemize}
  
 
 \subsubsection{Applications of the Genetic Algorithm to Reversible Logic Synthesis}
 
-There have been a number of applications og the genetic algorithm to logic synthesis in general, and reversible logic synthesis in 
-particular. \cite{Lukac2003} \cite{Lukac2008} \cite{Khan2004} \cite{Aguirre2003}
+There have been a number of applications of the genetic algorithm to logic synthesis in general, and reversible logic synthesis in 
+particular. \cite{Lukac2003}, \cite{Lukac2008}, \cite{Khan2004}, \cite{Aguirre2003}.
