@@ -84,15 +84,14 @@ There are a number of other factors in the design of genetic algorithm that can 
 These factors include:
 \begin{itemize}
  \item The initial population size.
-\\ Having too few individuals in initial popluation may not be able to search enough of the search space to 
+\\ Having less individuals in initial popluation may not be able to search enough of the search space to 
 find an acceptable solution, conversly, having too many may result in searchhing more of the search space than necessary.
  \item The maximum number of generations.
 \\ Specifying a maximum number of generations ensure that search will not continue indefinitely, however if this number is too 
 small it limits the possibility for an algorithm to find a good solution.
- \item Acceptable fitness threshold.
-\\Depending on the application, an acceptable solution could be the one that is very close to the ideal solution but does not exactly provide the
+ \item Fitness threshold.
+\\A fitness threshold allows to specify how exact of a solution is needed. Depending on the application, an acceptable solution could be the one that is very close to the ideal solution but does not exactly provide the
 desired result, whereas in other situations, an acceptable solution could only be the solution that is guaranteed to provide the desired result. 
-A fitness threshold allows to specify how exact of a solution is needed.  
 \end{itemize}
  
 

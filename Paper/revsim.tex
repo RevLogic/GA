@@ -27,11 +27,6 @@ Figure 4 shows there are three main types of gates that we have represented in o
 gates, such as the the Toffoli, Multiple Target gates, like the Fredkin or Swap, and Same Target gates such as the inverter 
 where the target and the control are on the same line.
 
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=100mm]{diagrams/gate_inheritence.png}
-\caption{Gate inheritence in Revsim}
-\end{figure}
 The Cascade class is used to represent a reversible cascade of gates. It provides the primary functionality for modelling 
 and modifying our reversible circuits, and is used other classes such as the Truth Table and Genetic Algorithm classes as 
 described below.
@@ -39,7 +34,13 @@ described below.
 The Truth Table class allows us to generate the truth tables of our reversible cascade and compare all or part of the truth 
 table from one circuit with another. Since we have to propagate values across each gate in the cascade to generate the output 
 values and need to generate all \(2^{n}\) entries in the truth table, the process of generating the truth table is linear in the 
-number of gates of the circuit is exponential in the number of variables 
+number of gates of the circuit is exponential in the number of variables.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=100mm]{diagrams/gate_inheritence.png}
+\caption{Gate inheritence in Revsim}
+\end{figure}
 
 Our simulation software also has a number of classes that provide additional extensibility. For example there are input/output 
 classes that allow us to directly read from and write to files in the \url{www.revlib.org}'s .real file format. Our initial genetic algorithm implementation 
@@ -83,9 +84,9 @@ parent 2 and the second half from parent 1. The children are then added to the p
 The mutation function randomly selects a certain number of gates and will either replace or remove them from the cascade of the 
 individuals it is being applied to.
 
-\paragraph{Parameter Variations.}
+%\paragraph{Parameter Variations.}
 
-Our initial parameters
+%Our initial parameters
 
 
 \subsubsection{Parallelization}
