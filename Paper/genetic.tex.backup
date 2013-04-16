@@ -21,53 +21,50 @@ Over a number of generations, fit individuals (effective solutions to a problem)
 Representation of the individuals in a population is critical to the successful application of this algorithm and is perhaps the most challenging aspect of implementing it. Since the model is based on biology, each individual is often 
 encoded as a string to which the mutation and crossover functions are applied. \\
 
-To show how a the genetic algorithm works, we will use a simple example of adding two numbers to reach a specified sum. Each individual in our algorithm will be represented as bit strings consisting of 6 genes with each gene composed of 4
-bits. For example, an individual in our example may be represented as: 0001 1110 1001 1111 0110 0000. We choose an
-encoding scheme where each gene in the individual encodes for either a number or an operator. We will let the genes $0000$ to 
-$1101$ represent the numbers 0 through 13 and the genes $1110$ and $1111$ represent addition and subtraction, respectively. Using 
+To show how the genetic algorithm works, we will use a simple example of adding two numbers to reach a specified sum. Each individual in our algorithm will be represented as bit strings consisting of 6 ``genes'' with each gene composed of 4
+bits. Thus, an individual in our example may be represented as: 0001 1110 1001 1111 0110 0000. We choose an
+encoding scheme where each gene in the individual encodes either a number or an operator. We will let the genes $0000$ to 
+$1101$ represent the numbers 0 through 13 and the genes $1110$ and $1111$ represent addition and subtraction operators, respectively. Using 
 this encoding scheme, our individual would represent the arithmetic expression $1 + 9 - 70$.
 
 \subsubsection{Fitness and Selection}
-The fitness function allows us to measure how close the solution represented by any specific individual is to the desired 
-output solution. Each individual is evaluated and ranked according to its fitness, and then according to the selection 
-criteria, some are chosen for crossover and mutation. To measure the fitness, we need to decode the representation of each 
-individual and compare it against our goal result. From the example individual above, if our goal was to find an expression 
-whose result is equal to the absolute value of the number 30, our fitness function would decode the individual and find that 
-it has a value of -60 and then compare it to the goal and evaluate its fitness, between 0.0 - 1.0. Once every individual is ranked according 
-to its fitness, a number of individuals are selected for crossover and mutation according to the selection criteria that is specified.
+The fitness function allows us to measure how close the solution represented by any individual is to the desired output solution. Each individual is evaluated and ranked according to its fitness, and then according to some selection 
+criteria where candidates are chosen for crossover and mutation. To measure the fitness, we need to decode the representation of each 
+individual and compare it against our goal result. From the example individual above, if our goal is to find an expression 
+whose result is equal to the absolute value of the number $30$, our fitness function would decode the individual's genetic representation and find that 
+it has a value of $-60$. The individual would then be compared to the goal and its fitness would be evaluated, yielding a value between $0.0$ and $1.0$, inclusive. Once every individual is ranked according 
+to its fitness, candidates are selected for crossover and mutation according to the selection criteria specified.
 
 
 \subsubsection{Crossover}
-Crossover tries to model the process of sexual reproduction in nature. After parent individuals are selected from the 
-population of the previous generation, the genes of these individuals are combined to make one or more child individuals. To 
-combine the genes, a crossover point is specified in each parent individual. Consider the following two binary strings, A: 1010 1100 0001 1000 1111 0000 
-and B: 1011 0011 1010 1111 0000 1110. The offspring individuals will be a combination of the first part of A with the second part of B, 
-or the first part of A with the second part of B. Here is an illustration of crossover using a randomly chosen crossover point, X:
+Crossover attempts to model the process of sexual reproduction found in nature. After ``parent'' individuals are selected from the population of a generation, the genes of these individuals are combined in order to produce one or more child individuals. To 
+combine their genes, a crossover point is specified in each parent. Consider the following two binary strings, $A$ = 1010 1100 0001 1000 1111 0000 
+and $B$ = 1011 0011 1010 1111 0000 1110. Their offspring individuals might be a combination of the first part of $A$ with the second part of $B$, 
+or the first part of $A$ combined with the second part of $B$. Here is an illustration of crossover using a randomly chosen crossover point, $X$:
 
 \begin{center}
-A: 1010 1100 0001 X 1000 1111 0000
-\\*B: 1011 0011 1010 X 1111 0000 1110
+$A$ = 1010 1100 0001 X 1000 1111 0000
+\\*$B$ = 1011 0011 1010 X 1111 0000 1110
 \vspace{2 mm}
-\\*We now have fragments : 
-\\*A1: 1010 1100 0001 
-\\*A2: 1000 1111 0000
-\\*B1: 1011 0011 1010 
-\\*B2: 1111 0000 1110
+\\*We now have the following fragments: 
+\\*$A_{1}$ = 1010 1100 0001 
+\\*$A_{2}$ = 1000 1111 0000
+\\*$B_{1}$ = 1011 0011 1010 
+\\*$B_{2}$ = 1111 0000 1110
 \vspace{2 mm}
-\\*Combining the fragments of A and B we would produce two offspring A\(_{1}\)B\(_{2}\) and B\(_{1}\)A\(_{2}\):
+\\*Combining the fragments of $A$ and $B$ we would yield two offspring, $A_{1}B_{2}$ and $B_{1}A_{2}$:
 \vspace{2 mm}
-\\*A\(_{1}\)B\(_{2}\): 1010 1100 0001 1111 0000 1110
-\\*B\(_{1}\)A\(_{2}\): 1011 0011 1010 1000 1111 0000
+\\*$A_{1}B_{2}$ = 1010 1100 0001 1111 0000 1110
+\\*$B_{1}A_{2}$ = 1011 0011 1010 1000 1111 0000
 \end{center}
 
 \subsubsection{Mutation}
-The mutation operation models mutation of the genes in organisms. For selected individuals, individual genes are randomly 
-changed in some way (depending on algorithm and encoding, this mutation can be achived through addition, deletion or switching/swapping of bits).
-For example given the individual A:  1010 1100 0001 1000 1111 0000, mutation could occur through swapping a bit to resulting 
-individual: 
-\begin{center} A\(_{sw}\):   1010 1\underline{0}00 0001 1000 1111 0000 \end{center}
-or by replacing a gene with another gene within the individual:
-\begin{center} A\(_{sw}\):   1010 \underline{1100} 1110 1000 1111 0000.\end{center}
+The mutation operation models the natural mutation of genes in living organisms. For selected individuals, individual genes may be randomly 
+changed in some way (depending on algorithm and encoding, this mutation is usually achived through addition, deletion, or swapping of bits).
+For example given the individual $A$ = 1010 1100 0001 1000 1111 0000, mutation could occur by swapping a bit. An individual resulting from this operation might be: 
+\begin{center} $A_{sw}$ = 1010 1\underline{0}00 0001 1000 1111 0000 \end{center}
+If instead we replace a gene with another gene within the individual, we might obtain:
+\begin{center} $A_{re}$ =   1010 \underline{1100} 1110 1000 1111 0000.\end{center}
                                                            
 \subsubsection{Initial Parameter Variations}
 
@@ -76,7 +73,7 @@ These factors include:
 \begin{itemize}
  \item The initial population size.
 \\ Having less individuals in initial popluation may not be able to search enough of the search space to 
-find an acceptable solution, conversly, having too many may result in searchhing more of the search space than necessary.
+find an acceptable solution, conversly, having too many may result in searching more of the search space than necessary.
  \item The maximum number of generations.
 \\ Specifying a maximum number of generations ensure that search will not continue indefinitely, however if this number is too 
 small it limits the possibility for an algorithm to find a good solution.
