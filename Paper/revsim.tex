@@ -1,7 +1,7 @@
 \subsection{Revsim: Reversible Logic Simulator}
   \subsubsection{Overview}
 
- Representing reversible circuits in a way that we could both easily simulate them and process them through 
+Representing reversible circuits in a way that we could both easily simulate them and process them through 
 a genetic algorithm was one of the first challenges we faced. There have been a number of reversible approaches 
 to circuit synthesis using the genetic algorithm \emph(references lukac, etc) but after conducting a preliminary 
 review, none of them offered the flexibility and extensibility that we were seeking. We set out to develop a 
@@ -10,14 +10,14 @@ circuits at the gate level. We will provide a brief overview and description of 
 
   \subsubsection{Explanation of Simulator Design}
 
-We first developed an initial version of our circuit simulator using a functional but once we had conducted some initial 
-experimentation and testing we decided to refactor our code using an object oriented approach.
+We first developed an initial version of our circuit simulator using a functional programming approach but once we had conducted some initial 
+experimentation and testing we decided to refactor our code using an object-oriented approach.
 
-Fig (7.1) shows the basic class structure of our software. Conceptually a gate has a number of input lines, output lines, 
+Figure (7.1) shows the basic class structure of our software. Conceptually a gate has a number of input lines, output lines, 
 controls and targets. The abstract Gate class formalizes this basic representation of a gate and is subclassed to create 
 the various types of gates and their implementations.
 
-As you can see from Fig (7.2) There are three main types of gates that we have represented in our simulator: Single Target 
+Figure (7.2) shows there are three main types of gates that we have represented in our simulator: Single Target 
 gates, such as the the Toffoli, Multiple Target gates, like the Fredkin or Swap, and Same Target gates such as the inverter 
 where the target and the control are on the same line.
 
@@ -31,7 +31,7 @@ values and need to generate all \(2^{n}\) entries in the truth table, the proces
 number of gates of the circuit is exponential in the number of variables 
 
 Our simulation software also has a number of classes that provide additional extensibility. For example there are input/output 
-classes that allow us to directly read from and write to files in the revlib.org's .real file format. Our initial GA implementation 
+classes that allow us to directly read from and write to files in the \url{www.revlib.org}'s .real file format. Our initial Genetic Algorithm implementation 
 required us to manually enter each goal cascade that we wanted to test against, but using these helper classes we were able to 
 implement the ability to parse any .real file and use its target output function in the fitness calculations for our Genetic 
 Algorithm. (more below) We also developed an experimental Shared Cube class that allows us to generate and use the shared cube 
@@ -43,20 +43,20 @@ on using the representation described below.
 
 \paragraph{Representation.} 
 
-We initially explored using a Shared Cubes representation for the individuals in used in our algorithm however while we initially 
+We initially explored using a shared cube representation for the individuals in used in our algorithm however while we initially 
 thought that the transformational rules  in [reference] would be useful in implementing mutation we found the difficult to implement 
 in the context of our genetic algorithm and we not able to discover an appropriate method of implementing crossover using the shared 
 cube representation. Instead we settled on using the cascade representation from our Cascade class which stores the list of gates used 
 in the circuit for the individuals in our populations.
 
-Our Algorithm initially reads in a circuit that specifies the desired output behaviour and then creates the initial population as copies 
+Our algorithm initially reads in a circuit that specifies the desired output behaviour and then creates the initial population as copies 
 of the initial circuit that have been mutated from the initial circuit up to a maximum number of mutations specified in the initial 
 conditions.once the initial population is generated, the cycle of fitness evaluations, selection mutation and crossover repeat until 
 one of two terminal conditions are reached, either a fitness of 1.0 or a maximum number of generations.
 
 \paragraph{Fitness and Selection.} 
 
-Our fitness metric was a weighted measure of how closely the truth table of the current individual matched the truth table of the of 
+Our fitness metric measured how closely the truth table of the current individual matched the truth table of the of 
 the desired output behaviour. It basically performs an exhaustive comparison and so the number of comparisons needed are approximately
  exponential in the number of variables (linewidth) of the circuit.  
 
