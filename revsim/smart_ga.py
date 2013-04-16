@@ -1,6 +1,7 @@
 # Revsim 
 # "Smart genetic algorithm" that utilizes the original circuit spec as a seed
 
+import os
 from genetic import *
 
 class SmartGA(GeneticAlgorithm):
@@ -73,7 +74,7 @@ class SmartGA(GeneticAlgorithm):
     
     def run(self):
         quantum_cost_goal = self.parent.cost() - self.cost_improvement_goal
-
+        """
         print "Smart GA Parameters"
         print "Initial Population Count:", self.init_population_size
         print "Initial Population Mutations:", self.initial_population_mutations
@@ -82,7 +83,10 @@ class SmartGA(GeneticAlgorithm):
         print "Maximum Number of Generations:", self.max_generations
         print "Quantum Cost Goal:", quantum_cost_goal
         print ""
+        """
 
+        print "Starting SmartGA, PID", os.getpid()
+        pidstring = "["+str(os.getpid())+"]"
         current_fitness = 0.0
         gen_count = 0
 
@@ -106,7 +110,7 @@ class SmartGA(GeneticAlgorithm):
             random_two.append(fits[random.randint(0, len(fits)-3)][1])
 
             if new_fitness > current_fitness:
-                print "Generation:",gen_count, "\t\tFitness:", new_fitness
+                print pidstring, "Generation:",gen_count, "\t\tFitness:", new_fitness
                 #self.population += self.crossover(self.parent, top_two[0][1])
                 #self.population += self.crossover(self.parent, top_two[1][1])
                 self.population += self.crossover(top_two[0][1], top_two[1][1])
@@ -127,15 +131,15 @@ class SmartGA(GeneticAlgorithm):
 
             if (gen_count == self.max_generations - 1) or (current_fitness == 1.0):
                 if gen_count == self.max_generations - 1:
-                    print "GENERATION LIMIT EXCEEDED!"
-                    print "Fitness:", current_fitness
+                    print pidstring, "GENERATION LIMIT EXCEEDED!"
+                    print pidstring, "Fitness:", current_fitness
+                    if current_fitness != 1:
+                        return self.parent
                 best = top_two[1][1]
                 self.bestgate = best
-                for gate in best:
-                    print gate
                     
-                print "Quantum Cost:", best.cost()
-                print "Gate Count:", len(best)
+                print pidstring, "Quantum Cost:", best.cost()
+                print pidstring, "Gate Count:", len(best)
                 return best
 
             gen_count += 1
