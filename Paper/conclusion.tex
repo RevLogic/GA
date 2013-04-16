@@ -1,6 +1,8 @@
 \section{Conclusion}
-We have presented a method to optimize reversible logic synthesis using genetic algorithms. Additionally, we have detailed the implementation of a reversible logic synthesis framework which allowed us to implement the genetic algorithm method to a large extent.
+We have presented a method to optimize reversible logic synthesis using genetic algorithms. Additionally, we have detailed the implementation of a reversible logic synthesis framework which allowed us to implement the genetic algorithm method to a large extent. \\
 
-Our genetic algorithm shows promise, but it is by no means optimal: further investigation is required in order to ascertain its effectiveness due to discrepancies in quantum cost calculation between our framework and those presented in RevLib.
+Our algorithm shows promise, but it is by no means optimal: further investigation is required in order to ascertain its effectiveness due to discrepancies in quantum cost calculation between our framework and those presented in RevLib. \\
 
-Future research in this area should address topics such as function-preserving mutation and crossover functions, as these were points of difficulty in our implementation.
+Future research in this area should address topics such as function-preserving mutation and crossover functions, as these were points of difficulty in our implementation. As our research focused more on the parallel implementation of a genetic algorithm, some more time should be spent on finding optimal cascade representations as well as on overall scalability. Currently, due to the nature of our approach, we require that a cascade's truth table be calculated before any quantum cost evaluation can take place. In practice, it would be far more efficient to utilize function-preserving transformations which would eliminate this requirement. \\
+
+In conclusion, even though our algorithm delivered sub-optimal results, we were able to develop an effective and solid framework for future research on the optimization of large reversible cascades.
