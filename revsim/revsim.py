@@ -22,10 +22,21 @@ if __name__ == "__main__":
         print "Revsim - Milestone 5 (Release Master)"
         print "C. Rabl, R. Lowry, H. Rana"
         print ""
-        filename = sys.argv[2]
         if sys.argv[1] == "--split":
-            split_ga(filename)
+            filename = sys.argv[2]
+            result = split_ga(filename)
+        elif sys.argv[1] == "--quantum":
+            filename = sys.argv[2]
+            optimization_factor = float(sys.argv[3])
+            result = ga_runner(filename, optimization_factor)
+            for gate in result:
+                print gate
         else:
-            ga_runner(filename)
+            print "Usage:"
+            print "--split <filename> : runs splitting GA on the cascade with no quantum cost optimization factor (recommended for large circuits)"
+            print "--quantum <filename> <optimization factor %>: performs quantum cost optimization using the SmartGA method (recommended for small circuits)"
+            print "--help : displays this help message"
     except KeyboardInterrupt:
         print "Stopped all Revsim subprocesses"
+    except IndexError:
+        print "For help, type ./revsim.py --help"
