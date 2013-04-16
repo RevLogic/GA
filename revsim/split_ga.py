@@ -16,6 +16,7 @@ from revsim import *
 
 def smartGA_pool_runner(block):
     ga = SmartGA(block, block.lines) # Need to use all lines
+    ga.eval_qcost = False
     ga.init_population_size = 100 # (50 - 500)
     ga.max_generations = 10000
     ga.max_population_size = 30 # (same as ipop)

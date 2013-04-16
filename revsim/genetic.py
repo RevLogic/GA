@@ -18,6 +18,7 @@ class GeneticAlgorithm:
         will almost certainly not work in the average case.
         """
         self.threshold = 0.9
+        self.eval_qcost = True
         
         # Initial population parameters
         self.init_population_size = 500 # Number of initial population members 
