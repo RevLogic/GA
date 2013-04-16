@@ -1,10 +1,10 @@
 \section{Experimental Results}
 
-We ran our genetic algorithm against 16 circuits found in the revlib.org circuit library. Table ~\ref{Tab:CIR} shows the results of the trials 
-for all 16 circuits. Of the 16 trials we were able to generate results from 14 of the circuits. 9 of the trials also generated 
-at least one circuit with a quantum cost improvement compared to the quantum cost calculated when we read in the comparison 
-circuit's .real file downloaded from revlib. The failure to generate any results for the circuits \verb!seq_314! and
- \verb!hwb9_121! is due to the time complexity of our fitness function and the large size of those circuits. 
+We ran our genetic algorithm against 16 circuits found in the \url{revlib.org} circuit library. Table ~\ref{Tab:CIR} shows the 
+results of the trials for all 16 circuits. Of the 16 trials, we were able to generate results from 14 of the circuits. 9 of those 
+trials also generated at least one circuit with an improved quantum cost when compared to the initial circuit's .real file which 
+was downloaded from revlib. The failure to generate any results for the circuits \verb!seq_314! and \verb!hwb9_121! is due to the 
+time complexity of our fitness function and the large size of those circuits. 
 
  \begin{table}
 \begin{center}
@@ -34,7 +34,7 @@ circuit's .real file downloaded from revlib. The failure to generate any results
  \end{table}
 
 There were a number of of circuits generated that showed a significant relative improvement in quantum cost over the original comparison 
-circuit downloaded from revlib (see Table ~\ref{Tab:CCC} ). Upon doing a detailed comparison of our best circuits to their corresponding original circuit on revlib we 
+circuit downloaded from revlib, see Table 2. Upon doing a detailed comparison of our best circuits to their corresponding original circuit on revlib we 
 did notice a discrepency between our calculation of quantum cost for gates with more than 4 input lines and the revlib calculations. We 
 realized that our quantum cost calculation which uses the quantum cost table found at \url{http://webhome.cs.uvic.ca/~dmaslov/definitions.html}
 did not account for the garbage lines. This discrepency only exists in circuits with gates larger than 3 inputs, and all circuits that only consisted
