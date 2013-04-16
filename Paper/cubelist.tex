@@ -1,4 +1,4 @@
-\subsection{ESOP Cube-list Representations}
+\subsection{ESOP cube-list Representations}
 
 Any boolean function can be represented by an exclusive-or sum-of-products (ESOP) expression. This is
 particularly useful for reversible logic synthesis since there are existing algorithms for converting 
@@ -16,7 +16,7 @@ represent an input variables and each element $f_{1} .. f_{j}$ represents an out
 cube list, a $1$ is written in cube position $x_{k}$ , $k \in \{1,2, ..., i\}$ if the variable $x_{k}$ is in 
 the ESOP product for that row. A $0$ is written if the negation $\bar{x}_{k}$ is present, and a '$-$' is written if $x_{k}$ is not present in the
 product term for that cube. For each element $f_{p}$, $p \in \{1,2,...j\}$, a 1 is written if that output variable contains 
-the product represented by the input portion of the list and a 0 is written otherwise. See figure \emph{figure 1} for 
+the product represented by the input portion of the list and a 0 is written otherwise. See \emph{figure 1} for 
 an example. \\
 %\include figures (a) and (b) showing cube-list and circuit.
 \begin{figure}[h]
@@ -55,7 +55,7 @@ variable where one line corresponds to the variable $x_{k}$, the $2^{nd}$ line c
 and the remaining $j$ lines correspond to the output variables. For every output line $f_{p}$, a Toffoli gate 
 is placed with its target on line $f_{p}$ and a control for that target is placed on the input line $x_{k}$ if there was a 1
 in the cube for the corresponding variable, or on the negation line of $x_{k}$ if there was a 0 in the
-cube for $x_{k}$, see figure (draw figure 2). This method allows a cube-list to be quickly and efficiently transformed 
+cube for $x_{k}$, see figure \emph{figure 2}. This method allows a cube-list to be quickly and efficiently transformed 
 into a reversible cascade and allows for the synthesis of rather large functions. \\*
 
 
