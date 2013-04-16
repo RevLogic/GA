@@ -2,25 +2,36 @@
   \subsubsection{Overview}
 
 Representing reversible circuits in a way that we could both easily simulate them and process them through 
-a genetic algorithm was one of the first challenges we faced. There have been a number of reversible approaches 
-to circuit synthesis using the genetic algorithm \emph(references lukac, etc) but after conducting a preliminary 
+a genetic algorithm was one of the first challenges we faced. while there have been a number of reversible approaches 
+to circuit synthesis using the genetic algorithm, after conducting a preliminary 
 review, none of them offered the flexibility and extensibility that we were seeking. We set out to develop a 
-software suite that could would allow us to simulate any number of reversible circuits and let us manipulate those 
+software suite that could allow us to simulate any number of reversible circuits and let us manipulate those 
 circuits at the gate level. We will provide a brief overview and description of the development of our software below.
 
   \subsubsection{Explanation of Simulator Design}
 
 We first developed an initial version of our circuit simulator using a functional programming approach but once we had conducted some initial 
-experimentation and testing we decided to refactor our code using an object-oriented approach.
+experimentation and testing, we decided to refactor our code using an object-oriented approach.
 
-Figure (7.1) shows the basic class structure of our software. Conceptually a gate has a number of input lines, output lines, 
+Figure 3 shows the basic class structure of our software. Conceptually a gate has a number of input lines, output lines, 
 controls and targets. The abstract Gate class formalizes this basic representation of a gate and is subclassed to create 
 the various types of gates and their implementations.
 
-Figure (7.2) shows there are three main types of gates that we have represented in our simulator: Single Target 
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=120mm]{diagrams/architecture.png}
+\caption{Class structure of Revsim}
+\end{figure}
+
+Figure 4 shows there are three main types of gates that we have represented in our simulator: Single Target 
 gates, such as the the Toffoli, Multiple Target gates, like the Fredkin or Swap, and Same Target gates such as the inverter 
 where the target and the control are on the same line.
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=100mm]{diagrams/gate_inheritence.png}
+\caption{Gate inheritence in Revsim}
+\end{figure}
 The Cascade class is used to represent a reversible cascade of gates. It provides the primary functionality for modelling 
 and modifying our reversible circuits, and is used other classes such as the Truth Table and Genetic Algorithm classes as 
 described below.
@@ -31,12 +42,12 @@ values and need to generate all \(2^{n}\) entries in the truth table, the proces
 number of gates of the circuit is exponential in the number of variables 
 
 Our simulation software also has a number of classes that provide additional extensibility. For example there are input/output 
-classes that allow us to directly read from and write to files in the \url{www.revlib.org}'s .real file format. Our initial Genetic Algorithm implementation 
+classes that allow us to directly read from and write to files in the \url{www.revlib.org}'s .real file format. Our initial genetic algorithm implementation 
 required us to manually enter each goal cascade that we wanted to test against, but using these helper classes we were able to 
-implement the ability to parse any .real file and use its target output function in the fitness calculations for our Genetic 
-Algorithm. We also developed an experimental Shared Cube class that allows us to generate and use the shared cube 
+implement the ability to parse any .real file and use its target output function in the fitness calculations for our genetic 
+algorithm. We also developed an experimental Shared Cube class that allows us to generate and use the shared cube 
 representation that we were initially going to use to represent individuals in our genetic algorithm so that we could apply a 
-number of the rule based transformations from (ref: jackies paper on rule transformations) but after implementing it we decided 
+number of the rule based transformations from \cite{Nayeem2011} but after implementing it, we decided 
 on using the representation described below. 
 
   \subsubsection{Description of Our Genetic Algorithm}
@@ -44,14 +55,14 @@ on using the representation described below.
 \paragraph{Representation.} 
 
 We initially explored using a shared cube representation for the individuals in used in our algorithm however while we initially 
-thought that the transformational rules  in [reference] would be useful in implementing mutation we found the difficult to implement 
-in the context of our genetic algorithm and we not able to discover an appropriate method of implementing crossover using the shared 
-cube representation. Instead we settled on using the cascade representation from our Cascade class which stores the list of gates used 
+thought that the transformational rules  in \cite{Thornton2007} would be useful in implementing mutation, we found it difficult to implement 
+in the context of our genetic algorithm and we were not able to discover an appropriate method of implementing crossover using the shared 
+cube representation. Instead. we settled on using the cascade representation from our Cascade class which stores the list of gates used 
 in the circuit for the individuals in our populations.
 
 Our algorithm initially reads in a circuit that specifies the desired output behaviour and then creates the initial population as copies 
 of the initial circuit that have been mutated from the initial circuit up to a maximum number of mutations specified in the initial 
-conditions.once the initial population is generated, the cycle of fitness evaluations, selection mutation and crossover repeat until 
+conditions. Once the initial population is generated, the cycle of fitness evaluations, selection, mutation and crossover repeats until 
 one of two terminal conditions are reached, either a fitness of 1.0 or a maximum number of generations.
 
 \paragraph{Fitness and Selection.} 
@@ -65,12 +76,12 @@ the desired output behaviour. It basically performs an exhaustive comparison and
 
 Our implementation of crossover selects the best two individuals as parents and creates two child individuals. The first child has the 
 first half of the gates from parent 1 and the second half from parent 2 while the second child has the first half of the gates from 
-parent 2 and the second half from parent 1, The children are then added to the population for the next iteration of the algorithm. 
+parent 2 and the second half from parent 1. The children are then added to the population for the next iteration of the algorithm. 
 
 \paragraph{Mutation.}
 
 The mutation function randomly selects a certain number of gates and will either replace or remove them from the cascade of the 
-individuals it it being applied to.
+individuals it is being applied to.
 
 \paragraph{Parameter Variations.}
 

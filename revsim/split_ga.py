@@ -16,13 +16,13 @@ from revsim import *
 
 def smartGA_pool_runner(block):
     ga = SmartGA(block, block.lines) # Need to use all lines
-    ga.init_population_size = 60 # (50 - 500)
+    ga.init_population_size = 100 # (50 - 500)
     ga.max_generations = 10000
-    ga.max_population_size = 20 # (same as ipop)
+    ga.max_population_size = 30 # (same as ipop)
     ga.threshold = 1.0
     ga.initial_population_mutations = 5 # (5 - 10)
     ga.subsequent_population_mutations = 2 # (2 - 5)
-    ga.cost_improvement_goal = int( (7.0/100.0) * block.cost()) 
+    ga.cost_improvement_goal = int( (5.0/100.0) * block.cost()) 
     ga.max_removals_per_mutation = 2 # (1-10)
     return ga.run()
 
@@ -31,11 +31,11 @@ def create_cascade(lines, gates):
     c.replace_gates(gates)
     return c
 
-if __name__ == '__main__':
+def split_ga(filename):
     # Start 2 worker processes: we use subprocesses to avoid GIL
     pool = Pool(processes=4)
     
-    r = RealReader(sys.argv[1])
+    r = RealReader(filename)
     ideal, non_garbage = r.read_cascade()
     
     print "Original quantum cost:", ideal.cost()
@@ -52,7 +52,7 @@ if __name__ == '__main__':
 
     ideal_copy = ideal.copy()
 
-    new_cascade_list = pool.map(smartGA_pool_runner, cascade_list)
+    new_cascade_list = pool.map_async(smartGA_pool_runner, cascade_list).get(9999999) # this is an UGLY python hack
 
     final_cascade = Cascade(ideal.lines)
 
@@ -68,3 +68,6 @@ if __name__ == '__main__':
     print "Quantum Cost Improvement:", ideal_copy.cost() - final_cascade.cost()
     print "Gate Count Improvement:", len(ideal_copy) - len(final_cascade)
     
+if __name__ == "__main__":
+    filename = sys.argv[1]
+    split_ga(filename)
