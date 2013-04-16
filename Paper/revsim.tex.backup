@@ -11,12 +11,11 @@ controls and targets. The abstract {\verb Gate } class formalizes this basic rep
 Figure \ref{fig:inheritence} shows that there are three main types of gates that we are capable of representing in our framework: ``Single Target'' 
 gates such as Toffoli, ``Multiple Target'' gates, like Fredkin and Swap, and ``Same Target'' gates such as inverters, where the target and the control exist on the same line.
 
-The {\bf Cascade} class is used to represent a reversible cascade of gates. It provides the primary functionality for modelling and modifying circuit designs, and is used by other classes such as the {\bf TruthTable} and {\bf GeneticAlgorithm} classes, as described below.
+The {\verb Cascade } class is used to represent a reversible cascade of gates. It provides the primary functionality for modelling and modifying circuit designs, and is used by other classes such as the {\verb TruthTable } and {\verb GeneticAlgorithm } classes, as described below.
 
-The {\bf TruthTable} class allows us to generate the truth tables of our reversible cascade and compare all or part of the truth 
-table from one circuit with another. Since we have to propagate values across each gate in the cascade to generate the output 
-values and need to generate all \(2^{n}\) entries in the truth table, the process of generating the truth table is linear in the 
-number of gates of the circuit is exponential in the number of variables.
+The {\verb TruthTable } class allows us to generate the truth tables of any {\verb Cascade } and compare all or part of the truth table from one circuit with another. Since we must propagate values across each gate in the cascade to generate the output 
+values (and since we must do this for all \(2^{n}\) entries in the truth table), the process of generating the truth table is linear in the 
+number of gates of the circuit and exponential in the number of variables ($\mathcal{O}(2^{mn})$, where $m$ is the number of gates in the cascade, and $n$ is the number of variable lines).
 
 \pagebreak
 \begin{figure}[H]
@@ -37,13 +36,13 @@ number of gates of the circuit is exponential in the number of variables.
 \pagebreak
 
 Our simulation software also has a number of classes that provide additional extensibility. For example there are input/output 
-classes that allow us to directly read from and write to files in the \url{www.revlib.org}'s .real file format. Our initial genetic algorithm implementation 
+classes that allow us to directly read from and write to files in the \url{www.revlib.org}'s {\verb *.real } file format. Our initial genetic algorithm implementation 
 required us to manually enter each goal cascade that we wanted to test against, but using these helper classes we were able to 
 implement the ability to parse any .real file and use its target output function in the fitness calculations for our genetic 
-algorithm. We also developed an experimental {\bf SharedCube} class that allows us to generate and use the shared cube 
+algorithm. We also developed an experimental {\verb SharedCube } class that allows us to generate and use the shared cube 
 representation that we were initially going to use to represent individuals in our genetic algorithm so that we could apply a 
 number of the rule based transformations from \cite{Nayeem2011} but after implementing it, we decided 
-on using the representation described below. 
+on using the representation described below. Due to time constraints, this was not implemented in the Release Master of the software.
 
   \subsubsection{Description of Our Genetic Algorithm}
 
