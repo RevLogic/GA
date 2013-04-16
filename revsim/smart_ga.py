@@ -85,8 +85,8 @@ class SmartGA(GeneticAlgorithm):
         print ""
         """
 
-        print "Starting SmartGA, PID", os.getpid()
-        pidstring = "["+str(os.getpid())+"]"
+        print "Starting Revsim SmartGA... PID", os.getpid()
+        pidstring = "[SGA "+str(os.getpid())+"]"
         current_fitness = 0.0
         gen_count = 0
 
