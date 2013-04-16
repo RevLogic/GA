@@ -1,0 +1,25 @@
+
+~/GA/condor/logs/runs/life_238.real/o$ grep -i "quantum costs:" ~/GA/revsim/tests/*
+/home/lowr4210/GA/revsim/tests/4gt11_83.real:# Used Library: MCT (gates: 8, quantum costs: 12)
+/home/lowr4210/GA/revsim/tests/alu-v0_27.real:# Used Library: MCT (gates: 6  quantum costs: 14)
+/home/lowr4210/GA/revsim/tests/decod24-v3_45.real:# Used Library: MCT (gates: 7, quantum costs: 35)
+/home/lowr4210/GA/revsim/tests/gap2.real:# Used Library: MCT (gates: 1541, quantum costs: 44665)
+/home/lowr4210/GA/revsim/tests/gaptest.real:# Used Library: MCT (gates: 1541, quantum costs: 44665)
+/home/lowr4210/GA/revsim/tests/hwb7_61.real:# Used Library: MCt (gates: 236 quantum costs: 3876)
+/home/lowr4210/GA/revsim/tests/hwb9_121.real:# Used Library: MCT (gates: 1541, quantum costs: 44665)
+/home/lowr4210/GA/revsim/tests/rd32_273.real:# Used Library: MCT (Gates: 20, Quantum costs: 116)
+/home/lowr4210/GA/revsim/tests/urf2_154.real:# Used Library: MCT (gates: 620 , quantum costs: 16152)
+/home/lowr4210/GA/revsim/tests/urf4_187.real:# Used Library: MCT (gates: 32004, quantum costs: 160020)
+
+
+
+
+~/GA/condor/logs/runs/life_238.real/o$ grep -i "quantum costs:" ~/GA/condor/files/*
+/home/lowr4210/GA/condor/files/f51m_233.real:# Used Library: MCT (Gates: 663, Quantum costs: 37400)
+/home/lowr4210/GA/condor/files/hwb7_62.real:# Used Library: MCT (gates: 331 quantum costs: 2611)
+/home/lowr4210/GA/condor/files/hwb8_116.real:# Used Library: MCT (gates: 749, quantum costs: 7015)
+/home/lowr4210/GA/condor/files/life_238.real:# Used Library: MCT (Gates: 107, Quantum costs: 6766)
+/home/lowr4210/GA/condor/files/max46_240.real:# Used Library: MCT (Gates: 107, Quantum costs: 5444)
+/home/lowr4210/GA/condor/files/mod5adder_129.real:# Used Library: MCT (gates: 17, quantum costs: 77)
+
+

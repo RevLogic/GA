@@ -1,0 +1,26 @@
+ |------- <../files/life_238.real> Set #4  Run #22 --------| 
+Original quantum cost: 11275
+Original gate count: 107
+Smart GA Parameters
+Initial Population Count: 313
+Initial Population Mutations: 10
+Subsequent Population Count: 313
+Subsequent Population Mutations: 4
+Maximum Number of Generations: 5000
+Quantum Cost Goal: 11253
+
+Generation: 0           Fitness: 1.0
+t1 x8
+t1 x1
+t6 x1 x4 x5 x6 x8 f0
+t1 x7
+t1 x0
+t7 x0 x1 x2 x3 x6 x8 f0
+t1 x8
+Quantum Cost: 191
+Gate Count: 7
+Quantum Cost Improvement: 11084
+Gate Count Improvement: 100
+ |------- End run number: 22 -------|
+ |------- <../files/life_238.real> Set #4  Run #23 --------| 
+

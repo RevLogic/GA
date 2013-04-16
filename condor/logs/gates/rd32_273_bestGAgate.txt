@@ -1,0 +1,27 @@
+------- Run number: 97 --------
+Original quantum cost: 52
+Original gate count: 20
+Smart GA Parameters
+Initial Population Count: 50
+Subsequent Population Count: 50
+Maximum Number of Generations: 1000
+
+Generation: 0           Fitness: 0.625
+Generation: 1           Fitness: 1.0
+t1 a
+t1 b
+t2 a d
+t3 e d a
+t3 a b d
+t1 a
+t1 c
+t3 a b d
+t1 a
+t3 a e d
+t1 c
+t2 c b
+Quantum Cost: 28
+Gate Count: 12
+Quantum Cost Improvement: 24
+Gate Count Improvement: 8
+------- End run number: 97 -------

@@ -4,7 +4,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.1.0
-lastDocument=genetic.tex
+lastDocument=approach.tex
 masterDocument=main.tex
 name=CS4210 Paper
 pkg_extIsRegExp=false
@@ -33,28 +33,28 @@ encoding=UTF-8
 highlight=LaTeX
 line=0
 mode=LaTeX
-open=false
-order=5
+open=true
+order=0
 
 [item:bibliography.bib]
 archive=true
 column=15
 encoding=UTF-8
 highlight=BibTeX
-line=411
+line=2142
 mode=BibTeX
 open=false
 order=1
 
 [item:conclusion.tex]
 archive=true
-column=0
+column=198
 encoding=UTF-8
 highlight=LaTeX
-line=0
+line=7
 mode=LaTeX
-open=false
-order=7
+open=true
+order=1
 
 [item:cs4210paper.kilepr]
 archive=true
@@ -73,38 +73,38 @@ encoding=UTF-8
 highlight=LaTeX
 line=49
 mode=LaTeX
-open=false
-order=0
+open=true
+order=2
 
 [item:genetic.tex]
 archive=true
-column=80
+column=59
 encoding=UTF-8
 highlight=LaTeX
 line=101
 mode=LaTeX
 open=true
-order=2
+order=3
 
 [item:introduction.tex]
 archive=true
-column=94
+column=76
 encoding=UTF-8
 highlight=LaTeX
 line=10
 mode=LaTeX
-open=false
-order=1
+open=true
+order=4
 
 [item:main.tex]
 archive=true
-column=20
+column=0
 encoding=UTF-8
 highlight=LaTeX
 line=32
 mode=LaTeX
 open=true
-order=0
+order=10
 
 [item:matricescost.tex]
 archive=true
@@ -113,8 +113,8 @@ encoding=UTF-8
 highlight=LaTeX
 line=0
 mode=LaTeX
-open=false
-order=-1
+open=true
+order=5
 
 [item:orderingrules.tex]
 archive=true
@@ -123,18 +123,18 @@ encoding=UTF-8
 highlight=LaTeX
 line=3
 mode=LaTeX
-open=false
-order=3
+open=true
+order=6
 
 [item:parallel.tex]
 archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=0
+line=8
 mode=LaTeX
-open=false
-order=-1
+open=true
+order=7
 
 [item:results.tex]
 archive=true
@@ -143,18 +143,18 @@ encoding=UTF-8
 highlight=LaTeX
 line=2
 mode=LaTeX
-open=false
-order=6
+open=true
+order=8
 
 [item:revsim.tex]
 archive=true
-column=58
+column=0
 encoding=UTF-8
 highlight=LaTeX
 line=90
 mode=LaTeX
 open=true
-order=1
+order=9
 
 [view-settings,view=0,item:Qcircuit.tex]
 CursorColumn=0
@@ -166,26 +166,26 @@ CursorLine=0
 
 [view-settings,view=0,item:bibliography.bib]
 CursorColumn=15
-CursorLine=411
+CursorLine=2142
 
 [view-settings,view=0,item:conclusion.tex]
-CursorColumn=0
-CursorLine=0
+CursorColumn=198
+CursorLine=7
 
 [view-settings,view=0,item:cubelist.tex]
 CursorColumn=0
 CursorLine=49
 
 [view-settings,view=0,item:genetic.tex]
-CursorColumn=80
+CursorColumn=59
 CursorLine=101
 
 [view-settings,view=0,item:introduction.tex]
-CursorColumn=94
+CursorColumn=76
 CursorLine=10
 
 [view-settings,view=0,item:main.tex]
-CursorColumn=20
+CursorColumn=0
 CursorLine=32
 
 [view-settings,view=0,item:matricescost.tex]
@@ -198,12 +198,12 @@ CursorLine=3
 
 [view-settings,view=0,item:parallel.tex]
 CursorColumn=0
-CursorLine=0
+CursorLine=8
 
 [view-settings,view=0,item:results.tex]
 CursorColumn=0
 CursorLine=2
 
 [view-settings,view=0,item:revsim.tex]
-CursorColumn=58
+CursorColumn=0
 CursorLine=90

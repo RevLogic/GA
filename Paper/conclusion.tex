@@ -6,3 +6,29 @@ Our algorithm shows promise, but it is by no means optimal: further investigatio
 Future research in this area should address topics such as function-preserving mutation and crossover functions, as these were points of difficulty in our implementation. As our research focused more on the parallel implementation of a genetic algorithm, some more time should be spent on finding optimal cascade representations as well as on overall scalability. Currently, due to the nature of our approach, we require that a cascade's truth table be calculated before any quantum cost evaluation can take place. In practice, it would be far more efficient to utilize function-preserving transformations which would eliminate this requirement. \\
 
 In conclusion, even though our algorithm delivered sub-optimal results, we were able to develop an effective and solid framework for future research on the optimization of large reversible cascades.
+
+\begin{table}[H]
+\begin{center}
+    \begin{tabular}{l | l | l | l}
+       Circuit            & Listed Cost & Our Calculated Cost & Best Generated  \\ 
+                          & on RevLib   &                     & Circuit Cost    \\ \hline
+     \verb!Max46_240!     & 5444                  & 15319               & 1281                        \\
+     \verb!life_238!      & 6766                  & 11275               & 191                         \\
+     \verb!f51m_233!      & 37400                 & 28303               & 32831                       \\
+     \verb!alu-v0_27!     & 14                    & 14                  & 7                           \\
+     \verb!decod24-v3_45! & 35                    & 35                  & 4                           \\
+     \verb!gsym9!         & 206                   & 206                 & 154                         \\
+     \verb!4gt11_83!      & 12                    & 12                  & 3                           \\
+     \verb!gsym6!         & 72                    & 72                  & 66                          \\
+     \verb!rd32_273!      & 116                   & 116                 & 92                          \\
+     \verb!mod5adder_129! & 77                    & 77                  & 77                          \\
+     \verb!hwb7_62!       & 2611                  & 2839                & 0                           \\
+     \verb!urf4_187!      & 160020                & 160020              & N/A                          \\
+     \verb!hwb8_116!      & 7015                  & 8341                & 0                           \\
+     \verb!seq_314!       & 19362                 & N/A                  & N/A                          \\
+     \verb!hwb9_121!      & 44665                 & N/A                  & N/A                          \\
+    \end{tabular}
+ \caption {Circuit Cost Comparisons}
+\label{tab:CCC}
+\end{center}
+\end{table}
