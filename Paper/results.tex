@@ -1,7 +1,7 @@
 \section{Experimental Results}
 
-We ran our genetic algorithm against 16 circuits found in the revlib.org circuit library. Table \emph{X} shows the results of the trials 
-for all 16 circuits. Of the 16 trials we were able to generate results from 14 of the circuits. 13 of the the trials also generated 
+We ran our genetic algorithm against 16 circuits found in the revlib.org circuit library. Table 1 shows the results of the trials 
+for all 16 circuits. Of the 16 trials we were able to generate results from 14 of the circuits. 9 of the trials also generated 
 at least one circuit with a quantum cost improvement compared to the quantum cost calculated when we read in the comparison 
 circuit's .real file downloaded from revlib. The failure to generate any results for the circuits \verb!seq_314! and
  \verb!hwb9_121! is due to the time complexity of our fitness function and the large size of those circuits. 
@@ -20,11 +20,11 @@ circuit's .real file downloaded from revlib. The failure to generate any results
     \verb!gsym9!         &  1040     & 1040        & 665       & 63.94    & 52          \\
     \verb!4gt11_83!      &  1020     & 1020        & 576       & 56.47    & 9           \\
     \verb!gsym6!         &  1020     & 1020        & 536       & 52.55    & 6           \\
-    \verb!rd32_273!      &  1020     & 1020        & 526       & 51.57    & 24          \\
-    \verb!mod5adder_129! &  5000     & 1277        & 188       & 14.72    & 72          \\
-    \verb!hwb7_62!       &  5000     & 60          & 7         & 11.67    & 217         \\
+    \verb!rd32_273!      &  1020     & 1020        & 526       & 51.57    & 92          \\
+    \verb!mod5adder_129! &  5000     & 1277        & 0         & 0.00     & 0           \\
+    \verb!hwb7_62!       &  5000     & 60          & 0         & 0.00     & 0           \\
     \verb!urf4_187!      &  1020     & 8           & 0         & 0.00     & N/A         \\
-    \verb!hwb8_116!      &  5000     & 14          & 1         & 7.14     & 100         \\
+    \verb!hwb8_116!      &  5000     & 14          & 0         & 0.00     & 0           \\
     \verb!seq_314!       &  3060     & 0           & 0         & N/A      & N/A         \\
     \verb!hwb9_121!      &  1020     & 0           & 0         & N/A      & N/A         \\
     \end{tabular}
@@ -33,9 +33,36 @@ circuit's .real file downloaded from revlib. The failure to generate any results
  \end{table}
 
 There were a number of of circuits generated that showed a significant relative improvement in quantum cost over the original comparison 
-circuit downloaded from revlib. Upon doing a detailed comparison of our circuit to the 
+circuit downloaded from revlib (see Table 2). Upon doing a detailed comparison of our best circuits to their corresponding original circuit on revlib we 
+did notice a discrepency between our calculation of quantum cost for gates with more than 4 input lines and the revlib calculations. We 
+realized that our quantum cost calculation which uses the quantum cost table found at \url{http://webhome.cs.uvic.ca/~dmaslov/definitions.html}
+did not account for the garbage lines. This discrepency only exists in circuits with gates larger than 3 inputs, and all circuits that only consisted
+of gates that were 3 input or smaller were accurately reported. We did not have the time to implement a revised quantum cost function which accounted 
+for the garbage lines, however our results were self consistent accross the runs and it should only be a matter of revising our cost function and 
+re-running our output circuits against the new cost function to caompare the circuits with larger gates directly to the revlib circuit.
 
 
-
-
-
+\begin{table}
+\begin{center}
+    \begin{tabular}{l | l | l | l}
+       Circuit            & Listed Cost & Our Calculated Cost & Best Generated  \\ 
+                          & on Revlib   & Our Calculated Cost & Circuit Cost    \\ \hline
+     \verb!Max46_240!     & 5444                  & 15319               & 1281                        \\
+     \verb!life_238!      & 6766                  & 11275               & 191                         \\
+     \verb!f51m_233!      & 37400                 & 28303               & 32831                       \\
+     \verb!alu-v0_27!     & 14                    & 14                  & 7                           \\
+     \verb!decod24-v3_45! & 35                    & 35                  & 4                           \\
+     \verb!gsym9!         & 206                   & 206                 & 154                         \\
+     \verb!4gt11_83!      & 12                    & 12                  & 3                           \\
+     \verb!gsym6!         & 72                    & 72                  & 66                          \\
+     \verb!rd32_273!      & 116                   & 116                 & 92                          \\
+     \verb!mod5adder_129! & 77                    & 77                  & 77                          \\
+     \verb!hwb7_62!       & 2611                  & 2839                & 0                           \\
+     \verb!urf4_187!      & 160020                & 160020              & N/A                          \\
+     \verb!hwb8_116!      & 7015                  & 8341                & 0                           \\
+     \verb!seq_314!       & 19362                 & N/A                  & N/A                          \\
+     \verb!hwb9_121!      & 44665                 & N/A                  & N/A                          \\
+    \end{tabular}
+\caption {Circuit Cost Comparisons}
+\end{center}
+\end{table}
