@@ -31,11 +31,11 @@ def create_cascade(lines, gates):
     c.replace_gates(gates)
     return c
 
-if __name__ == '__main__':
+def split_ga(filename):
     # Start 2 worker processes: we use subprocesses to avoid GIL
     pool = Pool(processes=4)
     
-    r = RealReader(sys.argv[1])
+    r = RealReader(filename)
     ideal, non_garbage = r.read_cascade()
     
     print "Original quantum cost:", ideal.cost()
@@ -68,3 +68,6 @@ if __name__ == '__main__':
     print "Quantum Cost Improvement:", ideal_copy.cost() - final_cascade.cost()
     print "Gate Count Improvement:", len(ideal_copy) - len(final_cascade)
     
+if __name__ == "__main__":
+    filename = sys.argv[1]
+    split_ga(filename)
