@@ -3,14 +3,14 @@
 \subsection{Genetic Algorithm}
  The Genetic Algorithm is a search heuristic that was introduced and investigated by John Holland (1975) 
 and his students (DeJong, 1975). The algorithm attempts to mimic the evolutionary process of natural 
-selection (Mitchell, 1996) by modelling the concepts of individuals in a population, fitness and selection, 
+selection \cite{Mitchell1996} by modelling the concepts of individuals in a population, fitness and selection, 
 crossover, and mutation that are found in the biological reproduction of organisms \cite{Mitchell1996}. 
 
-Over a number of generations, individual that is the solution to a problem can 
+Over a number of generations, an individual that is the solution to a problem can 
 evolve out of the latest generation of the individuals in the population. While there are a many variations 
 on this theme, the basic algorithm is as follows:
 \begin{enumerate}
- \item Generate an initial population of individuals that represent a potential solutions to the problem.  
+ \item Generate an initial population of individuals that represent a potential solutions to the problem, typically randomaly generated.
  \item Evaluate each individual's Fitness according to a metric.
  \item Until a solution is found or a maximum number of generations have elapsed, repeat the following:
   \begin{enumerate}
@@ -42,7 +42,7 @@ output solution. Each individual is evaluated and ranked according to its fitnes
 criteria, some are chosen for crossover and mutation. To measure the fitness, we need to decode the representation of each 
 individual and compare it against our goal result. From the example individual above, if our goal was to find an expression 
 whose result is equal to the absolute value of the number 30, our fitness function would decode the individual and find that 
-it has a value of -60 and then compare it to the goal and evaluate its fitness. Once every individual is ranked according 
+it has a value of -60 and then compare it to the goal and evaluate its fitness, between [0,1]. Once every individual is ranked according 
 to its fitness, a number of individuals are selected for crossover and mutation according to the selection criteria that we specify.
 
 
@@ -50,7 +50,7 @@ to its fitness, a number of individuals are selected for crossover and mutation 
 Crossover tries to model the process of sexual reproduction in nature. After parent individuals are selected from the 
 population of the previous generation, the `genes' of these individuals are combined to make one or more child individuals. To 
 combine the genes, a crossover point is specified in each parent individual. It is important that the crossover point occurs between genes
-and not inside of a gene or our encoding for this would be broken since we are using 4 bits to represent a gene, thus cross over point must not occur between these 4 bits. Consider the following two binary strings, A: 1010 1100 0001 1000 1111 0000 
+and not inside of a gene or our encoding for this example would be broken since we are using 4 bits to represent a gene, thus a cross over point must not occur between these 4 bits. Consider the following two binary strings, A: 1010 1100 0001 1000 1111 0000 
 and B: 1011 0011 1010 1111 0000 1110. The offspring individuals will be a combination of the first part of A with the second part of B, 
 or the first part of A with the second part of B. Here is an illustration of crossover using a randomly chosen crossover point, X:
 
