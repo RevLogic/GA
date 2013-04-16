@@ -4,6 +4,7 @@
 
 import random
 import sys
+import os
 
 from cascade import *
 from gates import *
@@ -17,11 +18,14 @@ from split_ga import *
 from ga_runner import *
 
 if __name__ == "__main__":
-    print "Revsim - Milestone 5 (Release Master)"
-    print "C. Rabl, R. Lowry, H. Rana"
-    print ""
-    filename = sys.argv[2]
-    if sys.argv[1] == "--split":
-        split_ga(filename)
-    else:
-        ga_runner(filename)
+    try:
+        print "Revsim - Milestone 5 (Release Master)"
+        print "C. Rabl, R. Lowry, H. Rana"
+        print ""
+        filename = sys.argv[2]
+        if sys.argv[1] == "--split":
+            split_ga(filename)
+        else:
+            ga_runner(filename)
+    except KeyboardInterrupt:
+        print "Stopped all Revsim subprocesses"
