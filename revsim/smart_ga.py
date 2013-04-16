@@ -69,8 +69,10 @@ class SmartGA(GeneticAlgorithm):
         function_eval = truth_table.fuzzy_compare_columns(self.goal, self.non_garbage)
         qcost_fitness = min(quantum_cost_goal / truth_table.c.cost(), 1.0)
         
-        return function_eval #* qcost_fitness
-
+        if self.eval_qcost:
+            return function_eval * qcost_fitness
+        
+        return function_eval
     
     def run(self):
         quantum_cost_goal = self.parent.cost() - self.cost_improvement_goal
@@ -86,7 +88,12 @@ class SmartGA(GeneticAlgorithm):
         """
 
         print "Starting Revsim SmartGA... PID", os.getpid()
-        pidstring = "[SGA "+str(os.getpid())+"]"
+        if self.eval_qcost:
+            pidstring = "[SGAQ "
+        else:
+            pidstring = "[SGA "
+
+        pidstring += str(os.getpid())+"]"
         current_fitness = 0.0
         gen_count = 0
 
