@@ -1,7 +1,7 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2012.8.31)  15 APR 2013 16:01
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2012.8.31)  15 APR 2013 21:00
 entering extended mode
  %&-line parsing enabled.
-**main
+**main.tex
 (./main.tex
 LaTeX2e <2005/12/01>
 Babel <v3.8h> and hyphenation patterns for english, usenglishmax, dumylang, noh
@@ -357,6 +357,27 @@ LaTeX Info: Redefining \cite on input line 602.
 (/usr/share/texmf/tex/latex/ltxmisc/url.sty
 \Urlmuskip=\muskip11
 Package: url 2005/06/27  ver 3.2  Verb mode for urls, etc.
+)
+(/usr/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/fontinst/base/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 90.
+
+(/usr/share/texmf/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2007/01/08 v0.04d Graphics/color for pdfTeX
+\Gread@gobject=\count101
+))
+\Gin@req@height=\dimen113
+\Gin@req@width=\dimen114
 ) (./Qcircuit.tex
 (/usr/share/texmf/tex/generic/xypic/xy.sty
 (/usr/share/texmf/tex/generic/xypic/xy.tex Bootstrap'ing: catcodes, docmode,
@@ -368,45 +389,45 @@ Package: url 2005/06/27  ver 3.2  Verb mode for urls, etc.
  Xy-pic is free software: see the User's Guide for details.
 
 Loading kernel: messages; fonts; allocations: state,
-\X@c=\dimen113
-\Y@c=\dimen114
-\U@c=\dimen115
-\D@c=\dimen116
-\L@c=\dimen117
-\R@c=\dimen118
+\X@c=\dimen115
+\Y@c=\dimen116
+\U@c=\dimen117
+\D@c=\dimen118
+\L@c=\dimen119
+\R@c=\dimen120
 \Edge@c=\toks29
-\X@p=\dimen119
-\Y@p=\dimen120
-\U@p=\dimen121
-\D@p=\dimen122
-\L@p=\dimen123
-\R@p=\dimen124
+\X@p=\dimen121
+\Y@p=\dimen122
+\U@p=\dimen123
+\D@p=\dimen124
+\L@p=\dimen125
+\R@p=\dimen126
 \Edge@p=\toks30
-\X@origin=\dimen125
-\Y@origin=\dimen126
-\X@xbase=\dimen127
-\Y@xbase=\dimen128
-\X@ybase=\dimen129
-\Y@ybase=\dimen130
-\X@min=\dimen131
-\Y@min=\dimen132
-\X@max=\dimen133
-\Y@max=\dimen134
+\X@origin=\dimen127
+\Y@origin=\dimen128
+\X@xbase=\dimen129
+\Y@xbase=\dimen130
+\X@ybase=\dimen131
+\Y@ybase=\dimen132
+\X@min=\dimen133
+\Y@min=\dimen134
+\X@max=\dimen135
+\Y@max=\dimen136
 \lastobjectbox@=\box28
 \zerodotbox@=\box29
-\almostz@=\dimen135
+\almostz@=\dimen137
  direction,
-\d@X=\dimen136
-\d@Y=\dimen137
-\K@=\count101
-\KK@=\count102
-\Direction=\count103
-\K@dXdY=\dimen138
-\K@dYdX=\dimen139
+\d@X=\dimen138
+\d@Y=\dimen139
+\K@=\count102
+\KK@=\count103
+\Direction=\count104
+\K@dXdY=\dimen140
+\K@dYdX=\dimen141
 \xyread@=\read1
 \xywrite@=\write3
-\csp@=\count104
-\quotPTK@=\dimen140
+\csp@=\count105
+\quotPTK@=\dimen142
 
 utility macros; pictures: \xy, positions,
 \swaptoks@@=\toks31
@@ -420,13 +441,13 @@ Package: xy 1999/02/16 Xy-pic version 3.7
 )
 (/usr/share/texmf/tex/generic/xypic/xymatrix.tex
  Xy-pic option: Matrix feature v.3.4
-\Row=\count105
-\Col=\count106
+\Row=\count106
+\Col=\count107
 \queue@=\toks33
 \queue@@=\toks34
-\qcount@=\count107
-\qcount@@=\count108
-\matrixsize@=\count109
+\qcount@=\count108
+\qcount@@=\count109
+\matrixsize@=\count110
  loaded)
 (/usr/share/texmf/tex/generic/xypic/xyframe.tex
  Xy-pic option: Frame and Bracket extension v.3.7 loaded)
@@ -436,40 +457,40 @@ Package: xy 1999/02/16 Xy-pic version 3.7
  Xy-pic option: Circle, Ellipse, Arc feature v.3.4
 (/usr/share/texmf/tex/generic/xypic/xycurve.tex
  Xy-pic option: Curve and Spline extension v.3.7 curve,
-\crv@cnt@=\count110
+\crv@cnt@=\count111
 \crvpts@=\toks35
 \splinebox@=\box31
-\splineval@=\dimen141
-\splinedepth@=\dimen142
-\splinetol@=\dimen143
-\splinelength@=\dimen144
+\splineval@=\dimen143
+\splinedepth@=\dimen144
+\splinetol@=\dimen145
+\splinelength@=\dimen146
  circles,
-\L@=\dimen145
+\L@=\dimen147
  loaded)
 circles, ellipses, elliptical arcs, loaded)
 (/usr/share/texmf/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2006/02/20 v1.4 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in pdf mode detected.
 ))
-\c@mydef=\count111
+\c@mydef=\count112
  (./main.aux
 (./introduction.aux) (./matricescost.aux) (./cubelist.aux) (./orderingrules.aux
 ) (./genetic.aux) (./parallel.aux) (./approach.aux) (./revsim.aux)
 (./results.aux) (./conclusion.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -484,15 +505,48 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2005/11/07 v1.9 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 19.
-
-(/usr/share/texmf/tex/latex/amsfonts/umsa.fd
+(/usr/share/texmf/doc/pdftex/manual/samplepdf/supp-pdf.tex
+(/usr/share/texmf/doc/pdftex/manual/samplepdf/supp-mis.tex
+loading : Context Support Macros / Miscellaneous (2004.10.26)
+\protectiondepth=\count113
+\scratchcounter=\count114
+\scratchtoks=\toks36
+\scratchdimen=\dimen148
+\scratchskip=\skip52
+\scratchmuskip=\muskip12
+\scratchbox=\box32
+\scratchread=\read2
+\scratchwrite=\write4
+\zeropoint=\dimen149
+\onepoint=\dimen150
+\onebasepoint=\dimen151
+\minusone=\count115
+\thousandpoint=\dimen152
+\onerealpoint=\dimen153
+\emptytoks=\toks37
+\nextbox=\box33
+\nextdepth=\dimen154
+\everyline=\toks38
+\!!counta=\count116
+\!!countb=\count117
+\recursecounter=\count118
+)
+loading : Context Support Macros / PDF (2004.03.26)
+\nofMPsegments=\count119
+\nofMParguments=\count120
+\MPscratchCnt=\count121
+\MPscratchDim=\dimen155
+\MPnumerator=\count122
+\everyMPtoPDFconversion=\toks39
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 20.
+ (/usr/share/texmf/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
 (/usr/share/texmf/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 19.
+LaTeX Font Info:    Try loading font information for U+msb on input line 20.
 
 (/usr/share/texmf/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2002/01/19 v2.2g AMS font definitions
@@ -509,37 +563,32 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 (./matricescost.tex [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 8--9
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--110
+Underfull \hbox (badness 10000) in paragraph at lines 57--83
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--110
+Underfull \hbox (badness 10000) in paragraph at lines 57--83
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--115
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
 
-[3] <xymatrix 8x3 1063> <xymatrix 8x3 1063>
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
+<xymatrix 8x3 1063> <xymatrix 8x3 1063> [3]
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
 
@@ -577,61 +626,69 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--11
 \openout2 = `genetic.aux'.
 
  (./genetic.tex [5] [6]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 86.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 87.
  (/usr/share/texmf/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 86.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 87.
  [7])
 \openout2 = `parallel.aux'.
 
 
-(./parallel.tex)
+(./parallel.tex [8]
+<diagrams/parallelization.png, id=39, 573.14125pt x 631.35875pt>
+File: diagrams/parallelization.png Graphic file (type png)
+
+<use diagrams/parallelization.png>)
 \openout2 = `approach.aux'.
 
  (./approach.tex)
 \openout2 = `revsim.aux'.
 
- (./revsim.tex [8] [9] [10])
+ (./revsim.tex [9 <./diagrams/parallelization.png>] [10]) [11
+\@writefile{toc}{\contentsline {paragraph}{Fitness and Selection.}{11}}
+\@writefile{toc}{\contentsline {paragraph}{Crossover.}{11}}
+\@writefile{toc}{\contentsline {paragraph}{Mutation.}{11}}
+\@writefile{toc}{\contentsline {paragraph}{Parameter Variations.}{11}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.4}Parallelizati
+on}{11}}
+\@writefile{toc}{\contentsline {paragraph}{Grid Computing.}{11}}
+]
 \openout2 = `results.aux'.
 
  (./results.tex)
 \openout2 = `conclusion.aux'.
 
-
-(./conclusion.tex) [11
-\@writefile{toc}{\contentsline {paragraph}{Grid Computing.}{11}}
+ (./conclusion.tex) [12
 \@writefile{toc}{\contentsline {paragraph}{Parallelization of large circuits.}{
-11}}
+12}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Experimental Results}{1
-1}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{11}}
-] (./main.bbl [12]) [13] (./main.aux (./introduction.aux) (./matricescost.aux)
+2}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{12}}
+] (./main.bbl) [13] (./main.aux (./introduction.aux) (./matricescost.aux)
 (./cubelist.aux) (./orderingrules.aux) (./genetic.aux) (./parallel.aux)
 (./approach.aux) (./revsim.aux) (./results.aux) (./conclusion.aux)) ) 
 Here is how much of TeX's memory you used:
- 5366 strings out of 256216
- 67514 string characters out of 1917072
- 369820 words of memory out of 1500000
- 8476 multiletter control sequences out of 10000+200000
+ 6025 strings out of 256216
+ 75938 string characters out of 1917072
+ 380395 words of memory out of 1500000
+ 9108 multiletter control sequences out of 10000+200000
  15834 words of font info for 77 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 46i,37n,40p,816b,1352s stack positions out of 5000i,500n,6000p,200000b,15000s
+ 46i,37n,40p,720b,1352s stack positions out of 5000i,500n,6000p,200000b,15000s
 </usr/shar
 e/texmf/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/bluesky
 /cm/cmex10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi12.pfb></usr/share/
-texmf/fonts/type1/bluesky/cm/cmmi6.pfb></usr/share/texmf/fonts/type1/bluesky/cm
-/cmmi8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb></usr/share/texmf
-/fonts/type1/bluesky/cm/cmr17.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr6
-.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr8.pfb></usr/share/texmf/fonts/
-type1/bluesky/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy6.pfb>
-</usr/share/texmf/fonts/type1/bluesky/cm/cmsy8.pfb></usr/share/texmf/fonts/type
-1/bluesky/cm/cmti12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmtt12.pfb></u
-sr/share/texmf/fonts/type1/bluesky/ams/msbm10.pfb>
-Output written on main.pdf (13 pages, 142143 bytes).
+texmf/fonts/type1/bluesky/cm/cmmi8.pfb></usr/share/texmf/fonts/type1/bluesky/cm
+/cmr12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr17.pfb></usr/share/texmf
+/fonts/type1/bluesky/cm/cmr8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy1
+0.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy8.pfb></usr/share/texmf/font
+s/type1/bluesky/cm/cmti12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmtt12.p
+fb></usr/share/texmf/fonts/type1/bluesky/ams/msbm10.pfb>
+Output written on main.pdf (13 pages, 146923 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
+ 95 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
- 13825 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 13830 words of extra memory for PDF output out of 14400 (max. 10000000)
 
