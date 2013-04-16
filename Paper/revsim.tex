@@ -13,14 +13,27 @@ circuits at the gate level. We will provide a brief overview and description of 
 We first developed an initial version of our circuit simulator using a functional programming approach but once we had conducted some initial 
 experimentation and testing we decided to refactor our code using an object-oriented approach.
 
-Figure (7.1) shows the basic class structure of our software. Conceptually a gate has a number of input lines, output lines, 
+Figure 3 shows the basic class structure of our software. Conceptually a gate has a number of input lines, output lines, 
 controls and targets. The abstract Gate class formalizes this basic representation of a gate and is subclassed to create 
 the various types of gates and their implementations.
 
-Figure (7.2) shows there are three main types of gates that we have represented in our simulator: Single Target 
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=140mm]{diagrams/architecture.png}
+\caption{Class structure of Revsim}
+\label{overflow}
+\end{figure}
+
+Figure 4 shows there are three main types of gates that we have represented in our simulator: Single Target 
 gates, such as the the Toffoli, Multiple Target gates, like the Fredkin or Swap, and Same Target gates such as the inverter 
 where the target and the control are on the same line.
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=100mm]{diagrams/gate_inheritence.png}
+\caption{Gate inheritence in Revsim}
+\label{overflow}
+\end{figure}
 The Cascade class is used to represent a reversible cascade of gates. It provides the primary functionality for modelling 
 and modifying our reversible circuits, and is used other classes such as the Truth Table and Genetic Algorithm classes as 
 described below.
